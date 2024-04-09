@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Testing Page</title>
@@ -18,9 +18,7 @@
     </head>
     <body>
         <%--<jsp:include page="navbar.jsp">--%>
-        <script type="text/javascript">
 
-        </script>
         <div class=""style="margin: 200px;">
             <form class="row g-3 needs-validation" novalidate>
                 <!--                username div-->
@@ -31,55 +29,55 @@
                             <span class="input-group-text " id="inputGroupPrepend">*</span>
                             <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                             <div class="invalid-feedback">
-                                Please choose a username.
+                                Please Choose a Username
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 ">
-                    <label for="validationCustom01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Type your First name here" required>
-                    <div class="valid-feedback">
-                        Looks good!
+                    <label for="validationFirstname" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationFirstname" value="" placeholder="Type your First name here" required>
+                    <div class="invalid-feedback">
+                        Please Enter your First Name
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">Middle name</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="" placeholder="Type your middle name here" notrequired>
+                    <label for="validationMiddlename" class="form-label">Middle name</label>
+                    <input type="text" class="form-control" id="validationMiddlename" value="" placeholder="Type your middle name here(not required)" notrequired>
                     <div class="valid-feedback">
                         hmmm.. nothing wrong here..
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="" placeholder="Type your Last name here" required>
-                    <div class="valid-feedback">
-                        Looks good!
+                    <label for="validationLastname" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationLastname" value="" placeholder="Type your Last name here" required>
+                    <div class="invalid-feedback">
+                        Please Enter your Last Name
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <label for="validationCustom03" class="form-label">Complete Address</label>
-                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <label for="validationAddress" class="form-label">Complete Address</label>
+                    <input type="text" class="form-control" id="validationAddress" required>
                     <div class="invalid-feedback">
-                        Please provide a valid city.
+                        Please provide your Complete Address
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <label for="validationCustom05" class="form-label">Birthday</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <label for="validationBirthday" class="form-label">Birthday</label>
+                    <input type="text" class="form-control" id="validationBirthday" required>
                     <div class="invalid-feedback">
-                        Please provide a valid zip.
+                        Please provide your Birthday
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <label for="validationCustom05" class="form-label">Mobile Number</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <label for="validationNumber" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" id="validationNumber" required>
                     <div class="invalid-feedback">
-                        Please provide a valid zip.
+                        Please provide your Mobile Number
                     </div>
                 </div>
                 <div class="col-12">
@@ -100,9 +98,7 @@
         </div>
         <script>
 
-
             var forms = document.querySelectorAll(".needs-validation");
-
 
             Array.prototype.slice.call(forms).forEach(function (form)
             {
@@ -110,13 +106,67 @@
                 {
                     if (!form.checkValidity())
                     {
-
                         event.preventDefault();
                         event.stopPropagation();
-                       
-
                     } else {
+                        var usern = $("#validationCustomUsername");
+                        var firstname = $("#validationFirstname");
+                        var middlename = $("#validationMiddlename");
+                        var lastname = $("#validationLastname");
+                        var address = $("#validationAddress");
+                        var birthday = $("#validationBirthday");
+                        var mobile = $("#validationNumber");
+                        const regex_user = /^[a-zA-Z0-9]{4,12}$/g;
+                        const regex_firstn = /^[a-zA-Z]{1,}$/g;
+                        const regex_middlen = /^[a-zA-Z]{0,}$/g;
+                        const regex_lastn = /^[a-zA-Z]{2,}$/g;
+                        const regex_address = /^[a-zA-Z0-9]+$/g;
+                        const regex_birthday = /^\d\d-\d\d-\d\d\d\d$/g;
+                        const regex_mobile = /^[0-9]{11}$/g;
+
+
+                        if (!regex_user.test(usern.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return;
+                        } else if (!regex_firstn.test(firstname.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return;
+                        } else if (!regex_middlen.test(middlename.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return;
+                        } else if (!regex_lastn.test(lastname.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return; 
+                        } else if (!regex_address.test(address.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return;
+                        } else if (!regex_birthday.test(birthday.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return;
+                        } else if (!regex_mobile.test(mobile.val())) {
+                            alert("invalid")
+                            event.preventDefault();
+                            form.classList.add("was-validated");
+                            return; 
+                        }
+                        
+
+
                         alert("Success")
+                        event.preventDefault();
+                        return;
                     }
 
                     form.classList.add("was-validated");

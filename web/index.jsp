@@ -23,11 +23,11 @@
             <form class="row g-3 needs-validation" novalidate>
                 <!--                username div-->
                 <div>
-                    <div class="col-md-3  ">
+                    <div class="col-md-4  ">
                         <label for="validationCustomUsername" class="form-label">Username</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text " id="inputGroupPrepend">*</span>
-                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Numbers Allowed 4-12 characters" aria-describedby="inputGroupPrepend" required>
                             <div class="invalid-feedback">
                                 Please Choose a Username
                             </div>
@@ -59,7 +59,7 @@
 
                 <div class="col-md-6">
                     <label for="validationAddress" class="form-label">Complete Address</label>
-                    <input type="text" class="form-control" id="validationAddress" required>
+                    <input type="text" class="form-control" placeholder="Type your address here" id="validationAddress" required>
                     <div class="invalid-feedback">
                         Please provide your Complete Address
                     </div>
@@ -67,15 +67,16 @@
 
                 <div class="col-md-3">
                     <label for="validationBirthday" class="form-label">Birthday</label>
-                    <input type="text" class="form-control" id="validationBirthday" required>
+                    <input type="text" class="form-control" placeholder="MM-DD-YYYY" id="validationBirthday" required>
                     <div class="invalid-feedback">
                         Please provide your Birthday
                     </div>
                 </div>
 
                 <div class="col-md-3">
+                   
                     <label for="validationNumber" class="form-label">Mobile Number</label>
-                    <input type="text" class="form-control" id="validationNumber" required>
+                    <input type="text" class="form-control" placeholder="PH#" id="validationNumber" required>
                     <div class="invalid-feedback">
                         Please provide your Mobile Number
                     </div>

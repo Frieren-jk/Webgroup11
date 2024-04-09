@@ -24,9 +24,9 @@
     <body>
         <%--<jsp:include page="navbar.jsp">--%>
         <script type="text/javascript">
-            
+
         </script>
-       
+
         <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-4">
                 <label for="validationCustomUsername" class="form-label">Username</label>
@@ -89,10 +89,25 @@
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-danger" type="submit">Submit</button>
             </div>
         </form>
+        <script>
+            var forms = document.querySelectorAll(".needs-validation");
 
+            Array.prototype.slice.call(forms).forEach(function (form)
+            {
+                form.addEventListener("submit", function (event)
+                {
+                    if (!form.checkValidity())
+                    {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                });
+            });
+        </script>
 
     </body>
 </html>

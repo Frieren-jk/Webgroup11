@@ -14,12 +14,8 @@
 
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery-v3.7.1.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/js/FormValidation.js"></script>
-        <style>
-            .youaremysunshine {
-                margin: 100px;
-            }
-        </style>
+        
+        
     </head>
     <body>
         <%--<jsp:include page="navbar.jsp">--%>

@@ -14,15 +14,19 @@
 
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery-v3.7.1.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/FormValidation.js"></script>
         <style>
-            .bruh {
+            .youaremysunshine {
                 margin: 100px;
             }
         </style>
     </head>
     <body>
         <%--<jsp:include page="navbar.jsp">--%>
-        <div class="bruh">
+        <script type="text/javascript">
+            
+        </script>
+        <div class="youaremysunshine">
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustomUsername" class="form-label">Username</label>

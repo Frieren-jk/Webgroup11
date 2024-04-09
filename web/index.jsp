@@ -17,7 +17,7 @@
     </head>
     <body>
         <%--<jsp:include page="navbar.jsp">--%>
-        <p>hello</p>
+        <p>Pano ba to</p>
         
     </body>
 </html>

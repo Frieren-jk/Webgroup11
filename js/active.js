@@ -3,10 +3,8 @@
 
     var $window = $(window);
 
-    // :: 1.0 Masonary Gallery Active Code
-
     var proCata = $('.amado-pro-catagory');
-    var singleProCata = ".single-products-catagory";
+    var singleProCata = ".single-products-category";
 
     if ($.fn.imagesLoaded) {
         proCata.imagesLoaded(function () {
@@ -21,15 +19,17 @@
     }
 
     // :: 2.1 Search Active Code
-    var amadoSearch = $('.search-nav');
+    var search = $('.search-nav');
     var searchClose = $('.search-close');
 
-    amadoSearch.on('click', function () {
-        $('body').toggleClass('search-wrapper-on');
+    search.on('click', function () {
+        $('body').animate({ scrollTop: 0 }, 'fast', function() {
+            $('body').toggleClass('search-section-on');
+        });
     });
 
     searchClose.on('click', function () {
-        $('body').removeClass('search-wrapper-on');
+        $('body').toggleClass('search-section-on');
     });
 
     // :: 2.2 Mobile Nav Active Code
@@ -37,11 +37,13 @@
     var navClose = $('.nav-close');
 
     amadoMobNav.on('click', function () {
-        $('.header-area').toggleClass('bp-xs-on');
+        $('.header-area').animate({ scrollTop: 0 }, 'fast', function() {
+            $('.header-area').toggleClass('bp-xs-on');
+        });
     });
 
     navClose.on('click', function () {
-        $('.header-area').removeClass('bp-xs-on');
+        $('.header-area').toggleClass('bp-xs-on');
     });
 
     // :: 3.0 ScrollUp Active Code

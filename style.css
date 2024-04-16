@@ -11,3 +11,73 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
+
+     .form-control {
+        border: none;
+        background: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        transition: border-color .4s ease-out;
+        border-radius: 0;
+        height: 40px;
+    }
+    /*Finally managed to place the eye inside the input field, pano gumana yun. Hail Stackoverflow*/
+      .form-group {
+          position: relative;
+          height: 60px;
+      }
+     .form-group i {
+      position: absolute;
+      right: 10px;
+      top: calc(70% - 5px); /* Adjusted to be in the middle vertically */
+      cursor: pointer;
+      }
+
+      .form-group.invalid i {
+      top: calc(50% - 20px); /* Adjusted based on the height of the small tag */
+      }
+
+    
+
+    .form-control:active,
+    .form-control:focus,
+    .btncustom.focus,
+    .btncustom:focus {
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .form-control.valid {
+        border-color: green;
+    }
+
+    .form-control.invalid {
+        border-color: red;
+    }
+
+    .form-control + small {
+        color: red;
+        opacity: 0;
+        height: 0;
+        transition: opacity .4s ease-out;
+        margin-top: 5px;
+    }
+
+
+
+    .form-control.invalid + small {
+        opacity: 1;
+        height: auto;
+        margin-bottom: 5px;
+        transition: opacity .4s ease-out;
+    }
+
+    
+
+     .form-control {
+                border: none;
+                background: none;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                transition: border-color .4s ease-out;
+                border-radius: 0;
+            }

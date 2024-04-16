@@ -329,7 +329,7 @@ img {
     @media #{$breakpoint-xs} {
         @include display-flex(flex);
     }
-    .amado-navbar-brand {
+    .navbar-brand {
         @include flex(0 0 70px);
         max-width: 70px;
         a {
@@ -337,7 +337,7 @@ img {
             max-width: 70px;
         }
     }
-    .amado-navbar-toggler {
+    .navbar-toggler {
         cursor: pointer;
         span {
             width: 28px;
@@ -402,7 +402,7 @@ img {
 
 /* :: 4.0 Search Wrapper Area CSS */
 
-.search-wrapper {
+.search-section {
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -528,7 +528,7 @@ img {
             margin-bottom: 100px;
             display: block;
         }
-        .amado-nav {
+        .main-nav {
             li {
                 a {
                     font-size: 14px;
@@ -580,12 +580,6 @@ img {
                 }
             }
         }
-        .amado-btn-group {
-            .amado-btn {
-                width: 160px;
-                display: block;
-            }
-        }
         .cart-fav-search {
             a {
                 display: block;
@@ -626,7 +620,7 @@ img {
             }
         }
     }
-    .products-catagories-area {
+    .products-categories-area {
         @include flex(0 0 calc(100% - 320px));
         width: calc(100% - 320px);
         max-width: calc(100% - 320px);
@@ -664,7 +658,7 @@ img {
             order: 2;
         }
     }
-    .amado_product_area {
+    .product_area {
         position: relative;
         z-index: 1;
         @include flex(0 0 calc(95% - 550px));
@@ -989,7 +983,7 @@ img {
                         }
                     }
                 }
-                .avaibility {
+                .availability {
                     margin-bottom: 0;
                     font-size: 12px;
                     color: #6b6b6b;
@@ -1067,8 +1061,8 @@ img {
     }
 }
 
-.search-wrapper-on {
-    .search-wrapper {
+.search-section-on {
+    .search-section {
         top: 0;
     }
     .main-content-wrapper {
@@ -1076,7 +1070,7 @@ img {
     }
 }
 
-.single-products-catagory {
+.single-products-category {
     position: relative;
     z-index: 1;
     width: 33.33333%;
@@ -1355,7 +1349,7 @@ img {
     background-color: #252525;
     padding: 80px 0;
     .single_widget_area {
-        .copywrite {
+        .footerdescription {
             font-size: 12px;
             color: rgba(255, 255, 255, 0.4);
             margin-top: 10px;
@@ -1418,7 +1412,7 @@ img {
         text-transform: capitalize;
         color: #242424;
     }
-    .catagories-menu {
+    .categories-menu {
         li {
             a {
                 text-transform: capitalize;

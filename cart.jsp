@@ -47,7 +47,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="navbar-brand">
-                <a href="index.jsp"><img src="img/core-img/logo.png" alt="error"></a>
+                <a href="index.jsp"><img src="img/core-img/FUR REAL.png" alt="error"></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="navbar-toggler">

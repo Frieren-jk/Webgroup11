@@ -64,7 +64,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="navbar-brand">
-                <a href="index.jsp"><img src="img/core-img/logo.png" alt="error"></a>
+                <a href="index.jsp"><img src="img/core-img/FUR REAL.png" alt="error"></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="navbar-toggler">
@@ -82,7 +82,7 @@
 
             <!-- Logo -->
             <div class="logo">
-                <a href="index.jsp"><img src="img/core-img/logo.png" alt="error"></a>
+                <a href="index.jsp"><img src="img/core-img/FUR REAL.png" alt="error"></a>
             </div>
 
             <!-- Cart Menu -->
@@ -229,7 +229,7 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="index.jsp"><img src="img/core-img/logo2.png" alt="error"></a>
+                            <a href="index.jsp"><img src="img/core-img/Dark Mode logo.png" alt="error"></a>
                         </div>
                         <!-- Text -->
                         <p class="footerdescription">Because we care for your pet's safety and health.

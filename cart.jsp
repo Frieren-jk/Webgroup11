@@ -73,6 +73,7 @@
                 <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                 <a href="registration.jsp"><img src="img/core-img/loginicon.png" alt="error">Log In</a>
                 <a href="registration.jsp"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
+                <a href="#"><img src="img/core-img/inventoryicon.png" alt="error">Inventory</a>
                 <a href="cart.jsp"><img src="img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
             </div>
 

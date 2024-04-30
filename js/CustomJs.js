@@ -54,7 +54,7 @@
                         alert("Please fill in all required fields correctly before submitting.");
                     } else {
                         //else if AllUserInfoValid is true it returns a success modal
-                        $('#staticBackdrop').modal('show');
+                        $('#myModal').modal('show');
                     }
                 });
 
@@ -119,3 +119,5 @@
 
 
             });
+            
+            

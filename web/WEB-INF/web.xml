@@ -10,6 +10,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/add/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory/add</url-pattern>
     </servlet-mapping>
     <session-config>

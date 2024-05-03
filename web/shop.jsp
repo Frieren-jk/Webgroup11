@@ -195,7 +195,7 @@
                                 <div class="product-img">
                                     <img src="img/product-img/cage 1.jpg" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product2.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 1.jpg" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -231,7 +231,7 @@
                                 <div class="product-img">
                                     <img src="img/product-img/cage 2.jpg" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product3.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 2.jpg" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -267,7 +267,7 @@
                                 <div class="product-img">
                                     <img src="img/product-img/cage 3.jpg" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product4.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 3.jpg" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -303,7 +303,7 @@
                                 <div class="product-img">
                                     <img src="img/product-img/cage 4.jpg" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product5.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 4.jpg" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -339,7 +339,7 @@
                                 <div class="product-img">
                                     <img src="img/product-img/cage 5.jpg" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product6.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 5.jpg" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -373,9 +373,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 6.jpg" alt="error">
+                                    <img src="img/product-img/cage 8.jpg" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product1.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 8.jpg" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">

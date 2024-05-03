@@ -28,7 +28,8 @@
 .form-group i {
     position: absolute;
     right: 10px;
-    top: calc(70% - 5px); /* Adjusted to be in the middle vertically */
+    top: calc(80% - 4px); /* Adjusted to be in the middle vertically */
+    left: calc(90% - 2px);
     cursor: pointer;
 }
 
@@ -64,13 +65,16 @@
 }
 
 
-
 .form-control.invalid + small {
+
     opacity: 1;
     height: auto;
     margin-bottom: 5px;
     transition: opacity .4s ease-out;
 }
+
+
+
 
 
 
@@ -210,6 +214,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #242424;
-  line-height: 1.3;
-  font-weight: 400; }
+    color: #242424;
+    line-height: 1.3;
+    font-weight: 400;
+}

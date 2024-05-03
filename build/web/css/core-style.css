@@ -331,7 +331,7 @@ img {
   z-index: 5000;
   top: -350px;
   left: 0;
-  background-color: #f5f7fa;
+  background-color: #FBFF4B;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms; }
   .search-section .search-content form {
@@ -1183,9 +1183,9 @@ img {
         .footer_area .single_widget_area .footer_menu .navbar-nav .nav-item .nav-link {
           padding: 10px 0; } }
       .footer_area .single_widget_area .footer_menu .navbar-nav .nav-item .nav-link:hover, .footer_area .single_widget_area .footer_menu .navbar-nav .nav-item .nav-link:focus {
-        color: #1877F2; }
+        color: #FBFF4B; }
     .footer_area .single_widget_area .footer_menu .navbar-nav .nav-item.active .nav-link {
-      color: #1877F2; }
+      color: #FBFF4B; }
     .footer_area .single_widget_area .footer_menu .navbar-nav .nav-item:last-child .nav-link {
       padding-right: 0; }
 

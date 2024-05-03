@@ -84,7 +84,7 @@
 
 
 .modal-confirm {
-    color: #434e65;
+    color: #1877f2;
     width: 525px;
 }
 .modal-confirm .modal-content {
@@ -94,7 +94,7 @@
     border: none;
 }
 .modal-confirm .modal-header {
-    background: #47c9a2;
+    background: #1877F2;
     border-bottom: none;
     position: relative;
     text-align: center;
@@ -141,9 +141,9 @@
     margin-top: 80px;
 }
 .modal-confirm .btn, .modal-confirm .btn:active {
-    color: #fff;
+    color: #050505;
     border-radius: 4px;
-    background: #eeb711 !important;
+    background: #FBFF4B !important;
     text-decoration: none;
     transition: all 0.4s;
     line-height: normal;
@@ -153,7 +153,7 @@
     border: none;
 }
 .modal-confirm .btn:hover, .modal-confirm .btn:focus {
-    background: #eda645 !important;
+    background: #ffd54b !important;
     outline: none;
 }
 .modal-confirm .btn span {

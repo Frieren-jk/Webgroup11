@@ -91,7 +91,7 @@
             <div class="container m-1 mt-auto mb-auto w-75">
                 <table id="myTable" class="table order-column hover" style="width:100%">
                     <div class="cart-btn w-10 mt-1 ">
-                        <a href="${pageContext.request.contextPath}/inventory/add" class="btn amado-bt ">Add Inventory</a>
+                        <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt ">Add Inventory</a>
                     </div>
                     <thead>
                         <tr>
@@ -283,10 +283,9 @@
             <script src="js/active.js"></script>
             <script src="js/CustomJs.js"></script>
             <script>
-                                        $(document).ready(function () {
-                                            $('#myTable').DataTable();
-                                        });
-
+                    $(document).ready(function () {
+                        $('#myTable').DataTable();
+                    });
 
             </script>
 

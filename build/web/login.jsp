@@ -9,19 +9,29 @@
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
-        <title>Fur Real Pet Supplies - Cart</title>
+        <title>Fur Real Pet Supplies - Login</title>
 
         <!-- Tab Icon  -->
         <link rel="icon" href="img/core-img/iconlight.png">
 
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="css/core-style.css">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="style.css">
+      
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
+        <!-- Font Awesome CSS -->
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
     </head>
 
     <body>
+        <div class="container">
+            <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#myModal">
+                Log In
+            </button>  
+        </div>
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -87,11 +97,55 @@
                             <li><a href="index.jsp">Home</a></li>
                             <li><a href="shop.jsp">Shop</a></li>
                             <li><a href="product-details.jsp">Product</a></li>
-                            <li class="active"><a href="cart.jsp">Cart</a></li>
+                            <li><a href="cart.jsp">Cart</a></li>
                             <li><a href="checkout.jsp">Checkout</a></li>
                         </ul>
                     </nav>
-                    <br><br><br><br><br>
+                    
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-title text-center">
+                                    <h4>LOGIN</h4>
+                                </div>
+                                <div class="d-flex flex-column text-center">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                        </div>
+                                        <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
+                                    </form>
+
+                                    <div class="text-center text-muted delimiter">or use a social network</div>
+                                    <div class="d-flex justify-content-center social-buttons">
+                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                            <i class="fab fa-facebook"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                                            <i class="fab fa-linkedin"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br>
 
                     <!-- Social Button -->
                     <div class="social-info d-flex justify-content-between">
@@ -100,108 +154,43 @@
                         <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
-                </div>
             </header>
             <!-- Header Area End -->
 
-            <div class="cart-table-area section-padding-100">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <div class="cart-title mt-50">
-                                <h2>SHOPPING CART</h2>
+        <div class="cart-table-area section-padding-100">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="checkout_details_area mt-50 clearfix">
+
+                            <div class="cart-title">
+                                <h2>LOGIN</h2>
                             </div>
 
-                            <div class="cart-table clearfix">
-                                <table class="table table-responsive">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Name</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart1.jpg" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Large Steel Cage</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 720.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty)) effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart2.jpg" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Steel Dog Plate</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 500.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty2" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if (!isNaN(qty)) effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart3.jpg" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Steel Dog Chain</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 500.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty3" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if (!isNaN(qty)) effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="cart-summary">
-                                <h5>Cart Total</h5>
-                                <ul class="summary-table">
-                                    <li><span>Subtotal:</span> <span>1720.00</span></li>
-                                    <li><span>Delivery:</span> <span>32.00</span></li>
-                                    <li><span>Total:</span> <span>1752.00</span></li>
-                                </ul>
-                                <div class="cart-btn mt-100">
-                                    <a href="cart.html" class="btn amado-bt w-100">Checkout</a>
+                            <form class="py-3 mt-5" id="regform">
+                                <div class="row mt-5">
+                                    <div class="col-12 col-md-6 m-auto mt-3">
+                                            <div class="form-group ">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                            <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                        </div> 
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-12 col-md-6 m-auto mt-3">
+                                        <div class="form-group form-pass">
+                                            <label for="password">Password</label>
+                                            <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
+                                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                            <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
+                                                must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
+                                        </div>
+                                    </div>   
+                                </div> 
+                            </form>
+                            <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-5">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -229,7 +218,7 @@
                     </div>
 
                     <!-- Single Widget Area -->
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-8"  >
                         <div class="single_widget_area">
                             <!-- Footer Menu -->
                             <div class="footer_menu">
@@ -246,7 +235,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="product-details.jsp">Product</a>
                                             </li>
-                                            <li class="nav-item active">
+                                            <li class="nav-item">
                                                 <a class="nav-link" href="cart.jsp">Cart</a>
                                             </li>
                                             <li class="nav-item">
@@ -261,7 +250,7 @@
                 </div>
             </div>
         </footer>
-
+        
         <!-- ##### Login Area Start ##### -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -310,6 +299,9 @@
 
         <!-- Active js -->
         <script src="js/active.js"></script>
+
+        <!-- <script src="js/CustomJs.js"></script> -->
+        <script></script>
     </body>
 
 </html>

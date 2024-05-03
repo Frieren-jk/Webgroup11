@@ -14,17 +14,12 @@
         <!-- Tab Icon  -->
         <link rel="icon" href="img/core-img/iconlight.png">
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="css/core-style.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="Custom11Css.css">
         <script src="https://kit.fontawesome.com/3f5c7d2f43.js" crossorigin="anonymous"></script>
-
-        <!-- Font Awesome CSS -->
-
-
-
-
     </head>
 
     <body>
@@ -39,7 +34,7 @@
                     <div class="modal-body text-center">
                         <h4>Great!</h4>	
                         <p>Your account has been created successfully.</p>
-                        <button  class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span> </button>
+                        <button  class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span></button>
                     </div>
                 </div>
             </div>
@@ -56,7 +51,7 @@
                         <div class="search-content">
                             <form action="#" method="get">
                                 <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                                <button type="submit"><img src="img/core-img/search.png" alt="error"></button>
+                                <button type="submit"><img src="img/core-img/searchicon.png" alt="error"></button>
                             </form>
                         </div>
                     </div>
@@ -66,7 +61,7 @@
         <!-- Search End -->
 
         <!-- ##### Main Content Wrapper Start ##### -->
-        <div class="main-content-wrapper d-flex clearfix">
+        <div class="main-content-wrapper d-flex clearfix" >
 
             <!-- Mobile Nav -->
             <div class="mobile-nav">
@@ -81,7 +76,7 @@
             </div>
 
             <!-- Header Area Start -->
-            <header class="header-area clearfix">
+            <header class="header-area clearfix ">
 
                 <!-- Close Icon -->
                 <div class="nav-close">
@@ -94,37 +89,38 @@
                 </div>
 
                 <!-- Cart Menu -->
-                <div class="cart-fav-search mb-100">
-                    <a href="#" class="search-nav"><img src="img/core-img/search.png" alt="error"> Search</a>
-                    <a data-toggle="modal" data-target="#myLogin" class="fav-nav"><img src="img/core-img/favorites.png" alt="error"> Log In</a>
-                    <a href="registration.jsp" class="fav-nav"><img src="img/core-img/pen.png" alt="error"> Register Now</a>
-                    <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventory.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
-                    <a href="cart.jsp" class="cart-nav"><img class="pb-1"  src="img/core-img/cart.png" alt="error"> Cart <span>(0)</span></a>
-                </div>
+                <div class="sticky-top pt-1">
+                    <div> </div>
+                    <div class="cart-fav-search mb-100 mt-5 ">
+                        <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
+                        <a class="fav-nav" data-toggle="modal" data-target="#myLogin"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+                        <a href="registration.jsp" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
+                        <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
+                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
+                    </div>
 
-                <!-- Main Nav -->
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.jsp">Home</a></li>
-                        <li><a href="shop.jsp">Shop</a></li>
-                        <li><a href="product-details.jsp">Product</a></li>
-                        <li><a href="cart.jsp">Cart</a></li>
-                        <li><a href="checkout.jsp">Checkout</a></li>
-                    </ul>
-                </nav>
+                    <!-- Main Nav -->
+                    <nav class="main-nav ">
+                        <ul>
+                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="shop.jsp">Shop</a></li>
+                            <li><a href="product-details.jsp">Product</a></li>
+                            <li><a href="cart.jsp">Cart</a></li>
+                            <li><a href="checkout.jsp">Checkout</a></li>
+                        </ul>
+                    </nav>
+                    <br><br><br><br><br>
 
-                <br><br><br><br><br>
-
-                <!-- Social Button -->
-                <div class="social-info d-flex justify-content-between">
-                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <!-- Social Button -->
+                    <div class="social-info d-flex justify-content-between">
+                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </header>
             <!-- Header Area End -->
-
 
             <div class="cart-table-area section-padding-100">
                 <div class="container-fluid ">
@@ -133,7 +129,7 @@
                             <div class="checkout_details_area mt-50 clearfix">
 
                                 <div class="cart-title">
-                                    <h2>Registration</h2>
+                                    <h2>REGISTRATION</h2>
                                 </div>
 
                                 <form class="py-3 needs-validation" id="regform" >
@@ -244,9 +240,10 @@
                                 <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
-                            <p class="footerdescription">Because we care for your pet's safety and health.
+                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
                                 <br>
                                 <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                            </p>
                         </div>
                     </div>
 
@@ -284,17 +281,18 @@
             </div>
         </footer>
 
+        <!-- ##### Login Area Start ##### -->
         <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
+                            <span aria-hidden="true">x</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="form-title text-center">
-                            <h4>Login</h4>
+                            <h4>LOGIN</h4>
                         </div>
                         <div class="d-flex flex-column text-center">
                             <form>
@@ -304,37 +302,34 @@
                                 <div class="form-group">
                                     <input type="password" class="form-control" id="password1" placeholder="Your password...">
                                 </div>
-                                <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                                <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
                             </form>
-
-
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info"> Sign Up</a>.</div>
                     </div>
                 </div>
-            </div>     
-            <!-- ##### Footer Area End ##### -->
+            </div>
+        </div>
+        <!-- ##### Login Area End ##### -->
+        <!-- ##### Footer Area End ##### -->
 
-            <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-            <script src="js/jquery/jQuery v3.7.1.min.js"></script>
+        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+        <script src="js/jquery/jQuery v3.7.1.min.js"></script>
 
+        <!-- Popper js -->
+        <script src="js/popper.min.js"></script>
 
-            <!-- Popper js -->
-            <script src="js/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
 
-            <!-- Bootstrap js -->
-            <script src="js/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="js/plugins.js"></script>
 
-            <!-- Plugins js -->
-            <script src="js/plugins.js"></script>
-
-            <!-- Active js -->
-            <script src="js/active.js"></script>
-            <script src="js/CustomJs.js"></script>
-
-
+        <!-- Active js -->
+        <script src="js/active.js"></script>
+        <script src="js/CustomJs.js"></script>
     </body>
 
 </html>

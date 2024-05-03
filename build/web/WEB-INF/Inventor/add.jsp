@@ -129,12 +129,12 @@
                                     <h2>Add Inventory</h2>
                                 </div>
 
-                                <form class="py-3" id="regform">
+                                <form method="POST" action="${pageContext.request.contextPath}/inventory/add" class="py-3" id="regform">
                                     <div class="row">
                                         <div class="col-12 col-md-6 mt-3">
                                             <div class="form-group ">
                                                 <label for="username">Username</label>
-                                                <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                                <input type="text" class="form-control" id="username" placeholder="Enter your username" >
                                                 <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
                                             </div> 
                                         </div>
@@ -145,7 +145,7 @@
                                             <div class="form-group form-pass">
                                                 <label for="password">Password</label>
                                                 <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
-                                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                                <input type="password" class="form-control" id="password" placeholder="Enter your password" >
                                                 <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
                                                     must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
                                             </div>
@@ -155,7 +155,7 @@
                                             <div class="form-group form-confirm">
                                                 <label for="confirmpassword">Confirm Password</label>
                                                 <i class="fa fa-eye-slash confirmPass" style='top: calc(70% - 3px);'></i>
-                                                <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm your password" required>
+                                                <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm your password" >
                                                 <small id="confirmpasswordHelp" class="form-text">Please confirm you password, passwords must match.</small>
                                             </div>
                                         </div>   
@@ -166,7 +166,7 @@
                                         <div class="col-12 col-md-4  mt-5">
                                             <div class="form-group">
                                                 <label for="First Name">First Name</label>
-                                                <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" required>
+                                                <input type="text" class="form-control" id="firstname" name="firstName" placeholder="Enter your First Name" >
                                                 <small id="firstnameHelp" class="form-text">First name must be characters only, minimum of 1 character.</small>
                                             </div>
                                         </div>
@@ -174,7 +174,7 @@
                                         <div class="col-12 col-md-4  mt-5 ">
                                             <div class="form-group">
                                                 <label for="Middle Name">Middle Name</label>
-                                                <input type="text" class="form-control" id="middlename" placeholder="Enter your Middle Name" notrequired>
+                                                <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter your Middle Name" >
                                                 <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty.</small>
                                             </div>
                                         </div>
@@ -182,7 +182,7 @@
                                         <div class="col-12 col-md-4 me-auto mt-5 ">
                                             <div class="form-group">
                                                 <label for="Last Name">Last Name</label>
-                                                <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name" required>
+                                                <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter your Last Name" >
                                                 <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
                                             </div>
                                         </div>
@@ -192,7 +192,7 @@
                                         <div class="col-12 col-md-4 me-auto mt-5">
                                             <div class="form-group">
                                                 <label for="address">Complete Address</label>
-                                                <input type="text" class="form-control" id="address" placeholder="Enter your Address" required>
+                                                <input type="text" class="form-control" id="address" placeholder="Enter your Address" >
                                                 <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                             </div>
                                         </div>
@@ -200,14 +200,14 @@
                                         <div class="col-12 col-md-4 me-auto mt-5">
                                             <div class="form-group">
                                                 <label for="Birthday">Birthday</label>
-                                                <input type="text" class="form-control" id="birthday" placeholder="Enter your Birthday" required>
+                                                <input type="text" class="form-control" id="birthday" placeholder="Enter your Birthday" >
                                                 <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4 me-auto mt-5 ">
                                             <div class="form-group">
                                                 <label for="Mobile Number">Mobile Number</label>
-                                                <input type="text" class="form-control" id="number" placeholder="Enter your Mobile Number" required>
+                                                <input type="text" class="form-control" id="number" placeholder="Enter your Mobile Number" >
                                                 <small id="numberHelp" class="form-text">Mobile Number must be numeric, should be 11 digits.</small>
                                             </div>
                                         </div>
@@ -290,7 +290,7 @@
 
         <!-- Active js -->
         <script src="<%=request.getContextPath()%>/js/active.js"></script>
-        <script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>
+<!--        <script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
 
     </body>
 

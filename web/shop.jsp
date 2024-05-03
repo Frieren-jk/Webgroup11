@@ -204,7 +204,7 @@
                                         <div class="line"></div>
                                         <p class="product-price">PHP Price</p>
                                         <a href="product-details.jsp">
-                                            <h6>Product</h6>
+                                            <h6>Foldable Steel Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -240,7 +240,7 @@
                                         <div class="line"></div>
                                         <p class="product-price">PHP Price</p>
                                         <a href="product-details.jsp">
-                                            <h6>Product</h6>
+                                            <h6>Metal Wire Dog Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -276,7 +276,7 @@
                                         <div class="line"></div>
                                         <p class="product-price">PHP Price</p>
                                         <a href="product-details.jsp">
-                                            <h6>Product</h6>
+                                            <h6>Carbon and High Quality Wood Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -312,7 +312,7 @@
                                         <div class="line"></div>
                                         <p class="product-price">PHP Price</p>
                                         <a href="product-details.jsp">
-                                            <h6>Product</h6>
+                                            <h6>Raven Dog Crate</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -348,7 +348,7 @@
                                         <div class="line"></div>
                                         <p class="product-price">PHP Price</p>
                                         <a href="product-details.jsp">
-                                            <h6>Product</h6>
+                                            <h6>Rolling 3 Door Metal Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -384,7 +384,7 @@
                                         <div class="line"></div>
                                         <p class="product-price">PHP Price</p>
                                         <a href="product-details.jsp">
-                                            <h6>Product</h6>
+                                            <h6> Round Foldable Steel Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->

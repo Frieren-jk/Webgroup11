@@ -202,7 +202,8 @@
                                                     var qty = effect.value;
                                                     if (!isNaN(qty))
                                                         effect.value++;
-                                                    return false;"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                                                    return false;"><i class="fa fa-caret-up" aria-hidden="true"></i>
+                                            </span>
                                         </div>
                                     </div>
                                     <button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button>

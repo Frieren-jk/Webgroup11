@@ -17,7 +17,7 @@
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="css/core-style.css">
         <link rel="stylesheet" href="style.css">
-      
+
         <!-- Bootstrap CSS -->
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
 
@@ -86,66 +86,67 @@
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
-                        <a href="registration.jsp" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
+                        <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
+                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
 
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li><a href="index.jsp">Home</a></li>
-                            <li><a href="shop.jsp">Shop</a></li>
-                            <li><a href="product-details.jsp">Product</a></li>
-                            <li><a href="cart.jsp">Cart</a></li>
-                            <li><a href="checkout.jsp">Checkout</a></li>
+                            <li class="active"><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
+                            <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
+                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
+                            <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                         </ul>
                     </nav>
-                    
-                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header border-bottom-0">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-title text-center">
-                                    <h4>LOGIN</h4>
-                                </div>
-                                <div class="d-flex flex-column text-center">
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email1"placeholder="Your email address...">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" id="password1" placeholder="Your password...">
-                                        </div>
-                                        <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
-                                    </form>
+                    <br><br><br><br><br>
 
-                                    <div class="text-center text-muted delimiter">or use a social network</div>
-                                    <div class="d-flex justify-content-center social-buttons">
-                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
-                                            <i class="fab fa-facebook"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
-                                            <i class="fab fa-linkedin"></i>
-                                        </button>
+                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header border-bottom-0">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-title text-center">
+                                        <h4>LOGIN</h4>
+                                    </div>
+                                    <div class="d-flex flex-column text-center">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                            </div>
+                                            <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
+                                        </form>
+
+                                        <div class="text-center text-muted delimiter">or use a social network</div>
+                                        <div class="d-flex justify-content-center social-buttons">
+                                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                                <i class="fab fa-twitter"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                                <i class="fab fa-facebook"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                                                <i class="fab fa-linkedin"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-center">
-                                <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <br><br><br><br><br>
+                    <br><br><br><br><br>
 
                     <!-- Social Button -->
                     <div class="social-info d-flex justify-content-between">
@@ -157,151 +158,151 @@
             </header>
             <!-- Header Area End -->
 
-        <div class="cart-table-area section-padding-100">
-            <div class="container-fluid ">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="checkout_details_area mt-50 clearfix">
+            <div class="cart-table-area section-padding-100">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="checkout_details_area mt-50 clearfix">
 
-                            <div class="cart-title">
-                                <h2>LOGIN</h2>
-                            </div>
+                                <div class="cart-title">
+                                    <h2>LOGIN</h2>
+                                </div>
 
-                            <form class="py-3 mt-5" id="regform">
-                                <div class="row mt-5">
-                                    <div class="col-12 col-md-6 m-auto mt-3">
+                                <form class="py-3 mt-5" id="regform">
+                                    <div class="row mt-5">
+                                        <div class="col-12 col-md-6 m-auto mt-3">
                                             <div class="form-group ">
-                                            <label for="username">Username</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                            <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                        </div> 
-                                    </div>
-                                </div>
-
-                                <div class="row mt-5">
-                                    <div class="col-12 col-md-6 m-auto mt-3">
-                                        <div class="form-group form-pass">
-                                            <label for="password">Password</label>
-                                            <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
-                                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                            <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
-                                                must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                                <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                            </div> 
                                         </div>
-                                    </div>   
-                                </div> 
-                            </form>
-                            <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-5">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ##### Main Content Wrapper End ##### -->
-
-        <!-- ##### Footer Area Start ##### -->
-        <footer class="footer_area clearfix">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Single Widget Area -->
-                    <div class="col-12 col-lg-4">
-                        <div class="single_widget_area">
-                            <!-- Logo -->
-                            <div class="footer-logo mr-50">
-                                <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
-                            </div>
-                            <!-- Text -->
-                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
-                                <br>
-                                <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Single Widget Area -->
-                    <div class="col-12 col-lg-8"  >
-                        <div class="single_widget_area">
-                            <!-- Footer Menu -->
-                            <div class="footer_menu">
-                                <nav class="navbar navbar-expand-lg justify-content-end">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                    <div class="collapse navbar-collapse" id="footerNavContent">
-                                        <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="index.jsp">Home</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
-                                            </li>
-                                        </ul>
                                     </div>
-                                </nav>
+
+                                    <div class="row mt-5">
+                                        <div class="col-12 col-md-6 m-auto mt-3">
+                                            <div class="form-group form-pass">
+                                                <label for="password">Password</label>
+                                                <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
+                                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                                <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
+                                                    must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
+                                            </div>
+                                        </div>   
+                                    </div> 
+                                </form>
+                                <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-5">Submit</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        
-        <!-- ##### Login Area Start ##### -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">x</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-title text-center">
-                            <h4>LOGIN</h4>
-                        </div>
-                        <div class="d-flex flex-column text-center">
-                            <form>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+            <!-- ##### Main Content Wrapper End ##### -->
+
+            <!-- ##### Footer Area Start ##### -->
+            <footer class="footer_area clearfix">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Single Widget Area -->
+                        <div class="col-12 col-lg-4">
+                            <div class="single_widget_area">
+                                <!-- Logo -->
+                                <div class="footer-logo mr-50">
+                                    <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                <!-- Text -->
+                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
+                                    <br>
+                                    <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Single Widget Area -->
+                        <div class="col-12 col-lg-8"  >
+                            <div class="single_widget_area">
+                                <!-- Footer Menu -->
+                                <div class="footer_menu">
+                                    <nav class="navbar navbar-expand-lg justify-content-end">
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                                        <div class="collapse navbar-collapse" id="footerNavContent">
+                                            <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="index.jsp">Home</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="shop.jsp">Shop</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="product-details.jsp">Product</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="cart.jsp">Cart</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
                                 </div>
-                                <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info"> Sign Up</a>.</div>
+                </div>
+            </footer>
+
+            <!-- ##### Login Area Start ##### -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-title text-center">
+                                <h4>LOGIN</h4>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                    </div>
+                                    <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info"> Sign Up</a>.</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ##### Login Area End ##### -->
-        <!-- ##### Footer Area End ##### -->
+            <!-- ##### Login Area End ##### -->
+            <!-- ##### Footer Area End ##### -->
 
-        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-        <script src="js/jquery/jQuery v3.7.1.min.js"></script>
+            <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+            <script src="js/jquery/jQuery v3.7.1.min.js"></script>
 
-        <!-- Popper js -->
-        <script src="js/popper.min.js"></script>
+            <!-- Popper js -->
+            <script src="js/popper.min.js"></script>
 
-        <!-- Bootstrap js -->
-        <script src="js/bootstrap.min.js"></script>
+            <!-- Bootstrap js -->
+            <script src="js/bootstrap.min.js"></script>
 
-        <!-- Plugins js -->
-        <script src="js/plugins.js"></script>
+            <!-- Plugins js -->
+            <script src="js/plugins.js"></script>
 
-        <!-- Active js -->
-        <script src="js/active.js"></script>
+            <!-- Active js -->
+            <script src="js/active.js"></script>
 
-        <!-- <script src="js/CustomJs.js"></script> -->
-        <script></script>
+            <!-- <script src="js/CustomJs.js"></script> -->
+            <script></script>
     </body>
 
 </html>

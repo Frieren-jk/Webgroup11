@@ -21,6 +21,34 @@
         <link rel="stylesheet" href="Custom11Css.css">
         <script src="https://kit.fontawesome.com/3f5c7d2f43.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+
+        .valid-feedback,
+        .invalid-feedback {
+            opacity: 1;
+            height: 0;
+            transition: opacity 0.4s ease-out, height 0.4s ease-out;
+            margin-top: 5px;
+        }
+        .form-control + .valid-feedback {
+            color: red;
+            opacity: 0;
+            height: 0;
+            transition: opacity .4s ease-out;
+            margin-top: 5px;
+        }
+
+
+        .form-control.invalid + .invalid-feedback {
+
+            opacity: 1;
+            height: auto;
+            margin-bottom: 5px;
+            transition: opacity .4s ease-out;
+        }
+
+
+    </style>
 
     <body>
         <div id="myModal" class="modal fade pt-5">

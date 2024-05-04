@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     $('form#regform').submit(function (event) {
         event.preventDefault(); // prevents form from submitting or resetting
-        $("#middlename").val(null); // Change 'default value' to whatever value you want to set
+        // Change 'default value' to whatever value you want to set
         //sets AllUserInfoValid to true if all user input are in correct format
         let AllUserInfoValid = true;
          // Change 'default value' to whatever value you want to set

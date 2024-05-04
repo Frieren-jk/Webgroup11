@@ -299,12 +299,28 @@
                         <div class="d-flex flex-column text-center">
                             <form>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                    <div class="form-group ">
+
+                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                        <div class="invalid-feedback">
+                                            Please enter a username.
+                                        </div>
+                                    </div> 
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                    <div class="form-group ">
+
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,</small>
+                                        <div class="invalid-feedback">
+                                            Please enter your password.
+                                        </div>
+                                    </div> 
                                 </div>
-                                <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
+
+                                <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
+                               
                             </form>
                         </div>
                     </div>
@@ -331,6 +347,7 @@
 
         <!-- Active js -->
         <script src="js/active.js"></script>
+        <script src="js/CustomJs.js"></script>
     </body>
 
 </html>

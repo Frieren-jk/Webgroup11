@@ -121,7 +121,7 @@
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
-                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+                        <a class="fav-nav" data-toggle="modal" data-target="#myLogin"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
@@ -349,12 +349,28 @@
                         <div class="d-flex flex-column text-center">
                             <form>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                    <div class="form-group ">
+
+                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                        <div class="invalid-feedback">
+                                            Please enter a username.
+                                        </div>
+                                    </div> 
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                    <div class="form-group ">
+
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,</small>
+                                        <div class="invalid-feedback">
+                                            Please enter your password.
+                                        </div>
+                                    </div> 
                                 </div>
-                                <button type="button" class="btn btn-info btn-block btn-round">Log In</button>
+
+                                <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
+
                             </form>
                         </div>
                     </div>

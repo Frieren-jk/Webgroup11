@@ -33,9 +33,7 @@
     cursor: pointer;
 }
 
-.sticky-top > *:not(a[href*="/inventory"]) {
-    opacity: 0.5;
-}
+
 
 .form-group.invalid i {
     top: calc(50% - 20px); /* Adjusted based on the height of the small tag */

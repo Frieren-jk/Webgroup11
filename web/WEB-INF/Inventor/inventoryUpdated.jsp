@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">
     </head>
-
+    
     <body>
 
         <div class="main-content-wrapper d-flex clearfix">
@@ -71,7 +71,7 @@
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li ><a>Home</a></li>
+                            <li><a>Home</a></li>
                             <li><a >Shop</a></li>
                             <li><a >Product</a></li>
                             <li><a >Cart</a></li>

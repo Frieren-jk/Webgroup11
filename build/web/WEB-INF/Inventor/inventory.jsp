@@ -58,34 +58,35 @@
                 </div>
 
                 <!-- Cart Menu -->
-                <div class="cart-fav-search mb-100">
-                    <a href="#" class="search-nav"><img src="img/core-img/search.png" alt="error"> Search</a>
-                    <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="img/core-img/favorites.png" alt="error"> Log In</a>
-                    <a href="registration.jsp" class="fav-nav"><img src="img/core-img/pen.png" alt="error"> Register Now</a>
-                    <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventory.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
-                    <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/cart.png" alt="error"> Cart <span>(0)</span></a>
-                </div>
+                <div class="sticky-top pt-1">
+                    <div> </div>
+                    <div class="cart-fav-search mb-100 mt-5 ">
+                        <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
+                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+                        <a href="registration.jsp" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
+                        <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
+                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
+                    </div>
 
-                <!-- Main Nav -->
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.jsp">Home</a></li>
-                        <li><a href="shop.jsp">Shop</a></li>
-                        <li><a href="product-details.jsp">Product</a></li>
-                        <li><a href="cart.jsp">Cart</a></li>
-                        <li><a href="checkout.jsp">Checkout</a></li>
-                    </ul>
-                </nav>
+                    <!-- Main Nav -->
+                    <nav class="main-nav ">
+                        <ul>
+                            <li class="active"><a href="index.jsp">Home</a></li>
+                            <li><a href="shop.jsp">Shop</a></li>
+                            <li><a href="product-details.jsp">Product</a></li>
+                            <li><a href="cart.jsp">Cart</a></li>
+                            <li><a href="checkout.jsp">Checkout</a></li>
+                        </ul>
+                    </nav>
+                    <br><br><br><br><br>
 
-                <br><br><br><br><br>
-
-                <!-- Social Button -->
-                <div class="social-info d-flex justify-content-between">
-                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </div>
+                    <!-- Social Button -->
+                    <div class="social-info d-flex justify-content-between">
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
             </header>
 
             <div class="container m-1 mt-auto mb-auto w-75">
@@ -283,9 +284,9 @@
             <script src="js/active.js"></script>
             <script src="js/CustomJs.js"></script>
             <script>
-                    $(document).ready(function () {
-                        $('#myTable').DataTable();
-                    });
+                                        $(document).ready(function () {
+                                            $('#myTable').DataTable();
+                                        });
 
             </script>
 

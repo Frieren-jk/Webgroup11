@@ -111,12 +111,12 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="shop.jsp">
-                            <img src="img/product-img/cage 3.jpg" alt="error">
+                            <img src="img/bg-img/cage 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
-                                <p>PHP 1760.00</p>
-                                <h4>Carbon and High Quality Wood Cage</h4>
+                                <p>PHP 1720.00</p>
+                                <h4>Foldable Steel Cage</h4>
                             </div>
                         </a>
                     </div>
@@ -124,89 +124,11 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="shop.jsp">
-                            <img src="img/bg-img/2.jpg" alt="error">
+                            <img src="img/bg-img/cage 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
-                                <p>PHP Price</p>
-                                <h4>Product</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
-                            <img src="img/bg-img/3.jpg" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP Price</p>
-                                <h4>Product</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
-                            <img src="img/bg-img/4.jpg" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP Price</p>
-                                <h4>Product</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
-                            <img src="img/product-img/cage 6.jpg" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP 1200.00</p>
-                                <h4>Plastic Dog Kennel</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
-                            <img src="img/bg-img/6.jpg" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP Price</p>
-                                <h4>Product</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
-                            <img src="img/bg-img/7.jpg" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP Price</p>
-                                <h4>Product</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
-                            <img src="img/product-img/cage 7.jpg" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP950.00</p>
+                                <p>PHP 1100.00</p>
                                 <h4>Cat Carrier Bag</h4>
                             </div>
                         </a>
@@ -215,12 +137,90 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="shop.jsp">
-                            <img src="img/bg-img/9.jpg" alt="error">
+                            <img src="img/bg-img/cage 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
-                                <p>PHP Price</p>
-                                <h4>Product</h4>
+                                <p>PHP 1600.00</p>
+                                <h4>Carbon Quality Wood Cage</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="shop.jsp">
+                            <img src="img/bg-img/cage 4 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 960.00</p>
+                                <h4>Small Plastic Cage</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="shop.jsp">
+                            <img src="img/bg-img/cage 5 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 750.00</p>
+                                <h4>Octagonal Dog Metal Fence</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="shop.jsp">
+                            <img src="img/bg-img/cage 6 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 1250.00</p>
+                                <h4>Round Foldable Steel Cage</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="shop.jsp">
+                            <img src="img/bg-img/cage 7 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 1490.00</p>
+                                <h4>Narra Wood Cage</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="shop.jsp">
+                            <img src="img/bg-img/cage 8 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 860.00</p>
+                                <h4>Comfortable Steel Cage with Stand</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="shop.jsp">
+                            <img src="img/bg-img/cage 9 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 350.00</p>
+                                <h4>Wired Metal Cage</h4>
                             </div>
                         </a>
                     </div>

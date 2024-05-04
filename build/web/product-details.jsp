@@ -84,9 +84,9 @@
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li class="active"><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                            <li ><a href="${pageContext.request.contextPath}/index">Home</a></li>
                             <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
-                            <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
+                            <li class="active"><a href="${pageContext.request.contextPath}/product">Product</a></li>
                             <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                             <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                         </ul>

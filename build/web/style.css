@@ -33,8 +33,6 @@
     cursor: pointer;
 }
 
-
-
 .form-group.invalid i {
     top: calc(50% - 20px); /* Adjusted based on the height of the small tag */
 }

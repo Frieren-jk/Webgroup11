@@ -72,7 +72,7 @@
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li class="active"><a href="index.jsp">Home</a></li>
+                            <li ><a href="index.jsp">Home</a></li>
                             <li><a href="shop.jsp">Shop</a></li>
                             <li><a href="product-details.jsp">Product</a></li>
                             <li><a href="cart.jsp">Cart</a></li>
@@ -89,8 +89,9 @@
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
             </header>
-
-            <div class="container m-1 mt-auto mb-auto w-75">
+             
+            <div class="container m-1 mt-5 mb-auto w-75">
+                <br><br><br><br><br><br>
                 <table id="myTable" class="table order-column hover" style="width:100%">
                     <div class="cart-btn w-10 mt-1 ">
                         <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt ">Add Inventory</a>

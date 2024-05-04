@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">
     </head>
-    
+   
     <body>
 
         <div class="main-content-wrapper d-flex clearfix">
@@ -61,7 +61,7 @@
                 <div class="sticky-top pt-1" >
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a  ><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error">Search</a>
+                        <a ><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error">Search</a>
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="<%=request.getContextPath()%>/img/core-img/loginicon.png" alt="error">Login</a>
                         <a class="fav-nav"><img src="<%=request.getContextPath()%>/img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" id="available"  class="fav-nav"><img src="<%=request.getContextPath()%>/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
@@ -71,11 +71,11 @@
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li><a>Home</a></li>
-                            <li><a >Shop</a></li>
-                            <li><a >Product</a></li>
-                            <li><a >Cart</a></li>
-                            <li><a >Checkout</a></li>
+                            <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shop.jsp">Shop</a></li>
+                            <li><a href="${pageContext.request.contextPath}/product-details.jsp">Product</a></li>
+                            <li><a href="${pageContext.request.contextPath}/cart.jsp">Cart</a></li>
+                            <li><a href="${pageContext.request.contextPath}/checkout.jsp">Checkout</a></li>
                         </ul>
                     </nav>
                     <br><br><br><br><br>
@@ -89,7 +89,8 @@
                     </div>
             </header>
 
-            <div class="container m-1 mt-auto mb-auto w-75">
+            <div class="container m-1 mt-5 mb-auto w-75">
+                <br><br><br><br><br><br>
                 <table id="myTable" class="table order-column hover" style="width:100%">
                     <div class="cart-btn w-10 mt-1 ">
                         <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt ">Add Inventory</a>

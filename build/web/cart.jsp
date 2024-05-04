@@ -78,7 +78,7 @@
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="registration.jsp" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
+                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
 
                     <!-- Main Nav -->
@@ -125,19 +125,19 @@
                                     <tbody>
                                         <tr>
                                             <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart1.jpg" alt="Product"></a>
+                                                <a href="#"><img src="img/bg-img/cage 1 cart.png" alt="Product"></a>
                                             </td>
                                             <td class="cart_product_desc">
-                                                <h5>Large Steel Cage</h5>
+                                                <h5>Foldable Steel Cage</h5>
                                             </td>
                                             <td class="price">
-                                                <span>PHP 720.00</span>
+                                                <span>PHP 1720.00</span>
                                             </td>
                                             <td class="qty">
                                                 <div class="qty-btn d-flex">
                                                     <p>Qty</p>
                                                     <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) && qty > 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
                                                         <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
                                                         <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty)) effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                                     </div>
@@ -146,19 +146,19 @@
                                         </tr>
                                         <tr>
                                             <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart2.jpg" alt="Product"></a>
+                                                <a href="#"><img src="img/bg-img/cage 2 cart.png" alt="Product"></a>
                                             </td>
                                             <td class="cart_product_desc">
-                                                <h5>Steel Dog Plate</h5>
+                                                <h5>Cat Carrier Bag</h5>
                                             </td>
                                             <td class="price">
-                                                <span>PHP 500.00</span>
+                                                <span>PHP 1100.00</span>
                                             </td>
                                             <td class="qty">
                                                 <div class="qty-btn d-flex">
                                                     <p>Qty</p>
                                                     <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if (!isNaN(qty) && qty > 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
                                                         <input type="number" class="qty-text" id="qty2" step="1" min="1" max="300" name="quantity" value="1">
                                                         <span class="qty-plus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if (!isNaN(qty)) effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                                     </div>
@@ -167,19 +167,19 @@
                                         </tr>
                                         <tr>
                                             <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart3.jpg" alt="Product"></a>
+                                                <a href="#"><img src="img/bg-img/cage 3 cart.png" alt="Product"></a>
                                             </td>
                                             <td class="cart_product_desc">
-                                                <h5>Steel Dog Chain</h5>
+                                                <h5>Small Plastic Cage</h5>
                                             </td>
                                             <td class="price">
-                                                <span>PHP 500.00</span>
+                                                <span>PHP 960.00</span>
                                             </td>
                                             <td class="qty">
                                                 <div class="qty-btn d-flex">
                                                     <p>Qty</p>
                                                     <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if (!isNaN(qty) && qty > 1) effect.value--; return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
                                                         <input type="number" class="qty-text" id="qty3" step="1" min="1" max="300" name="quantity" value="1">
                                                         <span class="qty-plus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if (!isNaN(qty)) effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                                     </div>
@@ -194,12 +194,12 @@
                             <div class="cart-summary">
                                 <h5>Cart Total</h5>
                                 <ul class="summary-table">
-                                    <li><span>Subtotal:</span> <span>1720.00</span></li>
+                                    <li><span>Subtotal:</span> <span>3780.00</span></li>
                                     <li><span>Delivery:</span> <span>32.00</span></li>
-                                    <li><span>Total:</span> <span>1752.00</span></li>
+                                    <li><span>Total:</span> <span>3812.00</span></li>
                                 </ul>
                                 <div class="cart-btn mt-100">
-                                    <a href="cart.html" class="btn amado-bt w-100">Checkout</a>
+                                    <a href="cart.jsp" class="btn amado-bt w-100">Checkout</a>
                                 </div>
                             </div>
                         </div>

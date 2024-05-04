@@ -134,7 +134,7 @@
 
                         <div class="widget-desc">
                             <div class="slider-range">
-                                <div data-min="100" data-max="10000" data-unit="PHP" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="100" data-value-max="10000" data-label-result="">
+                                <div data-min="100" data-max="9000" data-unit="PHP" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="100" data-value-max="9000" data-label-result="">
                                     <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
                                     <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
                                     <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>

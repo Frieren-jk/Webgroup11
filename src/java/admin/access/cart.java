@@ -26,9 +26,7 @@ public class cart extends HttpServlet {
             case "/cart":
                 viewcart(request, response);
                 break;
-            default:
-                viewDefault(request, response);
-                break;
+           
         }
 
     }
@@ -37,14 +35,6 @@ public class cart extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
-    }
-
-    private void viewDefault(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/cart.jsp");
-        rd.forward(request, response);
     }
 
     private void viewcart(HttpServletRequest request, HttpServletResponse response)

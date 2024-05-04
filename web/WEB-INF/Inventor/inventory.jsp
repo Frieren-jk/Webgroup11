@@ -62,7 +62,7 @@
                 <div class="sticky-top pt-1">
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
+                        <a href="" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
@@ -108,7 +108,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>JK Salvador</td>
+                            <td>John Karl Salvador</td>
                             <td>System Architect</td>
                             <td>Edinburgh</td>
                             <td>61</td>

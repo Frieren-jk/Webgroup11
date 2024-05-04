@@ -116,7 +116,7 @@
                         <!--  Categories  -->
                         <div class="categories-menu">
                             <ul>
-                                <li class="active"><a href="#">Cages</a></li>
+                                <li class="active"><a href="shop.jsp">Cages</a></li>
                                 <li><a href="#">Bowls</a></li>
                                 <li><a href="#">Leashes</a></li>
                                 <li><a href="#">Toys</a></li>
@@ -140,8 +140,7 @@
                                     <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
                                 </div>
                                 <div class="range-price pb-5" >PHP100 - PHP9000</div>
-                                <br><br><br><br><br>
-
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                             </div>
                         </div>
                     </div>
@@ -193,16 +192,16 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 1.jpg" alt="error">
+                                    <img src="img/product-img/cage 1 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 1.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 1 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
                                     <!-- Product Meta Data -->
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <p class="product-price">PHP Price</p>
+                                        <p class="product-price">PHP 1720.00</p>
                                         <a href="product-details.jsp">
                                             <h6>Foldable Steel Cage</h6>
                                         </a>
@@ -214,10 +213,9 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt="error"></a>
+                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -229,18 +227,53 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 2.jpg" alt="error">
+                                    <img src="img/product-img/cage 7 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 2.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 7 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
                                     <!-- Product Meta Data -->
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <p class="product-price">PHP Price</p>
+                                        <p class="product-price">PHP 1100.00</p>
                                         <a href="product-details.jsp">
-                                            <h6>Metal Wire Dog Cage</h6>
+                                            <h6>Cat Carrier Bag</h6>
+                                        </a>
+                                    </div>
+                                    <!-- Ratings & Cart -->
+                                    <div class="ratings-cart text-right">
+                                        <div class="ratings">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="cart">
+                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <img src="img/product-img/cage 3 shop.png" alt="error">
+                                    <!-- Hover Thumb -->
+                                    <img class="hover-img" src="img/product-img/cage 3 shop_z.png" alt="error">
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 1600.00</p>
+                                        <a href="product-details.jsp">
+                                            <h6>Carbon Quality Wood Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -253,7 +286,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt="error"></a>
+                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -265,18 +298,18 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 3.jpg" alt="error">
+                                    <img src="img/product-img/cage 15 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 3.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 15 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
                                     <!-- Product Meta Data -->
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <p class="product-price">PHP Price</p>
+                                        <p class="product-price">PHP 960.00</p>
                                         <a href="product-details.jsp">
-                                            <h6>Carbon and High Quality Wood Cage</h6>
+                                            <h6>Small Plastic Cage</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -289,7 +322,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt="error"></a>
+                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -301,18 +334,18 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 4.jpg" alt="error">
+                                    <img src="img/product-img/cage 9 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 4.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 9 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
                                     <!-- Product Meta Data -->
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <p class="product-price">PHP Price</p>
+                                        <p class="product-price">PHP 750.00</p>
                                         <a href="product-details.jsp">
-                                            <h6>Raven Dog Crate</h6>
+                                            <h6>Octagonal Dog Metal Fence</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
@@ -322,10 +355,9 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt="error"></a>
+                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -337,52 +369,16 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 5.jpg" alt="error">
+                                    <img src="img/product-img/cage 8 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 5.jpg" alt="error">
+                                    <img class="hover-img" src="img/product-img/cage 8 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
                                     <!-- Product Meta Data -->
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <p class="product-price">PHP Price</p>
-                                        <a href="product-details.jsp">
-                                            <h6>Rolling 3 Door Metal Cage</h6>
-                                        </a>
-                                    </div>
-                                    <!-- Ratings & Cart -->
-                                    <div class="ratings-cart text-right">
-                                        <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt="error"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Product Area -->
-                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                            <div class="single-product-wrapper">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <img src="img/product-img/cage 8.jpg" alt="error">
-                                    <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 8.jpg" alt="error">
-                                </div>
-                                <!-- Product Description -->
-                                <div class="product-description d-flex align-items-center justify-content-between">
-                                    <!-- Product Meta Data -->
-                                    <div class="product-meta-data">
-                                        <div class="line"></div>
-                                        <p class="product-price">PHP Price</p>
+                                        <p class="product-price">PHP 1250.00</p>
                                         <a href="product-details.jsp">
                                             <h6> Round Foldable Steel Cage</h6>
                                         </a>
@@ -393,11 +389,9 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt="error"></a>
+                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -410,7 +404,7 @@
                             <!-- Pagination -->
                             <nav aria-label="navigation">
                                 <ul class="pagination justify-content-end mt-50">
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="shop.jsp">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 </ul>
                             </nav>

@@ -78,7 +78,7 @@
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="registration.jsp" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
+                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
 
                     <!-- Main Nav -->
@@ -146,9 +146,9 @@
                                                 <input type="checkbox" class="custom-control-input" id="customCheck3">
                                                 <label class="custom-control-label" for="customCheck3">Check box if all are in correct format</label>
                                             </div>
-                                            <div class="custom-control custom-checkbox d-block mb-2">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">Create an account</label>
+                                            <div class="custom-control d-block">
+                                                <span>No account yet?</span>
+                                                <a style="font-size: 14px;" href="registration.jsp" class="link-primary">Create an account</a>
                                             </div>
 
                                         </div>
@@ -161,21 +161,21 @@
                             <div class="cart-summary">
                                 <h5>CART TOTAL</h5>
                                 <ul class="summary-table">
-                                    <li><span>Subtotal:</span> <span>1720.00</span></li>
+                                    <li><span>Subtotal:</span> <span>3780.00</span></li>
                                     <li><span>Delivery:</span> <span>32.00</span></li>
-                                    <li><span>Total:</span> <span>1752.00</span></li>
+                                    <li><span>Total:</span> <span>3812.00</span></li>
                                 </ul>
 
                                 <div class="payment-method">
                                     <!-- Cash on delivery -->
                                     <div class="custom-control custom-checkbox mr-sm-2">
-                                        <input type="checkbox" class="custom-control-input" id="cod" checked>
+                                        <input type="radio" class="custom-control-input" id="cod" name="payment_method" checked>
                                         <label class="custom-control-label" for="cod">Cash on Delivery</label>
                                     </div>
                                     <!-- Paypal -->
                                     <div class="custom-control custom-checkbox mr-sm-2">
-                                        <input type="checkbox" class="custom-control-input" id="paypal">
-                                        <label class="custom-control-label" for="paypal">Paypal <img class="ml-15" src="img/core-img/paypal.png" alt="error"></label>
+                                        <input type="radio" class="custom-control-input" id="paypal" name="payment_method">
+                                        <label class="custom-control-label" for="paypal">Paypal/Mastercard <img class="ml-15" src="img/core-img/paypal.png" alt="Paypal/Mastercard"></label>
                                     </div>
                                 </div>
 

@@ -78,7 +78,7 @@
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="registration.jsp" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
+                        <a href="cart.jsp" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
 
                     <!-- Main Nav -->
@@ -114,7 +114,7 @@
                                 <ol class="breadcrumb mt-50">
                                     <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
                                     <li class="breadcrumb-item"><a href="shop.jsp">Cages</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Large Steel Cage</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Foldable Steel Cage</li>
                                 </ol>
                             </nav>
                         </div>
@@ -165,14 +165,13 @@
                                 <!-- Product Meta Data -->
                                 <div class="product-meta-data">
                                     <div class="line"></div>
-                                    <p class="product-price">PHP 1720</p>
+                                    <p class="product-price">PHP 1720.00</p>
                                     <a href="product-details.html">
-                                        <h6>Large Steel Cage</h6>
+                                        <h6>Foldable Steel Cage</h6>
                                     </a>
                                     <!-- Ratings & Review -->
                                     <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -187,7 +186,7 @@
                                 </div>
 
                                 <div class="short_overview my-5">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim?</p>
+                                    <p>The large steel cage for dogs offers a spacious and secure environment for pets, crafted from durable steel for longevity. Its generous interior space allows for comfort and movement, while the sturdy construction ensures safety and containment. Ideal for crate training, travel, or providing a cozy retreat at home, this cage prioritizes the well-being of canine companions, combining versatility with peace of mind for owners.</p>
                                 </div>
 
                                 <!-- Add to Cart Form -->
@@ -195,7 +194,7 @@
                                     <div class="cart-btn d-flex mb-50">
                                         <p>Quantity</p>
                                         <div class="quantity">
-                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) & amp; & amp; qty & gt; 1) effect.value--; return false;"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) && qty > 1) effect.value--; return false;"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
                                             <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
                                             <span class="qty-plus" onclick="var effect = document.getElementById('qty');
                                                     var qty = effect.value;

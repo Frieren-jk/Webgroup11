@@ -54,15 +54,15 @@
 }
 
 .form-control.invalid {
-    border-color: red;
+    border-color: #dc3545;
 }
 
 .form-control + small {
-    color: red;
+    color: #dc3545;
     opacity: 0;
     height: 0;
     transition: opacity .4s ease-out;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 
@@ -71,10 +71,9 @@
 
     opacity: 1;
     height: auto;
-    margin-bottom: 5px;
+    margin-top: 10px;
     transition: opacity .4s ease-out;
 }
-
 
 
 

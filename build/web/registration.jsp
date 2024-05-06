@@ -166,7 +166,7 @@
                                             <div class="form-group ">
                                                 <label for="username">Username</label>
                                                 <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                                <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                                <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters.</small>
                                                 <div class="invalid-feedback">
                                                     Please enter a username.
                                                 </div>
@@ -195,7 +195,7 @@
                                                 <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm your password" required>
                                                 <small id="confirmpasswordHelp" class="form-text">Please confirm you password, passwords must match.</small>
                                                 <div class="invalid-feedback">
-                                                    Please enter your password.
+                                                    Please confirm your password.
                                                 </div>
                                             </div>
                                         </div>   
@@ -209,7 +209,7 @@
                                                 <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" required>
                                                 <small id="firstnameHelp" class="form-text">First name must be characters only, minimum of 1 character.</small>
                                                 <div class="invalid-feedback">
-                                                    Please enter your password.
+                                                    Please enter your First Name.
                                                 </div>
                                             </div>
                                         </div>
@@ -231,7 +231,7 @@
                                                 <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name"  required>
                                                 <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
                                                 <div class="invalid-feedback">
-                                                    Please enter your password.
+                                                    Please enter your Last Name.
                                                 </div>
                                             </div>
                                         </div>
@@ -244,28 +244,29 @@
                                                 <input type="text" class="form-control" id="address" placeholder="Enter your Address"  required>
                                                 <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                                 <div class="invalid-feedback">
-                                                    Please enter your password.
+                                                    Please enter your Address.
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-12 col-md-4 me-auto mt-5">
+
+                                        <div class="col-12 col-md-4 me-auto mt-5 ">
                                             <div class="form-group">
                                                 <label for="Birthday">Birthday</label>
-                                                <input type="text" class="form-control" id="birthday" placeholder="Enter your Birthday"  required >
+                                                <input type="date" class="form-control bday" id="birthday" min="1930-01-01"  placeholder="Enter your Birthday MM-DD-YYYY"   required>
                                                 <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
                                                 <div class="invalid-feedback">
-                                                    Please enter your password.
+                                                    Please pick your Birthday.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4 me-auto mt-5 ">
                                             <div class="form-group">
                                                 <label for="Mobile Number">Mobile Number</label>
-                                                <input type="text" class="form-control" id="number" placeholder="Enter your Mobile Number"   required>
-                                                <small id="numberHelp" class="form-text">Mobile Number must be numeric, should be 11 digits.</small>
+                                                <input type="text" class="form-control" id="number" placeholder="09 - Enter your Mobile Number"   required>
+                                                <small id="numberHelp" class="form-text">Mobile Number must be numeric, starts with 09, and should be 11 digits.</small>
                                                 <div class="invalid-feedback">
-                                                    Please enter your password.
+                                                    Please enter your Mobile Number.
                                                 </div>
                                             </div>
                                         </div>

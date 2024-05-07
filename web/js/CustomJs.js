@@ -102,6 +102,9 @@ $(document).ready(function () {
 
     passvisibility('showPass', 'form-pass');
     passvisibility('confirmPass', 'form-confirm');
+
+
+
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -121,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('birthday').setAttribute('max', maxDate);
 });
 
+
+
 (function () {
     'use strict';
 
@@ -138,3 +143,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, false);
             });
 })();
+

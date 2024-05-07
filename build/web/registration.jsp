@@ -15,6 +15,7 @@
         <link rel="icon" href="img/core-img/iconlight.png">
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
 
+
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="css/core-style.css">
         <link rel="stylesheet" href="style.css">
@@ -51,6 +52,7 @@
     </style>
 
     <body>
+
         <div id="myModal" class="modal fade pt-5">
             <div class="modal-dialog modal-confirm">
                 <div class="modal-content">
@@ -158,121 +160,124 @@
 
                                 <div class="cart-title">
                                     <h2>REGISTRATION</h2>
+
+
                                 </div>
-
-                                <form class="py-3 needs-validation" id="regform" novalidate>
-                                    <div class="row">
-                                        <div class="col-12 col-md-6 mt-3">
-                                            <div class="form-group ">
-                                                <label for="username">Username</label>
-                                                <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                                <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters.</small>
-                                                <div class="invalid-feedback">
-                                                    Please enter a username.
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-
-                                    <div class="row ">
-                                        <div class="col-12 col-md-6 mt-5">
-                                            <div class="form-group form-pass">
-                                                <label for="password">Password</label>
-                                                <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
-                                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required >
-                                                <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
-                                                    must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
-                                                <div class="invalid-feedback">
-                                                    Please enter your password.
-                                                </div>
-                                            </div>
-                                        </div>   
-
-                                        <div class="col-12 col-md-6 mt-5">
-                                            <div class="form-group form-confirm">
-                                                <label for="confirmpassword">Confirm Password</label>
-                                                <i class="fa fa-eye-slash confirmPass" style='top: calc(74% - 0px); left: calc(90% - 2px);'></i>
-                                                <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm your password" required>
-                                                <small id="confirmpasswordHelp" class="form-text">Please confirm you password, passwords must match.</small>
-                                                <div class="invalid-feedback">
-                                                    Please confirm your password.
-                                                </div>
-                                            </div>
-                                        </div>   
-
-                                    </div> 
-
-                                    <div class="row ">
-                                        <div class="col-12 col-md-4  mt-5">
-                                            <div class="form-group">
-                                                <label for="First Name">First Name</label>
-                                                <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" required>
-                                                <small id="firstnameHelp" class="form-text">First name must be characters only, minimum of 1 character.</small>
-                                                <div class="invalid-feedback">
-                                                    Please enter your First Name.
-                                                </div>
+                                <div class="registration-form-wrapper">
+                                    <form class="py-3 needs-validation" id="regform" novalidate>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 mt-3">
+                                                <div class="form-group ">
+                                                    <label for="username">Username</label>
+                                                    <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                                    <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters. Special Characters not allowed</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter a username.</div>
+                                                </div> 
                                             </div>
                                         </div>
 
-                                        <div class="col-12 col-md-4  mt-5 ">
-                                            <div class="form-group">
-                                                <label for="Middle Name">Middle Name</label>
-                                                <input type="text" class="form-control" id="middlename" placeholder="Enter your Middle Name" >
-                                                <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty.</small>
-                                                <div class="invalid-feedback">
-                                                    Not Required
+                                        <div class="row ">
+                                            <div class="col-12 col-md-6 mt-5">
+                                                <div class="form-group form-pass">
+                                                    <label for="password">Password</label>
+                                                    <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
+                                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required >
+                                                    <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
+                                                        must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your password.
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </div>   
 
-                                        <div class="col-12 col-md-4 me-auto mt-5 ">
-                                            <div class="form-group">
-                                                <label for="Last Name">Last Name</label>
-                                                <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name"  required>
-                                                <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
-                                                <div class="invalid-feedback">
-                                                    Please enter your Last Name.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+                                            <div class="col-12 col-md-6 mt-5">
+                                                <div class="form-group form-confirm">
+                                                    <label for="confirmpassword">Confirm Password</label>
+                                                    <i class="fa fa-eye-slash confirmPass" style='top: calc(74% - 0px); left: calc(90% - 2px);'></i>
+                                                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm your password" required>
+                                                    <small id="confirmpasswordHelp" class="form-text">Passwords must match.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please confirm your password.
+                                                    </div>
 
-                                    <div class="row ">
-                                        <div class="col-12 col-md-4 me-auto mt-5">
-                                            <div class="form-group">
-                                                <label for="address">Complete Address</label>
-                                                <input type="text" class="form-control" id="address" placeholder="Enter your Address"  required>
-                                                <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
-                                                <div class="invalid-feedback">
-                                                    Please enter your Address.
+                                                </div>
+                                            </div>   
+
+                                        </div> 
+
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4  mt-5">
+                                                <div class="form-group">
+                                                    <label for="First Name">First Name</label>
+                                                    <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" required>
+                                                    <small id="firstnameHelp" class="form-text">First name must be characters only, minimum of 1 character.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your First Name.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+
+                                            <div class="col-12 col-md-4  mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="Middle Name">Middle Name</label>
+                                                    <input type="text" class="form-control" id="middlename" placeholder="Enter your Middle Name" >
+                                                    <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty.</small>
+                                                    <div class="invalid-feedback">
+                                                        Not Required
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-4 me-auto mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="Last Name">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name"  required>
+                                                    <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your Last Name.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4 me-auto mt-5">
+                                                <div class="form-group">
+                                                    <label for="address">Complete Address</label>
+                                                    <input type="text" class="form-control" id="address" placeholder="Enter your Address"  required>
+                                                    <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your Address.
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
-                                        <div class="col-12 col-md-4 me-auto mt-5 ">
-                                            <div class="form-group">
-                                                <label for="Birthday">Birthday</label>
-                                                <input type="date" class="form-control bday" id="birthday" min="1930-01-01"  placeholder="Enter your Birthday MM-DD-YYYY"   required>
-                                                <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
-                                                <div class="invalid-feedback">
-                                                    Please pick your Birthday.
+                                            <div class="col-12 col-md-4 me-auto mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="Birthday">Birthday</label>
+                                                    <input type="date" class="form-control bday" id="birthday" min="1930-01-01"  placeholder="Enter your Birthday MM-DD-YYYY"   required>
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please pick your Birthday.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4 me-auto mt-5 ">
-                                            <div class="form-group">
-                                                <label for="Mobile Number">Mobile Number</label>
-                                                <input type="text" class="form-control" id="number" placeholder="09 - Enter your Mobile Number"   required>
-                                                <small id="numberHelp" class="form-text">Mobile Number must be numeric, starts with 09, and should be 11 digits.</small>
-                                                <div class="invalid-feedback">
-                                                    Please enter your Mobile Number.
+                                            <div class="col-12 col-md-4 me-auto mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="Mobile Number">Mobile Number</label>
+                                                    <input type="text" class="form-control" id="number" placeholder="09 - Enter your Mobile Number"   required>
+                                                    <small id="numberHelp" class="form-text">Mobile Number must be numeric, starts with 09, and should be 11 digits.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your Mobile Number.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div> 
-                                </form>
-                                <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-5 ">Submit</button>
+                                        </div> 
+                                    </form>
+                                    <button type='submit' form="regform" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -381,6 +386,8 @@
                 </div>
             </div>
         </div>
+
+
         <!-- ##### Login Area End ##### -->
         <!-- ##### Footer Area End ##### -->
 

@@ -502,7 +502,7 @@ img {
       .main-content-wrapper .header-area .cart-fav-search a:hover, .main-content-wrapper .header-area .cart-fav-search a:focus {
         color: #1877F2; }
     .main-content-wrapper .header-area .social-info a {
-      color: #b5b5b5;
+      color: black;
       display: inline-block; }
       .main-content-wrapper .header-area .social-info a i {
         font-size: 18px; }
@@ -596,10 +596,10 @@ img {
     position: relative;
     z-index: 1;
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(95% - 320px);
-    flex: 0 0 calc(95% - 320px);
+    -ms-flex: 0 0 calc(95% - 150px);
+    flex: 0 0 calc(100% - 150px);
     width: calc(95% - 320px);
-    max-width: calc(95% - 320px); }
+    max-width: calc(95% - 250px); }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .main-content-wrapper .cart-table-area {
         -webkit-box-flex: 0;
@@ -765,9 +765,9 @@ img {
     z-index: 1;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(95% - 320px);
-    flex: 0 0 calc(95% - 320px);
-    width: calc(95% - 320px);
-    max-width: calc(95% - 320px); }
+    flex: 0 0 calc(100% - 100px);
+    width: calc(95% - 500px);
+    max-width: calc(95% - 250px); }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .main-content-wrapper .single-product-area {
         -webkit-box-flex: 0;

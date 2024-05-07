@@ -218,7 +218,7 @@
                                     <li><span>Total:</span> <span>3812.00</span></li>
                                 </ul>
                                 <div class="cart-btn mt-100">
-                                    <a href="cart.jsp" class="btn amado-bt w-100">Checkout</a>
+                                    <a href="${pageContext.request.contextPath}/cart" class="btn amado-bt w-100">Checkout</a>
                                 </div>
                             </div>
                         </div>

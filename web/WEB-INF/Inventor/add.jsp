@@ -227,7 +227,7 @@
                     </div>
 
                     <!-- Single Widget Area -->
-                    <div class="col-12 col-lg-8">
+                    <div class="col-12 col-lg-8 ">
                         <div class="single_widget_area">
                             <!-- Footer Menu -->
                             <div class="footer_menu">

@@ -6,7 +6,7 @@ $(document).ready(function () {
         middlename: /^[a-zA-Z" "]{0,}$/i,
         lastname: /^[a-zA-Z" "]{2,}$/i,
         address: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d ]+$/i,
-//        birthday: /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/i,
+        birthday: /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(19[2-9][0-9]|200[0-5])$/i,
         number: /^09[0-9]{9}$/i,
         password: /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/,
         confirmpassword: /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/
@@ -103,26 +103,25 @@ $(document).ready(function () {
     passvisibility('showPass', 'form-pass');
     passvisibility('confirmPass', 'form-confirm');
 
-
-
+   
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const today = new Date();
-    const year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let day = today.getDate();
-
-    if (month < 10) {
-        month = '0' + month;
-    }
-    if (day < 10) {
-        day = '0' + day;
-    }
-
-    const maxDate = year + '-' + month + '-' + day;
-    document.getElementById('birthday').setAttribute('max', maxDate);
-});
+//document.addEventListener('DOMContentLoaded', function () {
+//    const today = new Date();
+//    const year = today.getFullYear();
+//    let month = today.getMonth() + 1;
+//    let day = today.getDate();
+//
+//    if (month < 10) {
+//        month = '0' + month;
+//    }
+//    if (day < 10) {
+//        day = '0' + day;
+//    }
+//
+//    const maxDate = year + '-' + month + '-' + day;
+//    document.getElementById('birthday').setAttribute('max', maxDate);
+//});
 
 
 

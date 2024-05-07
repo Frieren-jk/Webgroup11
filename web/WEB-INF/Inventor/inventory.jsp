@@ -215,7 +215,7 @@
             </div>
 
         <!-- ##### Footer Area Start ##### -->
-        <footer class="footer_area clearfix">
+        <footer class="footer_area clearfix ps-5">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Single Widget Area -->
@@ -223,7 +223,7 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
+                                <a href="index.jsp"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
                             <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot

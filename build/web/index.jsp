@@ -110,7 +110,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -123,7 +123,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -136,7 +136,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -149,7 +149,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 4 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -162,7 +162,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 5 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -175,7 +175,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 6 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -188,7 +188,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 7 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -201,7 +201,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 8 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -214,7 +214,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="shop.jsp">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/cage 9 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -259,19 +259,19 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item active">
-                                                <a class="nav-link" href="index.jsp">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -312,7 +312,7 @@
                                     <div class="form-group ">
 
                                         <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,</small>
+                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
                                         <div class="invalid-feedback">
                                             Please enter your password.
                                         </div>
@@ -325,7 +325,7 @@
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info"> Sign Up</a>.</div>
+                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info">Sign Up</a>.</div>
                     </div>
                 </div>
             </div>

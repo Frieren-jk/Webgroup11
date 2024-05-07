@@ -218,7 +218,7 @@
                                     <li><span>Total:</span> <span>3812.00</span></li>
                                 </ul>
                                 <div class="cart-btn mt-100">
-                                    <a href="cart.jsp" class="btn amado-bt w-100">Checkout</a>
+                                    <a href="${pageContext.request.contextPath}/cart" class="btn amado-bt w-100">Checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -257,19 +257,19 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="index.jsp">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item active">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>

@@ -11,6 +11,18 @@
 /* ---------------------------------------
 ##### - PLACE YOUR CUSTOM CSS HERE - #####
 --------------------------------------- */
+.footer_area {
+    width: 100%;
+    /* Adjust background color as needed */
+    
+    
+}
+
+
+
+
+
+
 .single-product-area {
     background-image: url('img/pawbg.jpg');
     background-size: cover; /* This sproperty ensures that the background image covers the entire div */

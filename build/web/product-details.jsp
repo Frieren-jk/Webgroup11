@@ -112,8 +112,8 @@
                         <div class="col-12">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mt-50">
-                                    <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="shop.jsp">Cages</a></li>
+                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/indexp">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/shop">Cages</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Foldable Steel Cage</li>
                                 </ol>
                             </nav>
@@ -246,19 +246,19 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="index.jsp">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                             </li>
                                             <li class="nav-item active">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>

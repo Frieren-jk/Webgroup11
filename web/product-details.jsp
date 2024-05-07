@@ -112,8 +112,8 @@
                         <div class="col-12">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mt-50">
-                                    <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="shop.jsp">Cages</a></li>
+                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/indexp">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/shop">Cages</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Foldable Steel Cage</li>
                                 </ol>
                             </nav>

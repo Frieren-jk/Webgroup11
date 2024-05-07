@@ -148,7 +148,7 @@
                                             </div>
                                             <div class="custom-control d-block">
                                                 <span>No account yet?</span>
-                                                <a style="font-size: 14px;" href="registration.jsp" class="link-primary">Create an account</a>
+                                                <a style="font-size: 14px;" href="${pageContext.request.contextPath}/registration" class="link-primary">Create an account</a>
                                             </div>
 
                                         </div>

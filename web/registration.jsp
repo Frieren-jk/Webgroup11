@@ -22,8 +22,8 @@
         <link rel="stylesheet" href="Custom11Css.css">
         <script src="https://kit.fontawesome.com/3f5c7d2f43.js" crossorigin="anonymous"></script>
     </head>
-    <style>
 
+    <style>
         .valid-feedback,
         .invalid-feedback {
             opacity: 1;
@@ -47,12 +47,9 @@
             margin-bottom: 5px;
             transition: opacity .4s ease-out;
         }
-
-
     </style>
 
     <body>
-
         <div id="myModal" class="modal fade pt-5">
             <div class="modal-dialog modal-confirm">
                 <div class="modal-content">
@@ -160,8 +157,6 @@
 
                                 <div class="cart-title">
                                     <h2>REGISTRATION</h2>
-
-
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form class="py-3 needs-validation" id="regform" novalidate>
@@ -170,7 +165,7 @@
                                                 <div class="form-group ">
                                                     <label for="username">Username</label>
                                                     <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                                    <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters. Special Characters not allowed</small>
+                                                    <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters. Special characters are not allowed.</small>
                                                     <div class="invalid-feedback">
                                                         Please enter a username.</div>
                                                 </div> 
@@ -222,7 +217,7 @@
                                                 <div class="form-group">
                                                     <label for="Middle Name">Middle Name</label>
                                                     <input type="text" class="form-control" id="middlename" placeholder="Enter your Middle Name" >
-                                                    <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty.</small>
+                                                    <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                                     <div class="invalid-feedback">
                                                         Not Required
                                                     </div>
@@ -368,7 +363,7 @@
                                     <div class="form-group ">
 
                                         <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,</small>
+                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
                                         <div class="invalid-feedback">
                                             Please enter your password.
                                         </div>
@@ -381,7 +376,7 @@
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info"> Sign Up</a>.</div>
+                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info">Sign Up</a>.</div>
                     </div>
                 </div>
             </div>

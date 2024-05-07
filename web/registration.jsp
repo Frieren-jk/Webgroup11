@@ -6,6 +6,8 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
@@ -149,7 +151,7 @@
             </header>
             <!-- Header Area End -->
 
-            <div class="cart-table-area section-padding-100">
+            <div class="cart-table-area section-padding-100 ">
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-12">
@@ -252,8 +254,8 @@
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
                                                     <label for="Birthday">Birthday</label>
-                                                    <input type="date" class="form-control bday" id="birthday" min="1930-01-01"  placeholder="Enter your Birthday MM-DD-YYYY"   required>
-                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
+                                                    <input type="text" class="form-control bday" id="birthday"  placeholder="Enter your Birthday MM-DD-YYYY"   required>
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age.</small>
                                                     <div class="invalid-feedback">
                                                         Please pick your Birthday.
                                                     </div>

@@ -281,7 +281,7 @@
 
             <!-- Active js -->
             <script src="js/active.js"></script>
-            <script src="js/CustomJs.js"></script>
+            <script defer src="js/CustomJs.js"></script>
             <script>
                 $(document).ready(function () {
                     $('#myTable').DataTable();

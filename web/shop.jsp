@@ -116,7 +116,7 @@
                         <!--  Categories  -->
                         <div class="categories-menu">
                             <ul>
-                                <li class="active"><a href="shop.jsp">Cages</a></li>
+                                <li class="active"><a href="${pageContext.request.contextPath}/shop">Cages</a></li>
                                 <li><a href="#">Bowls</a></li>
                                 <li><a href="#">Leashes</a></li>
                                 <li><a href="#">Toys</a></li>
@@ -202,7 +202,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1720.00</p>
-                                        <a href="product-details.jsp">
+                                        <a href="${pageContext.request.contextPath}/product">
                                             <h6>Foldable Steel Cage</h6>
                                         </a>
                                     </div>
@@ -215,7 +215,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                            <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +237,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1100.00</p>
-                                        <a href="product-details.jsp">
+                                        <a href="${pageContext.request.contextPath}/product">
                                             <h6>Cat Carrier Bag</h6>
                                         </a>
                                     </div>
@@ -250,7 +250,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                            <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1600.00</p>
-                                        <a href="product-details.jsp">
+                                        <a href="${pageContext.request.contextPath}/product">
                                             <h6>Carbon Quality Wood Cage</h6>
                                         </a>
                                     </div>
@@ -286,7 +286,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                            <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -308,7 +308,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 960.00</p>
-                                        <a href="product-details.jsp">
+                                        <a href="${pageContext.request.contextPath}/product">
                                             <h6>Small Plastic Cage</h6>
                                         </a>
                                     </div>
@@ -322,7 +322,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                            <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 750.00</p>
-                                        <a href="product-details.jsp">
+                                        <a href="${pageContext.request.contextPath}/product">
                                             <h6>Octagonal Dog Metal Fence</h6>
                                         </a>
                                     </div>
@@ -357,7 +357,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                            <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -379,7 +379,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1250.00</p>
-                                        <a href="product-details.jsp">
+                                        <a href="${pageContext.request.contextPath}/product">
                                             <h6> Round Foldable Steel Cage</h6>
                                         </a>
                                     </div>
@@ -391,7 +391,7 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                         <div class="cart">
-                                            <a href="cart.jsp" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                            <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -404,7 +404,7 @@
                             <!-- Pagination -->
                             <nav aria-label="navigation">
                                 <ul class="pagination justify-content-end mt-50">
-                                    <li class="page-item active"><a class="page-link" href="shop.jsp">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/shop">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 </ul>
                             </nav>
@@ -444,19 +444,19 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="index.jsp">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item active">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>

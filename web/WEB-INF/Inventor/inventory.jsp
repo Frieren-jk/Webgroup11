@@ -15,7 +15,6 @@
         <link rel="icon" href="img/core-img/iconlight.png">
 
         <!-- Core Style CSS -->
-
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
         <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"/>
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css"/>
@@ -28,9 +27,7 @@
         <link rel="stylesheet" href="Custom11Css.css">
     </head>
 
-
     <body>
-
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Mobile Nav -->
@@ -83,10 +80,10 @@
 
                     <!-- Social Button -->
                     <div class="social-info d-flex justify-content-between">
-                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
             </header>
 
@@ -124,12 +121,12 @@
                             <td>$170,750</td>
                         </tr>
                         <tr>
-                            <td>Ian Pallalos</td>
+                            <td>Ian Palallos</td>
                             <td>Senior Technical Author</td>
-                            <td>San Francisco</td>
+                            <td>Los Alamos</td>
                             <td>66</td>
-                            <td>2009-01-12</td>
-                            <td>$86,000</td>
+                            <td>1945-08-05</td>
+                            <td>$169,690</td>
                         </tr>
                         <tr>
                             <td>z------</td>
@@ -217,61 +214,61 @@
                 </table>
             </div>
 
-            <!-- ##### Footer Area End ##### -->
-            <footer class="footer_area clearfix w-100">
-                <div class="container ">
-                    <div class="row align-items-center">
-                        <!-- Single Widget Area -->
-                        <div class="col-12 col-lg-4">
-                            <div class="single_widget_area">
-                                <!-- Logo -->
-                                <div class="footer-logo mr-50">
-                                    <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
-                                </div>
-                                <!-- Text -->
-                                <p class="footerdescription">Because we care for your pet's safety and health.
-                                    <br>
-                                    <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+        <!-- ##### Footer Area Start ##### -->
+        <footer class="footer_area clearfix">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Single Widget Area -->
+                    <div class="col-12 col-lg-4">
+                        <div class="single_widget_area">
+                            <!-- Logo -->
+                            <div class="footer-logo mr-50">
+                                <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
                             </div>
+                            <!-- Text -->
+                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
+                                <br>
+                                <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                            </p>
                         </div>
+                    </div>
 
-                        <!-- Single Widget Area -->
-                        <div class="col-12 col-lg-8">
-                            <div class="single_widget_area">
-                                <!-- Footer Menu -->
-                                <div class="footer_menu">
-                                    <nav class="navbar navbar-expand-lg justify-content-end">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                        <div class="collapse navbar-collapse" id="footerNavContent">
-                                            <ul class="navbar-nav ml-auto">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="index.jsp">Home</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="shop.jsp">Shop</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="product-details.jsp">Product</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="cart.jsp">Cart</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="checkout.jsp">Checkout</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </nav>
-                                </div>
+                    <!-- Single Widget Area -->
+                    <div class="col-12 col-lg-8">
+                        <div class="single_widget_area">
+                            <!-- Footer Menu -->
+                            <div class="footer_menu">
+                                <nav class="navbar navbar-expand-lg justify-content-end">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                                    <div class="collapse navbar-collapse" id="footerNavContent">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product-details">Product</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
 
             <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
             <script src="js/jquery/jQuery v3.7.1.min.js"></script>
-
 
             <!-- Popper js -->
             <script src="js/popper.min.js"></script>
@@ -286,12 +283,9 @@
             <script src="js/active.js"></script>
             <script src="js/CustomJs.js"></script>
             <script>
-                                        $(document).ready(function () {
-                                            $('#myTable').DataTable();
-                                        });
-
+                $(document).ready(function () {
+                    $('#myTable').DataTable();
+                });
             </script>
-
     </body>
-
 </html>

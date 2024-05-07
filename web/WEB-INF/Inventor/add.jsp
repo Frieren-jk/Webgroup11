@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/core-style.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/style.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/Custom11Css.css">
+
         <style>
             /* Select all text within the sidebar */
             .sticky-top a,
@@ -31,9 +32,6 @@
                 opacity: 1; /* Apply black color to the "Inventory" link */
             }
         </style>
-
-
-
     </head>
 
     <body>
@@ -64,7 +62,7 @@
                         <div class="search-content">
                             <form action="#" method="get">
                                 <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                                <button type="submit"><img src="<%=request.getContextPath()%>/img/core-img/search.png" alt="error"></button>
+                                <button type="submit"><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error"></button>
                             </form>
                         </div>
                     </div>
@@ -105,34 +103,36 @@
                 <div class="sticky-top pt-1" >
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a  ><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error">Search</a>
+                        <a><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error">Search</a>
                         <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="<%=request.getContextPath()%>/img/core-img/loginicon.png" alt="error">Login</a>
                         <a class="fav-nav"><img src="<%=request.getContextPath()%>/img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" id="available"  class="fav-nav"><img src="<%=request.getContextPath()%>/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a  class="cart-nav"><img class="pb-1" src="<%=request.getContextPath()%>/img/core-img/carticon.png" alt="error">Cart<span>(0)</span></a>
+                        <a class="cart-nav"><img class="pb-1" src="<%=request.getContextPath()%>/img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
 
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li ><a>Home</a></li>
-                            <li><a >Shop</a></li>
-                            <li><a >Product</a></li>
-                            <li><a >Cart</a></li>
-                            <li><a >Checkout</a></li>
+                            <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
+                            <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
+                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
+                            <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                         </ul>
                     </nav>
                     <br><br><br><br><br>
+
+                    <!-- Social Button -->
+                    <div class="social-info d-flex justify-content-between">
+                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
                 </div>
-
-
-
-
-
             </header>
             <!-- Header Area End -->
-
-
+            
             <div class="cart-table-area section-padding-100" >
                 <br><br><br><br>
                 <div class="container-fluid ">
@@ -141,7 +141,7 @@
                             <div class="checkout_details_area mt-50 clearfix position-relative">
 
                                 <div class="cart-title">
-                                    <h2>Add Inventory</h2>
+                                    <h2>ADD INVENTORY</h2>
                                 </div>
 
                                 <form method="POST" action="${pageContext.request.contextPath}/inventory/add" class="py-3 " id="regform">
@@ -160,19 +160,14 @@
                                                 <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
                                             </div> 
                                         </div>
-
                                     </div>
 
-
-
                                     <div class="row ">
-
-
                                         <div class="col-12 col-md-4  mt-5 ">
                                             <div class="form-group">
                                                 <label for="Middle Name">Office</label>
                                                 <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter The Office" >
-                                                <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty.</small>
+                                                <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-4  mt-5 ">
@@ -189,11 +184,9 @@
                                                 <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                             </div>
                                         </div>
-
                                     </div> 
 
                                     <div class="row ">
-
                                     </div>
                                     <div class="row ">
                                         <div class="col-12 col-md-4 me-auto mt-5">
@@ -223,12 +216,13 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="index.jsp"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
+                                <a href="index.jsp"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
-                            <p class="footerdescription">Because we care for your pet's safety and health.
+                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
                                 <br>
                                 <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                            </p>
                         </div>
                     </div>
 
@@ -241,20 +235,20 @@
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="index.jsp">Home</a>
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product-details">Product</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -270,7 +264,6 @@
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
         <script src="<%=request.getContextPath()%>/js/jquery/jQuery v3.7.1.min.js"></script>
 
-
         <!-- Popper js -->
         <script src="<%=request.getContextPath()%>/js/popper.min.js"></script>
 
@@ -282,8 +275,6 @@
 
         <!-- Active js -->
         <script src="<%=request.getContextPath()%>/js/active.js"></script>
-<!--        <script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
-
+        <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
     </body>
-
 </html>

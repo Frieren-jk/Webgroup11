@@ -510,7 +510,7 @@
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info">Sign Up</a>.</div>
+                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
                     </div>
                 </div>
             </div>

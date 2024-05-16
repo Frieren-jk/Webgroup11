@@ -16,7 +16,7 @@
         <a href="" class="">Forgot your password?</a>
         <button class="input-button">Login</button>
       </div>
-      <p class="sign-up">Don't have an account? <a href="#">Sign up now.</a></p>
+      <p class="sign-up">Don't have an account? <a href="${pageContext.request.contextPath}/registration">Sign up now</a>.</p>
     </div>
     <div class="modal-right">
       <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dfd2ec5a01006fd8c4d7592a381d3776&auto=format&fit=crop&w=1000&q=80" alt="">

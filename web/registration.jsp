@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="Custom11Css.css">
         <script src="https://kit.fontawesome.com/3f5c7d2f43.js" crossorigin="anonymous"></script>
-    </head>
 
     <style>
         .valid-feedback,
@@ -50,6 +49,7 @@
             transition: opacity .4s ease-out;
         }
     </style>
+    </head>
 
     <body>
         <div id="myModal" class="modal fade pt-5">
@@ -221,7 +221,7 @@
                                                     <input type="text" class="form-control" id="middlename" placeholder="Enter your Middle Name" >
                                                     <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                                     <div class="invalid-feedback">
-                                                        Not Required
+                                                        Not Required.
                                                     </div>
                                                 </div>
                                             </div>
@@ -312,20 +312,19 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="index.jsp">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="shop.jsp">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="product-details.jsp">Product</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="cart.jsp">Cart</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="checkout.jsp">Checkout</a>
-                                            </li>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                         </ul>
                                     </div>
                                 </nav>
@@ -378,7 +377,7 @@
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info">Sign Up</a>.</div>
+                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
                     </div>
                 </div>
             </div>

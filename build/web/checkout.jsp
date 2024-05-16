@@ -148,7 +148,7 @@
                                             </div>
                                             <div class="custom-control d-block">
                                                 <span>No account yet?</span>
-                                                <a style="font-size: 14px;" href="registration.jsp" class="link-primary">Create an account</a>
+                                                <a style="font-size: 14px;" href="${pageContext.request.contextPath}/registration" class="link-primary">Create an account</a>
                                             </div>
 
                                         </div>
@@ -285,7 +285,7 @@
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="registration.jsp" class="text-info">Sign Up</a>.</div>
+                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,7 @@
         <link rel="icon" href="img/core-img/iconlight.png">
 
         <!-- Core Style CSS -->
+
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
         <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"/>
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css"/>
@@ -28,6 +29,7 @@
     </head>
 
     <body>
+
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Mobile Nav -->
@@ -56,39 +58,37 @@
                 </div>
 
                 <!-- Cart Menu -->
-                <div class="sticky-top pt-1">
-                    <div> </div>
-                    <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
-                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
-                        <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
-                    </div>
+                <div class="cart-fav-search mb-100">
+                    <a href="#" class="search-nav"><img src="img/core-img/search.png" alt="error"> Search</a>
+                    <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="img/core-img/favorites.png" alt="error"> Log In</a>
+                    <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/pen.png" alt="error"> Register Now</a>
+                    <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="img/core-img/inventory.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
+                    <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
+                </div>
 
-                    <!-- Main Nav -->
-                    <nav class="main-nav ">
-                        <ul>
-                            <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
-                            <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
-                            <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
-                        </ul>
-                    </nav>
-                    <br><br><br><br><br>
+                <!-- Main Nav -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                        <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
+                        <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
+                        <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
+                        <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
+                    </ul>
+                </nav>
 
-                    <!-- Social Button -->
-                    <div class="social-info d-flex justify-content-between">
-                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </div>
+                <br><br><br><br><br>
+
+                <!-- Social Button -->
+                <div class="social-info d-flex justify-content-between">
+                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
             </header>
 
-            <div class="container m-1 mt-5 mb-auto w-75">
-                <br><br><br><br><br><br>
+            <div class="container m-1 mt-auto mb-auto w-75">
                 <table id="myTable" class="table order-column hover" style="width:100%">
                     <div class="cart-btn w-10 mt-1 ">
                         <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt ">Add Inventory</a>
@@ -105,7 +105,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John Karl Salvador</td>
+                            <td>JK Salvador</td>
                             <td>System Architect</td>
                             <td>Edinburgh</td>
                             <td>61</td>
@@ -121,12 +121,12 @@
                             <td>$170,750</td>
                         </tr>
                         <tr>
-                            <td>Ian Palallos</td>
+                            <td>Ian Pallalos</td>
                             <td>Senior Technical Author</td>
-                            <td>Los Alamos</td>
+                            <td>San Francisco</td>
                             <td>66</td>
-                            <td>1945-08-05</td>
-                            <td>$169,690</td>
+                            <td>2009-01-12</td>
+                            <td>$86,000</td>
                         </tr>
                         <tr>
                             <td>z------</td>
@@ -214,22 +214,21 @@
                 </table>
             </div>
 
-            <!-- ##### Footer Area Start ##### -->
-            <footer class="footer_area clearfix" 
-                <div class="container-fluid"> <!-- Use container-fluid to span full width -->
+            <!-- ##### Footer Area End ##### -->
+            <footer class="footer_area clearfix w-100">
+                <div class="container ">
                     <div class="row align-items-center">
                         <!-- Single Widget Area -->
                         <div class="col-12 col-lg-4">
                             <div class="single_widget_area">
                                 <!-- Logo -->
                                 <div class="footer-logo mr-50">
-                                    <a href="index.jsp"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
+                                    <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
                                 </div>
                                 <!-- Text -->
-                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
+                                <p class="footerdescription">Because we care for your pet's safety and health.
                                     <br>
                                     <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
-                                </p>
                             </div>
                         </div>
 
@@ -242,14 +241,14 @@
                                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                         <div class="collapse navbar-collapse" id="footerNavContent">
                                             <ul class="navbar-nav ml-auto">
-                                                <li class="nav-item active">
+                                                <li class="nav-item">
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product-details">Product</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
@@ -270,6 +269,7 @@
             <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
             <script src="js/jquery/jQuery v3.7.1.min.js"></script>
 
+
             <!-- Popper js -->
             <script src="js/popper.min.js"></script>
 
@@ -283,9 +283,12 @@
             <script src="js/active.js"></script>
             <script src="js/CustomJs.js"></script>
             <script>
-                            $(document).ready(function () {
-                                $('#myTable').DataTable();
-                            });
+                                        $(document).ready(function () {
+                                            $('#myTable').DataTable();
+                                        });
+
             </script>
+
     </body>
+
 </html>

@@ -31,7 +31,7 @@
     background-position: center; /* This property centers the background image */
     /* Ensure the position is set to relative or absolute for z-index to work */
     z-index: -1;
-    
+
 
 }
 
@@ -48,9 +48,10 @@
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
-    background-color: rgba(255, 255, 255, 0.8);
-   
+
 }
+
+
 .form-control {
     border: none;
     background: none;
@@ -314,7 +315,7 @@ h6 {
     overflow: hidden;
     transition: all .5s;
     border-radius: 12px;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .buttonfx:before,
@@ -334,7 +335,7 @@ h6 {
 
 .buttonfx:before {
     background: #0275d8;
-    z-index: -2; 
+    z-index: -2;
     transform: translate3D(0,0,0);
 }
 

@@ -19,6 +19,15 @@
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="css/core-style.css">
         <link rel="stylesheet" href="./style.css">
+        <style>
+            .checkout-wrapper {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
     </head>
 
     <body>
@@ -106,6 +115,7 @@
 
             <div class="cart-table-area section-padding-100">
                 <div class="container-fluid">
+
                     <div class="row">
                         <div class="col-12 col-lg-8">
                             <div class="checkout_details_area mt-50 clearfix">
@@ -113,47 +123,48 @@
                                 <div class="cart-title">
                                     <h2>CHECKOUT</h2>
                                 </div>
-
-                                <form action="#" method="post">
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="username" value="" placeholder="Username" required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="first_name" value="" placeholder="First Name" required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="middle_name" value="" placeholder="Middle Name" required>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="last_name" value="" placeholder="Last Name" required>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <input type="text" class="form-control mb-3" id="street_address" placeholder="Complete Address" value="">
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" value="">
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <input type="number" class="form-control" id="phone_number" min="0" placeholder="Phone Number" value="">
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <textarea name="comment" style="height: 5cm; resize: none;" class="form-control" id="comment" cols="30" rows="10" placeholder="Leave a comment about your order"></textarea>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="custom-control custom-checkbox d-block">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                <label class="custom-control-label" for="customCheck3">Check box if all are in correct format</label>
+                                <div class="checkout-wrapper">
+                                    <form action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control" id="username" value="" placeholder="Username" required>
                                             </div>
-                                            <div class="custom-control d-block">
-                                                <span>No account yet?</span>
-                                                <a style="font-size: 14px;" href="${pageContext.request.contextPath}/registration" class="link-primary">Create an account</a>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control" id="first_name" value="" placeholder="First Name" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control" id="middle_name" value="" placeholder="Middle Name" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control" id="last_name" value="" placeholder="Last Name" required>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <input type="text" class="form-control mb-3" id="street_address" placeholder="Complete Address" value="">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" value="">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="number" class="form-control" id="phone_number" min="0" placeholder="Phone Number" value="">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <textarea name="comment" style="height: 5cm; resize: none;" class="form-control" id="comment" cols="30" rows="10" placeholder="Leave a comment about your order"></textarea>
                                             </div>
 
+                                            <div class="col-12">
+                                                <div class="custom-control custom-checkbox d-block">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                    <label class="custom-control-label" for="customCheck3">Check box if all are in correct format</label>
+                                                </div>
+                                                <div class="custom-control d-block">
+                                                    <span>No account yet?</span>
+                                                    <a style="font-size: 14px;" href="${pageContext.request.contextPath}/registration" class="link-primary">Create an account</a>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
 

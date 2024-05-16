@@ -3,7 +3,7 @@ $(document).ready(function () {
     const patterns = {
         username: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{4,12}$/i,
         firstname: /^(?=[a-zA-Z\s]*[a-zA-Z])[a-zA-Z\s]{1,}$/i,
-        middlename: /^[a-zA-Z\s]{0,}$/i,
+        middlename: /^[a-zA-Z\s]*$/i,
         lastname: /^[a-zA-Z\s]{2,}$/i,
         address: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d ]+$/i,
         birthday: /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(19[2-9][0-9]|200[0-5])$/i,
@@ -65,6 +65,11 @@ $(document).ready(function () {
                 } else if (pattern && !pattern.test(value)) {
                     allUserInfoValid = false;
                 } else if (!$(this).hasClass('valid')) {
+                    allUserInfoValid = false;
+                }
+            } else {
+                // Special validation for middlename to allow empty value
+                if (value && !pattern.test(value)) {
                     allUserInfoValid = false;
                 }
             }

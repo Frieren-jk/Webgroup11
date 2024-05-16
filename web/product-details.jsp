@@ -112,14 +112,14 @@
                         <div class="col-12">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mt-50">
-                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/indexp">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/index">Home</a></li>
                                     <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/shop">Cages</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Foldable Steel Cage</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
-
+                    <div class="cart-wrapper">                
                     <div class="row">
                         <div class="col-12 col-lg-7">
                             <div class="single_product_thumb">
@@ -210,6 +210,7 @@
                                 </form>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

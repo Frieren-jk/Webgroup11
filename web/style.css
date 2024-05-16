@@ -18,11 +18,10 @@
 
 
 .single-product-area {
-    background-image: url('img/pawbg.jpg');
-    background-size: cover; /* This sproperty ensures that the background image covers the entire div */
+    background-image: url('img/pawbg2.jpg');
+    background-size: cover; /* This property ensures that the background image covers the entire div */
     background-position: center; /* This property centers the background image */
-    /* Ensure the position is set to relative or absolute for z-index to work */
-
+    
 }
 
 .cart-table-area {
@@ -36,11 +35,7 @@
 }
 
 .header-area {
-    background-image: url('img/pawbg.jpg');
-    background-size: cover; /* This sproperty ensures that the background image covers the entire div */
-    background-position: center; /* This property centers the background image */
-    /* Ensure the position is set to relative or absolute for z-index to work */
-    z-index: -1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
 }
 .registration-form-wrapper {
@@ -48,10 +43,16 @@
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
-
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-
+.cart-wrapper {
+    background-color: white; /* Adjust the alpha value for transparency */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 12px; /* Optional: Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+   
+}
 .form-control {
     border: none;
     background: none;

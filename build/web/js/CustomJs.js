@@ -2,9 +2,9 @@ $(document).ready(function () {
     const inputs = document.querySelectorAll('input');
     const patterns = {
         username: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{4,12}$/i,
-        firstname: /^[a-zA-Z" "]{1,}$/i,
-        middlename: /^[a-zA-Z" "]{0,}$/i,
-        lastname: /^[a-zA-Z" "]{2,}$/i,
+        firstname: /^(?=[a-zA-Z\s]*[a-zA-Z])[a-zA-Z\s]{1,}$/i,
+        middlename: /^[a-zA-Z\s]{0,}$/i,
+        lastname: /^[a-zA-Z\s]{2,}$/i,
         address: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d ]+$/i,
         birthday: /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(19[2-9][0-9]|200[0-5])$/i,
         number: /^09[0-9]{9}$/i,
@@ -19,37 +19,58 @@ $(document).ready(function () {
     });
 
     function validate(field, regex) {
-        const value = field.value.trim();
+        const value = field.value.trim(); // Trim whitespace from the value
         const parent = field.parentElement;
 
         if (!value) {
+            // If the trimmed value is empty, remove both valid and invalid classes
+            field.classList.remove('valid');
             field.classList.remove('invalid');
             parent.classList.remove('was-validated', 'valid', 'invalid');
         } else if (!regex.test(value)) {
+            // If the value does not match the regex pattern
             field.classList.add('invalid');
             field.classList.remove('valid');
             parent.classList.remove('was-validated', 'valid', 'invalid');
         } else {
-            field.classList.remove('invalid');
-            field.classList.add('valid');
-            parent.classList.remove('was-validated', 'valid', 'invalid');
+            // If the value is valid, do an additional logical validation for the date
+            if (field.id === 'birthday' && !isValidDate(value)) {
+                field.classList.add('invalid');
+                field.classList.remove('valid');
+            } else {
+                field.classList.remove('invalid');
+                field.classList.add('valid');
+                parent.classList.remove('was-validated', 'valid', 'invalid');
+            }
         }
     }
 
+    function isValidDate(dateString) {
+        const [month, day, year] = dateString.split('-').map(Number);
+        const date = new Date(`${year}-${month}-${day}`);
+        return date.getMonth() + 1 === month && date.getDate() === day && date.getFullYear() === year;
+    }
+
     $('#regform').submit(function (event) {
-        let AllUserInfoValid = true;
+        let allUserInfoValid = true;
 
         $('#regform input').each(function () {
-            if ($(this).attr('id') !== 'birthday' && !$(this).hasClass('valid') && $(this).attr('id') !== 'middlename') {
-                AllUserInfoValid = false;
-            }
-            // if birthdate date picker has no value
-            if ($(this).attr('id') === 'birthday' && $(this).val() === '') {
-                AllUserInfoValid = false;
+            const inputId = $(this).attr('id');
+            const value = $(this).val().trim();
+            const pattern = patterns[inputId];
+
+            if (inputId !== 'middlename') {
+                if (!value) {
+                    allUserInfoValid = false;
+                } else if (pattern && !pattern.test(value)) {
+                    allUserInfoValid = false;
+                } else if (!$(this).hasClass('valid')) {
+                    allUserInfoValid = false;
+                }
             }
         });
 
-        if (!AllUserInfoValid) {
+        if (!allUserInfoValid) {
             // Prevent showing the modal if validation fails
             event.preventDefault(); // Prevent form submission
             alert("Please fill in all required fields correctly before submitting.");
@@ -102,28 +123,7 @@ $(document).ready(function () {
 
     passvisibility('showPass', 'form-pass');
     passvisibility('confirmPass', 'form-confirm');
-
-   
 });
-
-//document.addEventListener('DOMContentLoaded', function () {
-//    const today = new Date();
-//    const year = today.getFullYear();
-//    let month = today.getMonth() + 1;
-//    let day = today.getDate();
-//
-//    if (month < 10) {
-//        month = '0' + month;
-//    }
-//    if (day < 10) {
-//        day = '0' + day;
-//    }
-//
-//    const maxDate = year + '-' + month + '-' + day;
-//    document.getElementById('birthday').setAttribute('max', maxDate);
-//});
-
-
 
 (function () {
     'use strict';
@@ -142,4 +142,3 @@ $(document).ready(function () {
                 }, false);
             });
 })();
-

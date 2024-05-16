@@ -111,7 +111,7 @@
                             <div class="cart-title mt-50">
                                 <h2>SHOPPING CART</h2>
                             </div>
-
+                            <div class="cart-wrapper">
                             <div class="cart-table clearfix">
                                 <table class="table table-responsive">
                                     <thead>
@@ -207,6 +207,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-4">

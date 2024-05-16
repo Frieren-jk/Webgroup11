@@ -155,7 +155,7 @@
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-12">
-                            <div class="checkout_details_area mt-50 clearfix">
+                            <div class="checkout_details_area  clearfix">
 
                                 <div class="cart-title">
                                     <h2>REGISTRATION</h2>
@@ -254,8 +254,8 @@
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
                                                     <label for="Birthday">Birthday</label>
-                                                    <input type="text" class="form-control bday" id="birthday"  placeholder="Enter your Birthday MM-DD-YYYY"   required>
-                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age.</small>
+                                                    <input type="text" class="form-control bday" id="birthday"  placeholder="Enter your Birthday MM-DD-YYYY (2005)"   required>
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>
                                                     <div class="invalid-feedback">
                                                         Please pick your Birthday.
                                                     </div>

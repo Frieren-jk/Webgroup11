@@ -18,8 +18,6 @@
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/core-style.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/style.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/Custom11Css.css">
-
-
     </head>
 
     <body>
@@ -38,8 +36,6 @@
                 </div>
             </div>
         </div>
-
-        c
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">
@@ -73,10 +69,10 @@
                 <div class="sticky-top" >
 
                     <div class="cart-fav-search mb-100">
-                        <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/search.png" alt="error"> Search</a>
-                        <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/favorites.png" alt="error"> Log In</a>
-                        <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/pen.png" alt="error"> Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventory.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
+                        <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
+                        <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>
+                        <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
+                        <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
                     </div>
 
@@ -136,21 +132,21 @@
                                             <div class="col-12 col-md-4  mt-5 ">
                                                 <div class="form-group">
                                                     <label for="Middle Name">Office</label>
-                                                    <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter The Office" >
+                                                    <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter the Office" >
                                                     <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4  mt-5 ">
                                                 <div class="form-group">
                                                     <label for="Last Name">Age</label>
-                                                    <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter The Age" >
+                                                    <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter the Age" >
                                                     <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4  mt-5">
                                                 <div class="form-group">
                                                     <label for="address">Start Date</label>
-                                                    <input type="text" class="form-control" id="address" placeholder="Enter The Start Date" >
+                                                    <input type="text" class="form-control" id="address" placeholder="Enter the Start Date" >
                                                     <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                                 </div>
                                             </div>
@@ -162,7 +158,7 @@
                                             <div class="col-12 col-md-4 me-auto mt-5">
                                                 <div class="form-group">
                                                     <label for="Birthday">Salary</label>
-                                                    <input type="text" class="form-control" id="birthday" placeholder="Enter The Salary" >
+                                                    <input type="text" class="form-control" id="birthday" placeholder="Enter the Salary" >
                                                     <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
                                                 </div>
                                             </div>
@@ -207,7 +203,7 @@
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item active">
+                                            <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                             </li>
                                             <li class="nav-item">
@@ -249,4 +245,5 @@
         <script src="<%=request.getContextPath()%>/js/active.js"></script>
         <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
     </body>
+
 </html>

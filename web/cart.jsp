@@ -212,7 +212,7 @@
                         </div>
                         <div class="col-12 col-lg-4">
                             <div class="cart-summary">
-                                <h5>Cart Total</h5>
+                                <h5>CART TOTAL</h5>
                                 <ul class="summary-table">
                                     <li><span>Subtotal:</span> <span>3780.00</span></li>
                                     <li><span>Delivery:</span> <span>32.00</span></li>

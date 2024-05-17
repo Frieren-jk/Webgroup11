@@ -15,7 +15,6 @@
         <link rel="icon" href="${pageContext.request.contextPath}/img/core-img/iconlight.png">
 
         <!-- Core Style CSS -->
-
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
         <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"/>
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css"/>
@@ -28,9 +27,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
     </head>
 
-
     <body>
-        
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Search Start -->
@@ -247,9 +244,10 @@
                                     <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
                                 </div>
                                 <!-- Text -->
-                                <p class="footerdescription">Because we care for your pet's safety and health.
+                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
                                     <br>
                                     <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                                </p>
                             </div>
                         </div>
 
@@ -304,12 +302,10 @@
             <script src="${pageContext.request.contextPath}/js/active.js"></script>
             <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
             <script>
-                                        $(document).ready(function () {
-                                            $('#myTable').DataTable();
-                                        });
-
+                $(document).ready(function () {
+                    $('#myTable').DataTable();
+                });
             </script>
-
     </body>
 
 </html>

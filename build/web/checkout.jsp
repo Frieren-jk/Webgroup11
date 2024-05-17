@@ -51,7 +51,7 @@
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="index.jsp"><img src="img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
@@ -69,7 +69,7 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.jsp"><img src="img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
@@ -203,7 +203,7 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
+                                <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
                             <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot

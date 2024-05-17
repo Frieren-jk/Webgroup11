@@ -24,19 +24,40 @@
         <script  src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
         <script  src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/core-style.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
     </head>
+
 
     <body>
 
         <div class="main-content-wrapper d-flex clearfix">
 
+            <!-- Search Start -->
+            <div class="search-section section-padding-100">
+                <div class="search-close">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="search-content">
+                                <form action="#" method="get">
+                                    <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                                    <button type="submit"><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search End -->
+
             <!-- Mobile Nav -->
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="index.jsp"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
@@ -54,15 +75,15 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.jsp"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
                 <div class="cart-fav-search mb-100">
-                    <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/search.png" alt="error"> Search</a>
-                    <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/favorites.png" alt="error"> Log In</a>
-                    <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/pen.png" alt="error"> Register Now</a>
-                    <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventory.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
+                    <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
+                    <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>
+                    <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
+                    <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
                     <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
                 </div>
 
@@ -88,11 +109,11 @@
                 </div>
             </header>
 
-            <div class="container m-1 mt-auto mb-auto w-75">
-                <table id="myTable" class="table order-column hover" style="width:100%">
-                    <div class="cart-btn w-10 mt-1 ">
-                        <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt ">Add Inventory</a>
-                    </div>
+            <div class="container m-1 m-5 mb-auto w-75">
+                <div class="cart-btn w-10 mt-1">
+                    <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt">Add Inventory</a>
+                </div>
+                <table id="myTable" class="table order-column hover">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -223,7 +244,7 @@
                             <div class="single_widget_area">
                                 <!-- Logo -->
                                 <div class="footer-logo mr-50">
-                                    <a href="index.jsp"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
+                                    <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
                                 </div>
                                 <!-- Text -->
                                 <p class="footerdescription">Because we care for your pet's safety and health.
@@ -242,19 +263,19 @@
                                         <div class="collapse navbar-collapse" id="footerNavContent">
                                             <ul class="navbar-nav ml-auto">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="index.jsp">Home</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="shop.jsp">Shop</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="product-details.jsp">Product</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="cart.jsp">Cart</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
                                                 </li>
                                             </ul>
                                         </div>

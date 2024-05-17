@@ -19,19 +19,7 @@
         <link rel="stylesheet" href="<%=request.getContextPath()%>/style.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/Custom11Css.css">
 
-        <style>
-            /* Select all text within the sidebar */
-            .sticky-top a,
-            .main-nav a {
-                opacity: 0.5; /* Apply gray color to all text */
-            }
 
-            /* Select the "Inventory" link and override the color */
-            .sticky-top #available,
-            .main-nav a[href="${pageContext.request.contextPath}/inventory"] {
-                opacity: 1; /* Apply black color to the "Inventory" link */
-            }
-        </style>
     </head>
 
     <body>
@@ -51,25 +39,7 @@
             </div>
         </div>
 
-        <!-- Search Start -->
-        <div class="search-section section-padding-100">
-            <div class="search-close">
-                <i class="fa fa-close" aria-hidden="true"></i>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="search-content">
-                            <form action="#" method="get">
-                                <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                                <button type="submit"><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error"></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Search End -->
+        c
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">
@@ -78,7 +48,7 @@
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="index.jsp"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
@@ -96,18 +66,18 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.jsp"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
-                <div class="sticky-top pt-1" >
-                    <div> </div>
-                    <div class="cart-fav-search mb-100 mt-5 ">
-                        <a><img src="<%=request.getContextPath()%>/img/core-img/searchicon.png" alt="error">Search</a>
-                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="<%=request.getContextPath()%>/img/core-img/loginicon.png" alt="error">Login</a>
-                        <a class="fav-nav"><img src="<%=request.getContextPath()%>/img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory" id="available"  class="fav-nav"><img src="<%=request.getContextPath()%>/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
-                        <a class="cart-nav"><img class="pb-1" src="<%=request.getContextPath()%>/img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
+                <div class="sticky-top" >
+
+                    <div class="cart-fav-search mb-100">
+                        <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/search.png" alt="error"> Search</a>
+                        <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/favorites.png" alt="error"> Log In</a>
+                        <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/pen.png" alt="error"> Register Now</a>
+                        <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventory.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
+                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
                     </div>
 
                     <!-- Main Nav -->
@@ -132,7 +102,7 @@
                 </div>
             </header>
             <!-- Header Area End -->
-            
+
             <div class="cart-table-area section-padding-100" >
                 <br><br><br><br>
                 <div class="container-fluid ">
@@ -143,62 +113,64 @@
                                 <div class="cart-title">
                                     <h2>ADD INVENTORY</h2>
                                 </div>
+                                <div class="registration-form-wrapper">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add" class="py-3 " id="regform">
+                                        <div class="row">
+                                            <div class="col-12 col-md-8 mt-3">
+                                                <div class="form-group ">
+                                                    <label for="username">Full Name</label>
+                                                    <input type="text" class="form-control" id="username" placeholder="Enter the Full Name" >
+                                                    <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                                </div> 
+                                            </div>
+                                            <div class="col-12 col-md-4 mt-3">
+                                                <div class="form-group ">
+                                                    <label for="username">Position</label>
+                                                    <input type="text" class="form-control" id="username" placeholder="Enter the Position of the Employee" >
+                                                    <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                                </div> 
+                                            </div>
+                                        </div>
 
-                                <form method="POST" action="${pageContext.request.contextPath}/inventory/add" class="py-3 " id="regform">
-                                    <div class="row">
-                                        <div class="col-12 col-md-8 mt-3">
-                                            <div class="form-group ">
-                                                <label for="username">Full Name</label>
-                                                <input type="text" class="form-control" id="username" placeholder="Enter the Full Name" >
-                                                <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                            </div> 
-                                        </div>
-                                        <div class="col-12 col-md-4 mt-3">
-                                            <div class="form-group ">
-                                                <label for="username">Position</label>
-                                                <input type="text" class="form-control" id="username" placeholder="Enter the Position of the Employee" >
-                                                <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                            </div> 
-                                        </div>
-                                    </div>
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4  mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="Middle Name">Office</label>
+                                                    <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter The Office" >
+                                                    <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4  mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="Last Name">Age</label>
+                                                    <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter The Age" >
+                                                    <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4  mt-5">
+                                                <div class="form-group">
+                                                    <label for="address">Start Date</label>
+                                                    <input type="text" class="form-control" id="address" placeholder="Enter The Start Date" >
+                                                    <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
+                                                </div>
+                                            </div>
+                                        </div> 
 
-                                    <div class="row ">
-                                        <div class="col-12 col-md-4  mt-5 ">
-                                            <div class="form-group">
-                                                <label for="Middle Name">Office</label>
-                                                <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter The Office" >
-                                                <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
-                                            </div>
+                                        <div class="row ">
                                         </div>
-                                        <div class="col-12 col-md-4  mt-5 ">
-                                            <div class="form-group">
-                                                <label for="Last Name">Age</label>
-                                                <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter The Age" >
-                                                <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4 me-auto mt-5">
+                                                <div class="form-group">
+                                                    <label for="Birthday">Salary</label>
+                                                    <input type="text" class="form-control" id="birthday" placeholder="Enter The Salary" >
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4  mt-5">
-                                            <div class="form-group">
-                                                <label for="address">Start Date</label>
-                                                <input type="text" class="form-control" id="address" placeholder="Enter The Start Date" >
-                                                <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
-                                            </div>
-                                        </div>
-                                    </div> 
+                                        </div> 
+                                    </form>
 
-                                    <div class="row ">
-                                    </div>
-                                    <div class="row ">
-                                        <div class="col-12 col-md-4 me-auto mt-5">
-                                            <div class="form-group">
-                                                <label for="Birthday">Salary</label>
-                                                <input type="text" class="form-control" id="birthday" placeholder="Enter The Salary" >
-                                                <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </form>
-                                <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-3">Add</button>
+                                    <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-3">Add</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -216,7 +188,7 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="index.jsp"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
+                                <a href="${pageContext.request.contextPath}/index"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
                             <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot

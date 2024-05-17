@@ -12,16 +12,54 @@
 ##### - PLACE YOUR CUSTOM CSS HERE - #####
 --------------------------------------- */
 
+/*invneotry*/
+
+.container {
+    max-width: 70%;
+    margin: auto;
+
+}
+.cart-btn {
+    display: inline-block;
+}
+.btn.amado-bt {
+    border-radius: 12px;
+}
+
+.btn.amado-bt:focus {
+    outline: none;
+    box-shadow: none;
+}
+#myTable {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+#myTable th, #myTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+#myTable th {
+    background-color: #f2f2f2;
+}
+#myTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
 
 
 
+/*invneoty endd*/
 
 
 .single-product-area {
     background-image: url('img/pawbg2.jpg');
     background-size: cover; /* This property ensures that the background image covers the entire div */
     background-position: center; /* This property centers the background image */
-    
+
 }
 
 .cart-table-area {
@@ -51,7 +89,7 @@
     padding: 20px; /* Add padding for spacing */
     border-radius: 12px; /* Optional: Add rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
-   
+
 }
 .form-control {
     border: none;

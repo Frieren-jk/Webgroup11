@@ -96,7 +96,7 @@
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="index.jsp"><img src="img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
@@ -114,13 +114,13 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.jsp"><img src="img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
                 <div class="sticky-top pt-1">
                     <div> </div>
-                    <div class="cart-fav-search mb-100 mt-5 ">
+                    <div class="cart-fav-search mb-100  ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a class="fav-nav" data-toggle="modal" data-target="#myLogin"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
@@ -292,7 +292,7 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="index.jsp"><img src="img/core-img/logodark.png" alt="error"></a>
+                                <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
                             <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot

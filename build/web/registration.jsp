@@ -371,7 +371,7 @@
                                     </div> 
                                 </div>
 
-                                <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
+                                <button type='submit' form="Loginform" class="btn btn-info btn-block btn-round d-block  buttonfx angleindouble">Log In</button>
 
                             </form>
                         </div>

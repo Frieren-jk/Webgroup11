@@ -78,7 +78,7 @@
                 <!-- Cart Menu -->
                 <div class="cart-fav-search mb-100">
                     <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
-                    <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>
+<!--                    <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                     <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                     <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error"> Inventory</a>
                     <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
@@ -113,136 +113,138 @@
 
                 <div class="registration-form-wrapper pt-auto">
                     <div class="table-responsive">
-                    <table id="myTable" class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>JK Salvador</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>$320,800</td>
-                            </tr>
-                            <tr>
-                                <td>Alexander Pascual</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011-07-25</td>
-                                <td>$170,750</td>
-                            </tr>
-                            <tr>
-                                <td>Ian Palallos</td>
-                                <td>Senior Technical Author</td>
-                                <td>Los Alamos</td>
-                                <td>66</td>
-                                <td>1945-08-05</td>
-                                <td>$186,000</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>2012-03-29</td>
-                                <td>$433,060</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>33</td>
-                                <td>2008-11-28</td>
-                                <td>$162,700</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Integration Specialist</td>
-                                <td>New York</td>
-                                <td>61</td>
-                                <td>2012-12-02</td>
-                                <td>$372,000</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Sales Assistant</td>
-                                <td>San Francisco</td>
-                                <td>59</td>
-                                <td>2012-08-06</td>
-                                <td>$137,500</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Integration Specialist</td>
-                                <td>Tokyo</td>
-                                <td>55</td>
-                                <td>2010-10-14</td>
-                                <td>$327,900</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Javascript Developer</td>
-                                <td>San Francisco</td>
-                                <td>39</td>
-                                <td>2009-09-15</td>
-                                <td>$205,500</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Software Engineer</td>
-                                <td>Edinburgh</td>
-                                <td>23</td>
-                                <td>2008-12-13</td>
-                                <td>$103,600</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Javascript Developer</td>
-                                <td>Singapore</td>
-                                <td>29</td>
-                                <td>2011-06-27</td>
-                                <td>$183,000</td>
-                            </tr>
-                            <tr>
-                                <td>Z------</td>
-                                <td>Customer Support</td>
-                                <td>New York</td>
-                                <td>27</td>
-                                <td>2011-01-25</td>
-                                <td>$112,000</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </tfoot>
-                    </table>
+                        <table id="myTable" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>JK Salvador</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011-04-25</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander Pascual</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011-07-25</td>
+                                    <td>$170,750</td>
+                                </tr>
+                                <tr>
+                                    <td>Ian Palallos</td>
+                                    <td>Senior Technical Author</td>
+                                    <td>Los Alamos</td>
+                                    <td>66</td>
+                                    <td>1945-08-05</td>
+                                    <td>$186,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2012-03-29</td>
+                                    <td>$433,060</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>2008-11-28</td>
+                                    <td>$162,700</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2012-12-02</td>
+                                    <td>$372,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>2012-08-06</td>
+                                    <td>$137,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>2010-10-14</td>
+                                    <td>$327,900</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>39</td>
+                                    <td>2009-09-15</td>
+                                    <td>$205,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td>23</td>
+                                    <td>2008-12-13</td>
+                                    <td>$103,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                    <td>29</td>
+                                    <td>2011-06-27</td>
+                                    <td>$183,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Z------</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td>27</td>
+                                    <td>2011-01-25</td>
+                                    <td>$112,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>
+
+
 
             <!-- ##### Footer Area End ##### -->
             <footer class="footer_area clearfix w-100">
                 <div class="container">
                     <div class="row align-items-center">
                         <!-- Single Widget Area -->
-                         <div class="col-6 col-lg-4">
+                        <div class="col-6 col-lg-4">
                             <div class="single_widget_area">
                                 <!-- Logo -->
                                 <div class="footer-logo mr-50">
@@ -255,9 +257,9 @@
                                 </p>
                             </div>
                         </div>
-                                <br><br>
+                        <br><br>
                         <!-- Single Widget Area -->
-                         <div class="col-6 col-lg-8 ">
+                        <div class="col-6 col-lg-8 ">
                             <div class="single_widget_area">
                                 <!-- Footer Menu -->
                                 <div class="footer_menu">
@@ -289,6 +291,54 @@
                     </div>
                 </div>
             </footer>
+            <!-- ##### Login Area Start ##### -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-title text-center">
+                                <h4>LOGIN</h4>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="form-group ">
+
+                                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                            <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                            <div class="invalid-feedback">
+                                                Please enter a username.
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group ">
+
+                                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                            <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
+                                            <div class="invalid-feedback">
+                                                Please enter your password.
+                                            </div>
+                                        </div> 
+                                    </div>
+
+                                    <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ##### Login Area End ##### -->
 
             <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
             <script src="js/jquery/jQuery v3.7.1.min.js"></script>
@@ -308,7 +358,7 @@
             <script>
                                         $(document).ready(function () {
                                             $('#myTable').DataTable();
-                                            
+
                                         });
             </script>
     </body>

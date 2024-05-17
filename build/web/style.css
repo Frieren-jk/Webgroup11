@@ -58,9 +58,9 @@
 
 .single-product-area {
     background-image: url('img/pawbg2.jpg');
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
-     /* Set the height to 100% of the viewport height */
+    /* Set the height to 100% of the viewport height */
 }
 
 
@@ -80,6 +80,9 @@
 .header-area {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
+}
+.text-info {
+    font-size: 15px; /* Adjust the font size as needed */
 }
 
 .registration-form-wrapper {

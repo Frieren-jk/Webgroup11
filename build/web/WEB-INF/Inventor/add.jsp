@@ -165,7 +165,7 @@
                                         </div> 
                                     </form>
 
-                                    <button type='submit' form="regform" class="btn btn-primary d-block mx-auto mt-3">Add</button>
+                                    <button type='submit' form="regform" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Add</button>
                                 </div>
                             </div>
                         </div>

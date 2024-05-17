@@ -55,12 +55,17 @@
 /*invneoty endd*/
 
 
+
 .single-product-area {
     background-image: url('img/pawbg2.jpg');
-    background-size: cover; /* This property ensures that the background image covers the entire div */
-    background-position: center; /* This property centers the background image */
-
+    background-size: cover; 
+    background-position: center;
+     /* Set the height to 100% of the viewport height */
 }
+
+
+
+
 
 .cart-table-area {
     background-image: url('img/pawbg.jpg');
@@ -76,14 +81,31 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 
 }
+
 .registration-form-wrapper {
     background-color: white;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
     background-color: rgba(255, 255, 255, 0.8);
+    width: 100%; /* Ensure the wrapper uses the full width of its container */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .registration-form-wrapper {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 5px; /* Add margin to ensure some space around the element */
+    }
+}
+
+/* Ensure the table is responsive */
+table {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+}
 .cart-wrapper {
     background-color: white; /* Adjust the alpha value for transparency */
     padding: 20px; /* Add padding for spacing */
@@ -116,6 +138,13 @@
     top: calc(50% - 20px); /* Adjusted based on the height of the small tag */
 }
 
+@media (max-width: 767px) {
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
 
 
 .form-control:active,

@@ -121,12 +121,12 @@
                             <td>$170,750</td>
                         </tr>
                         <tr>
-                            <td>Ian Pallalos</td>
+                            <td>Ian Palallos</td>
                             <td>Senior Technical Author</td>
-                            <td>San Francisco</td>
+                            <td>Los Alamos</td>
                             <td>66</td>
-                            <td>2009-01-12</td>
-                            <td>$86,000</td>
+                            <td>1945-08-05</td>
+                            <td>$186,000</td>
                         </tr>
                         <tr>
                             <td>z------</td>

@@ -103,7 +103,7 @@
                             <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
                             <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
                             <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
-                            <li class="active"><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
+                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                             <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                         </ul>
                     </nav>
@@ -120,122 +120,47 @@
             </header>
             <!-- Header Area End -->
 
-            <div class="cart-table-area section-padding-100">
-                <div class="container-fluid">
+            <div class="cart-table-area section-padding-100 ">
+                <div class="container-fluid ">
                     <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <div class="cart-title mt-50">
-                                <h2>SHOPPING CART</h2>
-                            </div>
-                            <div class="cart-wrapper">
-                            <div class="cart-table clearfix">
-                                <table class="table table-responsive">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Name</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cage 1 cart.png" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Foldable Steel Cage</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 1720.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) && qty > 1)
-                                                                    effect.value--;
-                                                                return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty))
-                                                                    effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                        <div class="col-12">
+                            <div class="checkout_details_area clearfix">
+
+                                <div class="physical-shop-title">
+                                    <h2>PHYSICAL SHOP</h2>
+                                </div>
+                                <div class="physical-shop-wrapper">
+                                    <section>
+                                        <div class="col-md-6">
+                                            <div class="section-heading contact-info">
+                                                <div class="physical-shop-title">
+                                                    <h3>Contact Information</h3>
+                                                </div>
+                                                <p><b>Email: </b>furrealpetsupplies@gmail.com
+                                                <br><b>Contact Number: </b>0960-542-2186
+                                                <br><b>Operating Hours: </b>Weekdays and Weekends: 6AM - 5PM
+                                                <br><br><b>Address: </b><br>
+                                                <em>123 Example St, District, City, Zip Code Region<br>Philippines</em></p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <br>
+                                <div class="physical-shop-wrapper">
+                                    <section>
+                                        <div class="physical-shop-title">
+                                            <center><h3>Location on Google Maps</h3></center>
+                                        </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div>
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5632538.36497416!2d-129.942709!3d46.423669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3b5f9be02ded%3A0x9e79371a486731ec!2sexample!5e0!3m2!1sen!2sph!4v1716192207333!5m2!1sen!2sph" width="100%" height="500" frameborder="0" style="border:0"allowfullscreen></iframe>
                                                     </div>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cage 2 cart.png" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Cat Carrier Bag</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 1100.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty2');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty) && qty > 1)
-                                                                    effect.value--;
-                                                                return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty2" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty2');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty))
-                                                                    effect.value++;
-                                                                return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cage 3 cart.png" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Small Plastic Cage</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 960.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value;
-                                                                if (!isNaN(qty) && qty > 1)
-                                                                    effect.value--;
-                                                                return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty3" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty3');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty))
-                                                                    effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="cart-summary">
-                                <h5>CART TOTAL</h5>
-                                <ul class="summary-table">
-                                    <li><span>Subtotal:</span> <span>3780.00</span></li>
-                                    <li><span>Delivery:</span> <span>32.00</span></li>
-                                    <li><span>Total:</span> <span>3812.00</span></li>
-                                </ul>
-                                <div class="cart-btn mt-100">
-                                    <a href="${pageContext.request.contextPath}/cart" class="btn amado-bt w-100">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +207,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
-                                            <li class="nav-item active">
+                                            <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">

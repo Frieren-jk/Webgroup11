@@ -171,7 +171,7 @@
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-12">
-                            <div class="checkout_details_area  clearfix">
+                            <div class="checkout_details_area clearfix">
 
                                 <div class="cart-title">
                                     <h2>REGISTRATION</h2>

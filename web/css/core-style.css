@@ -625,7 +625,7 @@ img {
         width: 100%;
         max-width: 100%;
         padding-top: 0; } }
-    .main-content-wrapper .cart-table-area .cart-title h2 {
+    .main-content-wrapper .cart-table-area .cart-title .physical-shop-title h2 {
       font-size: 30px;
       margin-bottom: 30px;
       color: #242424; }

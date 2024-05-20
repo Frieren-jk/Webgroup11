@@ -253,8 +253,6 @@
                 </div>
             </div>
 
-
-
             <!-- ##### Footer Area End ##### -->
             <footer class="footer_area clearfix w-100">
                 <div class="container">

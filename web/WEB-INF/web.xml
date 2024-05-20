@@ -28,6 +28,10 @@
         <servlet-name>cart</servlet-name>
         <servlet-class>admin.access.cart</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>physicalshop</servlet-name>
+        <servlet-class>admin.access.physicalshop</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>cart</servlet-name>
         <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>physicalshop</servlet-name>
+        <url-pattern>/physicalshop</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

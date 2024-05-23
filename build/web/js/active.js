@@ -3,7 +3,7 @@
 
     var $window = $(window);
 
-    var proCata = $('.amado-pro-catagory');
+    var proCata = $('.pro-category');
     var singleProCata = ".single-products-category";
 
     if ($.fn.imagesLoaded) {

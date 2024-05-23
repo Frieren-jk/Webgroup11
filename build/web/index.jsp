@@ -122,7 +122,7 @@
 
             <!-- Product Categories Area Start -->
             <div class="products-categories-area clearfix">
-                <div class="amado-pro-catagory clearfix">
+                <div class="pro-category clearfix">
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">

@@ -13,8 +13,6 @@
 
         <!-- Tab Icon  -->
         <link rel="icon" href="<%=request.getContextPath()%>/img/core-img/iconlight.png">
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/core-style.css">
@@ -54,22 +52,6 @@
                 </div>
             </div>
 
-            <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <!-- Topbar End -->
-
             <!-- Header Area Start -->
             <header class="header-area clearfix">
 
@@ -108,10 +90,10 @@
 
                     <!-- Social Button -->
                     <div class="social-info d-flex justify-content-between">
-                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://x.com/suppliesfurreal" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>        
+                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </header>
@@ -128,19 +110,19 @@
                                     <h2>ADD INVENTORY</h2>
                                 </div>
                                 <div class="registration-form-wrapper">
-                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add" class="py-3 " id="regform">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/addtesting" class="py-3 " id="regform">
                                         <div class="row">
                                             <div class="col-12 col-md-8 mt-3">
                                                 <div class="form-group ">
-                                                    <label for="username">Full Name</label>
-                                                    <input type="text" class="form-control" id="username" placeholder="Enter the Full Name" >
+                                                    <label for="username">Employee ID</label>
+                                                    <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter the Full Name" >
                                                     <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
                                                 </div> 
                                             </div>
                                             <div class="col-12 col-md-4 mt-3">
                                                 <div class="form-group ">
-                                                    <label for="username">Position</label>
-                                                    <input type="text" class="form-control" id="username" placeholder="Enter the Position of the Employee" >
+                                                    <label for="firstName">First Name</label>
+                                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter the Position of the Employee">
                                                     <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
                                                 </div> 
                                             </div>
@@ -149,7 +131,7 @@
                                         <div class="row ">
                                             <div class="col-12 col-md-4  mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="Middle Name">Office</label>
+                                                    <label for="Middle Name">Middle Name</label>
                                                     <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter the Office" >
                                                     <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                                 </div>
@@ -164,7 +146,7 @@
                                             <div class="col-12 col-md-4  mt-5">
                                                 <div class="form-group">
                                                     <label for="address">Start Date</label>
-                                                    <input type="text" class="form-control" id="address" placeholder="Enter the Start Date" >
+                                                    <input type="text" class="form-control" id="address" name="department"  placeholder="Enter the Start Date" >
                                                     <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                                 </div>
                                             </div>
@@ -176,7 +158,7 @@
                                             <div class="col-12 col-md-4 me-auto mt-5">
                                                 <div class="form-group">
                                                     <label for="Birthday">Salary</label>
-                                                    <input type="text" class="form-control" id="birthday" placeholder="Enter the Salary" >
+                                                    <input type="text" class="form-control" id="birthday"  name="employmentStatus"  placeholder="Enter the Salary" >
                                                     <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
                                                 </div>
                                             </div>

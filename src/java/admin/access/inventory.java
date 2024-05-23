@@ -10,6 +10,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import admin.dao.EmployeeDao;
+import admin.model.EmployeeBlueprint;
 
 /**
  *
@@ -28,6 +30,9 @@ public class inventory extends HttpServlet {
                 break;
             case "/inventory/add":
                 viewAdd(request, response);
+                break;
+            case "/inventory/addtesting":
+                viewAdd1(request, response);
                 break;
             default:
                 viewInventory(request, response);
@@ -60,12 +65,29 @@ public class inventory extends HttpServlet {
 
     private void viewAdd(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        System.out.println("You name is " + firstName + " " + lastName);
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/WEB-INF/Inventor/inventoryUpdated.jsp");
         rd.forward(request, response);
+    }
+
+    private void viewAdd1(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        int employeeID = Integer.parseInt(request.getParameter("employeeID"));
+        String firstName = request.getParameter("firstName");
+        String middleName = request.getParameter("middleName");
+        String lastName = request.getParameter("lastName");
+        String department = request.getParameter("department");
+        String employmentStatus = request.getParameter("employmentStatus");
+        EmployeeBlueprint newEmployee = new EmployeeBlueprint(employeeID, firstName, lastName, middleName, department, employmentStatus);
+        EmployeeDao employeeDao = new EmployeeDao();
+        EmployeeBlueprint employeeDetails = employeeDao.getEmployeeList(newEmployee);
+
+        request.setAttribute("employeeDetails", employeeDetails);
+
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/datatesting.jsp");
+        rd.forward(request, response);
+
     }
 
 }

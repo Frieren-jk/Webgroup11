@@ -45,6 +45,10 @@
         <url-pattern>/inventory/add</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/addtesting</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>

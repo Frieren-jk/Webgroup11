@@ -23,7 +23,7 @@ public class index extends HttpServlet {
         String action = request.getServletPath();
 
         switch (action) {
-            case "/index":
+            case "/home":
                 viewHome(request, response);
                 break;
             

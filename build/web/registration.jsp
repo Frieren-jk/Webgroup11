@@ -69,7 +69,7 @@
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/home"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
@@ -103,7 +103,7 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/home"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
@@ -120,7 +120,7 @@
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                            <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                             <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
                             <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                             <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
@@ -281,10 +281,11 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="${pageContext.request.contextPath}/index"><img src="img/core-img/logodark.png" alt="error"></a>
+                                <a href="${pageContext.request.contextPath}/home"><img src="img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
-                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
+                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
+                                - George Eliot
                                 <br>
                                 <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
                             </p>
@@ -301,7 +302,7 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>

@@ -56,7 +56,7 @@
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
@@ -90,7 +90,7 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
@@ -99,13 +99,13 @@
 <!--              hide for now      <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                     <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                     <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error"> Inventory</a>
-                    <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
+                    <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span></a>
                 </div>
 
                 <!-- Main Nav -->
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                        <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                         <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
                         <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                         <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
@@ -265,10 +265,11 @@
                             <div class="single_widget_area">
                                 <!-- Logo -->
                                 <div class="footer-logo mr-50">
-                                    <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
+                                    <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
                                 </div>
                                 <!-- Text -->
-                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
+                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
+                                    - George Eliot
                                     <br>
                                     <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
                                 </p>
@@ -285,7 +286,7 @@
                                         <div class="collapse navbar-collapse" id="footerNavContent">
                                             <ul class="navbar-nav ml-auto  ms-auto">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>

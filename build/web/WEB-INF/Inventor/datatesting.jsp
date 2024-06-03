@@ -13,6 +13,8 @@
 
         <!-- Tab Icon  -->
         <link rel="icon" href="<%=request.getContextPath()%>/img/core-img/iconlight.png">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/core-style.css">
@@ -44,13 +46,29 @@
             <div class="mobile-nav">
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="${pageContext.request.contextPath}/index"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
                 </div>
                 <!-- Navbar Toggler -->
                 <div class="navbar-toggler">
                     <span></span><span></span><span></span>
                 </div>
             </div>
+
+            <!-- Topbar Start -->
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Topbar End -->
 
             <!-- Header Area Start -->
             <header class="header-area clearfix">
@@ -62,7 +80,7 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="${pageContext.request.contextPath}/index"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
+                    <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
                 </div>
 
                 <!-- Cart Menu -->
@@ -73,13 +91,13 @@
 <!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
-                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(0)</span></a>
+                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span></a>
                     </div>
 
                     <!-- Main Nav -->
                     <nav class="main-nav ">
                         <ul>
-                            <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+                            <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                             <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
                             <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                             <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
@@ -90,10 +108,10 @@
 
                     <!-- Social Button -->
                     <div class="social-info d-flex justify-content-between">
-                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/suppliesfurreal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://x.com/suppliesfurreal" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>        
                     </div>
                 </div>
             </header>
@@ -184,10 +202,11 @@
                         <div class="single_widget_area">
                             <!-- Logo -->
                             <div class="footer-logo mr-50">
-                                <a href="${pageContext.request.contextPath}/index"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
+                                <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
                             </div>
                             <!-- Text -->
-                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms." - George Eliot
+                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
+                                - George Eliot
                                 <br>
                                 <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
                             </p>
@@ -204,7 +223,7 @@
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/index">Home</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>

@@ -140,24 +140,10 @@
                                 <li><a href="#">Litter Boxes</a></li>
                                 <li><a href="#">Foods</a></li>
                             </ul>
-                        </div>
-                    </div>
-
-                    <!-- ##### Single Widget ##### -->
-                    <div class="widget price mb-50">
-                        <!-- Widget Title -->
-                        <h6 class="widget-title mb-30">PRICE RANGE</h6>
-
-                        <div class="widget-desc">
-                            <div class="slider-range">
-                                <div data-min="100" data-max="9000" data-unit="PHP" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="100" data-value-max="9000" data-label-result="">
-                                    <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                                    <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                                    <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                <div>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                                 </div>
-                                <div class="range-price pb-5" >PHP100 - PHP9000</div>
-                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -170,30 +156,21 @@
                             <div class="product-topbar d-xl-flex align-items-end justify-content-between">
                                 <!-- Total Products -->
                                 <div class="total-products">
-                                    <p>Showing 1-6 0f 12</p>
+                                    <p>Showing 1-6</p>
                                     <div class="view d-flex">
-                                        <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
                                     </div>
                                 </div>
                                 <!-- Sorting -->
                                 <div class="product-sorting d-flex">
                                     <div class="sort-by-date d-flex align-items-center mr-15">
-                                        <p>Sort by</p>
-                                        <form action="#" method="get">
-                                            <select name="select" id="sortBydate">
-                                                <option value="value">Date</option>
-                                                <option value="value">Newest</option>
-                                                <option value="value">Popular</option>
-                                            </select>
-                                        </form>
+
                                     </div>
                                     <div class="view-product d-flex align-items-center">
                                         <p>View</p>
                                         <form action="#" method="get">
                                             <select name="select" id="viewProduct">
                                                 <option value="value">1-6</option>
-                                                <option value="value">7-12</option>
                                             </select>
                                         </form>
                                     </div>
@@ -208,9 +185,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 1 shop.png" alt="error">
+                                    <img src="img/product-img/cages/cage 1 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 1 shop_z.png" alt="error">
+                                    <img class="hover-img" src="img/product-img/cages/cage 1 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -225,10 +202,7 @@
                                     <!-- Ratings & Cart -->
                                     <div class="ratings-cart text-right">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="cart">
                                             <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
@@ -243,9 +217,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 7 shop.png" alt="error">
+                                    <img src="img/product-img/cages/cage 2 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 7 shop_z.png" alt="error">
+                                    <img class="hover-img" src="img/product-img/cages/cage 2 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -260,10 +234,7 @@
                                     <!-- Ratings & Cart -->
                                     <div class="ratings-cart text-right">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="cart">
                                             <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
@@ -278,9 +249,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 3 shop.png" alt="error">
+                                    <img src="img/product-img/cages/cage 3 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 3 shop_z.png" alt="error">
+                                    <img class="hover-img" src="img/product-img/cages/cage 3 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -295,11 +266,7 @@
                                     <!-- Ratings & Cart -->
                                     <div class="ratings-cart text-right">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="cart">
                                             <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
@@ -314,9 +281,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 15 shop.png" alt="error">
+                                    <img src="img/product-img/cages/cage 4 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 15 shop_z.png" alt="error">
+                                    <img class="hover-img" src="img/product-img/cages/cage 4 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -331,11 +298,7 @@
                                     <!-- Ratings & Cart -->
                                     <div class="ratings-cart text-right">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="cart">
                                             <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
@@ -350,9 +313,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 9 shop.png" alt="error">
+                                    <img src="img/product-img/cages/cage 5 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 9 shop_z.png" alt="error">
+                                    <img class="hover-img" src="img/product-img/cages/cage 5 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -367,10 +330,7 @@
                                     <!-- Ratings & Cart -->
                                     <div class="ratings-cart text-right">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="cart">
                                             <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
@@ -385,9 +345,9 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="img/product-img/cage 8 shop.png" alt="error">
+                                    <img src="img/product-img/cages/cage 6 shop.png" alt="error">
                                     <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/cage 8 shop_z.png" alt="error">
+                                    <img class="hover-img" src="img/product-img/cages/cage 6 shop_z.png" alt="error">
                                 </div>
                                 <!-- Product Description -->
                                 <div class="product-description d-flex align-items-center justify-content-between">
@@ -402,9 +362,7 @@
                                     <!-- Ratings & Cart -->
                                     <div class="ratings-cart text-right">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="cart">
                                             <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
@@ -421,7 +379,6 @@
                             <nav aria-label="navigation">
                                 <ul class="pagination justify-content-end mt-50">
                                     <li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/shop">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 </ul>
                             </nav>
                         </div>

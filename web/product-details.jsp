@@ -141,34 +141,34 @@
                             <div class="single_product_thumb">
                                 <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
-                                        <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/c1prod1.jpg);">
+                                        <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/prodetails/c1prod1.jpg);">
                                         </li>
-                                        <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(img/product-img/c1prod2.png);">
+                                        <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(img/product-img/prodetails/c1prod2.png);">
                                         </li>
-                                        <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(img/product-img/c1prod3.jpg);">
+                                        <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(img/product-img/prodetails/c1prod3.jpg);">
                                         </li>
-                                        <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(img/product-img/c1prod4.png);">
+                                        <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(img/product-img/prodetails/c1prod4.png);">
                                         </li>
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <a class="gallery_img" href="img/product-img/c1prod1.jpg">
-                                                <img class="d-block w-100" src="img/product-img/c1prod1.jpg" alt="First slide">
+                                            <a class="gallery_img" href="img/product-img/prodetails/c1prod1.jpg">
+                                                <img class="d-block w-100" src="img/product-img/prodetails/c1prod1.jpg" alt="First slide">
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a class="gallery_img" href="img/product-img/c1prod2.png">
-                                                <img class="d-block w-100" src="img/product-img/c1prod2.png" alt="Second slide">
+                                            <a class="gallery_img" href="img/product-img/prodetails/c1prod2.png">
+                                                <img class="d-block w-100" src="img/product-img/prodetails/c1prod2.png" alt="Second slide">
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a class="gallery_img" href="img/product-img/c1prod3.jpg">
-                                                <img class="d-block w-100" src="img/product-img/c1prod3.jpg" alt="Third slide">
+                                            <a class="gallery_img" href="img/product-img/prodetails/c1prod3.jpg">
+                                                <img class="d-block w-100" src="img/product-img/prodetails/c1prod3.jpg" alt="Third slide">
                                             </a>
                                         </div>
                                         <div class="carousel-item">
-                                            <a class="gallery_img" href="img/product-img/c1prod4.png">
-                                                <img class="d-block w-100" src="img/product-img/c1prod4.png" alt="Fourth slide">
+                                            <a class="gallery_img" href="img/product-img/prodetails/c1prod4.png">
+                                                <img class="d-block w-100" src="img/product-img/prodetails/c1prod4.png" alt="Fourth slide">
                                             </a>
                                         </div>
                                     </div>
@@ -188,17 +188,13 @@
                                     <!-- Ratings & Review -->
                                     <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
                                         <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+
                                         </div>
                                         <div class="review">
-                                            <a href="#">Write a review</a>
+
                                         </div>
                                     </div>
-                                    <!-- Available -->
-                                    <p class="availability"><i class="fa fa-circle"></i> In Stock</p>
+
                                 </div>
 
                                 <div class="short_overview my-5">

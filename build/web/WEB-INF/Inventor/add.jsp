@@ -9,7 +9,7 @@
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
-        <title>Fur Real Pet Supplies - Add</title>
+        <title>Fur Real Pet Supplies - Add Products</title>
 
         <!-- Tab Icon  -->
         <link rel="icon" href="<%=request.getContextPath()%>/img/core-img/iconlight.png">

@@ -141,7 +141,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cage 1 cart.png" alt="Product"></a>
+                                                <a href="#"><img src="img/bg-img/cart/cage 1 cart.png" alt="Product"></a>
                                             </td>
                                             <td class="cart_product_desc">
                                                 <h5>Foldable Steel Cage</h5>
@@ -167,7 +167,7 @@
                                         </tr>
                                         <tr>
                                             <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cage 2 cart.png" alt="Product"></a>
+                                                <a href="#"><img src="img/bg-img/cart/cage 2 cart.png" alt="Product"></a>
                                             </td>
                                             <td class="cart_product_desc">
                                                 <h5>Cat Carrier Bag</h5>
@@ -196,7 +196,7 @@
                                         </tr>
                                         <tr>
                                             <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cage 3 cart.png" alt="Product"></a>
+                                                <a href="#"><img src="img/bg-img/cart/cage 3 cart.png" alt="Product"></a>
                                             </td>
                                             <td class="cart_product_desc">
                                                 <h5>Small Plastic Cage</h5>

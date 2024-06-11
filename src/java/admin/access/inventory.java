@@ -81,9 +81,17 @@ public class inventory extends HttpServlet {
         String employmentStatus = request.getParameter("employmentStatus");
         EmployeeBlueprint newEmployee = new EmployeeBlueprint(employeeID, firstName, lastName, middleName, department, employmentStatus);
         EmployeeDao employeeDao = new EmployeeDao();
-        EmployeeBlueprint employeeDetails = employeeDao.getEmployeeList(newEmployee);
+        boolean employeeDetails = employeeDao.createEmployee(newEmployee);
+        
+        if (employeeDetails) {
+            String message = "Reg for" + firstName + " " + middleName + " " + lastName + " is successful";
+            request.setAttribute("message", message);
+        } else { 
+            String message = "Error";
+            request.setAttribute("message", message);
+        }
 
-        request.setAttribute("employeeDetails", employeeDetails);
+        //request.setAttribute("employeeDetails", employeeDetails);
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/datatesting.jsp");
         rd.forward(request, response);

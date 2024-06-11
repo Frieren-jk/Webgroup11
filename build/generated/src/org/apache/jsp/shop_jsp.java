@@ -94,7 +94,7 @@ public final class shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"navbar-brand\">\r\n");
       out.write("                    <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/index\"><img src=\"img/core-img/logolight.png\" alt=\"error\"></a>\r\n");
+      out.write("/home\"><img src=\"img/core-img/logolight.png\" alt=\"error\"></a>\r\n");
       out.write("                </div>\r\n");
       out.write("                <!-- Navbar Toggler -->\r\n");
       out.write("                <div class=\"navbar-toggler\">\r\n");
@@ -132,7 +132,7 @@ public final class shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"logo\">\r\n");
       out.write("                    <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/index\"><img src=\"img/core-img/logolight.png\" alt=\"error\"></a>\r\n");
+      out.write("/home\"><img src=\"img/core-img/logolight.png\" alt=\"error\"></a>\r\n");
       out.write("                </div>\r\n");
       out.write("\r\n");
       out.write("                <!-- Cart Menu -->\r\n");
@@ -159,7 +159,7 @@ public final class shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <ul>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/index\">Home</a></li>\r\n");
+      out.write("/home\">Home</a></li>\r\n");
       out.write("                            <li class=\"active\"><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">Shop</a></li>\r\n");
@@ -537,10 +537,11 @@ public final class shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <div class=\"footer-logo mr-50\">\r\n");
       out.write("                                <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/index\"><img src=\"img/core-img/logodark.png\" alt=\"error\"></a>\r\n");
+      out.write("/home\"><img src=\"img/core-img/logodark.png\" alt=\"error\"></a>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <!-- Text -->\r\n");
-      out.write("                            <p class=\"footerdescription\">\"Animals are such agreeable friends - they ask no questions; they pass no criticisms.\" - George Eliot\r\n");
+      out.write("                            <p class=\"footerdescription\">\"Animals are such agreeable friends - they ask no questions; they pass no criticisms.\"<br>\r\n");
+      out.write("                                - George Eliot\r\n");
       out.write("                                <br>\r\n");
       out.write("                                <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>\r\n");
       out.write("                            </p>\r\n");
@@ -559,7 +560,7 @@ public final class shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/index\">Home</a>\r\n");
+      out.write("/home\">Home</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item active\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");

@@ -31,9 +31,6 @@ public class inventory extends HttpServlet {
             case "/inventory/add":
                 viewAdd(request, response);
                 break;
-            case "/inventory/addtesting":
-                viewAdd1(request, response);
-                break;
             default:
                 viewInventory(request, response);
                 break;
@@ -55,45 +52,39 @@ public class inventory extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/WEB-INF/Inventor/add.jsp");
-        rd.forward(request, response);
-    }
-
     private void viewAdd(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/WEB-INF/Inventor/inventoryUpdated.jsp");
         rd.forward(request, response);
     }
 
-    private void viewAdd1(HttpServletRequest request, HttpServletResponse response)
+    private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        int employeeID = Integer.parseInt(request.getParameter("employeeID"));
-        String firstName = request.getParameter("firstName");
-        String middleName = request.getParameter("middleName");
-        String lastName = request.getParameter("lastName");
-        String department = request.getParameter("department");
-        String employmentStatus = request.getParameter("employmentStatus");
-        EmployeeBlueprint newEmployee = new EmployeeBlueprint(employeeID, firstName, lastName, middleName, department, employmentStatus);
-        EmployeeDao employeeDao = new EmployeeDao();
-        boolean employeeDetails = employeeDao.createEmployee(newEmployee);
-        
-        if (employeeDetails) {
-            String message = "Reg for" + firstName + " " + middleName + " " + lastName + " is successful";
-            request.setAttribute("message", message);
-        } else { 
-            String message = "Error";
-            request.setAttribute("message", message);
+        if (request.getParameter("addItem") != null) {
+            String firstName = request.getParameter("firstName");
+            String middleName = request.getParameter("middleName");
+            String lastName = request.getParameter("lastName");
+            String department = request.getParameter("department");
+            String employmentStatus = request.getParameter("employmentStatus");
+            EmployeeBlueprint newEmployee = new EmployeeBlueprint(firstName, middleName, lastName, department, employmentStatus);
+            EmployeeDao employeeDao = new EmployeeDao();
+            boolean employeeDetails = employeeDao.createEmployee(newEmployee);
+
+            if (employeeDetails) {
+                String message = "Reg for" + firstName + " " + middleName + " " + lastName + " is successful";
+                request.setAttribute("message", message);
+            } else {
+                String message = "Error";
+                request.setAttribute("message", message);
+            }
+
         }
 
         //request.setAttribute("employeeDetails", employeeDetails);
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/datatesting.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add.jsp");
         rd.forward(request, response);
 
     }

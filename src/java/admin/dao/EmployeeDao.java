@@ -18,22 +18,20 @@ public class EmployeeDao {
         Connection conn  = null;
         PreparedStatement ps = null;
         String query = "insert into employee ("
-                + "EmployeeID, "
                 + "firstName, "
                 + "middleName, "
                 + "lastName, "
                 + "department, "
                 + "employmentStatus) "
-                + "values (?,?,?,?,?,?)";
+                + "values (?,?,?,?,?)";
         try {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(query);
-            ps.setInt(1, employee.getEmployeeID());
-            ps.setString(2, employee.getfirstName());
-            ps.setString(3, employee.getMiddleName());
-            ps.setString(4, employee.getLastName());
-            ps.setString(5, employee.getDepartment());
-            ps.setString(6, employee.getEmploymentStatus());
+            ps.setString(1, employee.getfirstName());
+            ps.setString(2, employee.getMiddleName());
+            ps.setString(3, employee.getLastName());
+            ps.setString(4, employee.getDepartment());
+            ps.setString(5, employee.getEmploymentStatus());
             int rowAffected = ps.executeUpdate();
             if (rowAffected != 0) {
                 success = true;
@@ -61,13 +59,12 @@ public class EmployeeDao {
     }
     
     public EmployeeBlueprint getEmployeeList(EmployeeBlueprint employee) {
-        int employeeID = employee.getEmployeeID();
         String firstName = employee.getfirstName();
-        String lastName = employee.getLastName();
         String middleName = employee.getMiddleName();
+         String lastName = employee.getLastName();
         String department = employee.getDepartment();
         String employmentStatus = employee.getEmploymentStatus();
-        EmployeeBlueprint employeelist = new EmployeeBlueprint(employeeID, firstName, lastName, middleName, department, employmentStatus);
+        EmployeeBlueprint employeelist = new EmployeeBlueprint(firstName, middleName,lastName, department, employmentStatus);
         return employeelist;
         
     

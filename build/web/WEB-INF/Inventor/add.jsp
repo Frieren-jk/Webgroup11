@@ -127,43 +127,36 @@
                                 <div class="cart-title">
                                     <h2>ADD INVENTORY</h2>
                                 </div>
-                                <div class="registration-form-wrapper">
-                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/addtesting" class="py-3 " id="regform">
-                                        <div class="row">
-                                            <div class="col-12 col-md-8 mt-3">
-                                                <div class="form-group ">
-                                                    <label for="username">Employee ID</label>
-                                                    <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter the Full Name" >
-                                                    <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                                </div> 
-                                            </div>
-                                            <div class="col-12 col-md-4 mt-3">
+                                <div class="registration-form-wrapper ">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/form" class="py-3  " id="regform">
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4 mt-3 ms-auto">
                                                 <div class="form-group ">
                                                     <label for="firstName">First Name</label>
                                                     <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter the Position of the Employee">
                                                     <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
                                                 </div> 
                                             </div>
-                                        </div>
-
-                                        <div class="row ">
-                                            <div class="col-12 col-md-4  mt-5 ">
+                                             <div class="col-12 col-md-4  mt-3 me-auto">
                                                 <div class="form-group">
                                                     <label for="Middle Name">Middle Name</label>
                                                     <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter the Office" >
                                                     <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-4  mt-5 ">
+                                        </div>
+
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4  mt-5 ms-auto ">
                                                 <div class="form-group">
-                                                    <label for="Last Name">Age</label>
+                                                    <label for="Last Name">Last Name</label>
                                                     <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter the Age" >
                                                     <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-4  mt-5">
+                                            <div class="col-12 col-md-4  mt-5 me-auto">
                                                 <div class="form-group">
-                                                    <label for="address">Start Date</label>
+                                                    <label for="address">Department</label>
                                                     <input type="text" class="form-control" id="address" name="department"  placeholder="Enter the Start Date" >
                                                     <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                                 </div>
@@ -173,9 +166,9 @@
                                         <div class="row ">
                                         </div>
                                         <div class="row ">
-                                            <div class="col-12 col-md-4 me-auto mt-5">
+                                            <div class="col-12 col-md-4 mt-5 ms-auto me-auto ">
                                                 <div class="form-group">
-                                                    <label for="Birthday">Salary</label>
+                                                    <label for="Birthday">Employment Status</label>
                                                     <input type="text" class="form-control" id="birthday"  name="employmentStatus"  placeholder="Enter the Salary" >
                                                     <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
                                                 </div>
@@ -183,7 +176,7 @@
                                         </div> 
                                     </form>
 
-                                    <button type='submit' form="regform" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Add</button>
+                                    <button type='submit' form="regform" name="addItem" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Add</button>
                                 </div>
                             </div>
                         </div>

@@ -9,7 +9,6 @@ package admin.model;
  * @author John
  */
 public class EmployeeBlueprint {
-    private int employeeID;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -21,9 +20,9 @@ public class EmployeeBlueprint {
         //empty
     }
     
-    public EmployeeBlueprint( int employeeID, String firstName, String middleName, String lastName, String department, String employmentStatus) {
+    public EmployeeBlueprint(String firstName, String middleName, String lastName, String department, String employmentStatus) {
        
-        this.employeeID = employeeID;
+       
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -31,15 +30,7 @@ public class EmployeeBlueprint {
         this.employmentStatus = employmentStatus;
     
     }
-    
-    public int getEmployeeID() { 
-        return employeeID;
-    }
-    
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
-    } 
-    
+
     public String getfirstName() { 
         return firstName;
     }

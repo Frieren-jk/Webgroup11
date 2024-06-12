@@ -52,7 +52,7 @@ public final class add_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- The above 4 meta tags must come first in the head -->\r\n");
       out.write("\r\n");
       out.write("        <!-- Title  -->\r\n");
-      out.write("        <title>Fur Real Pet Supplies - Add</title>\r\n");
+      out.write("        <title>Fur Real Pet Supplies - Add Products</title>\r\n");
       out.write("\r\n");
       out.write("        <!-- Tab Icon  -->\r\n");
       out.write("        <link rel=\"icon\" href=\"");

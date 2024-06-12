@@ -52,7 +52,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- The above 4 meta tags must come first in the head -->\r\n");
       out.write("\r\n");
       out.write("        <!-- Title  -->\r\n");
-      out.write("        <title>Fur Real Pet Supplies - Registration</title>\r\n");
+      out.write("        <title>Fur Real Pet Supplies - Products Inventory</title>\r\n");
       out.write("\r\n");
       out.write("        <!-- Tab Icon  -->\r\n");
       out.write("        <link rel=\"icon\" href=\"");

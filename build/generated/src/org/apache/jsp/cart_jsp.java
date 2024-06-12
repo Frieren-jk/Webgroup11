@@ -208,7 +208,7 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <tbody>\r\n");
       out.write("                                        <tr>\r\n");
       out.write("                                            <td class=\"cart_product_img\">\r\n");
-      out.write("                                                <a href=\"#\"><img src=\"img/bg-img/cage 1 cart.png\" alt=\"Product\"></a>\r\n");
+      out.write("                                                <a href=\"#\"><img src=\"img/bg-img/cart/cage 1 cart.png\" alt=\"Product\"></a>\r\n");
       out.write("                                            </td>\r\n");
       out.write("                                            <td class=\"cart_product_desc\">\r\n");
       out.write("                                                <h5>Foldable Steel Cage</h5>\r\n");
@@ -234,7 +234,7 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        </tr>\r\n");
       out.write("                                        <tr>\r\n");
       out.write("                                            <td class=\"cart_product_img\">\r\n");
-      out.write("                                                <a href=\"#\"><img src=\"img/bg-img/cage 2 cart.png\" alt=\"Product\"></a>\r\n");
+      out.write("                                                <a href=\"#\"><img src=\"img/bg-img/cart/cage 2 cart.png\" alt=\"Product\"></a>\r\n");
       out.write("                                            </td>\r\n");
       out.write("                                            <td class=\"cart_product_desc\">\r\n");
       out.write("                                                <h5>Cat Carrier Bag</h5>\r\n");
@@ -263,7 +263,7 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        </tr>\r\n");
       out.write("                                        <tr>\r\n");
       out.write("                                            <td class=\"cart_product_img\">\r\n");
-      out.write("                                                <a href=\"#\"><img src=\"img/bg-img/cage 3 cart.png\" alt=\"Product\"></a>\r\n");
+      out.write("                                                <a href=\"#\"><img src=\"img/bg-img/cart/cage 3 cart.png\" alt=\"Product\"></a>\r\n");
       out.write("                                            </td>\r\n");
       out.write("                                            <td class=\"cart_product_desc\">\r\n");
       out.write("                                                <h5>Small Plastic Cage</h5>\r\n");

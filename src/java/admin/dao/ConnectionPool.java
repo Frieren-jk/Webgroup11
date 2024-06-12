@@ -13,12 +13,12 @@ public class ConnectionPool {
             String driver = "com.mysql.cj.jdbc.Driver";
             Class.forName (driver);
             
-            String url = "jdbc:mysql://localhost:3306/test_db?serverTimezone=UTC";
+            String url = "jdbc:mysql://localhost:3306/webgroup11?serverTimezone=UTC";
             conn = (Connection) DriverManager.getConnection(url, "?", "?");
         }
         
         catch (SQLException e){
-            System.err.println("SQLException" + e);
+            System.out.println("SQLException" + e);
         }
         
         return conn;

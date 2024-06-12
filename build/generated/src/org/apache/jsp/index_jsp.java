@@ -196,7 +196,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 1 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 1 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -211,7 +211,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 2 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 2 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -226,7 +226,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 3 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 3 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -241,7 +241,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 4 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 4 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -256,7 +256,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 5 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 5 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -271,7 +271,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 6 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 6 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -286,7 +286,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 7 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 7 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -301,7 +301,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 8 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 8 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");
@@ -316,7 +316,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/shop\">\r\n");
-      out.write("                            <img src=\"img/bg-img/cage 9 home.png\" alt=\"error\">\r\n");
+      out.write("                            <img src=\"img/bg-img/home/cage 9 home.png\" alt=\"error\">\r\n");
       out.write("                            <!-- Hover Content -->\r\n");
       out.write("                            <div class=\"hover-content\">\r\n");
       out.write("                                <div class=\"line\"></div>\r\n");

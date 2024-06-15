@@ -10,6 +10,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import admin.dao.EmployeeDao;
+import admin.dao.SearchInventory;
+import admin.model.EmployeeBlueprint;
+import java.util.ArrayList;
 
 /**
  *
@@ -26,9 +30,7 @@ public class registration extends HttpServlet {
             case "/registration":
                 viewReg(request, response);
                 break;
-            default:
-                viewDefault(request, response);
-                break;
+           
         }
 
     }
@@ -39,22 +41,55 @@ public class registration extends HttpServlet {
         doGet(request, response);
     }
 
-    private void viewDefault(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/registration.jsp");
-        rd.forward(request, response);
-    }
+    
 
     private void viewReg(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        if (request.getParameter("RegisterItem") != null) {
+            String userName = request.getParameter("userName");
+            String password = request.getParameter("password");
+            String firstName = request.getParameter("firstName");
+            String middleName = request.getParameter("middleName");
+            String lastName = request.getParameter("lastName");
+            String address = request.getParameter("address");
+            String birthday = request.getParameter("birthday");
+            long mobileNumber = Long.parseLong(request.getParameter("mobileNumber"));
+            String department = request.getParameter("department");
+            String employmentStatus = request.getParameter("employmentStatus");
+            EmployeeBlueprint newEmployee = new EmployeeBlueprint(
+                    userName,
+                    password,
+                    firstName, 
+                    middleName, 
+                    lastName, 
+                    address,
+                    birthday,
+                    mobileNumber,
+                    department, 
+                    employmentStatus);
+            EmployeeDao employeeDao = new EmployeeDao();
+            boolean employeeDetails = employeeDao.createEmployee(newEmployee);
+
+            if (employeeDetails) {
+                
+                System.out.println("Registration for" + userName + " is successful");
+                
+            } else {
+                System.out.println("Registration is not successful");
+            }
+
+        }
+        
+        
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/registration.jsp");
         rd.forward(request, response);
+        
     }
-
- 
+    
+   
+  
 
 }

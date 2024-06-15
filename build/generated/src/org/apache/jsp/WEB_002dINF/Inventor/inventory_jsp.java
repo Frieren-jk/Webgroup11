@@ -11,10 +11,20 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_forEach_var_items.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -42,13 +52,16 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("<!DOCTYPE html>\r\n");
+      out.write("\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");
       out.write("    <head>\r\n");
+      out.write("        \r\n");
       out.write("        <meta charset=\"UTF-8\">\r\n");
       out.write("        <meta name=\"description\" content=\"\">\r\n");
       out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n");
+      out.write("        \r\n");
       out.write("        <!-- The above 4 meta tags must come first in the head -->\r\n");
       out.write("\r\n");
       out.write("        <!-- Title  -->\r\n");
@@ -226,120 +239,30 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <table id=\"myTable\" class=\"table table-striped table-hover\">\r\n");
       out.write("                            <thead>\r\n");
       out.write("                                <tr>\r\n");
+      out.write("                                    <th>Username</th>\r\n");
       out.write("                                    <th>Name</th>\r\n");
-      out.write("                                    <th>Position</th>\r\n");
-      out.write("                                    <th>Office</th>\r\n");
-      out.write("                                    <th>Age</th>\r\n");
-      out.write("                                    <th>Start date</th>\r\n");
-      out.write("                                    <th>Salary</th>\r\n");
+      out.write("                                    <th>Address</th>\r\n");
+      out.write("                                    <th>Birthday</th>\r\n");
+      out.write("                                    <th>Mobile Number</th>\r\n");
+      out.write("                                    <th>Department<th>\r\n");
+      out.write("                                    <th>Status<th>\r\n");
       out.write("                                </tr>\r\n");
       out.write("                            </thead>\r\n");
       out.write("                            <tbody>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>JK Salvador</td>\r\n");
-      out.write("                                    <td>System Architect</td>\r\n");
-      out.write("                                    <td>Edinburgh</td>\r\n");
-      out.write("                                    <td>61</td>\r\n");
-      out.write("                                    <td>2011-04-25</td>\r\n");
-      out.write("                                    <td>$320,800</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Alexander Pascual</td>\r\n");
-      out.write("                                    <td>Accountant</td>\r\n");
-      out.write("                                    <td>Tokyo</td>\r\n");
-      out.write("                                    <td>63</td>\r\n");
-      out.write("                                    <td>2011-07-25</td>\r\n");
-      out.write("                                    <td>$170,750</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Ian Palallos</td>\r\n");
-      out.write("                                    <td>Senior Technical Author</td>\r\n");
-      out.write("                                    <td>Los Alamos</td>\r\n");
-      out.write("                                    <td>66</td>\r\n");
-      out.write("                                    <td>1945-08-05</td>\r\n");
-      out.write("                                    <td>$186,000</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Senior Javascript Developer</td>\r\n");
-      out.write("                                    <td>Edinburgh</td>\r\n");
-      out.write("                                    <td>22</td>\r\n");
-      out.write("                                    <td>2012-03-29</td>\r\n");
-      out.write("                                    <td>$433,060</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Accountant</td>\r\n");
-      out.write("                                    <td>Tokyo</td>\r\n");
-      out.write("                                    <td>33</td>\r\n");
-      out.write("                                    <td>2008-11-28</td>\r\n");
-      out.write("                                    <td>$162,700</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Integration Specialist</td>\r\n");
-      out.write("                                    <td>New York</td>\r\n");
-      out.write("                                    <td>61</td>\r\n");
-      out.write("                                    <td>2012-12-02</td>\r\n");
-      out.write("                                    <td>$372,000</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Sales Assistant</td>\r\n");
-      out.write("                                    <td>San Francisco</td>\r\n");
-      out.write("                                    <td>59</td>\r\n");
-      out.write("                                    <td>2012-08-06</td>\r\n");
-      out.write("                                    <td>$137,500</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Integration Specialist</td>\r\n");
-      out.write("                                    <td>Tokyo</td>\r\n");
-      out.write("                                    <td>55</td>\r\n");
-      out.write("                                    <td>2010-10-14</td>\r\n");
-      out.write("                                    <td>$327,900</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Javascript Developer</td>\r\n");
-      out.write("                                    <td>San Francisco</td>\r\n");
-      out.write("                                    <td>39</td>\r\n");
-      out.write("                                    <td>2009-09-15</td>\r\n");
-      out.write("                                    <td>$205,500</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Software Engineer</td>\r\n");
-      out.write("                                    <td>Edinburgh</td>\r\n");
-      out.write("                                    <td>23</td>\r\n");
-      out.write("                                    <td>2008-12-13</td>\r\n");
-      out.write("                                    <td>$103,600</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Javascript Developer</td>\r\n");
-      out.write("                                    <td>Singapore</td>\r\n");
-      out.write("                                    <td>29</td>\r\n");
-      out.write("                                    <td>2011-06-27</td>\r\n");
-      out.write("                                    <td>$183,000</td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <td>Z------</td>\r\n");
-      out.write("                                    <td>Customer Support</td>\r\n");
-      out.write("                                    <td>New York</td>\r\n");
-      out.write("                                    <td>27</td>\r\n");
-      out.write("                                    <td>2011-01-25</td>\r\n");
-      out.write("                                    <td>$112,000</td>\r\n");
-      out.write("                                </tr>\r\n");
+      out.write("                                ");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
+      out.write("\r\n");
       out.write("                            </tbody>\r\n");
       out.write("                            <tfoot>\r\n");
       out.write("                                <tr>\r\n");
+      out.write("                                    <th>Username</th>\r\n");
       out.write("                                    <th>Name</th>\r\n");
-      out.write("                                    <th>Position</th>\r\n");
-      out.write("                                    <th>Office</th>\r\n");
-      out.write("                                    <th>Age</th>\r\n");
-      out.write("                                    <th>Start date</th>\r\n");
-      out.write("                                    <th>Salary</th>\r\n");
+      out.write("                                    <th>Address</th>\r\n");
+      out.write("                                    <th>Birthday</th>\r\n");
+      out.write("                                    <th>Mobile Number</th>\r\n");
+      out.write("                                    <th>Department<th>\r\n");
+      out.write("                                    <th>Status<th>\r\n");
       out.write("                                </tr>\r\n");
       out.write("                            </tfoot>\r\n");
       out.write("                        </table>\r\n");
@@ -510,5 +433,57 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_0.setParent(null);
+    _jspx_th_c_forEach_0.setItems(new String("$(AllUser)"));
+    _jspx_th_c_forEach_0.setVar("user");
+    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
+      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                                <tr>\r\n");
+          out.write("                                    \r\n");
+          out.write("                                        <td>$(user.userName)</td>\r\n");
+          out.write("                                        <td>$(user.firstName) $(user.middleName) $(user.lastName)</td>\r\n");
+          out.write("                                        <td>$(user.address)</td>\r\n");
+          out.write("                                        <td>$(user.birthday)</td>\r\n");
+          out.write("                                        <td>$(user.mobileNumber)</td>\r\n");
+          out.write("                                        <td>$(user.department)</td>\r\n");
+          out.write("                                        <td>\r\n");
+          out.write("                                            <a href=\"#\" class=\"btn btn-sm btn-link\">Edit</a>\r\n");
+          out.write("                                            <a href=\"#\" class=\"btn btn-sm btn-link\">Delete</a>\r\n");
+          out.write("                                        \r\n");
+          out.write("                                        </td>\r\n");
+          out.write("                                    \r\n");
+          out.write("                                    \r\n");
+          out.write("                                </tr>\r\n");
+          out.write("                                ");
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+    }
+    return false;
   }
 }

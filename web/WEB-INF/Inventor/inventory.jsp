@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
     <head>
+        
         <meta charset="UTF-8">
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
@@ -135,25 +138,42 @@
                         <table id="myTable" class="table table-striped table-hover">
                             <thead>
                                 <tr>
+                                    <th>Username</th>
                                     <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Address</th>
+                                    <th>Birthday</th>
+                                    <th>Mobile Number</th>
+                                    <th>Department<th>
+                                    <th>Status<th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <c:forEach items="$(AllUser)" var="user">
+                                <tr>
+                                    
+                                        <td>$(user.userName)</td>
+                                        <td>$(user.firstName) $(user.middleName) $(user.lastName)</td>
+                                        <td>$(user.address)</td>
+                                        <td>$(user.birthday)</td>
+                                        <td>$(user.mobileNumber)</td>
+                                        <td>$(user.department)</td>
+                                        <td>
+                                           $(user.employmentStatus)
+                                        </td>
+                                    
+                                    
+                                </tr>
+                                </c:forEach>
                             </tbody>
                             <tfoot>
                                 <tr>
+                                    <th>Username</th>
                                     <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Address</th>
+                                    <th>Birthday</th>
+                                    <th>Mobile Number</th>
+                                    <th>Department<th>
+                                    <th>Status<th>
                                 </tr>
                             </tfoot>
                         </table>

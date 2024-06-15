@@ -9,9 +9,14 @@ package admin.model;
  * @author John
  */
 public class EmployeeBlueprint {
+    private long mobileNumber;
+    private String userName;
+    private String password;
     private String firstName;
     private String middleName;
     private String lastName;
+    private String address;
+    private String birthday;
     private String department;
     private String employmentStatus;
    
@@ -20,16 +25,46 @@ public class EmployeeBlueprint {
         //empty
     }
     
-    public EmployeeBlueprint(String firstName, String middleName, String lastName, String department, String employmentStatus) {
+    public EmployeeBlueprint(
+            String userName, 
+            String password, 
+            String firstName, 
+            String middleName, 
+            String lastName,
+            String address,
+            String birthday, 
+            long mobileNumber,
+            String department, 
+            String employmentStatus) {
        
-       
+        this.userName = userName;
+        this.password = password;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
+        this.address = address;
+        this.birthday = birthday;
+        this.mobileNumber = mobileNumber;
         this.department = department;
         this.employmentStatus = employmentStatus;
     
     }
+    
+    public String getuserName() { 
+        return userName;
+    }
+    
+    public void setUserName(String userName) {
+        this.userName = userName;
+    } 
+    
+    public String getpassword() { 
+        return password;
+    }
+    
+    public void setPassword(String password) {
+        this.password = password;
+    } 
 
     public String getfirstName() { 
         return firstName;
@@ -55,6 +90,29 @@ public class EmployeeBlueprint {
         this.lastName = lastName;
     } 
     
+    public String getaddress() { 
+        return address;
+    }
+    
+    public void setAddress(String address) {
+        this.address = address;
+    } 
+    
+    public String getbirthday() { 
+        return birthday;
+    }
+    
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    } 
+    
+    public long getmobileNumber() { 
+        return mobileNumber;
+    }
+    
+    public void setMobileNumber(long mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    } 
     public String getDepartment() { 
         return department;
     }

@@ -20,7 +20,6 @@
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="css/core-style.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="Custom11Css.css">
         <script src="https://kit.fontawesome.com/3f5c7d2f43.js" crossorigin="anonymous"></script>
     </head>
 
@@ -151,11 +150,12 @@
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form class="py-3 needs-validation" id="regform" novalidate>
+                                    
                                         <div class="row">
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group ">
                                                     <label for="username">Username</label>
-                                                    <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                                    <input type="text" class="form-control" id="username" name="userName" placeholder="Enter your username" required>
                                                     <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters. Special characters are not allowed.</small>
                                                     <div class="invalid-feedback">
                                                         Please enter a username.</div>
@@ -167,8 +167,8 @@
                                             <div class="col-12 col-md-6 mt-5">
                                                 <div class="form-group form-pass">
                                                     <label for="password">Password</label>
-                                                    <i class="fa fa-eye-slash showPass " ></i><!-- sopas??-->
-                                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required >
+                                                    <i class="fa fa-eye-slash showPass " ></i>
+                                                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required >
                                                     <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
                                                         must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
                                                     <div class="invalid-feedback">
@@ -195,8 +195,8 @@
                                         <div class="row ">
                                             <div class="col-12 col-md-4  mt-5">
                                                 <div class="form-group">
-                                                    <label for="First Name">First Name</label>
-                                                    <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" required>
+                                                    <label for="firstname">First Name</label>
+                                                    <input type="text" class="form-control" id="firstname" name="firstName" placeholder="Enter your First Name" required>
                                                     <small id="firstnameHelp" class="form-text">First name must be characters only, minimum of 1 character.</small>
                                                     <div class="invalid-feedback">
                                                         Please enter your First Name.
@@ -206,8 +206,8 @@
 
                                             <div class="col-12 col-md-4  mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="Middle Name">Middle Name</label>
-                                                    <input type="text" class="form-control" id="middlename" placeholder="Enter your Middle Name" >
+                                                    <label for="middlename">Middle Name</label>
+                                                    <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter your Middle Name" >
                                                     <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
                                                     <div class="invalid-feedback">
                                                         Not Required.
@@ -217,8 +217,8 @@
 
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="Last Name">Last Name</label>
-                                                    <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name"  required>
+                                                    <label for="lastname">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastname"  name="lastName" placeholder="Enter your Last Name"  required>
                                                     <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
                                                     <div class="invalid-feedback">
                                                         Please enter your Last Name.
@@ -231,7 +231,7 @@
                                             <div class="col-12 col-md-4 me-auto mt-5">
                                                 <div class="form-group">
                                                     <label for="address">Complete Address</label>
-                                                    <input type="text" class="form-control" id="address" placeholder="Enter your Address"  required>
+                                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter your Address"  required>
                                                     <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
                                                     <div class="invalid-feedback">
                                                         Please enter your Address.
@@ -242,8 +242,8 @@
 
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="Birthday">Birthday</label>
-                                                    <input type="text" class="form-control bday" id="birthday"  placeholder="Enter your Birthday MM-DD-YYYY (2005)"   required>
+                                                    <label for="birthday">Birthday</label>
+                                                    <input type="text" class="form-control bday" id="birthday" name="birthday" placeholder="Enter your Birthday MM-DD-YYYY (2005)"   required>
                                                     <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>
                                                     <div class="invalid-feedback">
                                                         Please pick your Birthday.
@@ -252,8 +252,8 @@
                                             </div>
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="Mobile Number">Mobile Number</label>
-                                                    <input type="text" class="form-control" id="number" placeholder="09 - Enter your Mobile Number"   required>
+                                                    <label for="number">Mobile Number</label>
+                                                    <input type="text" class="form-control" id="number" name="mobileNumber" placeholder="09 - Enter your Mobile Number"   required>
                                                     <small id="numberHelp" class="form-text">Mobile Number must be numeric, starts with 09, and should be 11 digits.</small>
                                                     <div class="invalid-feedback">
                                                         Please enter your Mobile Number.
@@ -262,7 +262,7 @@
                                             </div>
                                         </div> 
                                     </form>
-                                    <button type='submit' form="regform" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Submit</button>
+                                    <button type='submit' form="regform" name="RegisterItem" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Submit</button>
                                 </div>
                             </div>
                         </div>

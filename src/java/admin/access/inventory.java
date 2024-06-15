@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import admin.dao.EmployeeDao;
+import admin.dao.SearchInventory;
 import admin.model.EmployeeBlueprint;
+import java.util.ArrayList;
 
 /**
  *
@@ -47,6 +49,10 @@ public class inventory extends HttpServlet {
     private void viewInventory(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        SearchInventory search = new SearchInventory();
+        ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
+        request.setAttribute("AllUser", AllUser);
+
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/WEB-INF/Inventor/inventory.jsp");
         rd.forward(request, response);
@@ -63,28 +69,40 @@ public class inventory extends HttpServlet {
     private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        if (request.getParameter("addItem") != null) {
-            String firstName = request.getParameter("firstName");
-            String middleName = request.getParameter("middleName");
-            String lastName = request.getParameter("lastName");
-            String department = request.getParameter("department");
-            String employmentStatus = request.getParameter("employmentStatus");
-            EmployeeBlueprint newEmployee = new EmployeeBlueprint(firstName, middleName, lastName, department, employmentStatus);
-            EmployeeDao employeeDao = new EmployeeDao();
-            boolean employeeDetails = employeeDao.createEmployee(newEmployee);
-
-            if (employeeDetails) {
-                String message = "Reg for" + firstName + " " + middleName + " " + lastName + " is successful";
-                request.setAttribute("message", message);
-            } else {
-                String message = "Error";
-                request.setAttribute("message", message);
-            }
-
-        }
-
+//        if (request.getParameter("addItem") != null) {
+//            String userName = request.getParameter("userName");
+//            String firstName = request.getParameter("firstName");
+//            String middleName = request.getParameter("middleName");
+//            String lastName = request.getParameter("lastName");
+//            String department = request.getParameter("department");
+//            String employmentStatus = request.getParameter("employmentStatus");
+//            EmployeeBlueprint newEmployee = new EmployeeBlueprint(firstName, middleName, lastName, department, employmentStatus);
+//            EmployeeDao employeeDao = new EmployeeDao();
+//            boolean employeeDetails = employeeDao.createEmployee(newEmployee);
+//
+//            if (employeeDetails) {
+//                String message = "Reg for" + firstName + " " + middleName + " " + lastName + " is successful";
+//                request.setAttribute("message", message);
+//            } else {
+//                String message = "Error";
+//                request.setAttribute("message", message);
+//            }
+//
+//        }
         //request.setAttribute("employeeDetails", employeeDetails);
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add.jsp");
+        rd.forward(request, response);
+
+    }
+
+    protected void Request(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        SearchInventory search = new SearchInventory();
+        ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
+        request.setAttribute("AllUser", AllUser);
+
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Inventor/inventory.jsp");
         rd.forward(request, response);
 
     }

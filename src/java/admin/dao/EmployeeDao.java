@@ -18,20 +18,30 @@ public class EmployeeDao {
         Connection conn  = null;
         PreparedStatement ps = null;
         String query = "insert into employee ("
+                + "userName, "
+                + "password, "
                 + "firstName, "
                 + "middleName, "
                 + "lastName, "
+                + "address, "
+                + "birthday, "
+                + "mobileNumber, "
                 + "department, "
                 + "employmentStatus) "
-                + "values (?,?,?,?,?)";
+                + "values (?,?,?,?,?,?,?,?,?,?)";
         try {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(query);
-            ps.setString(1, employee.getfirstName());
-            ps.setString(2, employee.getMiddleName());
-            ps.setString(3, employee.getLastName());
-            ps.setString(4, employee.getDepartment());
-            ps.setString(5, employee.getEmploymentStatus());
+            ps.setString(1, employee.getuserName());
+            ps.setString(2, employee.getpassword());
+            ps.setString(3, employee.getfirstName());
+            ps.setString(4, employee.getMiddleName());
+            ps.setString(5, employee.getLastName());
+            ps.setString(6, employee.getaddress());
+            ps.setString(7, employee.getbirthday());
+            ps.setLong(8, employee.getmobileNumber());
+            ps.setString(9, employee.getDepartment());
+            ps.setString(10, employee.getEmploymentStatus());
             int rowAffected = ps.executeUpdate();
             if (rowAffected != 0) {
                 success = true;
@@ -59,12 +69,27 @@ public class EmployeeDao {
     }
     
     public EmployeeBlueprint getEmployeeList(EmployeeBlueprint employee) {
+        String userName = employee.getuserName();
+        String password = employee.getpassword();
         String firstName = employee.getfirstName();
         String middleName = employee.getMiddleName();
-         String lastName = employee.getLastName();
+        String lastName = employee.getLastName();
+        String address = employee.getaddress();
+        String birthday = employee.getbirthday();
+        long mobileNumber = employee.getmobileNumber();
         String department = employee.getDepartment();
         String employmentStatus = employee.getEmploymentStatus();
-        EmployeeBlueprint employeelist = new EmployeeBlueprint(firstName, middleName,lastName, department, employmentStatus);
+        EmployeeBlueprint employeelist = new EmployeeBlueprint(
+                userName, 
+                password, 
+                firstName, 
+                middleName,
+                lastName, 
+                address,
+                birthday,
+                mobileNumber,
+                department, 
+                employmentStatus);
         return employeelist;
         
     

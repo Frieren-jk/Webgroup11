@@ -63,7 +63,6 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <!-- Core Style CSS -->\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"css/core-style.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"style.css\">\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"Custom11Css.css\">\r\n");
       out.write("        <script src=\"https://kit.fontawesome.com/3f5c7d2f43.js\" crossorigin=\"anonymous\"></script>\r\n");
       out.write("    </head>\r\n");
       out.write("\r\n");
@@ -218,11 +217,12 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"registration-form-wrapper\">\r\n");
       out.write("                                    <form class=\"py-3 needs-validation\" id=\"regform\" novalidate>\r\n");
+      out.write("                                    \r\n");
       out.write("                                        <div class=\"row\">\r\n");
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group \">\r\n");
       out.write("                                                    <label for=\"username\">Username</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"Enter your username\" required>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"userName\" placeholder=\"Enter your username\" required>\r\n");
       out.write("                                                    <small id=\"usernameHelp\"  class=\"form-text \">Alphanumeric, must be between 4 - 12 characters. Special characters are not allowed.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please enter a username.</div>\r\n");
@@ -234,8 +234,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            <div class=\"col-12 col-md-6 mt-5\">\r\n");
       out.write("                                                <div class=\"form-group form-pass\">\r\n");
       out.write("                                                    <label for=\"password\">Password</label>\r\n");
-      out.write("                                                    <i class=\"fa fa-eye-slash showPass \" ></i><!-- sopas??-->\r\n");
-      out.write("                                                    <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Enter your password\" required >\r\n");
+      out.write("                                                    <i class=\"fa fa-eye-slash showPass \" ></i>\r\n");
+      out.write("                                                    <input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" placeholder=\"Enter your password\" required >\r\n");
       out.write("                                                    <small id=\"passwordHelp\" class=\"form-text\">Password must be alphanumeric, 8 - 16 characters,\r\n");
       out.write("                                                        must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
@@ -262,8 +262,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                        <div class=\"row \">\r\n");
       out.write("                                            <div class=\"col-12 col-md-4  mt-5\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
-      out.write("                                                    <label for=\"First Name\">First Name</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"firstname\" placeholder=\"Enter your First Name\" required>\r\n");
+      out.write("                                                    <label for=\"firstname\">First Name</label>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"firstName\" placeholder=\"Enter your First Name\" required>\r\n");
       out.write("                                                    <small id=\"firstnameHelp\" class=\"form-text\">First name must be characters only, minimum of 1 character.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please enter your First Name.\r\n");
@@ -273,8 +273,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\r\n");
       out.write("                                            <div class=\"col-12 col-md-4  mt-5 \">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
-      out.write("                                                    <label for=\"Middle Name\">Middle Name</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"middlename\" placeholder=\"Enter your Middle Name\" >\r\n");
+      out.write("                                                    <label for=\"middlename\">Middle Name</label>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"middlename\" name=\"middleName\" placeholder=\"Enter your Middle Name\" >\r\n");
       out.write("                                                    <small id=\"middlenameHelp\" class=\"form-text\">Middle name must be characters only or leave it empty if not applicable.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Not Required.\r\n");
@@ -284,8 +284,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\r\n");
       out.write("                                            <div class=\"col-12 col-md-4 me-auto mt-5 \">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
-      out.write("                                                    <label for=\"Last Name\">Last Name</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"lastname\" placeholder=\"Enter your Last Name\"  required>\r\n");
+      out.write("                                                    <label for=\"lastname\">Last Name</label>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"lastname\"  name=\"lastName\" placeholder=\"Enter your Last Name\"  required>\r\n");
       out.write("                                                    <small id=\"lastnameHelp\" class=\"form-text\">Last name must be characters only, minimum of 2 characters.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please enter your Last Name.\r\n");
@@ -298,7 +298,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            <div class=\"col-12 col-md-4 me-auto mt-5\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
       out.write("                                                    <label for=\"address\">Complete Address</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"address\" placeholder=\"Enter your Address\"  required>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"address\" name=\"address\" placeholder=\"Enter your Address\"  required>\r\n");
       out.write("                                                    <small id=\"addressHelp\" class=\"form-text\">Address must be alphanumeric, does not contain special characters.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please enter your Address.\r\n");
@@ -309,8 +309,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\r\n");
       out.write("                                            <div class=\"col-12 col-md-4 me-auto mt-5 \">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
-      out.write("                                                    <label for=\"Birthday\">Birthday</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control bday\" id=\"birthday\"  placeholder=\"Enter your Birthday MM-DD-YYYY (2005)\"   required>\r\n");
+      out.write("                                                    <label for=\"birthday\">Birthday</label>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control bday\" id=\"birthday\" name=\"birthday\" placeholder=\"Enter your Birthday MM-DD-YYYY (2005)\"   required>\r\n");
       out.write("                                                    <small id=\"birthdayHelp\" class=\"form-text\">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please pick your Birthday.\r\n");
@@ -319,8 +319,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            </div>\r\n");
       out.write("                                            <div class=\"col-12 col-md-4 me-auto mt-5 \">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
-      out.write("                                                    <label for=\"Mobile Number\">Mobile Number</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"number\" placeholder=\"09 - Enter your Mobile Number\"   required>\r\n");
+      out.write("                                                    <label for=\"number\">Mobile Number</label>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"number\" name=\"mobileNumber\" placeholder=\"09 - Enter your Mobile Number\"   required>\r\n");
       out.write("                                                    <small id=\"numberHelp\" class=\"form-text\">Mobile Number must be numeric, starts with 09, and should be 11 digits.</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please enter your Mobile Number.\r\n");
@@ -329,7 +329,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            </div>\r\n");
       out.write("                                        </div> \r\n");
       out.write("                                    </form>\r\n");
-      out.write("                                    <button type='submit' form=\"regform\" class=\" d-block mx-auto mt-5 buttonfx angleindouble \">Submit</button>\r\n");
+      out.write("                                    <button type='submit' form=\"regform\" name=\"RegisterItem\" class=\" d-block mx-auto mt-5 buttonfx angleindouble \">Submit</button>\r\n");
       out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");

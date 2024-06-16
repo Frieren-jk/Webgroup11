@@ -27,21 +27,7 @@ public class EmployeeDao {
                 + "lastName, "
                 + "address, "
                 + "birthday, "
-                + "mobileNumber, "
-                + "department, "
-                + "employmentStatus) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-
-//                + "userName, "
-//                + "password, "
-//                + "firstName, "
-//                + "middleName, "
-//                + "lastName, "
-//                + "address, "
-//                + "birthday, "
-//                + "mobileNumber, "
-//                + "department, "
-//                + "employmentStatus) "
-//                + "values (?,?,?,?,?,?,?,?,?,?);";
+                + "mobileNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         try {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(query);
@@ -52,9 +38,7 @@ public class EmployeeDao {
             ps.setString(5, employee.getLastName());
             ps.setString(6, employee.getaddress());
             ps.setString(7, employee.getbirthday());
-            ps.setLong(8, employee.getmobileNumber());
-            ps.setString(9, employee.getDepartment());
-            ps.setString(10, employee.getEmploymentStatus());
+            ps.setString(8, employee.getmobileNumber());
             int rowAffected = ps.executeUpdate();
             if (rowAffected != 0) {
                 success = true;
@@ -89,9 +73,7 @@ public class EmployeeDao {
         String lastName = employee.getLastName();
         String address = employee.getaddress();
         String birthday = employee.getbirthday();
-        long mobileNumber = employee.getmobileNumber();
-        String department = employee.getDepartment();
-        String employmentStatus = employee.getEmploymentStatus();
+        String mobileNumber = employee.getmobileNumber();
         EmployeeBlueprint employeelist = new EmployeeBlueprint(
                 userName,
                 password,
@@ -100,9 +82,7 @@ public class EmployeeDao {
                 lastName,
                 address,
                 birthday,
-                mobileNumber,
-                department,
-                employmentStatus);
+                mobileNumber);
         return employeelist;
 
     }

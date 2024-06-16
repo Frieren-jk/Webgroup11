@@ -9,7 +9,6 @@ package admin.model;
  * @author John
  */
 public class EmployeeBlueprint {
-    private long mobileNumber;
     private String userName;
     private String password;
     private String firstName;
@@ -17,8 +16,9 @@ public class EmployeeBlueprint {
     private String lastName;
     private String address;
     private String birthday;
-    private String department;
-    private String employmentStatus;
+    private String mobileNumber;
+    private String accountStatus;
+    private String loginStatus;
    
     
     public EmployeeBlueprint() {
@@ -33,9 +33,7 @@ public class EmployeeBlueprint {
             String lastName,
             String address,
             String birthday, 
-            long mobileNumber,
-            String department, 
-            String employmentStatus) {
+            String mobileNumber) {
        
         this.userName = userName;
         this.password = password;
@@ -45,10 +43,11 @@ public class EmployeeBlueprint {
         this.address = address;
         this.birthday = birthday;
         this.mobileNumber = mobileNumber;
-        this.department = department;
-        this.employmentStatus = employmentStatus;
+       
     
     }
+    
+  
     
     public String getuserName() { 
         return userName;
@@ -106,28 +105,29 @@ public class EmployeeBlueprint {
         this.birthday = birthday;
     } 
     
-    public long getmobileNumber() { 
+    public String getmobileNumber() { 
         return mobileNumber;
     }
     
-    public void setMobileNumber(long mobileNumber) {
+    public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     } 
-    public String getDepartment() { 
-        return department;
+    
+    public String getaccountStatus() { 
+        return accountStatus;
     }
     
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setAccountStatus(String accountStatus) {
+        this.accountStatus = accountStatus;
     } 
     
-    public String getEmploymentStatus() { 
-        return employmentStatus;
+    public String getloginStatus() { 
+        return loginStatus;
     }
     
-    public void setEmploymentStatus(String employmentStatus) {
-        this.employmentStatus = employmentStatus;
+    public void setLoginStatus(String loginStatus) {
+        this.loginStatus = loginStatus;
     } 
-  
+   
     
 }

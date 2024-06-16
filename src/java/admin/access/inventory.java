@@ -11,8 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import admin.dao.EmployeeDao;
+import admin.dao.ProductDao;
 import admin.dao.SearchInventory;
 import admin.model.EmployeeBlueprint;
+import admin.model.ProductBlueprint;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -51,7 +54,13 @@ public class inventory extends HttpServlet {
 
         SearchInventory search = new SearchInventory();
         ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
+        System.out.println(AllUser);
         request.setAttribute("AllUser", AllUser);
+
+        ArrayList<ProductBlueprint> AllProducts = search.getAllProducts();
+        System.out.println(AllProducts);
+        request.setAttribute("AllProducts", AllProducts);
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventory.jsp");
         dispatcher.forward(request, response);
 
@@ -71,31 +80,35 @@ public class inventory extends HttpServlet {
     private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-//        if (request.getParameter("addItem") != null) {
-//            String userName = request.getParameter("userName");
-//            String firstName = request.getParameter("firstName");
-//            String middleName = request.getParameter("middleName");
-//            String lastName = request.getParameter("lastName");
-//            String department = request.getParameter("department");
-//            String employmentStatus = request.getParameter("employmentStatus");
-//            EmployeeBlueprint newEmployee = new EmployeeBlueprint(firstName, middleName, lastName, department, employmentStatus);
-//            EmployeeDao employeeDao = new EmployeeDao();
-//            boolean employeeDetails = employeeDao.createEmployee(newEmployee);
-//
-//            if (employeeDetails) {
-//                String message = "Reg for" + firstName + " " + middleName + " " + lastName + " is successful";
-//                request.setAttribute("message", message);
-//            } else {
-//                String message = "Error";
-//                request.setAttribute("message", message);
-//            }
-//
-//        }
-        //request.setAttribute("employeeDetails", employeeDetails);
+        if (request.getParameter("addItem") != null) {
+            int productID = Integer.parseInt(request.getParameter("productID"));
+            String productName = request.getParameter("productName");
+            String description = request.getParameter("description");
+            String size = request.getParameter("size");
+            BigDecimal price = new BigDecimal(request.getParameter("price"));
+            int quantity = Integer.parseInt(request.getParameter("quantity"));
+
+            // Create a new product instance
+            ProductBlueprint newProduct = new ProductBlueprint(productID, productName, description, size, price, quantity);
+            // Instantiate the ProductDao
+            ProductDao productDao = new ProductDao();
+
+            // Insert the new product into the database
+            boolean productAdded = productDao.createProduct(newProduct);
+
+            // Prepare a message to display on the UI
+            
+            if (productAdded) {
+                System.out.println("Succesfully added product");
+            } else {
+                System.out.println("Did not added product");
+            }
+
+           
+        }
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add.jsp");
         rd.forward(request, response);
 
     }
 
-   
 }

@@ -30,6 +30,8 @@ public class registration extends HttpServlet {
             case "/registration":
                 viewReg(request, response);
                 break;
+            
+           
            
         }
 
@@ -40,8 +42,6 @@ public class registration extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
-
-    
 
     private void viewReg(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -54,9 +54,7 @@ public class registration extends HttpServlet {
             String lastName = request.getParameter("lastName");
             String address = request.getParameter("address");
             String birthday = request.getParameter("birthday");
-            long mobileNumber = Long.parseLong(request.getParameter("mobileNumber"));
-            String department = request.getParameter("department");
-            String employmentStatus = request.getParameter("employmentStatus");
+            String mobileNumber = request.getParameter("mobileNumber");
             EmployeeBlueprint newEmployee = new EmployeeBlueprint(
                     userName,
                     password,
@@ -65,15 +63,14 @@ public class registration extends HttpServlet {
                     lastName, 
                     address,
                     birthday,
-                    mobileNumber,
-                    department, 
-                    employmentStatus);
+                    mobileNumber);
             EmployeeDao employeeDao = new EmployeeDao();
             boolean employeeDetails = employeeDao.createEmployee(newEmployee);
 
             if (employeeDetails) {
                 
                 System.out.println("Registration for" + userName + " is successful");
+                 
                 
             } else {
                 System.out.println("Registration is not successful");
@@ -81,11 +78,12 @@ public class registration extends HttpServlet {
 
         }
         
-        
-
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/registration.jsp");
         rd.forward(request, response);
+        
+
+        
         
     }
     

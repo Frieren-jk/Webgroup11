@@ -52,6 +52,7 @@ $(document).ready(function () {
     }
 
     $('#regform').submit(function (event) {
+        
         let allUserInfoValid = true;
 
         $('#regform input').each(function () {
@@ -88,8 +89,13 @@ $(document).ready(function () {
                 contentType: false, // The content type used when sending data to the server.
                 cache: false, // To unable request pages to be cached
                 processData: false,
+                
                 success: function (response) {
-                    $('#myModal').modal('show'); // Show the modal after successful submission
+                     
+                 window.location.href = '/TestingWeb/registration?success=true'; 
+              
+                 
+                   
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     if (xhr.status === 404) {
@@ -97,13 +103,19 @@ $(document).ready(function () {
                     } else {
                         alert("Error: " + xhr.status + "\nResponse Text: " + xhr.responseText);
                     }
-                }
+                } 
+                
+                
 
             });
+            
+            
 
         }
     });
-
+    
+   
+    
 
     const passwordInput = $('#password');
     const confirmPasswordInput = $('#confirmpassword');

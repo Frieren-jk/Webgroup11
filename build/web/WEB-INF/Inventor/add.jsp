@@ -117,146 +117,146 @@
             </header>
             <!-- Header Area End -->
 
-            <div class="cart-table-area section-padding-100" >
+            <div class="cart-table-area section-padding-100">
                 <br><br><br><br>
-                <div class="container-fluid ">
-                    <div class="row">
-                        <div class="col-12">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8">
                             <div class="checkout_details_area mt-50 clearfix position-relative">
-
                                 <div class="cart-title">
                                     <h2>ADD INVENTORY</h2>
                                 </div>
-                                <div class="registration-form-wrapper ">
-                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/form" class="py-3  " id="regform">
-                                        <div class="row ">
-                                            <div class="col-12 col-md-4 mt-3 ms-auto">
-                                                <div class="form-group ">
-                                                    <label for="firstName">First Name</label>
-                                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter the Position of the Employee">
-                                                    <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                                </div> 
-                                            </div>
-                                             <div class="col-12 col-md-4  mt-3 me-auto">
+                                <div class="registration-form-wrapper">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/form" class="py-3" id="regform">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
-                                                    <label for="Middle Name">Middle Name</label>
-                                                    <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter the Office" >
-                                                    <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
+                                                    <label for="productID">Product ID</label>
+                                                    <input type="text" class="form-control" id="productID" name="productID" placeholder="Enter the Product ID">
+                                                    <small id="productIDHelp" class="form-text">Product ID must be alphanumeric.</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 mt-3">
+                                                <div class="form-group">
+                                                    <label for="productName">Product Name</label>
+                                                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter the Product Name">
+                                                    <small id="productNameHelp" class="form-text">Product name must be alphanumeric.</small>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="row ">
-                                            <div class="col-12 col-md-4  mt-5 ms-auto ">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
-                                                    <label for="Last Name">Last Name</label>
-                                                    <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Enter the Age" >
-                                                    <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
+                                                    <label for="description">Description</label>
+                                                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter the Description">
+                                                    <small id="descriptionHelp" class="form-text">Description must be alphanumeric.</small>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-4  mt-5 me-auto">
+                                            <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
-                                                    <label for="address">Department</label>
-                                                    <input type="text" class="form-control" id="address" name="department"  placeholder="Enter the Start Date" >
-                                                    <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
+                                                    <label for="size">Size</label>
+                                                    <input type="text" class="form-control" id="size" name="size" placeholder="Enter the Size">
+                                                    <small id="sizeHelp" class="form-text">Size must be alphanumeric.</small>
                                                 </div>
                                             </div>
-                                        </div> 
-
-                                        <div class="row ">
                                         </div>
-                                        <div class="row ">
-                                            <div class="col-12 col-md-4 mt-5 ms-auto me-auto ">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
-                                                    <label for="Birthday">Employment Status</label>
-                                                    <input type="text" class="form-control" id="birthday"  name="employmentStatus"  placeholder="Enter the Salary" >
-                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY.</small>
+                                                    <label for="price">Price</label>
+                                                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price">
+                                                    <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
                                                 </div>
                                             </div>
-                                        </div> 
+                                            <div class="col-12 col-md-6 mt-3">
+                                                <div class="form-group">
+                                                    <label for="quantity">Quantity</label>
+                                                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity">
+                                                    <small id="quantityHelp" class="form-text">Quantity must be an integer.</small>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </form>
-
-                                    <button type='submit' form="regform" name="addItem" class=" d-block mx-auto mt-5 buttonfx angleindouble ">Add</button>
+                                    <button type="submit" form="regform" name="addItem" class="d-block mx-auto mt-5 buttonfx angleindouble">Add</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ##### Main Content Wrapper End ##### -->
+            <!-- ##### Main Content Wrapper End ##### -->
 
-        <!-- ##### Footer Area Start ##### -->
-        <footer class="footer_area clearfix">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Single Widget Area -->
-                    <div class="col-12 col-lg-4">
-                        <div class="single_widget_area">
-                            <!-- Logo -->
-                            <div class="footer-logo mr-50">
-                                <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
+            <!-- ##### Footer Area Start ##### -->
+            <footer class="footer_area clearfix">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Single Widget Area -->
+                        <div class="col-12 col-lg-4">
+                            <div class="single_widget_area">
+                                <!-- Logo -->
+                                <div class="footer-logo mr-50">
+                                    <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
+                                </div>
+                                <!-- Text -->
+                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
+                                    - George Eliot
+                                    <br>
+                                    <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                                </p>
                             </div>
-                            <!-- Text -->
-                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
-                                - George Eliot
-                                <br>
-                                <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
-                            </p>
                         </div>
-                    </div>
 
-                    <!-- Single Widget Area -->
-                    <div class="col-12 col-lg-8 ">
-                        <div class="single_widget_area">
-                            <!-- Footer Menu -->
-                            <div class="footer_menu">
-                                <nav class="navbar navbar-expand-lg justify-content-end">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                    <div class="collapse navbar-collapse" id="footerNavContent">
-                                        <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/product-details">Product</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
+                        <!-- Single Widget Area -->
+                        <div class="col-12 col-lg-8 ">
+                            <div class="single_widget_area">
+                                <!-- Footer Menu -->
+                                <div class="footer_menu">
+                                    <nav class="navbar navbar-expand-lg justify-content-end">
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                                        <div class="collapse navbar-collapse" id="footerNavContent">
+                                            <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product-details">Product</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-                                            
-        <!-- ##### Footer Area End ##### -->
+            </footer>
 
-        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-        <script src="<%=request.getContextPath()%>/js/jquery/jQuery v3.7.1.min.js"></script>
+            <!-- ##### Footer Area End ##### -->
 
-        <!-- Popper js -->
-        <script src="<%=request.getContextPath()%>/js/popper.min.js"></script>
+            <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+            <script src="<%=request.getContextPath()%>/js/jquery/jQuery v3.7.1.min.js"></script>
 
-        <!-- Bootstrap js -->
-        <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
+            <!-- Popper js -->
+            <script src="<%=request.getContextPath()%>/js/popper.min.js"></script>
 
-        <!-- Plugins js -->
-        <script src="<%=request.getContextPath()%>/js/plugins.js"></script>
+            <!-- Bootstrap js -->
+            <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 
-        <!-- Active js -->
-        <script src="<%=request.getContextPath()%>/js/active.js"></script>
-        <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
+            <!-- Plugins js -->
+            <script src="<%=request.getContextPath()%>/js/plugins.js"></script>
+
+            <!-- Active js -->
+            <script src="<%=request.getContextPath()%>/js/active.js"></script>
+            <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
     </body>
 
 </html>

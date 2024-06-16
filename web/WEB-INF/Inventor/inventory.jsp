@@ -3,7 +3,7 @@
 <html lang="en">
 
     <head>
-        
+
         <meta charset="UTF-8">
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,19 +69,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -133,176 +133,242 @@
                 <div class="cart-btn w-10 mt-1 mb-4">
                     <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt">Add Inventory</a>
                 </div>
+                <div class="cart-btn w-10 mt-1 mb-4" >
+                    <a id="toggleTables" class="btn amado-bt" style="color: white;">Show Product</a>
+                </div>
 
-                <div class="registration-form-wrapper pt-auto">
-                    <div class="table-responsive">
-                        <table id="myTable" class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Username</th>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Birthday</th>
-                                    <th>Mobile Number</th>
-                                    <th>Department</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <c:forEach var="user" items="${AllUser}">
-                                <tr>
-                                    
-                                    <td><c:out value="${user.userName}" /></td>
-                                        <td><c:out value="${user.firstName} ${user.middleName} ${user.lastName}" /></td>
-                                        <td><c:out value="${user.address}" /></td>
-                                        <td><c:out value="${user.birthday}" /></td>
-                                        <td><c:out value="${user.mobileNumber}" /></td>
-                                        <td><c:out value="${user.department}" /></td>
-                                        <td><c:out value="${user.employmentStatus}" /></td>
-                                    
-                                    
-                                </tr>
-                                </c:forEach>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Username</th>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Birthday</th>
-                                    <th>Mobile Number</th>
-                                    <th>Department</th>
-                                    <th>Status</th>
-                                </tr>
-                            </tfoot>
-                        </table>
+                <div class="table-wrapper">
+
+                    <div class="registration-form-wrapper pt-auto" id="table1">
+                        <div class="table-responsive">
+                            <table id="myTable1" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Birthday</th>
+                                        <th>Mobile Number</th>
+                                        <th>Account Status</th>
+                                        <th>Log In Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach var="show" items="${AllUser}">
+                                        <tr>
+
+                                            <td><c:out value="${show.userName}" /></td>
+                                            <td><c:out value="${show.firstName} ${show.middleName} ${show.lastName}" /></td>
+                                            <td><c:out value="${show.address}" /></td>
+                                            <td><c:out value="${show.birthday}" /></td>
+                                            <td><c:out value="${show.mobileNumber}" /></td>
+                                            <td><c:out value="${show.accountStatus}" /></td>
+                                            <td><c:out value="${show.loginStatus}" /></td>
+
+
+
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Birthday</th>
+                                        <th>Mobile Number</th>
+                                        <th>Account Status</th>
+                                        <th>Log In Status</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    
+
+                    <div class="registration-form-wrapper pt-auto" id="table2" >
+                        <div class="table-responsive">
+                            <table id="myTable2" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach var="product" items="${AllProducts}">
+                                        <tr>
+                                            <td><c:out value="${product.productID}" /></td>
+                                            <td><c:out value="${product.productName}" /></td>
+                                            <td><c:out value="${product.description}" /></td>
+                                            <td><c:out value="${product.price}" /></td>
+                                            <td><c:out value="${product.quantity}" /></td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- ##### Footer Area End ##### -->
+        <footer class="footer_area clearfix w-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Single Widget Area -->
+                    <div class="col-6 col-lg-4">
+                        <div class="single_widget_area">
+                            <!-- Logo -->
+                            <div class="footer-logo mr-50">
+                                <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
+                            </div>
+                            <!-- Text -->
+                            <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
+                                - George Eliot
+                                <br>
+                                <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
+                            </p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Single Widget Area -->
+                    <div class="col-6 col-lg-8 ">
+                        <div class="single_widget_area">
+                            <!-- Footer Menu -->
+                            <div class="footer_menu">
+                                <nav class="navbar navbar-expand-lg justify-content-end">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                                    <div class="collapse navbar-collapse" id="footerNavContent">
+                                        <ul class="navbar-nav ml-auto  ms-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- ##### Footer Area End ##### -->
-            <footer class="footer_area clearfix w-100">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Single Widget Area -->
-                        <div class="col-6 col-lg-4">
-                            <div class="single_widget_area">
-                                <!-- Logo -->
-                                <div class="footer-logo mr-50">
-                                    <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
-                                </div>
-                                <!-- Text -->
-                                <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
-                                    - George Eliot
-                                    <br>
-                                    <b>Fur Real Pet Supplies | <script>document.write(new Date().getFullYear());</script></b>
-                                </p>
-                            </div>
+        </footer>
+        <!-- ##### Login Area Start ##### -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">x</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-title text-center">
+                            <h4>LOGIN</h4>
                         </div>
-                        <br><br>
-                        <!-- Single Widget Area -->
-                        <div class="col-6 col-lg-8 ">
-                            <div class="single_widget_area">
-                                <!-- Footer Menu -->
-                                <div class="footer_menu">
-                                    <nav class="navbar navbar-expand-lg justify-content-end">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                        <div class="collapse navbar-collapse" id="footerNavContent">
-                                            <ul class="navbar-nav ml-auto  ms-auto">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
-                                                </li>
-                                            </ul>
+                        <div class="d-flex flex-column text-center">
+                            <form>
+                                <div class="form-group">
+                                    <div class="form-group ">
+
+                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
+                                        <div class="invalid-feedback">
+                                            Please enter a username.
                                         </div>
-                                    </nav>
+                                    </div> 
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <div class="form-group ">
+
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
+                                        <div class="invalid-feedback">
+                                            Please enter your password.
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
+
+                            </form>
                         </div>
                     </div>
-                </div>
-            </footer>
-            <!-- ##### Login Area Start ##### -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header border-bottom-0">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">x</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-title text-center">
-                                <h4>LOGIN</h4>
-                            </div>
-                            <div class="d-flex flex-column text-center">
-                                <form>
-                                    <div class="form-group">
-                                        <div class="form-group ">
-
-                                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                            <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                            <div class="invalid-feedback">
-                                                Please enter a username.
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-group ">
-
-                                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                            <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
-                                            <div class="invalid-feedback">
-                                                Please enter your password.
-                                            </div>
-                                        </div> 
-                                    </div>
-
-                                    <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
-
-                                </form>
-                            </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
-                        </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
                     </div>
                 </div>
             </div>
-            <!-- ##### Login Area End ##### -->
+        </div>
+        <!-- ##### Login Area End ##### -->
 
-            <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-            <script src="js/jquery/jQuery v3.7.1.min.js"></script>
+        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+        <script src="js/jquery/jQuery v3.7.1.min.js"></script>
 
-            <!-- Popper js -->
-            <script src="${pageContext.request.contextPath}/js/popper.min.js"></script>
+        <!-- Popper js -->
+        <script src="${pageContext.request.contextPath}/js/popper.min.js"></script>
 
-            <!-- Bootstrap js -->
-            <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 
-            <!-- Plugins js -->
-            <script src="${pageContext.request.contextPath}/js/plugins.js"></script>
+        <!-- Plugins js -->
+        <script src="${pageContext.request.contextPath}/js/plugins.js"></script>
 
-            <!-- Active js -->
-            <script src="${pageContext.request.contextPath}/js/active.js"></script>
-            <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
-            <script>
-                                        $(document).ready(function () {
-                                            $('#myTable').DataTable();
+        <!-- Active js -->
+        <script src="${pageContext.request.contextPath}/js/active.js"></script>
+        <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
+        <script>
+                                    $(document).ready(function () {
+                                        $('#myTable').DataTable();
+                                        $('#myTable1').DataTable();
+                                        $('#myTable2').DataTable();
 
+                                        // Initially hide the second table
+                                        $('#table2').hide();
+
+                                        $('#toggleTables').on('click', function () {
+                                            if ($('#table1').is(':hidden')) {
+                                                $('#table1').show();
+                                                $('#table2').hide();
+                                                $(this).text('Show Products');
+                                            } else {
+                                                $('#table1').hide();
+                                                $('#table2').show();
+                                                $(this).text('Show Users');
+                                            }
                                         });
-            </script>
+                                    });
+        </script>
     </body>
 
 </html>

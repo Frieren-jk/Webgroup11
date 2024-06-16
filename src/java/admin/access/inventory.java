@@ -52,10 +52,12 @@ public class inventory extends HttpServlet {
         SearchInventory search = new SearchInventory();
         ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
         request.setAttribute("AllUser", AllUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventory.jsp");
+        dispatcher.forward(request, response);
 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/WEB-INF/Inventor/inventory.jsp");
-        rd.forward(request, response);
+//        RequestDispatcher rd = getServletContext().getRequestDispatcher(
+//                "/WEB-INF/Inventor/inventory.jsp");
+//        rd.forward(request, response);
     }
 
     private void viewAdd(HttpServletRequest request, HttpServletResponse response)
@@ -95,16 +97,5 @@ public class inventory extends HttpServlet {
 
     }
 
-    protected void Request(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        SearchInventory search = new SearchInventory();
-        ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
-        request.setAttribute("AllUser", AllUser);
-
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Inventor/inventory.jsp");
-        rd.forward(request, response);
-
-    }
-
+   
 }

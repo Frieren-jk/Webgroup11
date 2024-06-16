@@ -8,6 +8,7 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
 
@@ -143,23 +144,21 @@
                                     <th>Address</th>
                                     <th>Birthday</th>
                                     <th>Mobile Number</th>
-                                    <th>Department<th>
-                                    <th>Status<th>
+                                    <th>Department</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <c:forEach items="$(AllUser)" var="user">
+                                <c:forEach var="user" items="${AllUser}">
                                 <tr>
                                     
-                                        <td>$(user.userName)</td>
-                                        <td>$(user.firstName) $(user.middleName) $(user.lastName)</td>
-                                        <td>$(user.address)</td>
-                                        <td>$(user.birthday)</td>
-                                        <td>$(user.mobileNumber)</td>
-                                        <td>$(user.department)</td>
-                                        <td>
-                                           $(user.employmentStatus)
-                                        </td>
+                                    <td><c:out value="${user.userName}" /></td>
+                                        <td><c:out value="${user.firstName} ${user.middleName} ${user.lastName}" /></td>
+                                        <td><c:out value="${user.address}" /></td>
+                                        <td><c:out value="${user.birthday}" /></td>
+                                        <td><c:out value="${user.mobileNumber}" /></td>
+                                        <td><c:out value="${user.department}" /></td>
+                                        <td><c:out value="${user.employmentStatus}" /></td>
                                     
                                     
                                 </tr>
@@ -172,8 +171,8 @@
                                     <th>Address</th>
                                     <th>Birthday</th>
                                     <th>Mobile Number</th>
-                                    <th>Department<th>
-                                    <th>Status<th>
+                                    <th>Department</th>
+                                    <th>Status</th>
                                 </tr>
                             </tfoot>
                         </table>

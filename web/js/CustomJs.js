@@ -80,24 +80,27 @@ $(document).ready(function () {
             event.preventDefault(); // Prevent form submission
             alert("Please fill in all required fields correctly before submitting.");
         } else {
-            
+
             $.ajax({
                 type: 'POST',
                 url: '/TestingWeb/registration', // Replace with your form submission URL
                 data: $('#regform').serialize(),
+                contentType: false, // The content type used when sending data to the server.
+                cache: false, // To unable request pages to be cached
+                processData: false,
                 success: function (response) {
                     $('#myModal').modal('show'); // Show the modal after successful submission
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     if (xhr.status === 404) {
                         alert("Error: " + xhr.status + "\nResponse Text: " + xhr.responseText);
-                    } else { 
+                    } else {
                         alert("Error: " + xhr.status + "\nResponse Text: " + xhr.responseText);
                     }
                 }
-                
+
             });
-            
+
         }
     });
 

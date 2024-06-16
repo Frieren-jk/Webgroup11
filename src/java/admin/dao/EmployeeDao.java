@@ -3,21 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package admin.dao;
+
 import admin.model.EmployeeBlueprint;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 /**
  *
  * @author John
  */
 public class EmployeeDao {
-    
+
     public boolean createEmployee(EmployeeBlueprint employee) {
         boolean success = false;
-        Connection conn  = null;
+        Connection conn = null;
         PreparedStatement ps = null;
-        String query = "insert into employee ("
+        String query = "INSERT INTO employee ("
                 + "userName, "
                 + "password, "
                 + "firstName, "
@@ -27,8 +29,19 @@ public class EmployeeDao {
                 + "birthday, "
                 + "mobileNumber, "
                 + "department, "
-                + "employmentStatus) "
-                + "values (?,?,?,?,?,?,?,?,?,?)";
+                + "employmentStatus) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+//                + "userName, "
+//                + "password, "
+//                + "firstName, "
+//                + "middleName, "
+//                + "lastName, "
+//                + "address, "
+//                + "birthday, "
+//                + "mobileNumber, "
+//                + "department, "
+//                + "employmentStatus) "
+//                + "values (?,?,?,?,?,?,?,?,?,?);";
         try {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(query);
@@ -47,7 +60,7 @@ public class EmployeeDao {
                 success = true;
             }
         } catch (SQLException error) {
-            System.out.println("createEmployee Error: " + error); 
+            System.out.println("createEmployee Error: " + error);
         } finally {
             if (conn != null) {
                 try {
@@ -63,11 +76,11 @@ public class EmployeeDao {
                     //ignore
                 }
             }
-            
+
         }
         return success;
     }
-    
+
     public EmployeeBlueprint getEmployeeList(EmployeeBlueprint employee) {
         String userName = employee.getuserName();
         String password = employee.getpassword();
@@ -80,19 +93,18 @@ public class EmployeeDao {
         String department = employee.getDepartment();
         String employmentStatus = employee.getEmploymentStatus();
         EmployeeBlueprint employeelist = new EmployeeBlueprint(
-                userName, 
-                password, 
-                firstName, 
+                userName,
+                password,
+                firstName,
                 middleName,
-                lastName, 
+                lastName,
                 address,
                 birthday,
                 mobileNumber,
-                department, 
+                department,
                 employmentStatus);
         return employeelist;
-        
-    
+
     }
-    
+
 }

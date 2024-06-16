@@ -20,7 +20,7 @@ public class SearchInventory {
         ResultSet rs = null;
 
         try {
-            String query = "SELECT"
+            String query = "SELECT "
                     + "userName, "
                     + "password, "
                     + "employeeID, "
@@ -54,7 +54,7 @@ public class SearchInventory {
 
                 AllUser.add(user);
 
-                conn.close();
+              
 
             }
 
@@ -85,7 +85,7 @@ public class SearchInventory {
 
         }
 
-        return null;
+        return AllUser;
 
     }
 

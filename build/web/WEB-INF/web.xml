@@ -21,8 +21,32 @@
         <servlet-class>admin.access.registration</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>shop</servlet-name>
-        <servlet-class>admin.access.shop</servlet-class>
+        <servlet-name>shop_cages</servlet-name>
+        <servlet-class>admin.access.shop_cages</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop_bowls</servlet-name>
+        <servlet-class>admin.access.shop_bowls</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop_leashes</servlet-name>
+        <servlet-class>admin.access.shop_leashes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop_toys</servlet-name>
+        <servlet-class>admin.access.shop_toys</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop_clothes</servlet-name>
+        <servlet-class>admin.access.shop_clothes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop_litterboxes</servlet-name>
+        <servlet-class>admin.access.shop_litterboxes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shop_foods</servlet-name>
+        <servlet-class>admin.access.shop_foods</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>cart</servlet-name>
@@ -65,8 +89,32 @@
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>shop</servlet-name>
-        <url-pattern>/shop</url-pattern>
+        <servlet-name>shop_cages</servlet-name>
+        <url-pattern>/cages</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop_bowls</servlet-name>
+        <url-pattern>/bowls</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop_leashes</servlet-name>
+        <url-pattern>/leashes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop_toys</servlet-name>
+        <url-pattern>/toys</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop_clothes</servlet-name>
+        <url-pattern>/clothes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop_litterboxes</servlet-name>
+        <url-pattern>/litterboxes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shop_foods</servlet-name>
+        <url-pattern>/foods</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>cart</servlet-name>

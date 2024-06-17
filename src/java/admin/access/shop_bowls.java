@@ -1,30 +1,24 @@
 package admin.access;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /**
  *
- * @author John
+ * @author IAN
  */
-public class shop extends HttpServlet {
-
+public class shop_bowls extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getServletPath();
 
         switch (action) {
-            case "/shop":
-                viewShop(request, response);
+            case "/bowls":
+                viewBowls(request, response);
                 break;
             default:
                 viewDefault(request, response);
@@ -43,15 +37,15 @@ public class shop extends HttpServlet {
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/shop.jsp");
+                "/bowls.jsp");
         rd.forward(request, response);
     }
 
-    private void viewShop(HttpServletRequest request, HttpServletResponse response)
+    private void viewBowls(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/shop.jsp");
+                "/bowls.jsp");
         rd.forward(request, response);
     }
 

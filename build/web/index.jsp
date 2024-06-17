@@ -101,7 +101,7 @@
                     <nav class="main-nav ">
                         <ul>
                             <li class="active"><a href="${pageContext.request.contextPath}/home">Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shop">Shop</a></li>
+                            <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
                             <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                             <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                             <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
@@ -127,12 +127,12 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 1 home.png" alt="error">
+                            <img src="img/bg-img/home/toy 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
-                                <p>PHP 1720.00</p>
-                                <h4>Foldable Steel Cage</h4>
+                                <p>PHP 130.00</p>
+                                <h4>Yarn Ball for Cats</h4>
                             </div>
                         </a>
                     </div>
@@ -153,12 +153,64 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="${pageContext.request.contextPath}/shop">
+                            <img src="img/bg-img/home/bowl 4 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 5700.00</p>
+                                <h4>Automatic Cat Feeder</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="${pageContext.request.contextPath}/shop">
+                            <img src="img/bg-img/home/litbox 3 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 1960.00</p>
+                                <h4>Hooded Cat Litter Box</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="${pageContext.request.contextPath}/shop">
+                            <img src="img/bg-img/home/cloth 1 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 860.00</p>
+                                <h4>Monkey Cat Sweater for Cats</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="${pageContext.request.contextPath}/shop">
+                            <img src="img/bg-img/home/leash 3 home.png" alt="error">
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <div class="line"></div>
+                                <p>PHP 1170.00</p>
+                                <h4>Retractable Dog Leash</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Single Category -->
+                    <div class="single-products-category clearfix">
+                        <a href="${pageContext.request.contextPath}/shop">
                             <img src="img/bg-img/home/cage 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
                                 <p>PHP 1600.00</p>
-                                <h4>Carbon Quality Wood Cage</h4>
+                                <h4>Carbon Quality and Wood Cage</h4>
                             </div>
                         </a>
                     </div>
@@ -166,12 +218,12 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 4 home.png" alt="error">
+                            <img src="img/bg-img/home/food 4 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
-                                <p>PHP 960.00</p>
-                                <h4>Small Plastic Cage</h4>
+                                <p>PHP 2415.00</p>
+                                <h4>Whiskas Tuna Dry 7kg for Cats</h4>
                             </div>
                         </a>
                     </div>
@@ -179,64 +231,12 @@
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
                         <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 5 home.png" alt="error">
+                            <img src="img/bg-img/home/food 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
                                 <div class="line"></div>
-                                <p>PHP 750.00</p>
-                                <h4>Octagonal Dog Metal Fence</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 6 home.png" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP 1250.00</p>
-                                <h4>Round Foldable Steel Cage</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 7 home.png" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP 1490.00</p>
-                                <h4>Narra Wood Cage</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 8 home.png" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP 860.00</p>
-                                <h4>Comfortable Steel Cage with Stand</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Single Category -->
-                    <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
-                            <img src="img/bg-img/home/cage 9 home.png" alt="error">
-                            <!-- Hover Content -->
-                            <div class="hover-content">
-                                <div class="line"></div>
-                                <p>PHP 350.00</p>
-                                <h4>Wired Metal Cage</h4>
+                                <p>PHP 1120.00</p>
+                                <h4>Pedigree Chicken 400g</h4>
                             </div>
                         </a>
                     </div>
@@ -279,7 +279,7 @@
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/shop">Shop</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>

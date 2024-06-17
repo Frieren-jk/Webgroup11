@@ -9,7 +9,7 @@
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
-        <title>Fur Real Pet Supplies - Physical Shop</title>
+        <title>Fur Real Pet Supplies - Leashes</title>
 
         <!-- Tab Icon  -->
         <link rel="icon" href="img/core-img/iconlight.png">
@@ -101,7 +101,7 @@
                     <nav class="main-nav ">
                         <ul>
                             <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
+                            <li class="active"><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
                             <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                             <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                             <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
@@ -120,52 +120,204 @@
             </header>
             <!-- Header Area End -->
 
-            <div class="cart-table-area section-padding-100 ">
-                <div class="container-fluid ">
+            <!-- Header Area End -->
+            <nav class="" >
+                <div class="shop_sidebar_area sticky-top ">
+
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget category mb-50 sticky-top">
+                        <!-- Widget Title -->
+                        <h6 class="widget-title mb-30 ">CATEGORIES</h6>
+
+                        <!--  Categories  -->
+                        <div class="categories-menu">
+                            <ul>
+                                <li><a href="${pageContext.request.contextPath}/cages">Cages</a></li>
+                                <li><a href="${pageContext.request.contextPath}/bowls">Bowls</a></li>
+                                <li class="active"><a href="${pageContext.request.contextPath}/leashes">Leashes</a></li>
+                                <li><a href="${pageContext.request.contextPath}/toys">Toys</a></li>
+                                <li><a href="${pageContext.request.contextPath}/clothes">Clothes</a></li>
+                                <li><a href="${pageContext.request.contextPath}/litterboxes">Litter Boxes</a></li>
+                                <li><a href="${pageContext.request.contextPath}/foods">Foods</a></li>
+                            </ul>
+                                <div>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="product_area section-padding-100">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <div class="checkout_details_area clearfix">
-
-                                <div class="physical-shop-title">
-                                    <h2>PHYSICAL SHOP</h2>
+                            <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                                <!-- Total Products -->
+                                <div class="total-products">
+                                    <p>Showing 1-5</p>
                                 </div>
-                                <div class="physical-shop-wrapper">
-                                    <section>
-                                        <div class="col-md-6">
-                                            <div class="section-heading contact-info">
-                                                <div class="physical-shop-title">
-                                                    <h3>Contact Information</h3>
-                                                </div>
-                                                <p><b><i class="fa-solid fa-envelope"></i> Email: </b>furrealpetsupplies@gmail.com
-                                                <br><b><i class="fa-solid fa-phone"></i> Contact Number: </b>0960-542-2186
-                                                <br>
-                                                <br><b><i class="fa-solid fa-clock"></i> Operating Hours: </b>
-                                                <br>
-                                                Weekdays: 8AM - 5PM | Weekends: 10AM - 3PM
-                                                <br><br><b><i class="fa-solid fa-map-location-dot"></i> Address: </b><br>
-                                                <em>123 Example St, District, City, Zip Code Region<br>Philippines</em></p>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                                <br>
-                                <div class="physical-shop-wrapper">
-                                    <section>
-                                        <div class="physical-shop-title">
-                                            <center><h3>Location on Google Maps</h3></center>
-                                        </div>
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div>
-                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5632538.36497416!2d-129.942709!3d46.423669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3b5f9be02ded%3A0x9e79371a486731ec!2sexample!5e0!3m2!1sen!2sph!4v1716192207333!5m2!1sen!2sph" width="100%" height="500" frameborder="0" style="border:0"allowfullscreen></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
+                                <!-- Sorting -->
+                                <div class="product-sorting d-flex">
+                                    <div class="view-product d-flex align-items-center">
+                                        <p>View</p>
+                                        <form action="#" method="get">
+                                            <select name="select" id="viewProduct">
+                                                <option value="value">1-5</option>
+                                            </select>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <img src="img/product-img/leashes/leash 1 shop.png" alt="error">
+                                    <!-- Hover Thumb -->
+                                    <img class="hover-img" src="img/product-img/leashes/leash 1 shop_z.png" alt="error">
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 500.00</p>
+                                        <a href="${pageContext.request.contextPath}/product">
+                                            <h6>Bungee Leash for Dogs</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="cart">
+                                        <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <img src="img/product-img/leashes/leash 2 shop.png" alt="error">
+                                    <!-- Hover Thumb -->
+                                    <img class="hover-img" src="img/product-img/leashes/leash 2 shop_z.png" alt="error">
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 650.00</p>
+                                        <a href="${pageContext.request.contextPath}/product">
+                                            <h6>No Pull Harness Leash</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="cart">
+                                        <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <img src="img/product-img/leashes/leash 3 shop.png" alt="error">
+                                    <!-- Hover Thumb -->
+                                    <img class="hover-img" src="img/product-img/leashes/leash 3 shop_z.png" alt="error">
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 1170.00</p>
+                                        <a href="${pageContext.request.contextPath}/product">
+                                            <h6>Retractable Dog Leash</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="cart">
+                                        <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <img src="img/product-img/leashes/leash 4 shop.png" alt="error">
+                                    <!-- Hover Thumb -->
+                                    <img class="hover-img" src="img/product-img/leashes/leash 4 shop_z.png" alt="error">
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 870.00</p>
+                                        <a href="${pageContext.request.contextPath}/product">
+                                            <h6>Metal Leash for Dogs</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="cart">
+                                        <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Product Area -->
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    <img src="img/product-img/leashes/leash 5 shop.png" alt="error">
+                                    <!-- Hover Thumb -->
+                                    <img class="hover-img" src="img/product-img/leashes/leash 5 shop_z.png" alt="error">
+                                </div>
+                                <!-- Product Description -->
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 430.00</p>
+                                        <a href="${pageContext.request.contextPath}/product">
+                                            <h6>Harness And Bungee Leash for Cats</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="cart">
+                                        <a href="${pageContext.request.contextPath}/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/carticon.png" alt="error"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Pagination -->
+                            <nav aria-label="navigation">
+                                <ul class="pagination justify-content-end mt-50">
+                                    <li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/leashes">1</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -205,7 +357,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                             </li>
-                                            <li class="nav-item">
+                                            <li class="nav-item active">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
                                             </li>
                                             <li class="nav-item">
@@ -293,5 +445,4 @@
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
     </body>
-
 </html>

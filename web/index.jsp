@@ -126,7 +126,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/toys">
                             <img src="img/bg-img/home/toy 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -139,7 +139,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/cages">
                             <img src="img/bg-img/home/cage 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -152,7 +152,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/bowls">
                             <img src="img/bg-img/home/bowl 4 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -165,7 +165,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/litterboxes">
                             <img src="img/bg-img/home/litbox 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -178,7 +178,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/clothes">
                             <img src="img/bg-img/home/cloth 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -191,7 +191,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/leashes">
                             <img src="img/bg-img/home/leash 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -204,7 +204,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/cages">
                             <img src="img/bg-img/home/cage 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -217,7 +217,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/foods">
                             <img src="img/bg-img/home/food 4 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -230,7 +230,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/shop">
+                        <a href="${pageContext.request.contextPath}/foods">
                             <img src="img/bg-img/home/food 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">

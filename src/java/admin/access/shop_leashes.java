@@ -17,7 +17,7 @@ public class shop_leashes extends HttpServlet{
         String action = request.getServletPath();
 
         switch (action) {
-            case "/leashes":
+            case "/shop/leashes":
                 viewLeashes(request, response);
                 break;
             default:
@@ -37,7 +37,7 @@ public class shop_leashes extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/leashes.jsp");
+                "/shop/leashes.jsp");
         rd.forward(request, response);
     }
 
@@ -45,7 +45,7 @@ public class shop_leashes extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/leashes.jsp");
+                "/shop/leashes.jsp");
         rd.forward(request, response);
     }
 

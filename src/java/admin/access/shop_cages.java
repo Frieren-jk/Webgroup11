@@ -17,7 +17,7 @@ public class shop_cages extends HttpServlet{
         String action = request.getServletPath();
 
         switch (action) {
-            case "/cages":
+            case "/shop/cages":
                 viewCages(request, response);
                 break;
             default:
@@ -37,7 +37,7 @@ public class shop_cages extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/cages.jsp");
+                "/shop/cages.jsp");
         rd.forward(request, response);
     }
 
@@ -45,7 +45,7 @@ public class shop_cages extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/cages.jsp");
+                "/shop/cages.jsp");
         rd.forward(request, response);
     }
 

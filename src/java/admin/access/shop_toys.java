@@ -17,7 +17,7 @@ public class shop_toys extends HttpServlet{
         String action = request.getServletPath();
 
         switch (action) {
-            case "/toys":
+            case "/shop/toys":
                 viewToys(request, response);
                 break;
             default:
@@ -37,7 +37,7 @@ public class shop_toys extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/toys.jsp");
+                "/shop/toys.jsp");
         rd.forward(request, response);
     }
 
@@ -45,7 +45,7 @@ public class shop_toys extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/toys.jsp");
+                "/shop/toys.jsp");
         rd.forward(request, response);
     }
 

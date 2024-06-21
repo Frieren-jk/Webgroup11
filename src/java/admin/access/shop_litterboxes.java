@@ -17,7 +17,7 @@ public class shop_litterboxes extends HttpServlet{
         String action = request.getServletPath();
 
         switch (action) {
-            case "/litterboxes":
+            case "/shop/litterboxes":
                 viewLitterboxes(request, response);
                 break;
             default:
@@ -37,7 +37,7 @@ public class shop_litterboxes extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/litterboxes.jsp");
+                "/shop/litterboxes.jsp");
         rd.forward(request, response);
     }
 
@@ -45,7 +45,7 @@ public class shop_litterboxes extends HttpServlet{
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/litterboxes.jsp");
+                "/shop/litterboxes.jsp");
         rd.forward(request, response);
     }
 

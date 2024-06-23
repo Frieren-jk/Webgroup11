@@ -31,9 +31,37 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/core-style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
+        <style>
+            .notification {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                display: none; /* Initially hidden */
+                animation: slideUp 0.5s ease; /* Animation */
+            }
+
+            @keyframes slideUp {
+                0% {
+                    bottom: -100px;
+                }
+                100% {
+                    bottom: 20px;
+                }
+            }
+        </style>
     </head>
 
     <body>
+        <div class="notification">
+            <c:if test="${not empty sessionScope.registrationMessage}">
+                <p>${sessionScope.registrationMessage}</p>
+            </c:if>
+        </div>
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Search Start -->
@@ -184,7 +212,7 @@
                             </table>
                         </div>
                     </div>
-                    
+
 
                     <div class="registration-form-wrapper pt-auto" id="table2" >
                         <div class="table-responsive">
@@ -367,6 +395,21 @@
                                                 $(this).text('Show Users');
                                             }
                                         });
+
+                                        function fadeOutNotification() {
+                                            var notification = document.querySelector('.notification');
+                                            setTimeout(function () {
+                                                notification.style.animation = 'fadeOut 0.5s ease forwards';
+                                                setTimeout(function () {
+                                                    notification.style.display = 'none';
+                                                }, 500); // Wait for fade out animation to complete
+                                            }, 3000); // 3000 milliseconds = 3 seconds
+                                        }
+
+                                        // Call fadeOutNotification on page load
+                                        window.onload = function () {
+                                            fadeOutNotification();
+                                        };
                                     });
         </script>
     </body>

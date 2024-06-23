@@ -91,7 +91,7 @@ public class SearchInventory {
     }
     
     public ArrayList<ProductBlueprint> getAllProducts() {
-        ArrayList<ProductBlueprint> allProducts = new ArrayList<>();
+        ArrayList<ProductBlueprint> AllProducts = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -119,7 +119,7 @@ public class SearchInventory {
                 product.setPrice(rs.getBigDecimal("price"));
                 product.setQuantity(rs.getInt("quantity"));
 
-                allProducts.add(product);
+                AllProducts.add(product);
             }
 
         } catch (SQLException error) {
@@ -148,7 +148,7 @@ public class SearchInventory {
             }
         }
 
-        return allProducts;
+        return AllProducts;
     }
 
 }

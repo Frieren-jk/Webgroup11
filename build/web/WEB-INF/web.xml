@@ -89,6 +89,10 @@
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/registration/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>shop_cages</servlet-name>
         <url-pattern>/cages</url-pattern>
     </servlet-mapping>

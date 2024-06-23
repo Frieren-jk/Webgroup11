@@ -162,7 +162,7 @@ public final class product_002ddetails_jsp extends org.apache.jasper.runtime.Htt
       out.write("/home\">Home</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/shop\">Shop</a></li>\r\n");
+      out.write("/cages\">Shop</a></li>\r\n");
       out.write("                            <li class=\"active\"><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/product\">Product</a></li>\r\n");
@@ -340,7 +340,7 @@ public final class product_002ddetails_jsp extends org.apache.jasper.runtime.Htt
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/shop\">Shop</a>\r\n");
+      out.write("/cages\">Shop</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item active\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");

@@ -6,6 +6,8 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
@@ -24,7 +26,7 @@
     </head>
 
     <body>
-        <div id="myModal" class="modal fade pt-5">
+        <div id="Success" class="modal fade pt-5">
             <div class="modal-dialog modal-confirm">
                 <div class="modal-content">
                     <div class="modal-header justify-content-center">
@@ -77,19 +79,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -150,7 +152,7 @@
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form class="py-3 needs-validation" id="regform" novalidate>
-                                    
+
                                         <div class="row">
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group ">
@@ -392,6 +394,7 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
-    </body>
+
+    </body> 
 
 </html>

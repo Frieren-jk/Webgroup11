@@ -30,7 +30,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -49,6 +49,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <meta name=\"description\" content=\"\">\r\n");
       out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n");
+      out.write("        \r\n");
+      out.write("        \r\n");
       out.write("        <!-- The above 4 meta tags must come first in the head -->\r\n");
       out.write("\r\n");
       out.write("        <!-- Title  -->\r\n");
@@ -67,7 +69,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
-      out.write("        <div id=\"myModal\" class=\"modal fade pt-5\">\r\n");
+      out.write("        <div id=\"Success\" class=\"modal fade pt-5\">\r\n");
       out.write("            <div class=\"modal-dialog modal-confirm\">\r\n");
       out.write("                <div class=\"modal-content\">\r\n");
       out.write("                    <div class=\"modal-header justify-content-center\">\r\n");
@@ -122,21 +124,21 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("            </div>\r\n");
       out.write("\r\n");
       out.write("            <!-- Topbar Start -->\r\n");
-      out.write("                <div class=\"container-fluid\">\r\n");
-      out.write("                    <div class=\"row upbar\">\r\n");
-      out.write("                        <div class=\"col-lg-6 d-none d-lg-block\">\r\n");
-      out.write("                            <div class=\"d-inline-flex align-items-center\">\r\n");
-      out.write("                                <a class=\"text-light\"><i class=\"fa-solid fa-phone\"></i> Call Us: 0960-542-2186</a>\r\n");
-      out.write("                                <span class=\"text-light px-2\">|</span>\r\n");
-      out.write("                                <a class=\"text-light\"><i class=\"fa-solid fa-envelope\"></i> Our Email: furrealpetsupplies@gmail.com</a>\r\n");
-      out.write("                                <span class=\"text-light px-2\">|</span>\r\n");
-      out.write("                                <a style=\"color: #FBFF4B;\" href=\"");
+      out.write("            <div class=\"container-fluid\">\r\n");
+      out.write("                <div class=\"row upbar\">\r\n");
+      out.write("                    <div class=\"col-lg-6 d-none d-lg-block\">\r\n");
+      out.write("                        <div class=\"d-inline-flex align-items-center\">\r\n");
+      out.write("                            <a class=\"text-light\"><i class=\"fa-solid fa-phone\"></i> Call Us: 0960-542-2186</a>\r\n");
+      out.write("                            <span class=\"text-light px-2\">|</span>\r\n");
+      out.write("                            <a class=\"text-light\"><i class=\"fa-solid fa-envelope\"></i> Our Email: furrealpetsupplies@gmail.com</a>\r\n");
+      out.write("                            <span class=\"text-light px-2\">|</span>\r\n");
+      out.write("                            <a style=\"color: #FBFF4B;\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/physicalshop\">Visit our physical shop. <i class=\"fa-solid fa-location-dot\"></i></a>\r\n");
-      out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
       out.write("            <!-- Topbar End -->\r\n");
       out.write("\r\n");
       out.write("            <!-- Header Area Start -->\r\n");
@@ -181,7 +183,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("/home\">Home</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/shop\">Shop</a></li>\r\n");
+      out.write("/cages\">Shop</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/product\">Product</a></li>\r\n");
@@ -217,7 +219,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"registration-form-wrapper\">\r\n");
       out.write("                                    <form class=\"py-3 needs-validation\" id=\"regform\" novalidate>\r\n");
-      out.write("                                    \r\n");
+      out.write("\r\n");
       out.write("                                        <div class=\"row\">\r\n");
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group \">\r\n");
@@ -378,7 +380,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/shop\">Shop</a>\r\n");
+      out.write("/cages\">Shop</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
@@ -473,7 +475,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <!-- Active js -->\r\n");
       out.write("        <script src=\"js/active.js\"></script>\r\n");
       out.write("        <script src=\"js/CustomJs.js\"></script>\r\n");
-      out.write("    </body>\r\n");
+      out.write("\r\n");
+      out.write("    </body> \r\n");
       out.write("\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {

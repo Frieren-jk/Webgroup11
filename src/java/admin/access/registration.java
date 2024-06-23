@@ -30,9 +30,11 @@ public class registration extends HttpServlet {
             case "/registration":
                 viewReg(request, response);
                 break;
-            
-           
-           
+            default:
+                // Handle unexpected paths or methods
+                response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                break;
+
         }
 
     }
@@ -45,7 +47,7 @@ public class registration extends HttpServlet {
 
     private void viewReg(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         if (request.getParameter("RegisterItem") != null) {
             String userName = request.getParameter("userName");
             String password = request.getParameter("password");
@@ -58,9 +60,9 @@ public class registration extends HttpServlet {
             EmployeeBlueprint newEmployee = new EmployeeBlueprint(
                     userName,
                     password,
-                    firstName, 
-                    middleName, 
-                    lastName, 
+                    firstName,
+                    middleName,
+                    lastName,
                     address,
                     birthday,
                     mobileNumber);
@@ -68,26 +70,23 @@ public class registration extends HttpServlet {
             boolean employeeDetails = employeeDao.createEmployee(newEmployee);
 
             if (employeeDetails) {
-                
+
                 System.out.println("Registration for" + userName + " is successful");
-                 
-                
+
             } else {
                 System.out.println("Registration is not successful");
             }
 
         }
-        
+
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+        response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+        response.setHeader("Expires", "0");
+
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
                 "/registration.jsp");
         rd.forward(request, response);
-        
 
-        
-        
     }
-    
-   
-  
 
 }

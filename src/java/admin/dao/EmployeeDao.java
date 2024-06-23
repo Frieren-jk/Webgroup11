@@ -15,6 +15,31 @@ import java.sql.SQLException;
  */
 public class EmployeeDao {
 
+    private String SQLurl = "jdbc:mysql://localhost:3306/webgroup11?serverTimezone=UTC";
+    private String username = "root";
+    private String password = "pass123";
+
+    private static final String SelectUserID = "select "
+            + "userName, "
+            + "password, "
+            + "firstName, "
+            + "middleName, "
+            + "lastName, "
+            + "address, "
+            + "birthday, "
+            + "mobileNumber from employee where username =?";
+    private static final String SelectAllUser = "select * from employee";
+    private static final String DeleteUser = "delete from employee where userName = ?;";
+    private static final String UpdateUser = "update employee set "
+            + "userName = ?, "
+            + "password = ?, "
+            + "firstName = ?, "
+            + "middleName = ?, "
+            + "lastName = ?, "
+            + "address = ?, "
+            + "birthday = ?, "
+            + "mobileNumber = ? where userName = ?;";
+
     public boolean createEmployee(EmployeeBlueprint employee) {
         boolean success = false;
         Connection conn = null;

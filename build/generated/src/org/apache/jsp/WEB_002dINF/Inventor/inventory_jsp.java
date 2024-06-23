@@ -13,6 +13,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -23,11 +24,13 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
     _jspx_tagPool_c_out_value_nobody.release();
+    _jspx_tagPool_c_if_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -95,9 +98,38 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/css/Custom11Css.css\">     \r\n");
+      out.write("        <style>\r\n");
+      out.write("            .notification {\r\n");
+      out.write("                position: fixed;\r\n");
+      out.write("                bottom: 20px;\r\n");
+      out.write("                left: 50%;\r\n");
+      out.write("                transform: translateX(-50%);\r\n");
+      out.write("                background-color: #4CAF50;\r\n");
+      out.write("                color: white;\r\n");
+      out.write("                padding: 15px;\r\n");
+      out.write("                border-radius: 5px;\r\n");
+      out.write("                display: none; /* Initially hidden */\r\n");
+      out.write("                animation: slideUp 0.5s ease; /* Animation */\r\n");
+      out.write("            }\r\n");
+      out.write("\r\n");
+      out.write("            @keyframes slideUp {\r\n");
+      out.write("                0% {\r\n");
+      out.write("                    bottom: -100px;\r\n");
+      out.write("                }\r\n");
+      out.write("                100% {\r\n");
+      out.write("                    bottom: 20px;\r\n");
+      out.write("                }\r\n");
+      out.write("            }\r\n");
+      out.write("        </style>\r\n");
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
+      out.write("        <div class=\"notification\">\r\n");
+      out.write("            ");
+      if (_jspx_meth_c_if_0(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("        </div>\r\n");
       out.write("        <div class=\"main-content-wrapper d-flex clearfix\">\r\n");
       out.write("\r\n");
       out.write("            <!-- Search Start -->\r\n");
@@ -206,7 +238,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/home\">Home</a></li>\r\n");
       out.write("                        <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/shop\">Shop</a></li>\r\n");
+      out.write("/cages\">Shop</a></li>\r\n");
       out.write("                        <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/product\">Product</a></li>\r\n");
@@ -237,74 +269,86 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/inventory/add/form\" class=\"btn amado-bt\">Add Inventory</a>\r\n");
       out.write("                </div>\r\n");
+      out.write("                <div class=\"cart-btn w-10 mt-1 mb-4\" >\r\n");
+      out.write("                    <a id=\"toggleTables\" class=\"btn amado-bt\" style=\"color: white;\">Show Product</a>\r\n");
+      out.write("                </div>\r\n");
       out.write("\r\n");
-      out.write("                <div class=\"registration-form-wrapper pt-auto\">\r\n");
-      out.write("                    <div class=\"table-responsive\">\r\n");
-      out.write("                        <table id=\"myTable\" class=\"table table-striped table-hover\">\r\n");
-      out.write("                            <thead>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <th>Username</th>\r\n");
-      out.write("                                    <th>Name</th>\r\n");
-      out.write("                                    <th>Address</th>\r\n");
-      out.write("                                    <th>Birthday</th>\r\n");
-      out.write("                                    <th>Mobile Number</th>\r\n");
-      out.write("                                    <th>Account Status</th>\r\n");
-      out.write("                                    <th>Log In Status</th>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </thead>\r\n");
-      out.write("                            <tbody>\r\n");
-      out.write("                                ");
+      out.write("                <div class=\"table-wrapper\">\r\n");
+      out.write("\r\n");
+      out.write("                    <div class=\"registration-form-wrapper pt-auto\" id=\"table1\">\r\n");
+      out.write("                        <div class=\"table-responsive\">\r\n");
+      out.write("                            <table id=\"myTable1\" class=\"table table-striped table-hover\">\r\n");
+      out.write("                                <thead>\r\n");
+      out.write("                                    <tr>\r\n");
+      out.write("                                        <th>Username</th>\r\n");
+      out.write("                                        <th>Name</th>\r\n");
+      out.write("                                        <th>Address</th>\r\n");
+      out.write("                                        <th>Birthday</th>\r\n");
+      out.write("                                        <th>Mobile Number</th>\r\n");
+      out.write("                                        <th>Account Status</th>\r\n");
+      out.write("                                        <th>Log In Status</th>\r\n");
+      out.write("                                    </tr>\r\n");
+      out.write("                                </thead>\r\n");
+      out.write("                                <tbody>\r\n");
+      out.write("                                    ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                            </tbody>\r\n");
-      out.write("                            <tfoot>\r\n");
-      out.write("                                <tr>\r\n");
-      out.write("                                    <th>Username</th>\r\n");
-      out.write("                                    <th>Name</th>\r\n");
-      out.write("                                    <th>Address</th>\r\n");
-      out.write("                                    <th>Birthday</th>\r\n");
-      out.write("                                    <th>Mobile Number</th>\r\n");
-      out.write("                                    <th>Account Status</th>\r\n");
-      out.write("                                    <th>Log In Status</th>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </tfoot>\r\n");
-      out.write("                        </table>\r\n");
+      out.write("                                </tbody>\r\n");
+      out.write("                                <tfoot>\r\n");
+      out.write("                                    <tr>\r\n");
+      out.write("                                        <th>Username</th>\r\n");
+      out.write("                                        <th>Name</th>\r\n");
+      out.write("                                        <th>Address</th>\r\n");
+      out.write("                                        <th>Birthday</th>\r\n");
+      out.write("                                        <th>Mobile Number</th>\r\n");
+      out.write("                                        <th>Account Status</th>\r\n");
+      out.write("                                        <th>Log In Status</th>\r\n");
+      out.write("                                    </tr>\r\n");
+      out.write("                                </tfoot>\r\n");
+      out.write("                            </table>\r\n");
+      out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
-      out.write("                </div>\r\n");
-      out.write("            </div>\r\n");
       out.write("\r\n");
-      out.write("            <div class=\"registration-form-wrapper pt-auto\" id=\"table2\" style=\"display: none;\">\r\n");
-      out.write("                <div class=\"table-responsive\">\r\n");
-      out.write("                    <table id=\"myTable2\" class=\"table table-striped table-hover\">\r\n");
-      out.write("                        <thead>\r\n");
-      out.write("                            <tr>\r\n");
-      out.write("                                <th>Product ID</th>\r\n");
-      out.write("                                <th>Product Name</th>\r\n");
-      out.write("                                <th>Category</th>\r\n");
-      out.write("                                <th>Price</th>\r\n");
-      out.write("                                <th>Stock</th>\r\n");
-      out.write("                            </tr>\r\n");
-      out.write("                        </thead>\r\n");
-      out.write("                        <tbody>\r\n");
-      out.write("                            ");
+      out.write("\r\n");
+      out.write("                    <div class=\"registration-form-wrapper pt-auto\" id=\"table2\" >\r\n");
+      out.write("                        <div class=\"table-responsive\">\r\n");
+      out.write("                            <table id=\"myTable2\" class=\"table table-striped table-hover\">\r\n");
+      out.write("                                <thead>\r\n");
+      out.write("                                    <tr>\r\n");
+      out.write("                                        <th>Product ID</th>\r\n");
+      out.write("                                        <th>Product Name</th>\r\n");
+      out.write("                                        <th>Category</th>\r\n");
+      out.write("                                        <th>Price</th>\r\n");
+      out.write("                                        <th>Stock</th>\r\n");
+      out.write("                                    </tr>\r\n");
+      out.write("                                </thead>\r\n");
+      out.write("                                <tbody>\r\n");
+      out.write("                                    ");
       if (_jspx_meth_c_forEach_1(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                        </tbody>\r\n");
-      out.write("                        <tfoot>\r\n");
-      out.write("                            <tr>\r\n");
-      out.write("                                <th>Product ID</th>\r\n");
-      out.write("                                <th>Product Name</th>\r\n");
-      out.write("                                <th>Category</th>\r\n");
-      out.write("                                <th>Price</th>\r\n");
-      out.write("                                <th>Stock</th>\r\n");
-      out.write("                            </tr>\r\n");
-      out.write("                        </tfoot>\r\n");
-      out.write("                    </table>\r\n");
+      out.write("                                </tbody>\r\n");
+      out.write("                                <tfoot>\r\n");
+      out.write("                                    <tr>\r\n");
+      out.write("                                        <th>Product ID</th>\r\n");
+      out.write("                                        <th>Product Name</th>\r\n");
+      out.write("                                        <th>Category</th>\r\n");
+      out.write("                                        <th>Price</th>\r\n");
+      out.write("                                        <th>Stock</th>\r\n");
+      out.write("                                    </tr>\r\n");
+      out.write("                                </tfoot>\r\n");
+      out.write("                            </table>\r\n");
+      out.write("                        </div>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("\r\n");
       out.write("                </div>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("        <!-- ##### Footer Area End ##### -->\r\n");
       out.write("        <footer class=\"footer_area clearfix w-100\">\r\n");
@@ -347,7 +391,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/shop\">Shop</a>\r\n");
+      out.write("/cages\">Shop</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
@@ -452,7 +496,38 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script>\r\n");
       out.write("                                    $(document).ready(function () {\r\n");
       out.write("                                        $('#myTable').DataTable();\r\n");
+      out.write("                                        $('#myTable1').DataTable();\r\n");
+      out.write("                                        $('#myTable2').DataTable();\r\n");
       out.write("\r\n");
+      out.write("                                        // Initially hide the second table\r\n");
+      out.write("                                        $('#table2').hide();\r\n");
+      out.write("\r\n");
+      out.write("                                        $('#toggleTables').on('click', function () {\r\n");
+      out.write("                                            if ($('#table1').is(':hidden')) {\r\n");
+      out.write("                                                $('#table1').show();\r\n");
+      out.write("                                                $('#table2').hide();\r\n");
+      out.write("                                                $(this).text('Show Products');\r\n");
+      out.write("                                            } else {\r\n");
+      out.write("                                                $('#table1').hide();\r\n");
+      out.write("                                                $('#table2').show();\r\n");
+      out.write("                                                $(this).text('Show Users');\r\n");
+      out.write("                                            }\r\n");
+      out.write("                                        });\r\n");
+      out.write("\r\n");
+      out.write("                                        function fadeOutNotification() {\r\n");
+      out.write("                                            var notification = document.querySelector('.notification');\r\n");
+      out.write("                                            setTimeout(function () {\r\n");
+      out.write("                                                notification.style.animation = 'fadeOut 0.5s ease forwards';\r\n");
+      out.write("                                                setTimeout(function () {\r\n");
+      out.write("                                                    notification.style.display = 'none';\r\n");
+      out.write("                                                }, 500); // Wait for fade out animation to complete\r\n");
+      out.write("                                            }, 3000); // 3000 milliseconds = 3 seconds\r\n");
+      out.write("                                        }\r\n");
+      out.write("\r\n");
+      out.write("                                        // Call fadeOutNotification on page load\r\n");
+      out.write("                                        window.onload = function () {\r\n");
+      out.write("                                            fadeOutNotification();\r\n");
+      out.write("                                        };\r\n");
       out.write("                                    });\r\n");
       out.write("        </script>\r\n");
       out.write("    </body>\r\n");
@@ -471,6 +546,36 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
+  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_0.setParent(null);
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty sessionScope.registrationMessage}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
+    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                <p>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.registrationMessage}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</p>\r\n");
+        out.write("            ");
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+    return false;
+  }
+
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -487,41 +592,41 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                    <tr>\r\n");
+          out.write("                                        <tr>\r\n");
           out.write("\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
           out.write("\r\n");
           out.write("\r\n");
           out.write("\r\n");
-          out.write("                                    </tr>\r\n");
-          out.write("                                ");
+          out.write("                                        </tr>\r\n");
+          out.write("                                    ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -683,29 +788,29 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                <tr>\r\n");
-          out.write("                                    <td>");
+          out.write("                                        <tr>\r\n");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
           out.write("</td>\r\n");
-          out.write("                                    <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
           out.write("</td>\r\n");
-          out.write("                                    <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_9((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
           out.write("</td>\r\n");
-          out.write("                                    <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_10((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
           out.write("</td>\r\n");
-          out.write("                                    <td>");
+          out.write("                                            <td>");
           if (_jspx_meth_c_out_11((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
           out.write("</td>\r\n");
-          out.write("                                </tr>\r\n");
-          out.write("                            ");
+          out.write("                                        </tr>\r\n");
+          out.write("                                    ");
           int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -733,7 +838,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_7 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_7.setPageContext(_jspx_page_context);
     _jspx_th_c_out_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
-    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.productId}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.productID}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_7 = _jspx_th_c_out_7.doStartTag();
     if (_jspx_th_c_out_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_7);
@@ -769,7 +874,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_9 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_9.setPageContext(_jspx_page_context);
     _jspx_th_c_out_9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
-    _jspx_th_c_out_9.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.category}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_9.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.description}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_9 = _jspx_th_c_out_9.doStartTag();
     if (_jspx_th_c_out_9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_9);
@@ -805,7 +910,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_11 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_11.setPageContext(_jspx_page_context);
     _jspx_th_c_out_11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
-    _jspx_th_c_out_11.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.stock}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_11.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.quantity}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_11 = _jspx_th_c_out_11.doStartTag();
     if (_jspx_th_c_out_11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_11);

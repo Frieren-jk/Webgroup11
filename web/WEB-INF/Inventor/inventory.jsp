@@ -241,8 +241,8 @@
                                             <td><c:out value="${product.price}" /></td>
                                             <td><c:out value="${product.quantity}" /></td>
                                             <td>
-                                                <a href="${pageContext.request.contextPath}/inventory/update/form/product?productID=<c:out value='${product.productID}'/>"> EDIT</a>
-                                                <a href="${pageContext.request.contextPath}/inventory/delete/product?productID=<c:out value='${product.productID}' />"> DELETE</a>
+                                                <a href="${pageContext.request.contextPath}/inventory/update/form/product?productID=<c:out value='${product.productID}'/>" type="button" class="btn btn-primary btn-sm"> EDIT</a>
+                                                <a href="${pageContext.request.contextPath}/inventory/delete/product?productID=<c:out value='${product.productID}' />" type="button" class="btn btn-danger btn-sm"> DELETE</a>
                                             </td> 
                                         </tr>
                                     </c:forEach>

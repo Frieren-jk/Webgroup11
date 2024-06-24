@@ -1,9 +1,5 @@
 package admin.access;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,15 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import admin.dao.EmployeeDao;
-import admin.dao.SearchInventory;
 import admin.model.EmployeeBlueprint;
-import java.util.ArrayList;
+import javax.servlet.annotation.WebServlet;
 
 /**
- *
- * @author John
+ * Servlet implementation class RegistrationServlet
  */
+@WebServlet(name = "registration", urlPatterns = {"/registration", "/registration/add"})
 public class registration extends HttpServlet {
+
+    private static final long serialVersionUID = 1L;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,13 +27,14 @@ public class registration extends HttpServlet {
             case "/registration":
                 viewReg(request, response);
                 break;
+            case "/registration/add":
+                addReg(request, response);
+                break;
             default:
                 // Handle unexpected paths or methods
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
                 break;
-
         }
-
     }
 
     @Override
@@ -47,7 +45,12 @@ public class registration extends HttpServlet {
 
     private void viewReg(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/registration.jsp");
+        rd.forward(request, response);
+    }
 
+    private void addReg(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         if (request.getParameter("RegisterItem") != null) {
             String userName = request.getParameter("userName");
             String password = request.getParameter("password");
@@ -67,26 +70,18 @@ public class registration extends HttpServlet {
                     birthday,
                     mobileNumber);
             EmployeeDao employeeDao = new EmployeeDao();
-            boolean employeeDetails = employeeDao.createEmployee(newEmployee);
+            employeeDao.createEmployee(newEmployee);
 
-            if (employeeDetails) {
+            System.out.println("Registration for " + userName + " is successful");
+            // Ensure no form resubmission
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+            response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+            response.setHeader("Expires", "0");
+            response.sendRedirect(request.getContextPath() + "/home");
 
-                System.out.println("Registration for" + userName + " is successful");
-
-            } else {
-                System.out.println("Registration is not successful");
-            }
-
+        } else {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid registration request");
         }
-
-        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-        response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-        response.setHeader("Expires", "0");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/registration.jsp");
-        rd.forward(request, response);
-
     }
 
 }

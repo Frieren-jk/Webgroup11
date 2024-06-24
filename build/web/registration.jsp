@@ -37,7 +37,7 @@
                     <div class="modal-body text-center">
                         <h4>Great!</h4>	
                         <p>Your account has been created successfully.</p>
-                        <button  class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span></button>
+                        <button name="Redirecthome" id="Redirecthome" class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span></button>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                         <div class="search-content">
                             <form action="#" method="get">
                                 <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                                <button type="submit"><img src="img/core-img/searchicon.png" alt="error"></button>
+                                <button  type="submit"><img src="img/core-img/searchicon.png" alt="error"></button>
                             </form>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                                     <h2>REGISTRATION</h2>
                                 </div>
                                 <div class="registration-form-wrapper">
-                                    <form class="py-3 needs-validation" id="regform" novalidate>
+                                    <form method="POST" action="${pageContext.request.contextPath}/registration/add" class="py-3 needs-validation" id="regform" novalidate>
 
                                         <div class="row">
                                             <div class="col-12 col-md-6 mt-3">

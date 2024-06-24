@@ -218,7 +218,9 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                    <h2>REGISTRATION</h2>\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"registration-form-wrapper\">\r\n");
-      out.write("                                    <form class=\"py-3 needs-validation\" id=\"regform\" novalidate>\r\n");
+      out.write("                                    <form method=\"POST\" action=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/registration/add\" class=\"py-3 needs-validation\" id=\"regform\" novalidate>\r\n");
       out.write("\r\n");
       out.write("                                        <div class=\"row\">\r\n");
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");

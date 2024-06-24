@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <html lang="en">
 
     <head>
@@ -8,6 +9,7 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
@@ -192,6 +194,7 @@
                                             <td><c:out value="${show.mobileNumber}" /></td>
                                             <td><c:out value="${show.accountStatus}" /></td>
                                             <td><c:out value="${show.loginStatus}" /></td>
+                                            
 
 
 
@@ -222,8 +225,10 @@
                                         <th>Product ID</th>
                                         <th>Product Name</th>
                                         <th>Category</th>
+                                        <th>size</th>
                                         <th>Price</th>
                                         <th>Stock</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -232,8 +237,13 @@
                                             <td><c:out value="${product.productID}" /></td>
                                             <td><c:out value="${product.productName}" /></td>
                                             <td><c:out value="${product.description}" /></td>
+                                            <td><c:out value="${product.size}" /></td>
                                             <td><c:out value="${product.price}" /></td>
                                             <td><c:out value="${product.quantity}" /></td>
+                                            <td>
+                                                <a href="${pageContext.request.contextPath}/inventory/update/form/product?productID=<c:out value='${product.productID}'/>"> EDIT</a>
+                                                <a href="${pageContext.request.contextPath}/inventory/delete/product?productID=<c:out value='${product.productID}' />"> DELETE</a>
+                                            </td> 
                                         </tr>
                                     </c:forEach>
                                 </tbody>
@@ -242,8 +252,10 @@
                                         <th>Product ID</th>
                                         <th>Product Name</th>
                                         <th>Category</th>
+                                        <th>size</th>
                                         <th>Price</th>
                                         <th>Stock</th>
+                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -396,20 +408,6 @@
                                             }
                                         });
 
-                                        function fadeOutNotification() {
-                                            var notification = document.querySelector('.notification');
-                                            setTimeout(function () {
-                                                notification.style.animation = 'fadeOut 0.5s ease forwards';
-                                                setTimeout(function () {
-                                                    notification.style.display = 'none';
-                                                }, 500); // Wait for fade out animation to complete
-                                            }, 3000); // 3000 milliseconds = 3 seconds
-                                        }
-
-                                        // Call fadeOutNotification on page load
-                                        window.onload = function () {
-                                            fadeOutNotification();
-                                        };
                                     });
         </script>
     </body>

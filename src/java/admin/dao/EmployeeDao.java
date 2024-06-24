@@ -28,7 +28,7 @@ public class EmployeeDao {
             + "lastName, "
             + "address, "
             + "birthday, "
-            + "mobileNumber from employee where username =?";
+            + "mobileNumber from employee where userName =?";
     private static final String SELECT_ALL_USER = "select * from employee";
     private static final String DELETE_USER = "delete from employee where userName = ?;";
     private static final String UPDATE_USER = "update employee set "

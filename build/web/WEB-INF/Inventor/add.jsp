@@ -127,7 +127,7 @@
                                     <h2>ADD INVENTORY</h2>
                                 </div>
                                 <div class="registration-form-wrapper">
-                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/form" class="py-3" id="regform">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/product" class="py-3" id="regform">
                                         <div class="row">
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">

@@ -16,12 +16,23 @@ import admin.dao.SearchInventory;
 import admin.model.EmployeeBlueprint;
 import admin.model.ProductBlueprint;
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.annotation.WebServlet;
 
 /**
  *
  * @author John
  */
+@WebServlet(name = "inventory", urlPatterns = {
+    "/inventory",
+    "/inventory/add/form",
+    "/inventory/delete/product",
+    "/inventory/update/product",
+    "/inventory/update/form/product",
+    "/inventory/add"})
 public class inventory extends HttpServlet {
 
     @Override
@@ -31,14 +42,40 @@ public class inventory extends HttpServlet {
 
         switch (action) {
             case "/inventory/add/form":
-                viewAddForm(request, response);
+                viewAddForm(request, response); //view form
                 break;
-            case "/inventory/add":
-                viewAdd(request, response);
+            case "/inventory/add/product":
+                AddProduct(request, response); //add product method
                 break;
-            default:
-                viewInventory(request, response);
+            case "/inventory":
+                viewInventory(request, response); //view inventory table method
                 break;
+            case "/inventory/update/product": {
+                try {
+                    UpdateProduct(request, response);
+                } catch (SQLException ex) {
+                    System.out.println("UPDATE PRODUCT CASE ERROR:" + ex);
+                }
+            }
+            break;
+
+            case "/inventory/update/form/product": {
+                try {
+                    ShowEditProduct(request, response);
+                } catch (SQLException ex) {
+                    System.out.println("SHOW EDIT PRODUCT CASE ERROR:" + ex);
+                }
+            }
+            break;
+            case "/inventory/delete/product": {
+                try {
+                    DeleteProduct(request, response);
+                } catch (SQLException ex) {
+                    System.out.println("DELTE PRODUCT CASE ERROR:" + ex);
+                }
+            }
+            break;
+
         }
 
     }
@@ -54,11 +91,11 @@ public class inventory extends HttpServlet {
 
         SearchInventory search = new SearchInventory();
         ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
-        System.out.println(AllUser);
+
         request.setAttribute("AllUser", AllUser);
 
         ArrayList<ProductBlueprint> AllProducts = search.getAllProducts();
-        System.out.println(AllProducts);
+
         request.setAttribute("AllProducts", AllProducts);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventory.jsp");
@@ -69,15 +106,7 @@ public class inventory extends HttpServlet {
 //        rd.forward(request, response);
     }
 
-    private void viewAdd(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/WEB-INF/Inventor/inventoryUpdated.jsp");
-        rd.forward(request, response);
-    }
-
-    private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
+    private void AddProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         if (request.getParameter("addItem") != null) {
@@ -97,18 +126,85 @@ public class inventory extends HttpServlet {
             boolean productAdded = productDao.createProduct(newProduct);
 
             // Prepare a message to display on the UI
-            
             if (productAdded) {
                 System.out.println("Succesfully added product");
+                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+                response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+                response.setHeader("Expires", "0");
+                response.sendRedirect(request.getContextPath() + "/inventory");
             } else {
-                System.out.println("Did not added product");
-            }
+                System.out.println("Did not add product");
 
-           
+                response.sendRedirect(request.getContextPath() + "/inventory/add/form");
+            }
         }
+    }
+
+    private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add.jsp");
         rd.forward(request, response);
 
     }
 
+    private void DeleteProduct(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        int productID = Integer.parseInt(request.getParameter("productID"));
+        ProductDao productDao = new ProductDao();
+        productDao.deleteProduct(productID);
+
+        response.sendRedirect(request.getContextPath() + "/inventory");
+
+    }
+
+    private void ShowEditProduct(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException, SQLException {
+    // Fetch productID from request parameter
+    String productIDParam = request.getParameter("productID");
+    
+    try {
+        // Convert productIDParam to an integer
+        int productID = Integer.parseInt(productIDParam);
+        
+        // Instantiate your DAO and call selectProduct
+        ProductDao productDao = new ProductDao();
+        ArrayList<ProductBlueprint> product = productDao.selectProduct(productID);
+        
+        // Set the 'product' attribute in request scope
+        request.setAttribute("product", product);
+        
+        // Forward the request to the JSP page
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit.jsp");
+        dispatcher.forward(request, response);
+        
+    } catch (NumberFormatException e) {
+        // Handle the case where productIDParam is not a valid integer
+        e.printStackTrace(); // Or log the error
+        // Optionally redirect or show an error message
+        response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid productID");
+    }
+}
+
+
+    private void UpdateProduct(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+
+        int productID = Integer.parseInt(request.getParameter("productID"));
+        String productName = request.getParameter("productName");
+        String description = request.getParameter("description");
+        String size = request.getParameter("size");
+        BigDecimal price = new BigDecimal(request.getParameter("price"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+
+        ProductDao update = new ProductDao();
+        
+        boolean editRegister = update.updateProduct(productName, description, size, price,  quantity, productID);
+        
+        if (editRegister) {
+            response.sendRedirect(request.getContextPath() + "/inventory");
+        } else {
+            System.out.println("Error Occured");
+        }
+    }
 }

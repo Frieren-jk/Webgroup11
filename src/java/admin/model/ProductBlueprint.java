@@ -19,8 +19,12 @@ public class ProductBlueprint {
     private BigDecimal price;
     private int quantity;
 
-    public ProductBlueprint() {
+    public ProductBlueprint(int productID, String productName, String description, String size, BigDecimal price, String quantity) {
 
+    }
+
+    public ProductBlueprint() {
+//    wag idelete need sa search inventory
     }
 
     public ProductBlueprint(
@@ -36,6 +40,18 @@ public class ProductBlueprint {
         this.size = size;
         this.price = price;
         this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductBlueprint{"
+                + "productID=" + productID
+                + ", productName='" + productName + '\''
+                + ", description='" + description + '\''
+                + ", size='" + size + '\''
+                + ", price=" + price
+                + ", quantity='" + quantity + '\''
+                + '}';
     }
 
     public int getProductID() {

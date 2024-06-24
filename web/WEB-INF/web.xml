@@ -68,9 +68,21 @@
         <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory/add</url-pattern>
     </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/add/product</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
-        <url-pattern>/inventory/addtesting</url-pattern>
+        <url-pattern>/inventory/delete/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/update/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/update/form/product</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>index</servlet-name>

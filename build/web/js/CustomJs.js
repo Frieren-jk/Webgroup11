@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
     const inputs = document.querySelectorAll('input');
     const patterns = {

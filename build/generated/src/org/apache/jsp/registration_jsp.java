@@ -80,7 +80,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                    <div class=\"modal-body text-center\">\r\n");
       out.write("                        <h4>Great!</h4>\t\r\n");
       out.write("                        <p>Your account has been created successfully.</p>\r\n");
-      out.write("                        <button  class=\"btn btn-success\" data-dismiss=\"modal\"><span>Start Exploring</span></button>\r\n");
+      out.write("                        <button name=\"Redirecthome\" id=\"Redirecthome\" class=\"btn btn-success\" data-dismiss=\"modal\"><span>Start Exploring</span></button>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
@@ -97,7 +97,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                        <div class=\"search-content\">\r\n");
       out.write("                            <form action=\"#\" method=\"get\">\r\n");
       out.write("                                <input type=\"search\" name=\"search\" id=\"search\" placeholder=\"Type your keyword...\">\r\n");
-      out.write("                                <button type=\"submit\"><img src=\"img/core-img/searchicon.png\" alt=\"error\"></button>\r\n");
+      out.write("                                <button  type=\"submit\"><img src=\"img/core-img/searchicon.png\" alt=\"error\"></button>\r\n");
       out.write("                            </form>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");

@@ -37,11 +37,7 @@
     </head>
 
     <body>
-        <div class="notification">
-            <c:if test="${not empty sessionScope.registrationMessage}">
-                <p>${sessionScope.registrationMessage}</p>
-            </c:if>
-        </div>
+
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Search Start -->
@@ -142,62 +138,16 @@
                     <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt">Add Inventory</a>
                 </div>
                 <div class="cart-btn w-10 mt-1 mb-4" >
-                    <a id="toggleTables" class="btn amado-bt" style="color: white;">Show Product</a>
+                    <a href="${pageContext.request.contextPath}/inventory/users" class="btn amado-bt" style="color: white;">Show Users</a>
                 </div>
 
                 <div class="table-wrapper">
 
-                    <div class="registration-form-wrapper pt-auto" id="table1">
-                        <div class="table-responsive">
-                            <table id="myTable1" class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Username</th>
-                                        <th>Name</th>
-                                        <th>Address</th>
-                                        <th>Birthday</th>
-                                        <th>Mobile Number</th>
-                                        <th>Account Status</th>
-                                        <th>Log In Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <c:forEach var="show" items="${AllUser}">
-                                        <tr>
-
-                                            <td><c:out value="${show.userName}" /></td>
-                                            <td><c:out value="${show.firstName} ${show.middleName} ${show.lastName}" /></td>
-                                            <td><c:out value="${show.address}" /></td>
-                                            <td><c:out value="${show.birthday}" /></td>
-                                            <td><c:out value="${show.mobileNumber}" /></td>
-                                            <td><c:out value="${show.accountStatus}" /></td>
-                                            <td><c:out value="${show.loginStatus}" /></td>
-
-
-
-
-                                        </tr>
-                                    </c:forEach>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Username</th>
-                                        <th>Name</th>
-                                        <th>Address</th>
-                                        <th>Birthday</th>
-                                        <th>Mobile Number</th>
-                                        <th>Account Status</th>
-                                        <th>Log In Status</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
 
 
                     <div class="registration-form-wrapper pt-auto" id="table2" >
                         <div class="table-responsive">
-                            <table id="myTable2" class="table table-striped table-hover">
+                            <table id="myTable" class="table row-border order-column table-hover">
                                 <thead>
                                     <tr>
                                         <th>Product ID</th>
@@ -366,25 +316,9 @@
         <script src="${pageContext.request.contextPath}/js/active.js"></script>
         <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
         <script>
+
                                     $(document).ready(function () {
                                         $('#myTable').DataTable();
-                                        $('#myTable1').DataTable();
-                                        $('#myTable2').DataTable();
-
-                                        // Initially hide the second table
-                                        $('#table2').hide();
-
-                                        $('#toggleTables').on('click', function () {
-                                            if ($('#table1').is(':hidden')) {
-                                                $('#table1').show();
-                                                $('#table2').hide();
-                                                $(this).text('Show Products');
-                                            } else {
-                                                $('#table1').hide();
-                                                $('#table2').show();
-                                                $(this).text('Show Users');
-                                            }
-                                        });
 
                                     });
         </script>

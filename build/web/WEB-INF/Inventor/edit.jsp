@@ -147,13 +147,6 @@
                                                     <div class="row">
                                                         <div class="col-12 col-md-6 mt-3">
                                                             <div class="form-group">
-                                                                <label for="productID">Product ID</label>
-                                                                <input type="text" class="form-control" id="productID" name="productID" placeholder="Enter the Product ID" value="${product.productID}" >
-                                                                <small id="productIDHelp" class="form-text">Product ID must be alphanumeric.</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mt-3">
-                                                            <div class="form-group">
                                                                 <label for="productName">Product Name</label>
                                                                 <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter the Product Name" value="${product.productName}" >
                                                                 <small id="productNameHelp" class="form-text">Product name must be alphanumeric.</small>

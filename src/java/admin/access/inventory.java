@@ -47,8 +47,11 @@ public class inventory extends HttpServlet {
             case "/inventory/add/product":
                 AddProduct(request, response); //add product method
                 break;
-            case "/inventory":
-                viewInventory(request, response); //view inventory table method
+            case "/inventory/users":
+                viewInventoryUsers(request, response); //view inventory table method
+                break;
+            case "/inventory/products":
+                viewInventoryProducts(request, response); //view inventory table method
                 break;
             case "/inventory/update/product": {
                 try {
@@ -86,7 +89,7 @@ public class inventory extends HttpServlet {
         doGet(request, response);
     }
 
-    private void viewInventory(HttpServletRequest request, HttpServletResponse response)
+    private void viewInventoryUsers(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         SearchInventory search = new SearchInventory();
@@ -94,17 +97,31 @@ public class inventory extends HttpServlet {
 
         request.setAttribute("AllUser", AllUser);
 
+        
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventoryUsers.jsp");
+        dispatcher.forward(request, response);
+        
+    
+
+    }
+    
+    private void viewInventoryProducts(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        SearchInventory search = new SearchInventory();
+
         ArrayList<ProductBlueprint> AllProducts = search.getAllProducts();
 
         request.setAttribute("AllProducts", AllProducts);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventory.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventoryProducts.jsp");
         dispatcher.forward(request, response);
+        
+    
 
-//        RequestDispatcher rd = getServletContext().getRequestDispatcher(
-//                "/WEB-INF/Inventor/inventory.jsp");
-//        rd.forward(request, response);
     }
+    
+    
 
     private void AddProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -131,7 +148,7 @@ public class inventory extends HttpServlet {
                 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
                 response.setHeader("Pragma", "no-cache"); // HTTP 1.0
                 response.setHeader("Expires", "0");
-                response.sendRedirect(request.getContextPath() + "/inventory");
+                response.sendRedirect(request.getContextPath() + "/inventory/products");
             } else {
                 System.out.println("Did not add product");
 
@@ -154,7 +171,7 @@ public class inventory extends HttpServlet {
         ProductDao productDao = new ProductDao();
         productDao.deleteProduct(productID);
 
-        response.sendRedirect(request.getContextPath() + "/inventory");
+        response.sendRedirect(request.getContextPath() + "/inventory/products");
 
     }
 
@@ -178,10 +195,8 @@ public class inventory extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit.jsp");
         dispatcher.forward(request, response);
         
-    } catch (NumberFormatException e) {
-        // Handle the case where productIDParam is not a valid integer
-        e.printStackTrace(); // Or log the error
-        // Optionally redirect or show an error message
+    } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
+       
         response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid productID");
     }
 }
@@ -202,7 +217,7 @@ public class inventory extends HttpServlet {
         boolean editRegister = update.updateProduct(productName, description, size, price,  quantity, productID);
         
         if (editRegister) {
-            response.sendRedirect(request.getContextPath() + "/inventory");
+            response.sendRedirect(request.getContextPath() + "/inventory/products");
         } else {
             System.out.println("Error Occured");
         }

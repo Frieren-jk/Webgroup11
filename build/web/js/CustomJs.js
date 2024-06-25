@@ -53,7 +53,7 @@ $(document).ready(function () {
     }
 
     $('#regform').submit(function (event) {
-        
+
 
         let allUserInfoValid = true;
 
@@ -91,7 +91,7 @@ $(document).ready(function () {
         }
     });
 
-   
+
 
 //            $.ajax({
 //                type: 'POST',
@@ -183,4 +183,7 @@ $(document).ready(function () {
                     form.classList.add('was-validated');
                 }, false);
             });
+
+    $('#myTable1').DataTable();
+    $('#myTable2').DataTable();
 })();

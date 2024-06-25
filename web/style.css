@@ -18,45 +18,27 @@
     outline: none;
     box-shadow: none;
 }
-#myTable1 {
+#myTable {
     width: 100%;
     margin: 20px 0;
     border-collapse: collapse;
 }
-#myTable1 th, #myTable1 td {
+#myTable th, #myTable td {
     padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
 }
-#myTable1 th {
+#myTable th {
     background-color: #f2f2f2;
 }
 #myTable tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-#myTable1 tr:hover {
+#myTable tr:hover {
     background-color: #f1f1f1;
 }
 
-#myTable2 {
-    width: 100%;
-    
-  
-}
-#myTable2 th, #myTable2 td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-#myTable2 th {
-    background-color: #f2f2f2;
-}
-#myTable2 tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-#myTable2 tr:hover {
-    background-color: #f1f1f1;
-}
+
 
 .valid-feedback,
 .invalid-feedback {

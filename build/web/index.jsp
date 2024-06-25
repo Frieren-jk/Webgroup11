@@ -102,7 +102,6 @@
                         <ul>
                             <li class="active"><a href="${pageContext.request.contextPath}/home">Home</a></li>
                             <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                            <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                             <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                             <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                         </ul>
@@ -126,7 +125,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/toys">
+                        <a href="${pageContext.request.contextPath}/toy2">
                             <img src="img/bg-img/home/toy 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -139,7 +138,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/cages">
+                        <a href="${pageContext.request.contextPath}/cage2">
                             <img src="img/bg-img/home/cage 2 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -152,7 +151,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/bowls">
+                        <a href="${pageContext.request.contextPath}/bowl4">
                             <img src="img/bg-img/home/bowl 4 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -165,7 +164,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/litterboxes">
+                        <a href="${pageContext.request.contextPath}/litterbox3">
                             <img src="img/bg-img/home/litbox 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -178,7 +177,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/clothes">
+                        <a href="${pageContext.request.contextPath}/clothe1">
                             <img src="img/bg-img/home/cloth 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -191,7 +190,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/leashes">
+                        <a href="${pageContext.request.contextPath}/leash3">
                             <img src="img/bg-img/home/leash 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -204,7 +203,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/cages">
+                        <a href="${pageContext.request.contextPath}/cage3">
                             <img src="img/bg-img/home/cage 3 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -217,7 +216,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/foods">
+                        <a href="${pageContext.request.contextPath}/food4">
                             <img src="img/bg-img/home/food 4 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -230,7 +229,7 @@
 
                     <!-- Single Category -->
                     <div class="single-products-category clearfix">
-                        <a href="${pageContext.request.contextPath}/foods">
+                        <a href="${pageContext.request.contextPath}/food1">
                             <img src="img/bg-img/home/food 1 home.png" alt="error">
                             <!-- Hover Content -->
                             <div class="hover-content">
@@ -280,9 +279,6 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>

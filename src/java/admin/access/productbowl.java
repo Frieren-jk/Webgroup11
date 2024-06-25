@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author John
+ * @author IAN
  */
-public class product extends HttpServlet {
+public class productbowl extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -23,11 +23,17 @@ public class product extends HttpServlet {
         String action = request.getServletPath();
 
         switch (action) {
-            case "/product":
-                viewproduct(request, response);
+            case "/bowl1":
+                viewBowl1(request, response);
                 break;
-            default:
-                viewDefault(request, response);
+            case "/bowl2":
+                viewBowl2(request, response);
+                break;
+            case "/bowl3":
+                viewBowl3(request, response);
+                break;
+            case "/bowl4":
+                viewBowl4(request, response);
                 break;
         }
 
@@ -39,22 +45,35 @@ public class product extends HttpServlet {
         doGet(request, response);
     }
 
-    private void viewDefault(HttpServletRequest request, HttpServletResponse response)
+    private void viewBowl1(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/product-details.jsp");
+                "/product/bowl1.jsp");
         rd.forward(request, response);
     }
 
-    private void viewproduct(HttpServletRequest request, HttpServletResponse response)
+    private void viewBowl2(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher(
-                "/product-details.jsp");
+                "/product/bowl2.jsp");
         rd.forward(request, response);
     }
 
- 
+    private void viewBowl3(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
+        RequestDispatcher rd = getServletContext().getRequestDispatcher(
+                "/product/bowl3.jsp");
+        rd.forward(request, response);
+    }
+
+    private void viewBowl4(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        RequestDispatcher rd = getServletContext().getRequestDispatcher(
+                "/product/bowl4.jsp");
+        rd.forward(request, response);
+    }
 }

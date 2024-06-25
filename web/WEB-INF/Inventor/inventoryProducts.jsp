@@ -115,7 +115,6 @@
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                         <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                        <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                         <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                         <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                     </ul>
@@ -232,9 +231,6 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>

@@ -4,34 +4,67 @@
         <servlet-name>inventory</servlet-name>
         <servlet-class>admin.access.inventory</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>index</servlet-name>
         <servlet-class>admin.access.index</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>checkout</servlet-name>
         <servlet-class>admin.access.checkout</servlet-class>
     </servlet>
+    
     <servlet>
-        <servlet-name>product</servlet-name>
-        <servlet-class>admin.access.product</servlet-class>
+        <servlet-name>productcage</servlet-name>
+        <servlet-class>admin.access.productcage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>productbowl</servlet-name>
+        <servlet-class>admin.access.productbowl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>productleash</servlet-name>
+        <servlet-class>admin.access.productleash</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>producttoy</servlet-name>
+        <servlet-class>admin.access.producttoy</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>productclothe</servlet-name>
+        <servlet-class>admin.access.productclothe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>productlitterbox</servlet-name>
+        <servlet-class>admin.access.productlitterbox</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>productfood</servlet-name>
+        <servlet-class>admin.access.productfood</servlet-class>
+    </servlet>
+    
     <servlet>
         <servlet-name>registration</servlet-name>
         <servlet-class>admin.access.registration</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>cart</servlet-name>
         <servlet-class>admin.access.cart</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>physicalshop</servlet-name>
         <servlet-class>admin.access.physicalshop</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>shop</servlet-name>
         <servlet-class>admin.access.shop</servlet-class>
     </servlet>
+    
+    
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory</url-pattern>
@@ -81,10 +114,6 @@
         <url-pattern>/checkout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>product</servlet-name>
-        <url-pattern>/product</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
@@ -100,10 +129,7 @@
         <servlet-name>physicalshop</servlet-name>
         <url-pattern>/physicalshop</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>shop</servlet-name>
-        <url-pattern>/shop</url-pattern>
-    </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/cages</url-pattern>
@@ -124,15 +150,131 @@
         <servlet-name>shop</servlet-name>
         <url-pattern>/leashes</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/litterboxes</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>shop</servlet-name>
         <url-pattern>/toys</url-pattern>
     </servlet-mapping>
-   
+    
+    
+    <servlet-mapping>
+        <servlet-name>productcage</servlet-name>
+        <url-pattern>/cage1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productcage</servlet-name>
+        <url-pattern>/cage2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productcage</servlet-name>
+        <url-pattern>/cage3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productcage</servlet-name>
+        <url-pattern>/cage4</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productcage</servlet-name>
+        <url-pattern>/cage5</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productcage</servlet-name>
+        <url-pattern>/cage6</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>productbowl</servlet-name>
+        <url-pattern>/bowl1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productbowl</servlet-name>
+        <url-pattern>/bowl2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productbowl</servlet-name>
+        <url-pattern>/bowl3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productbowl</servlet-name>
+        <url-pattern>/bowl4</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>productleash</servlet-name>
+        <url-pattern>/leash1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productleash</servlet-name>
+        <url-pattern>/leash2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productleash</servlet-name>
+        <url-pattern>/leash3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productleash</servlet-name>
+        <url-pattern>/leash4</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productleash</servlet-name>
+        <url-pattern>/leash5</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>producttoy</servlet-name>
+        <url-pattern>/toy1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>producttoy</servlet-name>
+        <url-pattern>/toy2</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>productclothe</servlet-name>
+        <url-pattern>/clothe1</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>productlitterbox</servlet-name>
+        <url-pattern>/litterbox1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productlitterbox</servlet-name>
+        <url-pattern>/litterbox2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productlitterbox</servlet-name>
+        <url-pattern>/litterbox3</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>productfood</servlet-name>
+        <url-pattern>/food1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productfood</servlet-name>
+        <url-pattern>/food2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productfood</servlet-name>
+        <url-pattern>/food3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productfood</servlet-name>
+        <url-pattern>/food4</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productfood</servlet-name>
+        <url-pattern>/food5</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productfood</servlet-name>
+        <url-pattern>/food6</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             300

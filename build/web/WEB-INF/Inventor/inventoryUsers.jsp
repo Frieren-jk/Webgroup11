@@ -15,7 +15,7 @@
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
-        <title>Fur Real Pet Supplies - Products Inventory</title>
+        <title>Fur Real Pet Supplies - Users Inventory</title>
 
         <!-- Tab Icon  -->
         <link rel="icon" href="${pageContext.request.contextPath}/img/core-img/iconlight.png">
@@ -115,7 +115,6 @@
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                         <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                        <li><a href="${pageContext.request.contextPath}/product">Product</a></li>
                         <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
                         <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
                     </ul>
@@ -239,9 +238,6 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>

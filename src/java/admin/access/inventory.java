@@ -87,9 +87,7 @@ public class inventory extends HttpServlet {
             case "/inventory/add/form/user":
                 viewAddFormUser(request, response); //view form
                 break;
-            case "/inventory/add/user":
-                AddUser(request, response); //add product method
-                break;
+            
         }
 
     }

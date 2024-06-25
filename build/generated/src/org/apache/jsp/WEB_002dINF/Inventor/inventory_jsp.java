@@ -100,29 +100,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/css/Custom11Css.css\">     \r\n");
-      out.write("        <style>\r\n");
-      out.write("            .notification {\r\n");
-      out.write("                position: fixed;\r\n");
-      out.write("                bottom: 20px;\r\n");
-      out.write("                left: 50%;\r\n");
-      out.write("                transform: translateX(-50%);\r\n");
-      out.write("                background-color: #4CAF50;\r\n");
-      out.write("                color: white;\r\n");
-      out.write("                padding: 15px;\r\n");
-      out.write("                border-radius: 5px;\r\n");
-      out.write("                display: none; /* Initially hidden */\r\n");
-      out.write("                animation: slideUp 0.5s ease; /* Animation */\r\n");
-      out.write("            }\r\n");
       out.write("\r\n");
-      out.write("            @keyframes slideUp {\r\n");
-      out.write("                0% {\r\n");
-      out.write("                    bottom: -100px;\r\n");
-      out.write("                }\r\n");
-      out.write("                100% {\r\n");
-      out.write("                    bottom: 20px;\r\n");
-      out.write("                }\r\n");
-      out.write("            }\r\n");
-      out.write("        </style>\r\n");
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
@@ -321,7 +299,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <th>Product ID</th>\r\n");
       out.write("                                        <th>Product Name</th>\r\n");
       out.write("                                        <th>Category</th>\r\n");
-      out.write("                                        <th>size</th>\r\n");
+      out.write("                                        <th>Size</th>\r\n");
       out.write("                                        <th>Price</th>\r\n");
       out.write("                                        <th>Stock</th>\r\n");
       out.write("                                        <th>Action</th>\r\n");
@@ -338,7 +316,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <th>Product ID</th>\r\n");
       out.write("                                        <th>Product Name</th>\r\n");
       out.write("                                        <th>Category</th>\r\n");
-      out.write("                                        <th>size</th>\r\n");
+      out.write("                                        <th>Size</th>\r\n");
       out.write("                                        <th>Price</th>\r\n");
       out.write("                                        <th>Stock</th>\r\n");
       out.write("                                        <th>Action</th>\r\n");
@@ -614,7 +592,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
           if (_jspx_meth_c_out_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                            \r\n");
+          out.write("\r\n");
           out.write("\r\n");
           out.write("\r\n");
           out.write("\r\n");
@@ -812,13 +790,13 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("/inventory/update/form/product?productID=");
           if (_jspx_meth_c_out_13((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
-          out.write("\"> EDIT</a>\r\n");
+          out.write("\" type=\"button\" class=\"btn btn-primary btn-sm\"> EDIT</a>\r\n");
           out.write("                                                <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/inventory/delete/product?productID=");
           if (_jspx_meth_c_out_14((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
-          out.write("\"> DELETE</a>\r\n");
+          out.write("\" type=\"button\" class=\"btn btn-danger btn-sm\"> DELETE</a>\r\n");
           out.write("                                            </td> \r\n");
           out.write("                                        </tr>\r\n");
           out.write("                                    ");

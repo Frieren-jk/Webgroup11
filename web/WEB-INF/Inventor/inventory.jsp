@@ -33,29 +33,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/core-style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
-        <style>
-            .notification {
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: #4CAF50;
-                color: white;
-                padding: 15px;
-                border-radius: 5px;
-                display: none; /* Initially hidden */
-                animation: slideUp 0.5s ease; /* Animation */
-            }
 
-            @keyframes slideUp {
-                0% {
-                    bottom: -100px;
-                }
-                100% {
-                    bottom: 20px;
-                }
-            }
-        </style>
     </head>
 
     <body>
@@ -194,7 +172,7 @@
                                             <td><c:out value="${show.mobileNumber}" /></td>
                                             <td><c:out value="${show.accountStatus}" /></td>
                                             <td><c:out value="${show.loginStatus}" /></td>
-                                            
+
 
 
 
@@ -225,7 +203,7 @@
                                         <th>Product ID</th>
                                         <th>Product Name</th>
                                         <th>Category</th>
-                                        <th>size</th>
+                                        <th>Size</th>
                                         <th>Price</th>
                                         <th>Stock</th>
                                         <th>Action</th>
@@ -252,7 +230,7 @@
                                         <th>Product ID</th>
                                         <th>Product Name</th>
                                         <th>Category</th>
-                                        <th>size</th>
+                                        <th>Size</th>
                                         <th>Price</th>
                                         <th>Stock</th>
                                         <th>Action</th>

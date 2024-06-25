@@ -146,7 +146,7 @@ public final class bowls_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/registration\" class=\"fav-nav\"><img src=\"img/core-img/createicon.png\" alt=\"error\">Register Now</a>\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/inventory\" class=\"fav-nav\"><img src=\"img/core-img/inventoryicon.png\" href=\"");
+      out.write("/inventory/users\" class=\"fav-nav\"><img src=\"img/core-img/inventoryicon.png\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/inventory\" alt=\"error\">Inventory</a>\r\n");
       out.write("                        <a href=\"");

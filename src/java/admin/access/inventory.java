@@ -34,6 +34,12 @@ import javax.servlet.annotation.WebServlet;
     "/inventory/users",
     "/inventory/update",
     "/inventory/update/form/product",
+    "/inventory/users",
+    "/inventory/add/form/user",
+    "/inventory/add/user",
+    "/inventory/update/form/user",
+    "/inventory/delete/user",
+    "/inventory/update/user",
     "/inventory/add"})
 public class inventory extends HttpServlet {
 
@@ -77,9 +83,7 @@ public class inventory extends HttpServlet {
                 }
             }
             break;
-            
-            
-            
+
             //USERS INVENTORY CASES
             case "/inventory/users":
                 viewInventoryUsers(request, response); //view inventory table method
@@ -87,9 +91,37 @@ public class inventory extends HttpServlet {
             case "/inventory/add/form/user":
                 viewAddFormUser(request, response); //view form
                 break;
-            
-        }
+            case "/inventory/add/user":
+                AddUser(request, response); //add product method
+                break;
+            case "/inventory/update/form/user": {
+                try {
+                    ShowEditUser(request, response);
+                } catch (SQLException ex) {
+                    System.out.println("SHOW EDIT USER CASE ERROR:" + ex);
+                }
+            }
+            break;
+            case "/inventory/delete/user": {
+                try {
+                    DeleteUser(request, response);
+                } catch (SQLException ex) {
+                    System.out.println("DELETE USER CASE ERROR:" + ex);
+                }
+            }
+            break;
 
+            case "/inventory/update/user": {
+                try {
+                    UpdateUser(request, response);
+                } catch (SQLException ex) {
+                    System.out.println("UPDATE USER CASE ERROR:" + ex);
+                }
+            }
+            break;
+
+            //end of switch case
+        }
     }
 
     @Override
@@ -97,8 +129,7 @@ public class inventory extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
-    
-    
+
     //INVENTORY METHODS FOR PRODUCT
     private void viewInventoryProducts(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -111,8 +142,6 @@ public class inventory extends HttpServlet {
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventoryProducts.jsp");
         dispatcher.forward(request, response);
-        
-    
 
     }
 
@@ -145,7 +174,7 @@ public class inventory extends HttpServlet {
             } else {
                 System.out.println("Did not add product");
 
-                response.sendRedirect(request.getContextPath() + "/inventory/add/form");
+                response.sendRedirect(request.getContextPath() + "/inventory/add/form/product");
             }
         }
     }
@@ -169,31 +198,30 @@ public class inventory extends HttpServlet {
     }
 
     private void ShowEditProduct(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException, SQLException {
-    // Fetch productID from request parameter
-    String productIDParam = request.getParameter("productID");
-    
-    try {
-        // Convert productIDParam to an integer
-        int productID = Integer.parseInt(productIDParam);
-        
-        // Instantiate your DAO and call selectProduct
-        ProductDao productDao = new ProductDao();
-        ArrayList<ProductBlueprint> product = productDao.selectProduct(productID);
-        
-        // Set the 'product' attribute in request scope
-        request.setAttribute("product", product);
-        
-        // Forward the request to the JSP page
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit_products.jsp");
-        dispatcher.forward(request, response);
-        
-    } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
-       
-        response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid productID");
-    }
-}
+            throws ServletException, IOException, SQLException {
+        // Fetch productID from request parameter
+        String productIDParam = request.getParameter("productID");
 
+        try {
+            // Convert productIDParam to an integer
+            int productID = Integer.parseInt(productIDParam);
+
+            // Instantiate your DAO and call selectProduct
+            ProductDao productDao = new ProductDao();
+            ArrayList<ProductBlueprint> product = productDao.selectProduct(productID);
+
+            // Set the 'product' attribute in request scope
+            request.setAttribute("product", product);
+
+            // Forward the request to the JSP page
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit_products.jsp");
+            dispatcher.forward(request, response);
+
+        } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
+
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid productID");
+        }
+    }
 
     private void UpdateProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
@@ -206,29 +234,29 @@ public class inventory extends HttpServlet {
         int quantity = Integer.parseInt(request.getParameter("quantity"));
 
         ProductDao update = new ProductDao();
-        
-        boolean editRegister = update.updateProduct(productName, description, size, price,  quantity, productID);
-        
+
+        boolean editRegister = update.updateProduct(productName, description, size, price, quantity, productID);
+
         if (editRegister) {
             response.sendRedirect(request.getContextPath() + "/inventory/products");
         } else {
             System.out.println("Error Occured");
         }
     }
-    
+
     // INVENTORY METHODS FOR USER
     // INVENTORY METHODS FOR USER
     // INVENTORY METHODS FOR USER
     // INVENTORY METHODS FOR USER
-     private void viewAddFormUser(HttpServletRequest request, HttpServletResponse response)
+    private void viewAddFormUser(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add_users.jsp");
         rd.forward(request, response);
 
     }
-     
-     private void viewInventoryUsers(HttpServletRequest request, HttpServletResponse response)
+
+    private void viewInventoryUsers(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         SearchInventory search = new SearchInventory();
@@ -236,11 +264,125 @@ public class inventory extends HttpServlet {
 
         request.setAttribute("AllUser", AllUser);
 
-        
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventoryUsers.jsp");
         dispatcher.forward(request, response);
-        
-    
 
     }
+
+    private void AddUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        if (request.getParameter("AddUser") != null) {
+            String userName = request.getParameter("userName");
+            String firstName = request.getParameter("firstName");
+            String password = "Secret@123"; //Default Password
+            String middleName = request.getParameter("middleName");
+            String lastName = request.getParameter("lastName");
+            String address = request.getParameter("address");
+            String birthday = request.getParameter("birthday");
+            String mobileNumber = request.getParameter("mobileNumber");
+            EmployeeBlueprint newEmployee = new EmployeeBlueprint(
+                    userName,
+                    password,
+                    firstName,
+                    middleName,
+                    lastName,
+                    address,
+                    birthday,
+                    mobileNumber);
+            EmployeeDao employeeDao = new EmployeeDao();
+            boolean userAdded = employeeDao.createEmployee(newEmployee);
+
+            if (userAdded) {
+                System.out.println("Add Inventory for " + userName + " is successful");
+                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+                response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+                response.setHeader("Expires", "0");
+                response.sendRedirect(request.getContextPath() + "/inventory/users");
+            } else {
+                System.out.println("Did not add product");
+
+                response.sendRedirect(request.getContextPath() + "/inventory/add/form/user");
+            }
+
+        } else {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid Add Inventory request");
+        }
+    }
+
+    private void ShowEditUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        // Fetch productID from request parameter
+        String userNameParam = request.getParameter("userName");
+
+        try {
+            // Convert productIDParam to an integer
+            String userName = userNameParam;
+
+            // Instantiate your DAO and call selectProduct
+            EmployeeDao employeedao = new EmployeeDao();
+            ArrayList<EmployeeBlueprint> user = employeedao.selectUser(userName);
+
+            // Set the 'product' attribute in request scope
+            request.setAttribute("user", user);
+
+            // Forward the request to the JSP page
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit_users.jsp");
+            dispatcher.forward(request, response);
+
+        } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
+
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid username");
+        }
+    }
+
+    private void DeleteUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        String userName = request.getParameter("userName");
+        EmployeeDao employeedao = new EmployeeDao();
+        employeedao.deleteUser(userName);
+
+        response.sendRedirect(request.getContextPath() + "/inventory/users");
+
+    }
+
+    private void UpdateUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+
+        try {
+            String userName = request.getParameter("userName");
+            String password = request.getParameter("password");
+            String firstName = request.getParameter("firstName");
+            String middleName = request.getParameter("middleName");
+            String lastName = request.getParameter("lastName");
+            String address = request.getParameter("address");
+            String birthday = request.getParameter("birthday");
+            String mobileNumber = request.getParameter("mobileNumber");
+
+            EmployeeDao employeedao = new EmployeeDao();
+            boolean editUser = employeedao.updateUser(
+                    password,
+                    firstName,
+                    middleName,
+                    lastName,
+                    address,
+                    birthday,
+                    mobileNumber,
+                    userName);
+            
+             
+      
+
+            if (editUser) {
+                response.sendRedirect(request.getContextPath() + "/inventory/users");
+            } else {
+                System.out.println("Error Occurred: Failed to update user.");
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Failed to update user.");
+            }
+        } catch (IOException e) {
+            System.out.println("Unexpected Error: " + e.getMessage());
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "An unexpected error occurred. Please try again later.");
+        }
+    }
+
 }

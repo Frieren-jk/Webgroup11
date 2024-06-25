@@ -239,7 +239,7 @@ public final class inventoryProducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                <div class=\"cart-btn w-10 mt-1 mb-4\">\r\n");
       out.write("                    <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/inventory/add/form\" class=\"btn amado-bt\">Add Inventory</a>\r\n");
+      out.write("/inventory/add/form/product\" class=\"btn amado-bt\">Add Inventory</a>\r\n");
       out.write("                </div>\r\n");
       out.write("                <div class=\"cart-btn w-10 mt-1 mb-4\" >\r\n");
       out.write("                    <a href=\"");

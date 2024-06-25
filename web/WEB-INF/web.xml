@@ -87,6 +87,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/add/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory/add</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -99,11 +103,23 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/delete/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory/update/product</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/update/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory/update/form/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/update/form/user</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>index</servlet-name>

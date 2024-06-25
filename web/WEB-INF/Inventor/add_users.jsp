@@ -116,67 +116,102 @@
             </header>
             <!-- Header Area End -->
 
-            <div class="cart-table-area section-padding-100">
-                <br><br><br><br>
-                <div class="container-fluid">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-md-8">
-                            <div class="checkout_details_area mt-50 clearfix position-relative">
+            <div class="cart-table-area section-padding-100 ">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="checkout_details_area clearfix">
+
                                 <div class="cart-title">
-                                    <h2>ADD INVENTORY</h2>
+                                    <h2>ADD USER</h2>
                                 </div>
                                 <div class="registration-form-wrapper">
-                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/product" class="py-3" id="regform">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/user" class="py-3 needs-validation" id="regform" novalidate>
+
                                         <div class="row">
                                             <div class="col-12 col-md-6 mt-3">
-                                                <div class="form-group">
-                                                    <label for="productID">Product ID</label>
-                                                    <input type="text" class="form-control" id="productID" name="productID" placeholder="Enter the Product ID">
-                                                    <small id="productIDHelp" class="form-text">Product ID must be alphanumeric.</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 mt-3">
-                                                <div class="form-group">
-                                                    <label for="productName">Product Name</label>
-                                                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter the Product Name">
-                                                    <small id="productNameHelp" class="form-text">Product name must be alphanumeric.</small>
-                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="username">Username</label>
+                                                    <input type="text" class="form-control" id="username" name="userName" placeholder="Enter your username" required>
+                                                    <small id="usernameHelp"  class="form-text ">Alphanumeric, must be between 4 - 12 characters. Special characters are not allowed.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter a username.</div>
+                                                </div> 
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12 col-md-6 mt-3">
+
+                                        
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4  mt-5">
                                                 <div class="form-group">
-                                                    <label for="description">Description</label>
-                                                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter the Description">
-                                                    <small id="descriptionHelp" class="form-text">Description must be alphanumeric.</small>
+                                                    <label for="firstname">First Name</label>
+                                                    <input type="text" class="form-control" id="firstname" name="firstName" placeholder="Enter your First Name" required>
+                                                    <small id="firstnameHelp" class="form-text">First name must be characters only, minimum of 1 character.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your First Name.
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-6 mt-3">
+
+                                            <div class="col-12 col-md-4  mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="size">Size</label>
-                                                    <input type="text" class="form-control" id="size" name="size" placeholder="Enter the Size">
-                                                    <small id="sizeHelp" class="form-text">Size must be alphanumeric.</small>
+                                                    <label for="middlename">Middle Name</label>
+                                                    <input type="text" class="form-control" id="middlename" name="middleName" placeholder="Enter your Middle Name" >
+                                                    <small id="middlenameHelp" class="form-text">Middle name must be characters only or leave it empty if not applicable.</small>
+                                                    <div class="invalid-feedback">
+                                                        Not Required.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 col-md-6 mt-3">
+
+                                            <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
-                                                    <label for="price">Price</label>
-                                                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price">
-                                                    <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
+                                                    <label for="lastname">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastname"  name="lastName" placeholder="Enter your Last Name"  required>
+                                                    <small id="lastnameHelp" class="form-text">Last name must be characters only, minimum of 2 characters.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your Last Name.
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-6 mt-3">
+                                        </div> 
+
+                                        <div class="row ">
+                                            <div class="col-12 col-md-4 me-auto mt-5">
                                                 <div class="form-group">
-                                                    <label for="quantity">Quantity</label>
-                                                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity">
-                                                    <small id="quantityHelp" class="form-text">Quantity must be an integer.</small>
+                                                    <label for="address">Complete Address</label>
+                                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter your Address"  required>
+                                                    <small id="addressHelp" class="form-text">Address must be alphanumeric, does not contain special characters.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your Address.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+
+
+                                            <div class="col-12 col-md-4 me-auto mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="birthday">Birthday</label>
+                                                    <input type="text" class="form-control bday" id="birthday" name="birthday" placeholder="Enter your Birthday MM-DD-YYYY (2005)"   required>
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please pick your Birthday.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 me-auto mt-5 ">
+                                                <div class="form-group">
+                                                    <label for="number">Mobile Number</label>
+                                                    <input type="text" class="form-control" id="number" name="mobileNumber" placeholder="09 - Enter your Mobile Number"   required>
+                                                    <small id="numberHelp" class="form-text">Mobile Number must be numeric, starts with 09, and should be 11 digits.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your Mobile Number.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
                                     </form>
-                                    <button type="submit" form="regform" name="addItem" class="d-block mx-auto mt-5 buttonfx angleindouble">Add</button>
+                                    <button type="submit" form="regform" name="AddUser" class="d-block mx-auto mt-5 buttonfx angleindouble">Add</button>
                                 </div>
                             </div>
                         </div>
@@ -186,15 +221,15 @@
             <!-- ##### Main Content Wrapper End ##### -->
 
             <!-- ##### Footer Area Start ##### -->
-            <footer class="footer_area clearfix">
+            <footer class="footer_area clearfix w-100">
                 <div class="container">
                     <div class="row align-items-center">
                         <!-- Single Widget Area -->
-                        <div class="col-12 col-lg-4">
+                        <div class="col-6 col-lg-4">
                             <div class="single_widget_area">
                                 <!-- Logo -->
                                 <div class="footer-logo mr-50">
-                                    <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
+                                    <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
                                 </div>
                                 <!-- Text -->
                                 <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
@@ -204,16 +239,16 @@
                                 </p>
                             </div>
                         </div>
-
+                        <br><br>
                         <!-- Single Widget Area -->
-                        <div class="col-12 col-lg-8 ">
+                        <div class="col-6 col-lg-8 ">
                             <div class="single_widget_area">
                                 <!-- Footer Menu -->
                                 <div class="footer_menu">
                                     <nav class="navbar navbar-expand-lg justify-content-end">
                                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                         <div class="collapse navbar-collapse" id="footerNavContent">
-                                            <ul class="navbar-nav ml-auto">
+                                            <ul class="navbar-nav ml-auto  ms-auto">
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                                 </li>
@@ -221,6 +256,12 @@
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
                                                 </li>
                                                 <li class="nav-item">
+<<<<<<< Updated upstream
+=======
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
+                                                </li>
+                                                <li class="nav-item">
+>>>>>>> Stashed changes
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                                 </li>
                                                 <li class="nav-item">
@@ -235,7 +276,6 @@
                     </div>
                 </div>
             </footer>
-
             <!-- ##### Footer Area End ##### -->
 
             <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
@@ -252,7 +292,7 @@
 
             <!-- Active js -->
             <script src="<%=request.getContextPath()%>/js/active.js"></script>
-            <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
+<!--            <script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
     </body>
 
 </html>

@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -173,7 +173,7 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/img/core-img/createicon.png\" alt=\"error\"> Register Now</a>\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/inventory\" class=\"fav-nav\"><img src=\"");
+      out.write("/inventory/users\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/inventoryicon.png\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -237,8 +237,6 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <form method=\"POST\" action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/inventory/update/product\" class=\"py-3\" id=\"regform\">\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("\r\n");
       out.write("                                        ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
@@ -389,6 +387,14 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\r\n");
           out.write("                                            <div class=\"row\">\r\n");
+          out.write("                                                <div class=\"col-12 col-md-6 mt-3\">\r\n");
+          out.write("                                                    <div class=\"form-group\">\r\n");
+          out.write("                                                        <label for=\"productID\">Editing Product ID </label>\r\n");
+          out.write("                                                        <input type=\"text\" class=\"form-control\" id=\"productID\" name=\"productID\" value=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.productID}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" readonly >\r\n");
+          out.write("                                                    </div>\r\n");
+          out.write("                                                </div>\r\n");
           out.write("                                                <div class=\"col-12 col-md-6 mt-3\">\r\n");
           out.write("                                                    <div class=\"form-group\">\r\n");
           out.write("                                                        <label for=\"productName\">Product Name</label>\r\n");

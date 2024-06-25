@@ -9,16 +9,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
  * @author John
  */
 public class EmployeeDao {
-
-    private String SQLurl = "jdbc:mysql://localhost:3306/webgroup11?serverTimezone=UTC";
-    private String username = "root";
-    private String password = "pass123";
 
     private static final String SELECT_USER_ID = "select "
             + "userName, "
@@ -28,21 +25,22 @@ public class EmployeeDao {
             + "lastName, "
             + "address, "
             + "birthday, "
-            + "mobileNumber from employee where userName =?";
+            + "mobileNumber from employee where userName = ? ";
     private static final String SELECT_ALL_USER = "select * from employee";
     private static final String DELETE_USER = "delete from employee where userName = ?;";
-    private static final String UPDATE_USER = "update employee set "
-            + "userName = ?, "
-            + "password = ?, "
-            + "firstName = ?, "
-            + "middleName = ?, "
-            + "lastName = ?, "
-            + "address = ?, "
-            + "birthday = ?, "
-            + "mobileNumber = ? where userName = ?;";
+    private static final String UPDATE_USER = "UPDATE employee SET "
+            + "password=?, "
+            + "firstName=?, "
+            + "middleName=?, "
+            + "lastName=?, "
+            + "address=?, "
+            + "birthday=?, "
+            + "mobileNumber=? "
+            + "WHERE userName=?";
 
     //create User
-    public void createEmployee(EmployeeBlueprint employee) {
+    public boolean createEmployee(EmployeeBlueprint employee) {
+        boolean success = false;
         Connection conn;
         PreparedStatement ps;
         String query = "INSERT INTO employee ("
@@ -66,9 +64,14 @@ public class EmployeeDao {
             ps.setString(7, employee.getbirthday());
             ps.setString(8, employee.getmobileNumber());
             int rowAffected = ps.executeUpdate();
+            // Check if the insertion was successful
+            if (rowAffected != 0) {
+                success = true;
+            }
         } catch (SQLException error) {
             System.out.println("createEmployee Error: " + error);
         }
+        return success;
     }
 
     //get User
@@ -95,34 +98,43 @@ public class EmployeeDao {
     }
 
     //update User
-    public boolean updateEmployee(EmployeeBlueprint employee) {
-        boolean rowUpdate = false;
+    public boolean updateUser(String password, String firstName, String middleName, String lastName, String address, String birthday, String mobileNumber, String userName) {
+        boolean success = false;
         Connection conn;
         PreparedStatement ps;
         try {
+            // Get a connection from the connection pool 
             conn = ConnectPool.getConnection();
+            // Prepare the SQL statement
             ps = conn.prepareStatement(UPDATE_USER);
-            ps.setString(1, employee.getuserName());
-            ps.setString(2, employee.getpassword());
-            ps.setString(3, employee.getfirstName());
-            ps.setString(4, employee.getMiddleName());
-            ps.setString(5, employee.getLastName());
-            ps.setString(6, employee.getaddress());
-            ps.setString(7, employee.getbirthday());
-            ps.setString(8, employee.getmobileNumber());
-            rowUpdate = ps.executeUpdate() > 0;
+            // Set the parameters for the prepared statement
+            ps.setString(1, password);
+            ps.setString(2, firstName);
+            ps.setString(3, middleName);
+            ps.setString(4, lastName);
+            ps.setString(5, address);
+            ps.setString(6, birthday);
+            ps.setString(7, mobileNumber);
+            ps.setString(8, userName);
+
+            // Execute the update
+            int rowAffected = ps.executeUpdate();
+            // Check if the insertion was successful
+            if (rowAffected != 0) {
+                success = true;
+            }
         } catch (SQLException error) {
-            System.out.println("createEmployee Error: " + error);
+            System.out.println("updateProduct Error: " + error);
         }
 
-        return rowUpdate;
+        return success;
     }
 
     //SELECT USER BY ID
-    public EmployeeBlueprint selectUser(String userName) {
-        EmployeeBlueprint user = null;
-        Connection conn;
-        PreparedStatement ps;
+    public ArrayList<EmployeeBlueprint> selectUser(String userName) {
+        ArrayList<EmployeeBlueprint> AllUser = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
         try {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(SELECT_USER_ID);
@@ -131,21 +143,25 @@ public class EmployeeDao {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                String passw = rs.getString("password");
-                String firstName = rs.getString("firstName");
-                String middleName = rs.getString("middleName");
-                String lastName = rs.getString("lastName");
-                String address = rs.getString("address");
-                String birthday = rs.getString("birthday");
-                String mobileNumber = rs.getString("mobileNumber");
-                user = new EmployeeBlueprint(userName, passw, firstName, middleName, lastName, address, birthday, mobileNumber);
+                EmployeeBlueprint user = new EmployeeBlueprint();
+                user.setUserName(rs.getString("userName"));
+                user.setPassword(rs.getString("password"));
+                user.setFirstName(rs.getString("firstName"));
+                user.setMiddleName(rs.getString("middleName"));
+                user.setLastName(rs.getString("lastName"));
+                user.setAddress(rs.getString("address"));
+                user.setBirthday(rs.getString("birthday"));
+                user.setMobileNumber(rs.getString("mobileNumber"));
+
+                AllUser.add(user);
+                System.out.println(AllUser);
             }
 
         } catch (SQLException e) {
             System.out.println("SELECT USER BY ID error: " + e);
         }
 
-        return user;
+        return AllUser;
     }
 
     //DLEETE USER
@@ -157,9 +173,8 @@ public class EmployeeDao {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(DELETE_USER);
             ps.setString(1, userName);
-            
+
             rowsDeleted = ps.executeUpdate() > 0;
-            
 
         } catch (SQLException e) {
             System.out.println("SELECT USER BY ID error: " + e);

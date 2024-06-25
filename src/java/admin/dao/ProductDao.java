@@ -26,7 +26,12 @@ public class ProductDao {
             + "quantity from product where productID = ? ";
     private static final String SELECT_ALL_PRODUCT = "select * from product";
     private static final String DELETE_PRODUCT = "delete from product where productID = ?;";
-    private static final String UPDATE_PRODUCT = "UPDATE product SET productName=?, description=?, size=?, price=?, quantity=? WHERE productID=?";
+    private static final String UPDATE_PRODUCT = "UPDATE product SET "
+            + "productName=?, "
+            + "description=?, "
+            + "size=?, "
+            + "price=?, "
+            + "quantity=? WHERE productID=?";
 
     // Method to create a new product in the database
     public boolean createProduct(ProductBlueprint product) {
@@ -64,7 +69,7 @@ public class ProductDao {
         return success;
     }
 
-    // Method to get a product list (this is a placeholder, typically you would get a list from the database)
+   
     public ProductBlueprint getProductList(ProductBlueprint product) {
         // Get the fields from the product object
         int productID = product.getProductID();

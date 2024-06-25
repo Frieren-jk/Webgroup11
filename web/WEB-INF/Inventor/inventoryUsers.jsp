@@ -134,7 +134,7 @@
 
             <div class="container m-auto m-1 m-5 mb-auto ">
                 <div class="cart-btn w-10 mt-1 mb-4">
-                    <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt">Add Inventory</a>
+                    <a href="${pageContext.request.contextPath}/inventory/add/form/user" class="btn amado-bt">Add Inventory</a>
                 </div>
                 <div class="cart-btn w-10 mt-1 mb-4" >
                     <a href="${pageContext.request.contextPath}/inventory/products" id="toggleTables" class="btn amado-bt" style="color: white;">Show Product</a>
@@ -169,8 +169,8 @@
                                             <td><c:out value="${show.accountStatus}" /></td>
                                             <td><c:out value="${show.loginStatus}" /></td>
                                              <td>
-                                                <a href="${pageContext.request.contextPath}/inventory/update/form/product?userName=<c:out value='${product.productID}'/>" type="button" class="btn btn-primary btn-sm ps-3 pe-4"> EDIT  </a>
-                                                <a href="${pageContext.request.contextPath}/inventory/delete/product?userNameD=<c:out value='${product.productID}' />" type="button" class="btn btn-danger btn-sm"> DELETE</a>
+                                                <a href="${pageContext.request.contextPath}/inventory/update/form/user?userName=<c:out value='${show.userName}'/>" type="button" class="btn btn-primary btn-sm ps-3 pe-4"> EDIT  </a>
+                                                <a href="${pageContext.request.contextPath}/inventory/delete/user?userName=<c:out value='${show.userName}' />" type="button" class="btn btn-danger btn-sm"> DELETE</a>
                                             </td> 
 
 

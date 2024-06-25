@@ -187,7 +187,7 @@
                                         </c:forEach>
 
                                     </form>
-                                    <button type="submit" form="regform" name="addItem" class="d-block mx-auto mt-5 buttonfx angleindouble">
+                                    <button type="submit" form="regform"  class="d-block mx-auto mt-5 buttonfx angleindouble">
 
                                         Update
 

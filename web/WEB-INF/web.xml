@@ -46,7 +46,11 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
-        <url-pattern>/inventory/add/form</url-pattern>
+        <url-pattern>/inventory/add/form/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventory</servlet-name>
+        <url-pattern>/inventory/add/form/user</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>

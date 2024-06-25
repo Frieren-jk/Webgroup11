@@ -106,7 +106,7 @@
                     <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
 <!--              hide for now      <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                     <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
-                    <a href="${pageContext.request.contextPath}/inventory" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error"> Inventory</a>
+                    <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error"> Inventory</a>
                     <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span></a>
                 </div>
 
@@ -152,9 +152,10 @@
                                         <th>Name</th>
                                         <th>Address</th>
                                         <th>Birthday</th>
-                                        <th>Mobile Number</th>
-                                        <th>Account Status</th>
-                                        <th>Log In Status</th>
+                                        <th>Mobile #</th>
+                                        <th>Account</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -168,7 +169,10 @@
                                             <td><c:out value="${show.mobileNumber}" /></td>
                                             <td><c:out value="${show.accountStatus}" /></td>
                                             <td><c:out value="${show.loginStatus}" /></td>
-
+                                             <td>
+                                                <a href="${pageContext.request.contextPath}/inventory/update/form/product?userName=<c:out value='${product.productID}'/>" type="button" class="btn btn-primary btn-sm ps-3 pe-4"> EDIT  </a>
+                                                <a href="${pageContext.request.contextPath}/inventory/delete/product?userNameD=<c:out value='${product.productID}' />" type="button" class="btn btn-danger btn-sm"> DELETE</a>
+                                            </td> 
 
 
 
@@ -181,9 +185,10 @@
                                         <th>Name</th>
                                         <th>Address</th>
                                         <th>Birthday</th>
-                                        <th>Mobile Number</th>
-                                        <th>Account Status</th>
-                                        <th>Log In Status</th>
+                                        <th>Mobile #</th>
+                                        <th>Account</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                             </table>

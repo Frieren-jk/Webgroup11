@@ -31,6 +31,8 @@ import javax.servlet.annotation.WebServlet;
     "/inventory/add/form",
     "/inventory/delete/product",
     "/inventory/update/product",
+    "/inventory/users",
+    "/inventory/update",
     "/inventory/update/form/product",
     "/inventory/add"})
 public class inventory extends HttpServlet {
@@ -41,17 +43,15 @@ public class inventory extends HttpServlet {
         String action = request.getServletPath();
 
         switch (action) {
-            case "/inventory/add/form":
-                viewAddForm(request, response); //view form
+            //PRODUCT INVENTORY CASES
+            case "/inventory/products":
+                viewInventoryProducts(request, response); //view inventory table method
+                break;
+            case "/inventory/add/form/product":
+                viewAddFormProduct(request, response); //view form
                 break;
             case "/inventory/add/product":
                 AddProduct(request, response); //add product method
-                break;
-            case "/inventory/users":
-                viewInventoryUsers(request, response); //view inventory table method
-                break;
-            case "/inventory/products":
-                viewInventoryProducts(request, response); //view inventory table method
                 break;
             case "/inventory/update/product": {
                 try {
@@ -61,7 +61,6 @@ public class inventory extends HttpServlet {
                 }
             }
             break;
-
             case "/inventory/update/form/product": {
                 try {
                     ShowEditProduct(request, response);
@@ -78,7 +77,19 @@ public class inventory extends HttpServlet {
                 }
             }
             break;
-
+            
+            
+            
+            //USERS INVENTORY CASES
+            case "/inventory/users":
+                viewInventoryUsers(request, response); //view inventory table method
+                break;
+            case "/inventory/add/form/user":
+                viewAddFormUser(request, response); //view form
+                break;
+            case "/inventory/add/user":
+                AddUser(request, response); //add product method
+                break;
         }
 
     }
@@ -88,23 +99,9 @@ public class inventory extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
-
-    private void viewInventoryUsers(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        SearchInventory search = new SearchInventory();
-        ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
-
-        request.setAttribute("AllUser", AllUser);
-
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventoryUsers.jsp");
-        dispatcher.forward(request, response);
-        
     
-
-    }
     
+    //INVENTORY METHODS FOR PRODUCT
     private void viewInventoryProducts(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -120,8 +117,6 @@ public class inventory extends HttpServlet {
     
 
     }
-    
-    
 
     private void AddProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -157,10 +152,10 @@ public class inventory extends HttpServlet {
         }
     }
 
-    private void viewAddForm(HttpServletRequest request, HttpServletResponse response)
+    private void viewAddFormProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add_products.jsp");
         rd.forward(request, response);
 
     }
@@ -192,7 +187,7 @@ public class inventory extends HttpServlet {
         request.setAttribute("product", product);
         
         // Forward the request to the JSP page
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/edit_products.jsp");
         dispatcher.forward(request, response);
         
     } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
@@ -221,5 +216,33 @@ public class inventory extends HttpServlet {
         } else {
             System.out.println("Error Occured");
         }
+    }
+    
+    // INVENTORY METHODS FOR USER
+    // INVENTORY METHODS FOR USER
+    // INVENTORY METHODS FOR USER
+    // INVENTORY METHODS FOR USER
+     private void viewAddFormUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/Inventor/add_users.jsp");
+        rd.forward(request, response);
+
+    }
+     
+     private void viewInventoryUsers(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        SearchInventory search = new SearchInventory();
+        ArrayList<EmployeeBlueprint> AllUser = search.getAllUser();
+
+        request.setAttribute("AllUser", AllUser);
+
+        
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Inventor/inventoryUsers.jsp");
+        dispatcher.forward(request, response);
+        
+    
+
     }
 }

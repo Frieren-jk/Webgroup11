@@ -135,7 +135,7 @@
 
             <div class="container m-auto m-1 m-5 mb-auto ">
                 <div class="cart-btn w-10 mt-1 mb-4">
-                    <a href="${pageContext.request.contextPath}/inventory/add/form" class="btn amado-bt">Add Inventory</a>
+                    <a href="${pageContext.request.contextPath}/inventory/add/form/product" class="btn amado-bt">Add Inventory</a>
                 </div>
                 <div class="cart-btn w-10 mt-1 mb-4" >
                     <a href="${pageContext.request.contextPath}/inventory/users" class="btn amado-bt" style="color: white;">Show Users</a>

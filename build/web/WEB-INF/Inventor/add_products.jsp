@@ -221,12 +221,6 @@
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/cages">Shop</a>
                                                 </li>
                                                 <li class="nav-item">
-<<<<<<< Updated upstream
-=======
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/product">Product</a>
-                                                </li>
-                                                <li class="nav-item">
->>>>>>> Stashed changes
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                                 </li>
                                                 <li class="nav-item">

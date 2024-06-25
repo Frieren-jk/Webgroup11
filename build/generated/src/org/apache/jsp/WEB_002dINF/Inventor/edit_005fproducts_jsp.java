@@ -64,7 +64,7 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("        <!-- The above 4 meta tags must come first in the head -->\r\n");
       out.write("\r\n");
       out.write("        <!-- Title  -->\r\n");
-      out.write("        <title>Fur Real Pet Supplies - Add Products</title>\r\n");
+      out.write("        <title>Fur Real Pet Supplies - Edit Products</title>\r\n");
       out.write("\r\n");
       out.write("        <!-- Tab Icon  -->\r\n");
       out.write("        <link rel=\"icon\" href=\"");
@@ -196,9 +196,6 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("/cages\">Shop</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">Product</a></li>\r\n");
-      out.write("                            <li><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/cart\">Cart</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -244,7 +241,7 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\r\n");
       out.write("\r\n");
       out.write("                                    </form>\r\n");
-      out.write("                                    <button type=\"submit\" form=\"regform\" name=\"addItem\" class=\"d-block mx-auto mt-5 buttonfx angleindouble\">\r\n");
+      out.write("                                    <button type=\"submit\" form=\"regform\"  class=\"d-block mx-auto mt-5 buttonfx angleindouble\">\r\n");
       out.write("\r\n");
       out.write("                                        Update\r\n");
       out.write("\r\n");
@@ -299,11 +296,6 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                                                    <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/cages\">Shop</a>\r\n");
-      out.write("                                                </li>\r\n");
-      out.write("                                                <li class=\"nav-item\">\r\n");
-      out.write("                                                    <a class=\"nav-link\" href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product-details\">Product</a>\r\n");
       out.write("                                                </li>\r\n");
       out.write("                                                <li class=\"nav-item\">\r\n");
       out.write("                                                    <a class=\"nav-link\" href=\"");

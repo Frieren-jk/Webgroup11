@@ -165,9 +165,6 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/cages\">Shop</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">Product</a></li>\r\n");
-      out.write("                            <li><a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/cart\">Cart</a></li>\r\n");
       out.write("                            <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -272,7 +269,7 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1720.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/cage1\">\r\n");
       out.write("                                            <h6>Foldable Steel Cage</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -303,7 +300,7 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1100.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/cage2\">\r\n");
       out.write("                                            <h6>Cat Carrier Bag</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -334,7 +331,7 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1600.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/cage3\">\r\n");
       out.write("                                            <h6>Carbon Quality and Wood Cage</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -365,7 +362,7 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 960.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/cage4\">\r\n");
       out.write("                                            <h6>Small Plastic Cage for Cats</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -396,7 +393,7 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 750.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/cage5\">\r\n");
       out.write("                                            <h6>Octagonal Dog Metal Fence</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -427,7 +424,7 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1250.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/cage6\">\r\n");
       out.write("                                            <h6>Round Steel Roller Cage</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -498,11 +495,6 @@ public final class cages_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/cages\">Shop</a>\r\n");
-      out.write("                                            </li>\r\n");
-      out.write("                                            <li class=\"nav-item\">\r\n");
-      out.write("                                                <a class=\"nav-link\" href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">Product</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");

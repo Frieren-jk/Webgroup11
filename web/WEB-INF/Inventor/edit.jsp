@@ -127,75 +127,74 @@
                             <div class="checkout_details_area mt-50 clearfix position-relative">
                                 <div class="cart-title">
                                     <h2>
-                                        <c:if test="${product != null}">
-                                            EDIT PRODUCT
-                                        </c:if>
-                                        <c:if test="${product == null}">
-                                            ADD PRODUCT
-                                        </c:if>
+
+                                        EDIT PRODUCT
+
+
                                     </h2>
                                 </div>
                                 <div class="registration-form-wrapper">
-                                    <c:if test="${product != null}">
-                                        <form method="POST" action="${pageContext.request.contextPath}/inventory/update/product" class="py-3" id="regform">
-                                        </c:if>
-                                        <c:if test="${product == null}">
-                                            <form method="POST" action="${pageContext.request.contextPath}/inventory/add/product" class="py-3" id="regform">
-                                            </c:if>
-                                            <c:if test="${product != null}">
-                                                <c:forEach var="product" items="${product}">
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label for="productName">Product Name</label>
-                                                                <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter the Product Name" value="${product.productName}" >
-                                                                <small id="productNameHelp" class="form-text">Product name must be alphanumeric.</small>
-                                                            </div>
-                                                        </div>
+
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/update/product" class="py-3" id="regform">
+
+
+
+                                        <c:forEach var="product" items="${product}">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 mt-3">
+                                                    <div class="form-group">
+                                                        <label for="productID">Editing Product ID </label>
+                                                        <input type="text" class="form-control" id="productID" name="productID" value="${product.productID}" readonly >
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label for="description">Description</label>
-                                                                <input type="text" class="form-control" id="description" name="description" placeholder="Enter the Description" value="${product.description}">
-                                                                <small id="descriptionHelp" class="form-text">Description must be alphanumeric.</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label for="size">Size</label>
-                                                                <input type="text" class="form-control" id="size" name="size" placeholder="Enter the Size" value="${product.size}">
-                                                                <small id="sizeHelp" class="form-text">Size must be alphanumeric.</small>
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mt-3">
+                                                    <div class="form-group">
+                                                        <label for="productName">Product Name</label>
+                                                        <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter the Product Name" value="${product.productName}" >
+                                                        <small id="productNameHelp" class="form-text">Product name must be alphanumeric.</small>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label for="price">Price</label>
-                                                                <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price" value="${product.price}">
-                                                                <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mt-3">
-                                                            <div class="form-group">
-                                                                <label for="quantity">Quantity</label>
-                                                                <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity" value="${product.quantity}">
-                                                                <small id="quantityHelp" class="form-text">Quantity must be an integer.</small>
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 mt-3">
+                                                    <div class="form-group">
+                                                        <label for="description">Description</label>
+                                                        <input type="text" class="form-control" id="description" name="description" placeholder="Enter the Description" value="${product.description}">
+                                                        <small id="descriptionHelp" class="form-text">Description must be alphanumeric.</small>
                                                     </div>
-                                                </c:forEach>
-                                            </c:if>
-                                        </form>
-                                        <button type="submit" form="regform" name="addItem" class="d-block mx-auto mt-5 buttonfx angleindouble">
-                                            <c:if test="${product != null}">
-                                                Update
-                                            </c:if>
-                                            <c:if test="${product == null}">
-                                                Add
-                                            </c:if>
-                                        </button>
+                                                </div>
+                                                <div class="col-12 col-md-6 mt-3">
+                                                    <div class="form-group">
+                                                        <label for="size">Size</label>
+                                                        <input type="text" class="form-control" id="size" name="size" placeholder="Enter the Size" value="${product.size}">
+                                                        <small id="sizeHelp" class="form-text">Size must be alphanumeric.</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 mt-3">
+                                                    <div class="form-group">
+                                                        <label for="price">Price</label>
+                                                        <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price" value="${product.price}">
+                                                        <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mt-3">
+                                                    <div class="form-group">
+                                                        <label for="quantity">Quantity</label>
+                                                        <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity" value="${product.quantity}">
+                                                        <small id="quantityHelp" class="form-text">Quantity must be an integer.</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </c:forEach>
+
+                                    </form>
+                                    <button type="submit" form="regform" name="addItem" class="d-block mx-auto mt-5 buttonfx angleindouble">
+
+                                        Update
+
+                                    </button>
                                 </div>
                             </div>
                         </div>

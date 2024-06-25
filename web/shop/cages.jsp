@@ -188,7 +188,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1720.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/cage1">
                                             <h6>Foldable Steel Cage</h6>
                                         </a>
                                     </div>
@@ -215,7 +215,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1100.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/cage2">
                                             <h6>Cat Carrier Bag</h6>
                                         </a>
                                     </div>
@@ -242,7 +242,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1600.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/cage3">
                                             <h6>Carbon Quality and Wood Cage</h6>
                                         </a>
                                     </div>
@@ -269,7 +269,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 960.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/cage4">
                                             <h6>Small Plastic Cage for Cats</h6>
                                         </a>
                                     </div>
@@ -296,7 +296,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 750.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/cage5">
                                             <h6>Octagonal Dog Metal Fence</h6>
                                         </a>
                                     </div>
@@ -323,7 +323,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1250.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/cage6">
                                             <h6>Round Steel Roller Cage</h6>
                                         </a>
                                     </div>

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -191,9 +192,17 @@ public class inventory extends HttpServlet {
             throws ServletException, IOException, SQLException {
         int productID = Integer.parseInt(request.getParameter("productID"));
         ProductDao productDao = new ProductDao();
-        productDao.deleteProduct(productID);
+        boolean deletedproduct = productDao.deleteProduct(productID);
+        HttpSession session = request.getSession();
 
-        response.sendRedirect(request.getContextPath() + "/inventory/products");
+        // Remove session attribute based on type
+        if (deletedproduct) {
+            session.setAttribute("deleteProduct", true);
+            session.setAttribute("productID", productID);
+
+            // Redirect to prevent form resubmission
+            response.sendRedirect(request.getContextPath() + "/inventory/products");
+        }
 
     }
 
@@ -232,13 +241,17 @@ public class inventory extends HttpServlet {
         String size = request.getParameter("size");
         BigDecimal price = new BigDecimal(request.getParameter("price"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
+        HttpSession session = request.getSession();
 
         ProductDao update = new ProductDao();
 
-        boolean editRegister = update.updateProduct(productName, description, size, price, quantity, productID);
+        boolean editProduct = update.updateProduct(productName, description, size, price, quantity, productID);
 
-        if (editRegister) {
+        if (editProduct) {
+            session.setAttribute("editProduct", true);
+            session.setAttribute("productName", productName);
             response.sendRedirect(request.getContextPath() + "/inventory/products");
+
         } else {
             System.out.println("Error Occured");
         }
@@ -340,9 +353,17 @@ public class inventory extends HttpServlet {
             throws ServletException, IOException, SQLException {
         String userName = request.getParameter("userName");
         EmployeeDao employeedao = new EmployeeDao();
-        employeedao.deleteUser(userName);
+        boolean deleteUser = employeedao.deleteUser(userName);
+        HttpSession session = request.getSession();
 
-        response.sendRedirect(request.getContextPath() + "/inventory/users");
+        if (deleteUser) {
+            session.setAttribute("deleteUser", true);
+            session.setAttribute("userName", userName);
+
+            // Redirect to prevent form resubmission
+            response.sendRedirect(request.getContextPath() + "/inventory/users");
+
+        }
 
     }
 
@@ -358,6 +379,7 @@ public class inventory extends HttpServlet {
             String address = request.getParameter("address");
             String birthday = request.getParameter("birthday");
             String mobileNumber = request.getParameter("mobileNumber");
+            HttpSession session = request.getSession();
 
             EmployeeDao employeedao = new EmployeeDao();
             boolean editUser = employeedao.updateUser(
@@ -369,11 +391,10 @@ public class inventory extends HttpServlet {
                     birthday,
                     mobileNumber,
                     userName);
-            
-             
-      
 
             if (editUser) {
+                session.setAttribute("editUser", true);
+                session.setAttribute("userName", userName);
                 response.sendRedirect(request.getContextPath() + "/inventory/users");
             } else {
                 System.out.println("Error Occurred: Failed to update user.");

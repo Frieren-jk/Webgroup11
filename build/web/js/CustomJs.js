@@ -1,5 +1,10 @@
 
+/* global bootstrap */
+
 $(document).ready(function () {
+
+    
+
     const inputs = document.querySelectorAll('input');
     const patterns = {
         username: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{4,12}$/i,

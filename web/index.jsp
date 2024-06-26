@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- The above 4 meta tags must come first in the head -->
 
-        <!-- Title  -->
-        <title>Fur Real Pet Supplies - Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-        <!-- Tab Icon  -->
-        <link rel="icon" href="img/core-img/iconlight.png">
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- The above 4 meta tags must come first in the head -->
 
-        <!-- Core Style CSS -->
-        <link rel="stylesheet" href="css/core-style.css">
-        <link rel="stylesheet" href="./style.css">
-    </head>
+    <!-- Title  -->
+    <title>Fur Real Pet Supplies - Home</title>
+
+    <!-- Tab Icon  -->
+    <link rel="icon" href="img/core-img/iconlight.png">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="./style.css">
+
 
     <body>
+
+        <c:if test="${regUser == true}">
+            <div class="toast-container position-fixed top-0 end-0 p-3" >
+                <div id="liveToast" class="toast show"
+                     role="status" aria-live="assertive" aria-atomic="true"
+                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                    <div class="toast-header bg-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong class="me-auto">STATUS</strong>
+                        <a href="${regUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
+                    </div>
+                    <div class="toast-body ">
+                         NEW USER REGISTRATION SUCCESSFUL: WELCOME "<c:out value="${userName}" />"
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -58,19 +79,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -331,7 +352,7 @@
                                 </div>
 
                                 <button type='submit' form="Loginform" class="btn btn-info btn-block btn-round d-block  buttonfx angleindouble">Log In</button>
-                               
+
                             </form>
                         </div>
                     </div>
@@ -359,6 +380,10 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+        <script>
+                                    // Use JavaScript to show the toast if createUser is true
+
+        </script>
     </body>
 
 </html>

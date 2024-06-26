@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import admin.dao.EmployeeDao;
 import admin.model.EmployeeBlueprint;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class RegistrationServlet
@@ -70,14 +71,19 @@ public class registration extends HttpServlet {
                     birthday,
                     mobileNumber);
             EmployeeDao employeeDao = new EmployeeDao();
-            employeeDao.createEmployee(newEmployee);
+            boolean createUser = employeeDao.createEmployee(newEmployee);
+            HttpSession session = request.getSession();
 
-            System.out.println("Registration for " + userName + " is successful");
-            // Ensure no form resubmission
-            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-            response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-            response.setHeader("Expires", "0");
-            response.sendRedirect(request.getContextPath() + "/home");
+            if (createUser) {
+                // Ensure no form resubmission
+                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+                response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+                response.setHeader("Expires", "0");
+                session.setAttribute("regUser", true);
+                session.setAttribute("userName", userName);
+
+                response.sendRedirect(request.getContextPath() + "/home");
+            }
 
         } else {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid registration request");

@@ -38,7 +38,39 @@
     </head>
 
     <body>
+        <c:if test="${editProduct == true}">
+            <div class="toast-container position-fixed top-0 end-0 p-3">
+                <div id="liveToastEdit" class="toast show"
+                     role="status" aria-live="assertive" aria-atomic="true"
+                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                    <div class="toast-header bg-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong class="me-auto">STATUS</strong>
+                        <a href="${editProduct = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
+                    </div>
+                    <div class="toast-body toastSuccess">
+                        Product "<c:out value="${productName}" />" WAS SUCCESSFULLY EDITED
+                    </div>
+                </div>
+            </div>
+        </c:if>
 
+        <c:if test="${deleteProduct == true}">
+            <div class="toast-container position-fixed top-0 end-0 p-3">
+                <div id="liveToastDelete" class="toast show"
+                     role="status" aria-live="assertive" aria-atomic="true"
+                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                    <div class="toast-header bg-danger">
+                        <i class="fas fa-trash-alt me-2"></i>
+                        <strong class="me-auto">STATUS</strong>
+                       <a href="${deleteProduct = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
+                    </div>
+                    <div class="toast-body toastDanger">
+                        Product ID: "<c:out value="${productID}" />" WAS SUCCESSFULLY DELETED
+                    </div>
+                </div>
+            </div>
+        </c:if>
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Search Start -->
@@ -146,7 +178,7 @@
                                     <tr>
                                         <th>Product ID</th>
                                         <th>Product Name</th>
-                                        <th>Category</th>
+                                        <th>Description</th>
                                         <th>Size</th>
                                         <th>Price</th>
                                         <th>Stock</th>
@@ -172,7 +204,7 @@
                                                     </svg>
                                                 </a>
                                             </td> 
-                                             <td> 
+                                            <td> 
                                                 <a href="${pageContext.request.contextPath}/inventory/delete/product?productID=<c:out value='${product.productID}' />" class="bin-button">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +262,7 @@
                                     <tr>
                                         <th>Product ID</th>
                                         <th>Product Name</th>
-                                        <th>Category</th>
+                                        <th>Description</th>
                                         <th>Size</th>
                                         <th>Price</th>
                                         <th>Stock</th>
@@ -373,6 +405,8 @@
                                         $('#myTable').DataTable();
 
                                     });
+
+
         </script>
     </body>
 

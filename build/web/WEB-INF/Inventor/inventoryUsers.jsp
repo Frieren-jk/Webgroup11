@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 
     <head>
@@ -21,23 +20,64 @@
         <link rel="icon" href="${pageContext.request.contextPath}/img/core-img/iconlight.png">
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <!-- Core Style CSS -->
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
         <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"/>
         <link defer rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css"/>
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
         <script defer src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
         <script defer src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/core-style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
 
+        <style>
+
+        </style>
+
     </head>
 
     <body>
+
+        <%-- Debugging statement to check the value of 'success' --%>
+        <c:if test="${editUser == true}">
+        <div class="toast-container position-fixed top-0 end-0 p-3" >
+            <div id="liveToast" class="toast show"
+                 role="status" aria-live="assertive" aria-atomic="true"
+                 data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                <div class="toast-header bg-success">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <strong class="me-auto">STATUS</strong>
+                    <a href="${editUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
+                </div>
+                <div class="toast-body">
+                   USER "<c:out value="${userName}" />" WAS SUCCESSFULLY EDITED
+                </div>
+            </div>
+        </div>
+        </c:if>
+        <c:if test="${deleteUser == true}">
+            <div class="toast-container position-fixed top-0 end-0 p-3">
+                <div id="liveToast" class="toast show"
+                     role="status" aria-live="assertive" aria-atomic="true"
+                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                    <div class="toast-header bg-danger">
+                        <i class="fas fa-trash-alt me-2"></i> <!-- Changed to trash icon -->
+                        <strong class="me-auto">STATUS</strong>
+                        <a href="${deleteUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
+                    </div>
+                    <div class="toast-body toastDanger">
+                        USER "<c:out value="${userName}" />" WAS SUCCESSFULLY DELETED
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
        
+
+
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Search Start -->
@@ -106,7 +146,7 @@
 
                     <div class="cart-fav-search mb-100">
                         <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
-<!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
+    <!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/homeicon.png" alt="error">Home</a>
@@ -114,15 +154,15 @@
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span>
                         </a>
                     </div>
-                <br><br><br><br><br>
+                    <br><br><br><br><br>
 
-                <!-- Social Button -->
-                <div class="social-info d-flex justify-content-between">
-                    <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://x.com/suppliesfurreal" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                    <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>        
-                </div>
+                    <!-- Social Button -->
+                    <div class="social-info d-flex justify-content-between">
+                        <a href="https://www.facebook.com/profile.php?id=61558747046846" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/furrealpetsupplies/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://x.com/suppliesfurreal" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.pinterest.ph/furrealthopetssupplies/" target="_blank"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>        
+                    </div>
             </header>
             <!-- Header Area End -->
 
@@ -172,7 +212,7 @@
                                                     </svg>
                                                 </a>
                                             </td> 
-                                             <td> 
+                                            <td> 
                                                 <a href="${pageContext.request.contextPath}/inventory/delete/user?userName=<c:out value='${show.userName}' />" class="bin-button">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -375,10 +415,14 @@
         <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
         <script>
 
-                                   $(document).ready(function () {
-                                       $('#myTable').DataTable();
-                                      
-                                   });
+                                    $(document).ready(function () {
+                                        $('#myTable').DataTable();
+
+                                        
+
+                                    });
+                                    
+                                    
         </script>
     </body>
 

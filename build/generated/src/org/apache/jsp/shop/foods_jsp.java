@@ -257,7 +257,7 @@ public final class foods_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1120.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/food1\">\r\n");
       out.write("                                            <h6>Pedigree Chicken 400g</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -288,7 +288,7 @@ public final class foods_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 310.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/food2\">\r\n");
       out.write("                                            <h6>Pedigree Choice Cuts Wet Beef 22oz</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -319,7 +319,7 @@ public final class foods_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 630.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/food3\">\r\n");
       out.write("                                            <h6>Pedigree Schmackos for Dogs</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -350,7 +350,7 @@ public final class foods_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 2415.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/food4\">\r\n");
       out.write("                                            <h6>Whiskas Tuna Dry 7kg for Cats</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -381,7 +381,7 @@ public final class foods_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1360.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/food5\">\r\n");
       out.write("                                            <h6>Whiskas Adult Wet Cat Food Pouches</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -412,7 +412,7 @@ public final class foods_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 550.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/food6\">\r\n");
       out.write("                                            <h6>Purina Friskies Indoor Delights 1.1kg</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");

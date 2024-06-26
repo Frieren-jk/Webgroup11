@@ -257,7 +257,7 @@ public final class toys_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 420.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/toy1\">\r\n");
       out.write("                                            <h6>2 Piece Dog Bone Toy</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -288,7 +288,7 @@ public final class toys_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 130.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/toy2\">\r\n");
       out.write("                                            <h6>Yarn Ball for Cats</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");

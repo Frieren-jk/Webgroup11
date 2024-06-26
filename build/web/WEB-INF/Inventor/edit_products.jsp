@@ -168,7 +168,7 @@
                                                 <div class="col-12 col-md-6 mt-3">
                                                     <div class="form-group">
                                                         <label for="quantity">Quantity</label>
-                                                        <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity" value="${product.quantity}">
+                                                        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity" value="${product.quantity}">
                                                         <small id="quantityHelp" class="form-text">Quantity must be an integer.</small>
                                                     </div>
                                                 </div>
@@ -190,15 +190,15 @@
             <!-- ##### Main Content Wrapper End ##### -->
 
             <!-- ##### Footer Area Start ##### -->
-            <footer class="footer_area clearfix w-100">
+            <footer class="footer_area clearfix">
                 <div class="container">
                     <div class="row align-items-center">
                         <!-- Single Widget Area -->
-                        <div class="col-6 col-lg-4">
+                        <div class="col-12 col-lg-4">
                             <div class="single_widget_area">
                                 <!-- Logo -->
                                 <div class="footer-logo mr-50">
-                                    <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logodark.png" alt="error"></a>
+                                    <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logodark.png" alt="error"></a>
                                 </div>
                                 <!-- Text -->
                                 <p class="footerdescription">"Animals are such agreeable friends - they ask no questions; they pass no criticisms."<br>
@@ -208,16 +208,16 @@
                                 </p>
                             </div>
                         </div>
-                        <br><br>
+
                         <!-- Single Widget Area -->
-                        <div class="col-6 col-lg-8 ">
+                        <div class="col-12 col-lg-8 ">
                             <div class="single_widget_area">
                                 <!-- Footer Menu -->
                                 <div class="footer_menu">
                                     <nav class="navbar navbar-expand-lg justify-content-end">
                                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                         <div class="collapse navbar-collapse" id="footerNavContent">
-                                            <ul class="navbar-nav ml-auto  ms-auto">
+                                            <ul class="navbar-nav ml-auto">
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
                                                 </li>

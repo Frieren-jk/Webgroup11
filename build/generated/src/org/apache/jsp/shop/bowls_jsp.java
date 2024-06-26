@@ -257,7 +257,7 @@ public final class bowls_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 220.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/bowl1\">\r\n");
       out.write("                                            <h6>Small Stainless Steel Bowl</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -288,7 +288,7 @@ public final class bowls_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 300.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/bowl2\">\r\n");
       out.write("                                            <h6>Slow Feeder Stainless Steel Bowl</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -319,7 +319,7 @@ public final class bowls_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 180.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/bowl3\">\r\n");
       out.write("                                            <h6>Plastic Slow Feeder Dog Bowl</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -350,7 +350,7 @@ public final class bowls_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 5700.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/bowl4\">\r\n");
       out.write("                                            <h6>Automatic Cat Feeder</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");

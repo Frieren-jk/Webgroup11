@@ -257,7 +257,7 @@ public final class litterboxes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 590.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/litterbox1\">\r\n");
       out.write("                                            <h6>Sifting Cat Litter Box</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -288,7 +288,7 @@ public final class litterboxes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 910.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/litterbox2\">\r\n");
       out.write("                                            <h6>Open Top Cat Litter Box with Shovel</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
@@ -319,7 +319,7 @@ public final class litterboxes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 1960.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
+      out.write("/litterbox3\">\r\n");
       out.write("                                            <h6>Hooded Cat Litter Box</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");

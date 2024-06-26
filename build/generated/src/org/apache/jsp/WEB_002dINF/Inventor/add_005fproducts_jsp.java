@@ -253,7 +253,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
       out.write("                                                    <label for=\"quantity\">Quantity</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"quantity\" name=\"quantity\" placeholder=\"Enter the Quantity\">\r\n");
+      out.write("                                                    <input type=\"number\" class=\"form-control\" id=\"quantity\" name=\"quantity\" placeholder=\"Enter the Quantity\">\r\n");
       out.write("                                                    <small id=\"quantityHelp\" class=\"form-text\">Quantity must be an integer.</small>\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </div>\r\n");

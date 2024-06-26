@@ -43,23 +43,22 @@
 
         <%-- Debugging statement to check the value of 'success' --%>
         <c:if test="${editUser == true}">
-        <div class="toast-container position-fixed top-0 end-0 p-3" >
-            <div id="liveToast" class="toast show"
-                 role="status" aria-live="assertive" aria-atomic="true"
-                 data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                <div class="toast-header bg-success">
-                    <i class="fas fa-check-circle me-2"></i>
-                    <strong class="me-auto">STATUS</strong>
-                    <a href="${editUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                </div>
-                <div class="toast-body">
-                   USER "<c:out value="${userName}" />" WAS SUCCESSFULLY EDITED
+            <div class=" bounce-in-right toast-container position-fixed top-0 end-0 p-3" id="toastContainer">
+                <div id="liveToast" class="toast show"
+                     role="status" aria-live="assertive"  aria-atomic="true">
+                    <div class="toast-header bg-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong class="me-auto">STATUS</strong>
+                        <a href="${editUser = false}" class="btn-close " data-bs-dismiss="toast" aria-label="Close"></a>
+                    </div>
+                    <div class="toast-body">
+                        USER "<c:out value="${userName}" />" WAS SUCCESSFULLY EDITED
+                    </div>
                 </div>
             </div>
-        </div>
         </c:if>
         <c:if test="${deleteUser == true}">
-            <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
                 <div id="liveToast" class="toast show"
                      role="status" aria-live="assertive" aria-atomic="true"
                      data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
@@ -75,7 +74,7 @@
             </div>
         </c:if>
 
-       
+
 
 
         <div class="main-content-wrapper d-flex clearfix">
@@ -417,12 +416,11 @@
 
                                     $(document).ready(function () {
                                         $('#myTable').DataTable();
-
                                         
-
+                                        
                                     });
-                                    
-                                    
+
+
         </script>
     </body>
 

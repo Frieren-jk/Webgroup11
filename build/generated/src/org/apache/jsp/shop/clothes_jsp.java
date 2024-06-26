@@ -257,8 +257,8 @@ public final class clothes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <p class=\"product-price\">PHP 860.00</p>\r\n");
       out.write("                                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/product\">\r\n");
-      out.write("                                            <h6>onkey Cat Sweater for Cats</h6>\r\n");
+      out.write("/clothe1\">\r\n");
+      out.write("                                            <h6>Monkey Cat Sweater for Cats</h6>\r\n");
       out.write("                                        </a>\r\n");
       out.write("                                    </div>\r\n");
       out.write("\r\n");

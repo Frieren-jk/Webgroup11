@@ -39,7 +39,7 @@
 
     <body>
         <c:if test="${editProduct == true}">
-            <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
                 <div id="liveToastEdit" class="toast show"
                      role="status" aria-live="assertive" aria-atomic="true"
                      data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
@@ -56,7 +56,7 @@
         </c:if>
 
         <c:if test="${deleteProduct == true}">
-            <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
                 <div id="liveToastDelete" class="toast show"
                      role="status" aria-live="assertive" aria-atomic="true"
                      data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>

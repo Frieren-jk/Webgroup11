@@ -101,25 +101,19 @@
                     <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/core-img/logolight.png" alt="error"></a>
                 </div>
 
-                <!-- Cart Menu -->
-                <div class="cart-fav-search mb-100">
-                    <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
-<!--              hide for now      <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
-                    <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
-                    <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error"> Inventory</a>
-                    <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span></a>
-                </div>
-
                 <!-- Main Nav -->
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-                        <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                        <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
-                        <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
-                    </ul>
-                </nav>
+                <div class="sticky-top" >
 
+                    <div class="cart-fav-search mb-100">
+                        <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
+<!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
+                        <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
+                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
+                        <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/homeicon.png" alt="error">Home</a>
+                        <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/shopicon.png" alt="error">Shop</a>
+                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span>
+                        </a>
+                    </div>
                 <br><br><br><br><br>
 
                 <!-- Social Button -->
@@ -134,7 +128,7 @@
 
             <div class="container m-auto m-1 m-5 mb-auto ">
                 <div class="cart-btn w-10 mt-1 mb-4">
-                    <a href="${pageContext.request.contextPath}/inventory/add/form/user" class="btn amado-bt">Add Inventory</a>
+                    <a href="${pageContext.request.contextPath}/inventory/add/form/user" class="btn amado-bt">Add User</a>
                 </div>
                 <div class="cart-btn w-10 mt-1 mb-4" >
                     <a href="${pageContext.request.contextPath}/inventory/products" id="toggleTables" class="btn amado-bt" style="color: white;">Show Product</a>
@@ -243,7 +237,10 @@
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
                                             </li>
                                         </ul>
                                     </div>

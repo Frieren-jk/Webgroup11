@@ -86,25 +86,18 @@
                     <a href="${pageContext.request.contextPath}/home"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
 
-                <!-- Cart Menu -->
+                <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
-                        <a class="fav-nav" data-toggle="modal" data-target="#myLogin"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
+                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
+                        <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
+                        <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="img/core-img/shopicon.png" alt="error">Shop</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
-
-                    <!-- Main Nav -->
-                    <nav class="main-nav ">
-                        <ul>
-                            <li ><a href="${pageContext.request.contextPath}/home">Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
-                        </ul>
-                    </nav>
                     <br><br><br><br><br>
 
                     <!-- Social Button -->
@@ -160,7 +153,9 @@
                                 <div class="short_overview my-5">
                                     <p>A cat carrier bag is a portable, enclosed bag designed for safely transporting cats. It typically features durable materials, mesh panels for ventilation, secure zippers or clasps, and comfortable handles or shoulder straps. Some models may include additional pockets for storing pet essentials and a removable, washable base for easy cleaning. Ideal for vet visits, travel, or outings, a cat carrier bag ensures your feline friend's comfort and security while on the go.</p>
                                 </div>
-                                <button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button>
+                                <div>
+                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,6 +203,15 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link fav-nav" data-toggle="modal" data-target="#myModal">Login</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
                                             </li>
                                         </ul>
                                     </div>

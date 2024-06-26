@@ -83,7 +83,7 @@
                     <a href="${pageContext.request.contextPath}/home"><img src="<%=request.getContextPath()%>/img/core-img/logolight.png" alt="error"></a>
                 </div>
 
-                <!-- Cart Menu -->
+                <!-- Main Nav -->
                 <div class="sticky-top" >
 
                     <div class="cart-fav-search mb-100">
@@ -91,18 +91,11 @@
 <!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
-                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span></a>
+                        <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/homeicon.png" alt="error">Home</a>
+                        <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/shopicon.png" alt="error">Shop</a>
+                        <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span>
+                        </a>
                     </div>
-
-                    <!-- Main Nav -->
-                    <nav class="main-nav ">
-                        <ul>
-                            <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
-                            <li><a href="${pageContext.request.contextPath}/checkout">Checkout</a></li>
-                        </ul>
-                    </nav>
                     <br><br><br><br><br>
 
                     <!-- Social Button -->
@@ -122,8 +115,9 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8">
                             <div class="checkout_details_area mt-50 clearfix position-relative">
+                                
                                 <div class="cart-title">
-                                    <h2>ADD INVENTORY</h2>
+                                    <h2>ADD PRODUCT</h2>
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form method="POST" action="${pageContext.request.contextPath}/inventory/add/product" class="py-3" id="regform">
@@ -224,7 +218,10 @@
                                                     <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="${pageContext.request.contextPath}/checkout">Checkout</a>
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
                                                 </li>
                                             </ul>
                                         </div>

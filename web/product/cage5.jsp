@@ -86,25 +86,18 @@
                     <a href="${pageContext.request.contextPath}/home"><img src="img/core-img/logolight.png" alt="error"></a>
                 </div>
 
-                <!-- Cart Menu -->
+                <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
-                        <a class="fav-nav" data-toggle="modal" data-target="#myLogin"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error">Inventory</a>
+                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
+                        <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
+                        <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="img/core-img/shopicon.png" alt="error">Shop</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
                     </div>
-
-                    <!-- Main Nav -->
-                    <nav class="main-nav ">
-                        <ul>
-                            <li ><a href="${pageContext.request.contextPath}/home">Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cages">Shop</a></li>
-                            <li><a href="${pageContext.request.contextPath}/cart">Cart</a></li>
-                        </ul>
-                    </nav>
                     <br><br><br><br><br>
 
                     <!-- Social Button -->
@@ -160,7 +153,9 @@
                                 <div class="short_overview my-5">
                                     <p>The octagonal dog metal fence is a durable and versatile enclosure designed to provide a safe and secure outdoor space for pets. Its octagonal shape offers ample room for dogs to play and exercise, while the sturdy metal construction ensures long-lasting performance and resistance to weather elements. The fence typically features easy-to-assemble panels with secure latches, making it both a practical and efficient solution for pet owners looking to create a controlled environment for their furry friends.</p>
                                 </div>
-                                <button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button>
+                                <div>
+                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,6 +203,15 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link fav-nav" data-toggle="modal" data-target="#myModal">Login</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
                                             </li>
                                         </ul>
                                     </div>

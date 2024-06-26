@@ -131,7 +131,7 @@
                     <a href="${pageContext.request.contextPath}/inventory/add/form/user" class="btn amado-bt">Add User</a>
                 </div>
                 <div class="cart-btn w-10 mt-1 mb-4" >
-                    <a href="${pageContext.request.contextPath}/inventory/products" id="toggleTables" class="btn amado-bt" style="color: white;">Show Product</a>
+                    <a href="${pageContext.request.contextPath}/inventory/products" id="toggleTables" class="btn amado-bt" style="color: white;">Show Products</a>
                 </div>
 
                 <div class="table-wrapper">

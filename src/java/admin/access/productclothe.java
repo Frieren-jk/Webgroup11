@@ -23,7 +23,7 @@ public class productclothe extends HttpServlet {
         String action = request.getServletPath();
 
         switch (action) {
-            case "/toy1":
+            case "/clothe1":
                 viewClothe1(request, response);
                 break;
         }

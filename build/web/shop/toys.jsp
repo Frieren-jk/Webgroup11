@@ -180,7 +180,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 420.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/toy1">
                                             <h6>2 Piece Dog Bone Toy</h6>
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 130.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/toy2">
                                             <h6>Yarn Ball for Cats</h6>
                                         </a>
                                     </div>

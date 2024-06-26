@@ -180,8 +180,8 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 860.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
-                                            <h6>onkey Cat Sweater for Cats</h6>
+                                        <a href="${pageContext.request.contextPath}/clothe1">
+                                            <h6>Monkey Cat Sweater for Cats</h6>
                                         </a>
                                     </div>
 

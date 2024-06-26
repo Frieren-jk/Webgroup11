@@ -180,7 +180,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1120.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/food1">
                                             <h6>Pedigree Chicken 400g</h6>
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 310.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/food2">
                                             <h6>Pedigree Choice Cuts Wet Beef 22oz</h6>
                                         </a>
                                     </div>
@@ -234,7 +234,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 630.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/food3">
                                             <h6>Pedigree Schmackos for Dogs</h6>
                                         </a>
                                     </div>
@@ -261,7 +261,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 2415.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/food4">
                                             <h6>Whiskas Tuna Dry 7kg for Cats</h6>
                                         </a>
                                     </div>
@@ -288,7 +288,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1360.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/food5">
                                             <h6>Whiskas Adult Wet Cat Food Pouches</h6>
                                         </a>
                                     </div>
@@ -315,7 +315,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 550.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/food6">
                                             <h6>Purina Friskies Indoor Delights 1.1kg</h6>
                                         </a>
                                     </div>

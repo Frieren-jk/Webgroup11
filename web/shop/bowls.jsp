@@ -180,7 +180,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 220.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/bowl1">
                                             <h6>Small Stainless Steel Bowl</h6>
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 300.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/bowl2">
                                             <h6>Slow Feeder Stainless Steel Bowl</h6>
                                         </a>
                                     </div>
@@ -234,7 +234,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 180.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/bowl3">
                                             <h6>Plastic Slow Feeder Dog Bowl</h6>
                                         </a>
                                     </div>
@@ -261,7 +261,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 5700.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/bowl4">
                                             <h6>Automatic Cat Feeder</h6>
                                         </a>
                                     </div>

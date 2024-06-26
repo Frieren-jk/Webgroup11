@@ -180,7 +180,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 500.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/leash1">
                                             <h6>Bungee Leash for Dogs</h6>
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 650.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/leash2">
                                             <h6>No Pull Harness Leash</h6>
                                         </a>
                                     </div>
@@ -234,7 +234,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1170.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/leash3">
                                             <h6>Retractable Dog Leash</h6>
                                         </a>
                                     </div>
@@ -261,7 +261,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 870.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/leash4">
                                             <h6>Metal Leash for Dogs</h6>
                                         </a>
                                     </div>
@@ -288,7 +288,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 430.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/leash5">
                                             <h6>Harness And Bungee Leash for Cats</h6>
                                         </a>
                                     </div>

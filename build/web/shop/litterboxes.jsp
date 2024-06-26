@@ -180,7 +180,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 590.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/litterbox1">
                                             <h6>Sifting Cat Litter Box</h6>
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 910.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/litterbox2">
                                             <h6>Open Top Cat Litter Box with Shovel</h6>
                                         </a>
                                     </div>
@@ -234,7 +234,7 @@
                                     <div class="product-meta-data">
                                         <div class="line"></div>
                                         <p class="product-price">PHP 1960.00</p>
-                                        <a href="${pageContext.request.contextPath}/product">
+                                        <a href="${pageContext.request.contextPath}/litterbox3">
                                             <h6>Hooded Cat Litter Box</h6>
                                         </a>
                                     </div>

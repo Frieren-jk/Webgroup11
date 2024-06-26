@@ -164,7 +164,7 @@
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
                                                     <label for="quantity">Quantity</label>
-                                                    <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity">
+                                                    <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter the Quantity">
                                                     <small id="quantityHelp" class="form-text">Quantity must be an integer.</small>
                                                 </div>
                                             </div>

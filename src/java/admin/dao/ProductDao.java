@@ -12,10 +12,6 @@ import java.util.ArrayList;
  * ProductDao class to handle database operations for the Product entity.
  */
 public class ProductDao {
-    
-     private String SQLurl = "jdbc:mysql://localhost:3306/webgroup11?serverTimezone=UTC";
-    private String username = "root";
-    private String password = "pass123";
 
     private static final String SELECT_PRODUCT_ID = "SELECT "
             + "productID,"

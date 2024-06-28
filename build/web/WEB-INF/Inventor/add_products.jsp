@@ -23,21 +23,22 @@
     </head>
 
     <body>
-        <div class="modal fade " style="z-index: 1060;" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!--        <c:if test="${addProductError == true}">
+            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
+                <div id="liveToastDelete" class="toast show"
+                     role="status" aria-live="assertive" aria-atomic="true"
+                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                    <div class="toast-header bg-danger">
+                        <i class="fas fa-trash-alt me-2"></i>
+                        <strong class="me-auto">STATUS</strong>
+                       <a href="${addProductError = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
                     </div>
-                    <div class="modal-body d-flex justify-content-evenly">
-                        SUCCESS!!
-                    </div>
-                    <div class="modal-footer ">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Back to Home</button>
+                    <div class="toast-body toastDanger">
+                        <c:out value="${ErrorMessage}" />
                     </div>
                 </div>
             </div>
-        </div>
+        </c:if>-->
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">

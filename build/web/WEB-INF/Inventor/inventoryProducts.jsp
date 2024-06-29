@@ -54,6 +54,25 @@
                 </div>
             </div>
         </c:if>
+        
+        <c:if test="${addProduct == true}">
+            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
+                <div id="liveToastEdit" class="toast show"
+                     role="status" aria-live="assertive" aria-atomic="true"
+                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
+                    <div class="toast-header bg-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong class="me-auto">STATUS</strong>
+                        <a href="${addProduct = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
+                    </div>
+                    <div class="toast-body toastSuccess">
+                        Product "<c:out value="${productName}" />" WAS SUCCESSFULLY ADDED
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        
+        
 
         <c:if test="${deleteProduct == true}">
             <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">

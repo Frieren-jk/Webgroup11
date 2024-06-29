@@ -18,6 +18,8 @@ import admin.model.ProductBlueprint;
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpSession;
 
@@ -56,8 +58,15 @@ public class inventory extends HttpServlet {
                 viewAddFormProduct(request, response); //view form
                 break;
             case "/inventory/add/product":
-                AddProduct(request, response); //add product method
+            {
+                try {
+                    AddProduct(request, response); //add product method
+                } catch (SQLException ex) {
+                    Logger.getLogger(inventory.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
                 break;
+
             case "/inventory/update/product": {
                 try {
                     UpdateProduct(request, response);
@@ -145,7 +154,7 @@ public class inventory extends HttpServlet {
     }
 
     private void AddProduct(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
 
         if (request.getParameter("addItem") != null) {
             int productID = Integer.parseInt(request.getParameter("productID"));
@@ -159,6 +168,7 @@ public class inventory extends HttpServlet {
             ProductBlueprint newProduct = new ProductBlueprint(productID, productName, description, size, price, quantity);
             // Instantiate the ProductDao
             ProductDao productDao = new ProductDao();
+            HttpSession session = request.getSession();
 
             // Insert the new product into the database
             boolean productAdded = productDao.createProduct(newProduct);
@@ -169,6 +179,8 @@ public class inventory extends HttpServlet {
                 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
                 response.setHeader("Pragma", "no-cache"); // HTTP 1.0
                 response.setHeader("Expires", "0");
+                session.setAttribute("addProduct", productAdded);
+                session.setAttribute("productName", productName);
                 response.sendRedirect(request.getContextPath() + "/inventory/products");
             } else {
                 System.out.println("Did not add product");
@@ -301,6 +313,7 @@ public class inventory extends HttpServlet {
                     address,
                     birthday,
                     mobileNumber);
+            HttpSession session = request.getSession();
             EmployeeDao employeeDao = new EmployeeDao();
             boolean userAdded = employeeDao.createEmployee(newEmployee);
 
@@ -309,6 +322,8 @@ public class inventory extends HttpServlet {
                 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
                 response.setHeader("Pragma", "no-cache"); // HTTP 1.0
                 response.setHeader("Expires", "0");
+                session.setAttribute("addUser", userAdded);
+                session.setAttribute("userName", userName);
                 response.sendRedirect(request.getContextPath() + "/inventory/users");
             } else {
                 System.out.println("Did not add product");

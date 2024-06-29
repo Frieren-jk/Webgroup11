@@ -30,7 +30,7 @@ public class ProductDao {
             + "quantity=? WHERE productID=?";
 
     // Method to create a new product in the database
-    public boolean createProduct(ProductBlueprint product) {
+    public boolean createProduct(ProductBlueprint product) throws SQLException {
         boolean success = false;
         Connection conn = null;
         PreparedStatement ps = null;

@@ -7,31 +7,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The above 4 meta tags must come first in the head -->
 
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <!-- Title  -->
+        <title>Fur Real Pet Supplies - Home</title>
 
-    <!-- The above 4 meta tags must come first in the head -->
+        <!-- Tab Icon  -->
+        <link rel="icon" href="img/core-img/iconlight.png">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-    <!-- Title  -->
-    <title>Fur Real Pet Supplies - Home</title>
-
-    <!-- Tab Icon  -->
-    <link rel="icon" href="img/core-img/iconlight.png">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="./style.css">
-
+        <!-- Core Style CSS -->
+        <link rel="stylesheet" href="css/core-style.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
 
 
     <body>
+
 
        <input type="hidden" id="status" value="${regUser}">
 
@@ -71,19 +69,19 @@
             </div>
 
             <!-- Topbar Start -->
-            <div class="container-fluid">
-                <div class="row upbar">
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <div class="d-inline-flex align-items-center">
-                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                            <span class="text-light px-2">|</span>
-                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                            <span class="text-light px-2">|</span>
-                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
+                <div class="container-fluid">
+                    <div class="row upbar">
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                                <span class="text-light px-2">|</span>
+                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                                <span class="text-light px-2">|</span>
+                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -104,6 +102,7 @@
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
+
                         <a class="fav-nav" href="${pageContext.request.contextPath}/login" ><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
@@ -292,7 +291,9 @@
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
                                             </li>
                                             <li class="nav-item">
+
                                                 <a class="nav-link fav-nav" href="${pageContext.request.contextPath}/login">Login</a>
+
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
@@ -308,52 +309,6 @@
         </footer>
 
         <!-- ##### Login Area Start ##### -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">x</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-title text-center">
-                            <h4>LOGIN</h4>
-                        </div>
-                        <div class="d-flex flex-column text-center">
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter a username.
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter your password.
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <button type='submit' form="Loginform" class="btn btn-info btn-block btn-round d-block  buttonfx angleindouble">Log In</button>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- ##### Login Area End ##### -->
         <!-- ##### Footer Area End ##### -->
 
@@ -372,6 +327,7 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
                                     $(document).ready(function () {
@@ -387,6 +343,7 @@
                                     });
 
         </script>
+
     </body>
 
 </html>

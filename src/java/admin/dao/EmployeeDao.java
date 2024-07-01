@@ -6,10 +6,12 @@ package admin.dao;
 
 import admin.model.EmployeeBlueprint;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import org.apache.catalina.User;
 
 /**
  *
@@ -182,4 +184,86 @@ public class EmployeeDao {
         return rowsDeleted;
     }
 
+    public EmployeeBlueprint checkUserExists(String userName, String password) throws ClassNotFoundException {
+        EmployeeBlueprint user = null;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            String query = "SELECT * FROM employee WHERE userName = ? OR password = ?";
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userName);
+            ps.setString(2, password);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                user = new EmployeeBlueprint();
+                user.setUserName(rs.getString("userName"));
+                user.setPassword(rs.getString("password"));
+            }
+        } catch (SQLException e) {
+            System.out.println("SQLException" + e);
+        } finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException" + e.getMessage());
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException" + e.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException" + e.getMessage());
+                }
+            }
+        }
+        return user;
+    }
+    
+    public boolean isUserInDatabase(EmployeeBlueprint user) throws ClassNotFoundException {
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+
+    try {
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/webgroup11", "root", "WebtechNakakainis1");
+        pstmt = conn.prepareStatement("SELECT * FROM employee WHERE username = ? AND password = ?");
+        pstmt.setString(1, user.getuserName());
+        pstmt.setString(2, user.getpassword());
+        rs = pstmt.executeQuery();
+
+        return rs.next(); // returns true if the user exists in the database
+    } catch (SQLException e) {
+        throw new ClassNotFoundException("Error checking user in database: " + e.getMessage());
+    } finally {
+        closeResources(conn, pstmt, rs);
+    }
+}
+
+    private void closeResources(Connection conn, PreparedStatement pstmt, ResultSet rs) {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+            if (pstmt != null) {
+                pstmt.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            // log the error
+        }
+    }
 }

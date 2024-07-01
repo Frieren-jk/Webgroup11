@@ -1,3 +1,9 @@
+<% if(session.getAttribute("userName")==null){
+        response.sendRedirect(request.getContextPath() + "/login");
+    } 
+    
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,24 +30,10 @@
     <link rel="stylesheet" href="./style.css">
 
 
+
     <body>
 
-        <c:if test="${regUser == true}">
-            <div class="toast-container position-fixed top-0 end-0 p-3" >
-                <div id="liveToast" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-success">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${regUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body ">
-                         NEW USER REGISTRATION SUCCESSFUL: WELCOME "<c:out value="${userName}" />"
-                    </div>
-                </div>
-            </div>
-        </c:if>
+       <input type="hidden" id="status" value="${regUser}">
 
         <!-- Search Start -->
         <div class="search-section section-padding-100">
@@ -112,7 +104,7 @@
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
-                        <a class="fav-nav" data-toggle="modal" data-target="#myModal"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+                        <a class="fav-nav" href="${pageContext.request.contextPath}/login" ><img src="img/core-img/loginicon.png" alt="error">Login</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
@@ -300,7 +292,7 @@
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link fav-nav" data-toggle="modal" data-target="#myModal">Login</a>
+                                                <a class="nav-link fav-nav" href="${pageContext.request.contextPath}/login">Login</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
@@ -380,8 +372,19 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-                                    // Use JavaScript to show the toast if createUser is true
+                                    $(document).ready(function () {
+                                        var status = $('#status').val();
+                                        console.log("Status value: " + status);
+                                        if (status === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'Success',
+                                                text: 'User successfully created!'
+                                            })
+                                        }
+                                    });
 
         </script>
     </body>

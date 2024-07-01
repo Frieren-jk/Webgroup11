@@ -26,22 +26,7 @@
     </head>
 
     <body>
-        <div id="Success" class="modal fade pt-5">
-            <div class="modal-dialog modal-confirm">
-                <div class="modal-content">
-                    <div class="modal-header justify-content-center">
-                        <div class="icon-box"> 
-                            <i class="material-icon fa-solid fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="modal-body text-center">
-                        <h4>Great!</h4>	
-                        <p>Your account has been created successfully.</p>
-                        <button name="Redirecthome" id="Redirecthome" class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span></button>
-                    </div>
-                </div>
-            </div>
-        </div>     
+        <input type="hidden" id="status" value="${regUser}">
 
         <!-- Search Start -->
         <div class="search-section section-padding-100">
@@ -389,6 +374,8 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     </body> 
 

@@ -41,17 +41,17 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
-      out.write("        <title>Login</title>\r\n");
+      out.write("        <title>Login Page</title>\r\n");
       out.write("        <meta charset=\"utf-8\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n");
       out.write("        <link href=\"css/Another.css\" rel=\"stylesheet\" type=\"text/css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\">\r\n");
       out.write("        <link href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" rel=\"stylesheet\">\r\n");
+      out.write("        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\" integrity=\"sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"/>\r\n");
       out.write("        <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\"></script>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
@@ -74,7 +74,7 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <img src=\"img/core-img/logotransparent.png\" width=\"150px\">\r\n");
       out.write("                        </div>\r\n");
       out.write("                        <div class=\"text-center mb-4\">\r\n");
-      out.write("                            <h4>Log-in to your account</h4>\r\n");
+      out.write("                            <h4>Login to your account</h4>\r\n");
       out.write("                        </div>\r\n");
       out.write("                        <!-- Form -->\r\n");
       out.write("                        <form class=\"px-3\" method=\"post\" action=\"");
@@ -83,11 +83,11 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <!-- Input Box -->\r\n");
       out.write("                            <div class=\"form-input\">\r\n");
       out.write("                                <span><i class=\"fa fa-user\"></i></span>\r\n");
-      out.write("                                <input type=\"text\" name=\"userName\" placeholder=\"Type your Username\" required>\r\n");
+      out.write("                                <input type=\"text\" name=\"userNamelog\" placeholder=\"Type your Username\" required>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"form-input\">\r\n");
       out.write("                                <span><i class=\"fa fa-lock\"></i></span>\r\n");
-      out.write("                                <input type=\"password\" name=\"password\" placeholder=\"Password\" required>\r\n");
+      out.write("                                <input type=\"password\" name=\"passwordlog\" placeholder=\"Type your Password\" required>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"row mb-3\">\r\n");
       out.write("                                <!-- Remember Checkbox -->\r\n");
@@ -100,7 +100,7 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            </div>\r\n");
       out.write("                            <!-- Login Button -->\r\n");
       out.write("                            <div class=\"mb-3\"> \r\n");
-      out.write("                                <button type=\"submit\" class=\"btn btn-block\">Login</button>\r\n");
+      out.write("                                <button type=\"submit\" class=\"btn btn-block\">Log In</button>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"text-right \">\r\n");
       out.write("                                <a href=\"reset.html\" class=\"forget-link\">Forgot password?</a>\r\n");
@@ -109,13 +109,13 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"text-center mb-2 text-white\">or login with</div>\r\n");
       out.write("\r\n");
       out.write("                                <!-- Facebook Button -->\r\n");
-      out.write("                                <a href=\"\" class=\"btn btn-social btn-facebook\">facebook</a>\r\n");
+      out.write("                                <a href=\"\" class=\"btn btn-social btn-facebook\"><i class=\"fa-brands fa-facebook\" aria-hidden=\"true\"></i> Facebook</a>\r\n");
       out.write("\r\n");
       out.write("                                <!-- Google Button -->\r\n");
-      out.write("                                <a href=\"\" class=\"btn btn-social btn-google\">google</a>\r\n");
+      out.write("                                <a href=\"\" class=\"btn btn-social btn-google\"><i class=\"fa-brands fa-google\"></i> Google</a>\r\n");
       out.write("\r\n");
       out.write("                                <!-- Twitter Button -->\r\n");
-      out.write("                                <a href=\"\" class=\"btn btn-social btn-twitter\">twitter</a>\r\n");
+      out.write("                                <a href=\"\" class=\"btn btn-social btn-twitter\"><i class=\"fa-brands fa-x-twitter\" aria-hidden=\"true\"></i> Twitter</a>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"text-center mb-5 text-white\">Don't have an account? \r\n");
       out.write("                                <a class=\"register-link\" href=\"");
@@ -137,14 +137,14 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                if (status === \"failed\") {\r\n");
       out.write("                    Swal.fire({\r\n");
       out.write("                        icon: 'error',\r\n");
-      out.write("                        title: 'Error Log-in',\r\n");
-      out.write("                        text: 'username and password does not match!'\r\n");
+      out.write("                        title: 'Error Login',\r\n");
+      out.write("                        text: 'Your username and password does not match!'\r\n");
       out.write("                    })\r\n");
       out.write("                }\r\n");
       out.write("            });\r\n");
       out.write("        </script>\r\n");
       out.write("    </body>\r\n");
-      out.write("</html>\r\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

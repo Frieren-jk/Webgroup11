@@ -137,10 +137,16 @@ public final class leash2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top pt-1\">\r\n");
-      out.write("                    <div> </div>\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100 mt-5 \">\r\n");
+      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</a>\r\n");
+      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");
+      out.write("                        <a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/logout\" class=\"fav-nav\"><img src=\"img/core-img/logouticon.png\" alt=\"error\">Log Out</a>\r\n");
+      out.write("                        <br><br><br>\r\n");
       out.write("                        <a href=\"#\" class=\"search-nav\"><img src=\"img/core-img/searchicon.png\" alt=\"error\">Search</a>\r\n");
-      out.write("                        <a class=\"fav-nav\" data-toggle=\"modal\" data-target=\"#myModal\"><img src=\"img/core-img/loginicon.png\" alt=\"error\">Login</a>\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\" class=\"fav-nav\"><img src=\"img/core-img/createicon.png\" alt=\"error\">Register Now</a>\r\n");
@@ -285,9 +291,6 @@ public final class leash2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/physicalshop\">Physical Shop</a>\r\n");
-      out.write("                                            </li>\r\n");
-      out.write("                                            <li class=\"nav-item\">\r\n");
-      out.write("                                                <a class=\"nav-link fav-nav\" data-toggle=\"modal\" data-target=\"#myModal\">Login</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");

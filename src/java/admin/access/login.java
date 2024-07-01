@@ -67,15 +67,16 @@ public class login extends HttpServlet {
         HttpSession session = request.getSession();
         RequestDispatcher dispatcher = null;
         
-        String userName = request.getParameter("userName");
-        String password = request.getParameter("password");
+        String userName = request.getParameter("userNamelog");
+        String password = request.getParameter("passwordlog");
         
         UserDao userdao = new UserDao();
         boolean loginUser = userdao.checkUserExists(userName, password);
         
         if (loginUser) {
-            session.setAttribute("userName", userName);
+            session.setAttribute("userNamelog", userName);
             dispatcher = request.getRequestDispatcher("index.jsp");
+            System.out.println("succeess"+userName);
         } else {
             
             request.setAttribute("status", "failed");

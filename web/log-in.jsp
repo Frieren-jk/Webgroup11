@@ -36,11 +36,11 @@
                             <!-- Input Box -->
                             <div class="form-input">
                                 <span><i class="fa fa-user"></i></span>
-                                <input type="text" name="userName" placeholder="Type your Username" required>
+                                <input type="text" name="userNamelog" placeholder="Type your Username" required>
                             </div>
                             <div class="form-input">
                                 <span><i class="fa fa-lock"></i></span>
-                                <input type="password" name="password" placeholder="Type your Password" required>
+                                <input type="password" name="passwordlog" placeholder="Type your Password" required>
                             </div>
                             <div class="row mb-3">
                                 <!-- Remember Checkbox -->

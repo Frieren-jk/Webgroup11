@@ -95,7 +95,7 @@
                 <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userName}</a>
+                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog}</a>
                         <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>

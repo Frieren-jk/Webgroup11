@@ -76,13 +76,15 @@ public class registration extends HttpServlet {
 
             if (createUser) {
                 // Ensure no form resubmission
-                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-                response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-                response.setHeader("Expires", "0");
-                session.setAttribute("regUser", true);
-                session.setAttribute("userName", userName);
 
+                session.setAttribute("regUser", "success");
+                session.setAttribute("userName", userName);
                 response.sendRedirect(request.getContextPath() + "/home");
+                
+            } else {
+
+                request.setAttribute("regUser", "failed");
+                response.sendRedirect(request.getContextPath() + "/registration");
             }
 
         } else {

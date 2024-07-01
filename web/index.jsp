@@ -1,3 +1,9 @@
+<% if(session.getAttribute("userName")==null){
+        response.sendRedirect(request.getContextPath() + "/login");
+    } 
+    
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +27,13 @@
         <link rel="stylesheet" href="./style.css">
     </head>
 
+
     <body>
+
+
+       <input type="hidden" id="status" value="${regUser}">
+
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -91,7 +103,9 @@
                     <div> </div>
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
-                        <a href="${pageContext.request.contextPath}/login" class="fav-nav"><img src="img/core-img/loginicon.png" alt="error">Login</a>
+
+                        <a class="fav-nav" href="${pageContext.request.contextPath}/login" ><img src="img/core-img/loginicon.png" alt="error">Login</a>
+
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
@@ -279,7 +293,8 @@
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a>
+                                                <a class="nav-link fav-nav" href="${pageContext.request.contextPath}/login">Login</a>
+
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/registration">Register Now</a>
@@ -313,6 +328,23 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+                                    $(document).ready(function () {
+                                        var status = $('#status').val();
+                                        console.log("Status value: " + status);
+                                        if (status === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'Success',
+                                                text: 'User successfully created!'
+                                            })
+                                        }
+                                    });
+
+        </script>
+
     </body>
 
 </html>

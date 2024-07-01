@@ -1,14 +1,14 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Login Page</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="css/Another.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     </head>
     <body>
@@ -29,7 +29,7 @@
                             <img src="img/core-img/logotransparent.png" width="150px">
                         </div>
                         <div class="text-center mb-4">
-                            <h4>Log-in to your account</h4>
+                            <h4>Login to your account</h4>
                         </div>
                         <!-- Form -->
                         <form class="px-3" method="post" action="${pageContext.request.contextPath}/user">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="form-input">
                                 <span><i class="fa fa-lock"></i></span>
-                                <input type="password" name="password" placeholder="Password" required>
+                                <input type="password" name="password" placeholder="Type your Password" required>
                             </div>
                             <div class="row mb-3">
                                 <!-- Remember Checkbox -->
@@ -53,7 +53,7 @@
                             </div>
                             <!-- Login Button -->
                             <div class="mb-3"> 
-                                <button type="submit" class="btn btn-block">Login</button>
+                                <button type="submit" class="btn btn-block">Log In</button>
                             </div>
                             <div class="text-right ">
                                 <a href="reset.html" class="forget-link">Forgot password?</a>
@@ -62,13 +62,13 @@
                                 <div class="text-center mb-2 text-white">or login with</div>
 
                                 <!-- Facebook Button -->
-                                <a href="" class="btn btn-social btn-facebook">facebook</a>
+                                <a href="" class="btn btn-social btn-facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
 
                                 <!-- Google Button -->
-                                <a href="" class="btn btn-social btn-google">google</a>
+                                <a href="" class="btn btn-social btn-google"><i class="fa-brands fa-google"></i> Google</a>
 
                                 <!-- Twitter Button -->
-                                <a href="" class="btn btn-social btn-twitter">twitter</a>
+                                <a href="" class="btn btn-social btn-twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter</a>
                             </div>
                             <div class="text-center mb-5 text-white">Don't have an account? 
                                 <a class="register-link" href="${pageContext.request.contextPath}/registration">Register here</a>
@@ -88,8 +88,8 @@
                 if (status === "failed") {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Error Log-in',
-                        text: 'username and password does not match!'
+                        title: 'Error Login',
+                        text: 'Your username and password does not match!'
                     })
                 }
             });

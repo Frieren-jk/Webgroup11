@@ -31,12 +31,7 @@
         <script defer src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/core-style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
-
-        <style>
-
-        </style>
-
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">
     </head>
 
     <body>
@@ -162,10 +157,12 @@
 
                 <!-- Main Nav -->
                 <div class="sticky-top" >
-
                     <div class="cart-fav-search mb-100">
+                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userName}</a>
+                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/changepassicon.png" alt="error">Change Pass</a>
+                        <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/logouticon.png" alt="error">Log Out</a>
+                        <br><br><br>
                         <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
-    <!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/homeicon.png" alt="error">Home</a>

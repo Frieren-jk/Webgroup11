@@ -138,7 +138,7 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    Swal.fire({\r\n");
       out.write("                        icon: 'error',\r\n");
       out.write("                        title: 'Error Log-in',\r\n");
-      out.write("                        text: 'User does not exist!'\r\n");
+      out.write("                        text: 'username and password does not match!'\r\n");
       out.write("                    })\r\n");
       out.write("                }\r\n");
       out.write("            });\r\n");

@@ -60,6 +60,10 @@
         <servlet-name>login</servlet-name>
         <servlet-class>admin.access.login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>admin.access.logout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory</url-pattern>
@@ -283,6 +287,10 @@
     <servlet-mapping>
         <servlet-name>login</servlet-name>
         <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

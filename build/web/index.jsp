@@ -33,6 +33,7 @@
 
        <input type="hidden" id="status" value="${regUser}">
 
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -104,7 +105,9 @@
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
 
                         <a class="fav-nav" href="${pageContext.request.contextPath}/login" ><img src="img/core-img/loginicon.png" alt="error">Login</a>
+
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
+                        <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Log Out</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
                         <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="img/core-img/shopicon.png" alt="error">Shop</a>
@@ -291,7 +294,6 @@
                                                 <a class="nav-link" href="${pageContext.request.contextPath}/physicalshop">Physical Shop</a>
                                             </li>
                                             <li class="nav-item">
-
                                                 <a class="nav-link fav-nav" href="${pageContext.request.contextPath}/login">Login</a>
 
                                             </li>

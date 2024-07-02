@@ -1,9 +1,10 @@
 
-/* global bootstrap */
+
+/* global Swal */
 
 $(document).ready(function () {
 
-    
+
 
     const inputs = document.querySelectorAll('input');
     const patterns = {
@@ -84,48 +85,22 @@ $(document).ready(function () {
         });
 
         if (!allUserInfoValid) {
-            // Prevent showing the modal if validation fails
-            event.preventDefault(); // Prevent form submission
-            alert("Please fill in all required fields correctly before submitting.");
+            // Prevent showing the modal if validation fails // Prevent form submission\
+
+            Swal.fire({
+                title: 'Error!',
+                text: 'Please fill in all required fields correctly before submitting.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            event.preventDefault();
         } else {
-
-            alert("ACCOUNT CREATED SUCCCESSFULLY");
-
 
 
         }
     });
 
 
-
-//            $.ajax({
-//                type: 'POST',
-//                url: '/TestingWeb/registration/add', // Replace with your form submission URL
-//                data: $('#regform').serialize() + '&_=' + new Date().getTime(),
-//                contentType: false, // The content type used when sending data to the server.
-//                cache: false, // To unable request pages to be cached
-//
-//
-//                success: function (response) {
-////                    location.reload();
-////
-////                    // After refreshing, redirect to inventory page
-////                    window.location.href = '/TestingWeb/home';
-////                    
-//                    // Optionally, you can also show an alert after refreshing
-//                    alert("Registration Successful");
-//                },
-//                error: function (xhr, ajaxOptions, thrownError) {
-//                    if (xhr.status === 404) {
-//                        alert("Error: " + xhr.status + "\nResponse Text: " + xhr.responseText);
-//                    } else {
-//                        alert("Error: " + xhr.status + "\nResponse Text: " + xhr.responseText);
-//                    }
-//                }
-//
-//
-//
-//            });
 
 
     const passwordInput = $('#password');

@@ -38,58 +38,13 @@
     </head>
 
     <body>
-        <c:if test="${editProduct == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToastEdit" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-success">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${editProduct = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastSuccess">
-                        Product "<c:out value="${productName}" />" WAS SUCCESSFULLY EDITED
-                    </div>
-                </div>
-            </div>
-        </c:if>
-        
-        <c:if test="${addProduct == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToastEdit" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-success">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${addProduct = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastSuccess">
-                        Product "<c:out value="${productName}" />" WAS SUCCESSFULLY ADDED
-                    </div>
-                </div>
-            </div>
-        </c:if>
-        
-        
+       
 
-        <c:if test="${deleteProduct == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToastDelete" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-danger">
-                        <i class="fas fa-trash-alt me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                       <a href="${deleteProduct = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastDanger">
-                        Product ID: "<c:out value="${productID}" />" WAS SUCCESSFULLY DELETED
-                    </div>
-                </div>
-            </div>
-        </c:if>
+      
+        <input type="hidden" id="editStatus" value="${editProduct}">
+        <input type="hidden" id="addProduct" value="${addProduct}">
+
+
         <div class="main-content-wrapper d-flex clearfix">
 
             <!-- Search Start -->
@@ -155,10 +110,12 @@
 
                 <!-- Main Nav -->
                 <div class="sticky-top" >
-
                     <div class="cart-fav-search mb-100">
+                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/changepassicon.png" alt="error">Change Pass</a>
+                        <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/logouticon.png" alt="error">Log Out</a>
+                        <br><br><br>
                         <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
-<!--                   hide for now     <a data-toggle="modal" data-target="#myModal" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/loginicon.png" alt="error"> Log In</a>-->
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
                         <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/homeicon.png" alt="error">Home</a>
@@ -224,7 +181,7 @@
                                                 </a>
                                             </td> 
                                             <td> 
-                                                <a href="${pageContext.request.contextPath}/inventory/delete/product?productID=<c:out value='${product.productID}' />" class="bin-button">
+                                                <a data-href="${pageContext.request.contextPath}/inventory/delete/product?productID=<c:out value='${product.productID}' />" class="bin-button delete-link">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         fill="none"
@@ -418,11 +375,65 @@
         <!-- Active js -->
         <script src="${pageContext.request.contextPath}/js/active.js"></script>
         <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
 
                                     $(document).ready(function () {
                                         $('#myTable').DataTable();
+                                        var status = $('#editStatus').val();
+                                        var add = $('#addProduct').val();
+                                        if (status === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'Edit Success',
+                                                text: 'Product was successfully edited'
+                                            }).then(function () {
+            <% session.removeAttribute("editProduct");%>
+                                            });
+                                        }
 
+                                        if (add === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'Product Added',
+                                                text: 'Product was successfully added to the inventory'
+                                            }).then(function () {
+            <% session.removeAttribute("addProduct");%>
+                                            });
+                                        }
+
+                                    });
+
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        const deleteLinks = document.querySelectorAll('.delete-link');
+                                        deleteLinks.forEach(function (link) {
+                                            link.addEventListener('click', function (event) {
+                                                event.preventDefault(); // Prevent the default anchor behavior
+
+                                                const href = this.getAttribute('data-href'); // Get the data-href attribute
+
+                                                Swal.fire({
+                                                    title: "Are you sure?",
+                                                    text: "You won't be able to revert this!",
+                                                    icon: "warning",
+                                                    showCancelButton: true,
+                                                    confirmButtonColor: "#3085d6",
+                                                    cancelButtonColor: "#d33",
+                                                    confirmButtonText: "Yes, delete it!"
+                                                }).then((result) => {
+                                                    if (result.isConfirmed) {
+                                                        Swal.fire({
+                                                            title: "Deleted!",
+                                                            text: "User has been deleted.",
+                                                            icon: "success"
+                                                        }).then(() => {
+                                                            // Redirect to the href if confirmed
+                                                            window.location.href = href;
+                                                        });
+                                                    }
+                                                });
+                                            });
+                                        });
                                     });
 
 

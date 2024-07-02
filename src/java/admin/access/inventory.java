@@ -179,7 +179,7 @@ public class inventory extends HttpServlet {
                 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
                 response.setHeader("Pragma", "no-cache"); // HTTP 1.0
                 response.setHeader("Expires", "0");
-                session.setAttribute("addProduct", productAdded);
+                session.setAttribute("addProduct", "success");
                 session.setAttribute("productName", productName);
                 response.sendRedirect(request.getContextPath() + "/inventory/products");
             } else {
@@ -258,7 +258,7 @@ public class inventory extends HttpServlet {
         boolean editProduct = update.updateProduct(productName, description, size, price, quantity, productID);
 
         if (editProduct) {
-            session.setAttribute("editProduct", true);
+            session.setAttribute("editProduct", "success");
             session.setAttribute("productName", productName);
             response.sendRedirect(request.getContextPath() + "/inventory/products");
 
@@ -322,7 +322,7 @@ public class inventory extends HttpServlet {
                 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
                 response.setHeader("Pragma", "no-cache"); // HTTP 1.0
                 response.setHeader("Expires", "0");
-                session.setAttribute("addUser", userAdded);
+                session.setAttribute("addUser", "success");
                 session.setAttribute("userName", userName);
                 response.sendRedirect(request.getContextPath() + "/inventory/users");
             } else {
@@ -406,7 +406,7 @@ public class inventory extends HttpServlet {
                     userName);
 
             if (editUser) {
-                session.setAttribute("editUser", true);
+                session.setAttribute("editUser", "success");
                 session.setAttribute("userName", userName);
                 response.sendRedirect(request.getContextPath() + "/inventory/users");
             } else {

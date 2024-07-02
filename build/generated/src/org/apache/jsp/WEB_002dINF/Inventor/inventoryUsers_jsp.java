@@ -14,7 +14,6 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -25,13 +24,11 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
     _jspx_tagPool_c_out_value_nobody.release();
-    _jspx_tagPool_c_if_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -61,7 +58,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write('\r');
       out.write('\n');
 
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -77,9 +74,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html lang=\"en\">\r\n");
-      out.write("\r\n");
       out.write("    <head>\r\n");
-      out.write("\r\n");
       out.write("        <meta charset=\"UTF-8\">\r\n");
       out.write("        <meta name=\"description\" content=\"\">\r\n");
       out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
@@ -119,23 +114,12 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
-      out.write("\r\n");
-      out.write("        ");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("        ");
-      if (_jspx_meth_c_if_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("        <input type=\"hidden\" id=\"addUser\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addUser}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\"\r\n");
+      out.write("\">\r\n");
       out.write("        <input type=\"hidden\" id=\"editStatus\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${editUser}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("\r\n");
       out.write("        <div class=\"main-content-wrapper d-flex clearfix\">\r\n");
       out.write("\r\n");
@@ -325,16 +309,9 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                            </table>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("                </div>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("\r\n");
       out.write("        <!-- ##### Footer Area End ##### -->\r\n");
       out.write("        <footer class=\"footer_area clearfix w-100\">\r\n");
@@ -403,56 +380,6 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("        </footer>\r\n");
-      out.write("        <!-- ##### Login Area Start ##### -->\r\n");
-      out.write("        <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n");
-      out.write("            <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\r\n");
-      out.write("                <div class=\"modal-content\">\r\n");
-      out.write("                    <div class=\"modal-header border-bottom-0\">\r\n");
-      out.write("                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n");
-      out.write("                            <span aria-hidden=\"true\">x</span>\r\n");
-      out.write("                        </button>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"modal-body\">\r\n");
-      out.write("                        <div class=\"form-title text-center\">\r\n");
-      out.write("                            <h4>LOGIN</h4>\r\n");
-      out.write("                        </div>\r\n");
-      out.write("                        <div class=\"d-flex flex-column text-center\">\r\n");
-      out.write("                            <form>\r\n");
-      out.write("                                <div class=\"form-group\">\r\n");
-      out.write("                                    <div class=\"form-group \">\r\n");
-      out.write("\r\n");
-      out.write("                                        <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"Enter your username\" required>\r\n");
-      out.write("                                        <small id=\"usernameHelp\"  class=\"form-text\">Alphanumeric, must be between 4 - 12 characters.</small>\r\n");
-      out.write("                                        <div class=\"invalid-feedback\">\r\n");
-      out.write("                                            Please enter a username.\r\n");
-      out.write("                                        </div>\r\n");
-      out.write("                                    </div> \r\n");
-      out.write("                                </div>\r\n");
-      out.write("                                <div class=\"form-group\">\r\n");
-      out.write("                                    <div class=\"form-group \">\r\n");
-      out.write("\r\n");
-      out.write("                                        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Enter your password\" required>\r\n");
-      out.write("                                        <small id=\"passwordHelp\" class=\"form-text\">Password must be alphanumeric, 8 - 16 characters.</small>\r\n");
-      out.write("                                        <div class=\"invalid-feedback\">\r\n");
-      out.write("                                            Please enter your password.\r\n");
-      out.write("                                        </div>\r\n");
-      out.write("                                    </div> \r\n");
-      out.write("                                </div>\r\n");
-      out.write("\r\n");
-      out.write("                                <button type='submit' form=\"regform\" class=\"btn btn-info btn-block btn-round\">Log In</button>\r\n");
-      out.write("\r\n");
-      out.write("                            </form>\r\n");
-      out.write("                        </div>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"modal-footer d-flex justify-content-center\">\r\n");
-      out.write("                        <div class=\"signup-section\">Not a member yet? <a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/registration\" class=\"text-info\">Sign Up</a>.</div>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                </div>\r\n");
-      out.write("            </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <!-- ##### Login Area End ##### -->\r\n");
       out.write("\r\n");
       out.write("        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->\r\n");
       out.write("        <script src=\"js/jquery/jQuery v3.7.1.min.js\"></script>\r\n");
@@ -490,20 +417,34 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                                        if (status === \"success\") {\r\n");
       out.write("                                            Swal.fire({\r\n");
       out.write("                                                icon: 'success',\r\n");
-      out.write("                                                title: 'Edit Success',\r\n");
-      out.write("                                                text: 'Username was successfully edited'\r\n");
+      out.write("                                                title: 'Edit Successfully',\r\n");
+      out.write("                                                text: 'The user was successfully edited.',\r\n");
+      out.write("                                                timer: 4000,\r\n");
+      out.write("                                                background: '#20c997',\r\n");
+      out.write("                                                toast: true,\r\n");
+      out.write("                                                color: '#fff',\r\n");
+      out.write("                                                position: 'top-end',\r\n");
+      out.write("                                                iconColor: '#fff',\r\n");
+      out.write("                                                showConfirmButton: false,\r\n");
+      out.write("                                                timerProgressBar: true\r\n");
       out.write("                                            }).then(function () {\r\n");
       out.write("            ");
  session.removeAttribute("editUser");
       out.write("\r\n");
       out.write("                                            });\r\n");
       out.write("                                        }\r\n");
-      out.write("                                        \r\n");
+      out.write("\r\n");
       out.write("                                        if (add === \"success\") {\r\n");
       out.write("                                            Swal.fire({\r\n");
       out.write("                                                icon: 'success',\r\n");
       out.write("                                                title: 'User Added',\r\n");
-      out.write("                                                text: 'User was successfully added to the inventory'\r\n");
+      out.write("                                                text: 'User was successfully added to the inventory.',\r\n");
+      out.write("                                                timer: 4000,\r\n");
+      out.write("                                                background: '#20c997',\r\n");
+      out.write("                                                color: '#fff',\r\n");
+      out.write("                                                iconColor: '#fff',\r\n");
+      out.write("                                                showConfirmButton: false,\r\n");
+      out.write("                                                timerProgressBar: true\r\n");
       out.write("                                            }).then(function () {\r\n");
       out.write("            ");
  session.removeAttribute("addUser");
@@ -535,7 +476,13 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                                                        Swal.fire({\r\n");
       out.write("                                                            title: \"Deleted!\",\r\n");
       out.write("                                                            text: \"User has been deleted.\",\r\n");
-      out.write("                                                            icon: \"success\"\r\n");
+      out.write("                                                            icon: \"success\",\r\n");
+      out.write("                                                            timer: 4000,\r\n");
+      out.write("                                                            background: '#20c997',\r\n");
+      out.write("                                                            color: '#fff',\r\n");
+      out.write("                                                            iconColor: '#fff',\r\n");
+      out.write("                                                            showConfirmButton: false,\r\n");
+      out.write("                                                            timerProgressBar: true\r\n");
       out.write("                                                        }).then(() => {\r\n");
       out.write("                                                            // Redirect to the href if confirmed\r\n");
       out.write("                                                            window.location.href = href;\r\n");
@@ -545,8 +492,6 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                                            });\r\n");
       out.write("                                        });\r\n");
       out.write("                                    });\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("        </script>\r\n");
       out.write("    </body>\r\n");
       out.write("\r\n");
@@ -562,71 +507,6 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
-  }
-
-  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addUser == true}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
-    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("            <div class=\"bounce-in-right toast-container position-fixed top-0 end-0 p-3\">\r\n");
-        out.write("                <div id=\"liveToastEdit\" class=\"toast show\"\r\n");
-        out.write("                     role=\"status\" aria-live=\"assertive\" aria-atomic=\"true\"\r\n");
-        out.write("                     data-bs-config='{\"animation\": true, \"autohide\": true, \"delay\": 5000}'>\r\n");
-        out.write("                    <div class=\"toast-header bg-success\">\r\n");
-        out.write("                        <i class=\"fas fa-check-circle me-2\"></i>\r\n");
-        out.write("                        <strong class=\"me-auto\">STATUS</strong>\r\n");
-        out.write("                        <a href=\"");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addUser = false}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"\"></a>\r\n");
-        out.write("                    </div>\r\n");
-        out.write("                    <div class=\"toast-body toastSuccess\">\r\n");
-        out.write("                        USER \"");
-        if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
-          return true;
-        out.write("\" WAS SUCCESSFULLY ADDED\r\n");
-        out.write("                        DEFAULT PASSWORD: Secret@123\r\n");
-        out.write("                    </div>\r\n");
-        out.write("                </div>\r\n");
-        out.write("            </div>\r\n");
-        out.write("        ");
-        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-      return true;
-    }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_out_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:out
-    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
-    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_out_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_0);
-    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
-    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
-      return true;
-    }
-    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
-    return false;
   }
 
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
@@ -647,6 +527,10 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
           out.write("\r\n");
           out.write("                                        <tr>\r\n");
           out.write("\r\n");
+          out.write("                                            <td>");
+          if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write("</td>\r\n");
           out.write("                                            <td>");
           if (_jspx_meth_c_out_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
@@ -671,15 +555,11 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
           if (_jspx_meth_c_out_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\r\n");
-          out.write("                                            <td>");
-          if (_jspx_meth_c_out_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
-            return true;
-          out.write("</td>\r\n");
           out.write("                                            <td> \r\n");
           out.write("                                                <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/inventory/update/form/user?userName=");
-          if (_jspx_meth_c_out_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+          if (_jspx_meth_c_out_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\" class=\"editBtn\">\r\n");
           out.write("                                                    <svg height=\"1em\" viewBox=\"0 0 512 512\">\r\n");
@@ -693,7 +573,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
           out.write("                                                <a data-href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/inventory/delete/user?userName=");
-          if (_jspx_meth_c_out_9((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+          if (_jspx_meth_c_out_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\" class=\"bin-button delete-link\">\r\n");
           out.write("                                                    <svg\r\n");
@@ -769,6 +649,24 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     return false;
   }
 
+  private boolean _jspx_meth_c_out_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_out_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.userName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
+    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+      return true;
+    }
+    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+    return false;
+  }
+
   private boolean _jspx_meth_c_out_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -777,7 +675,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_1 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_1.setPageContext(_jspx_page_context);
     _jspx_th_c_out_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.userName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.firstName} ${show.middleName} ${show.lastName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_1 = _jspx_th_c_out_1.doStartTag();
     if (_jspx_th_c_out_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_1);
@@ -795,7 +693,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_2 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_2.setPageContext(_jspx_page_context);
     _jspx_th_c_out_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.firstName} ${show.middleName} ${show.lastName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.address}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_2 = _jspx_th_c_out_2.doStartTag();
     if (_jspx_th_c_out_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_2);
@@ -813,7 +711,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_3 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_3.setPageContext(_jspx_page_context);
     _jspx_th_c_out_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.address}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.birthday}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_3 = _jspx_th_c_out_3.doStartTag();
     if (_jspx_th_c_out_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_3);
@@ -831,7 +729,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_4 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_4.setPageContext(_jspx_page_context);
     _jspx_th_c_out_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_4.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.birthday}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_4.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.mobileNumber}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_4 = _jspx_th_c_out_4.doStartTag();
     if (_jspx_th_c_out_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_4);
@@ -849,7 +747,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_5 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_5.setPageContext(_jspx_page_context);
     _jspx_th_c_out_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.mobileNumber}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.accountStatus}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_5 = _jspx_th_c_out_5.doStartTag();
     if (_jspx_th_c_out_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_5);
@@ -867,7 +765,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_6 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_6.setPageContext(_jspx_page_context);
     _jspx_th_c_out_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.accountStatus}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.loginStatus}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_6 = _jspx_th_c_out_6.doStartTag();
     if (_jspx_th_c_out_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_6);
@@ -885,7 +783,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_7 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_7.setPageContext(_jspx_page_context);
     _jspx_th_c_out_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.loginStatus}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.userName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_7 = _jspx_th_c_out_7.doStartTag();
     if (_jspx_th_c_out_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_7);
@@ -910,24 +808,6 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       return true;
     }
     _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_8);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_out_9(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:out
-    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_9 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
-    _jspx_th_c_out_9.setPageContext(_jspx_page_context);
-    _jspx_th_c_out_9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_9.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${show.userName}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_c_out_9 = _jspx_th_c_out_9.doStartTag();
-    if (_jspx_th_c_out_9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_9);
-      return true;
-    }
-    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_9);
     return false;
   }
 }

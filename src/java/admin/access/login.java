@@ -2,6 +2,7 @@ package admin.access;
 
 import admin.dao.UserDao;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -12,6 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class login extends HttpServlet {
+
+    private static final int MAX_ATTEMPTS = 3; // Maximum login attempts
+    private static final long LOCKOUT_TIME = 60000; //  (1 minute) or 300000 for 5 minutes
+    private static final HashMap<String, Integer> attempts = new HashMap<>();
+    private static final HashMap<String, Long> lockout = new HashMap<>();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -50,16 +56,39 @@ public class login extends HttpServlet {
         String userName = request.getParameter("userNamelog");
         String password = request.getParameter("passwordlog");
 
+        if (lockout.containsKey(userName) && lockout.get(userName) > System.currentTimeMillis()) {
+            // User is currently locked out
+            session.setAttribute("lockoutTime", lockout.get(userName));
+            response.sendRedirect(request.getContextPath() + "/login");
+            return;
+        }
+
         UserDao userdao = new UserDao();
         boolean loginUser = userdao.checkUserExists(userName, password);
 
         if (loginUser) {
+            // Reset attempts after successful login
+            attempts.remove(userName);
+            lockout.remove(userName);
             session.setAttribute("userNamelog", userName);
             session.setAttribute("userSuccess", "success");
             response.sendRedirect(request.getContextPath() + "/home");
         } else {
-            session.setAttribute("status", "failed");
-            response.sendRedirect(request.getContextPath() + "/login");
+            // Increment the attempt count
+            int attemptCount = attempts.getOrDefault(userName, 0) + 1;
+            attempts.put(userName, attemptCount);
+
+            if (attemptCount >= MAX_ATTEMPTS) {
+                // Lock the user out if the maximum attempts are reached
+                long lockoutExpiration = System.currentTimeMillis() + LOCKOUT_TIME;
+                lockout.put(userName, System.currentTimeMillis() + LOCKOUT_TIME);
+                attempts.remove(userName);
+                session.setAttribute("lockoutTime", lockoutExpiration);
+                response.sendRedirect(request.getContextPath() + "/login");
+            } else {
+                session.setAttribute("status", "failed");
+                response.sendRedirect(request.getContextPath() + "/login");
+            }
         }
     }
 }

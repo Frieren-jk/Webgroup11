@@ -68,6 +68,7 @@ public final class edit_005fusers_jsp extends org.apache.jasper.runtime.HttpJspB
     response.setDateHeader("Expires", 0); // Proxies
 
       out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("\r\n");

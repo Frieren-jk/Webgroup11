@@ -58,6 +58,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
     response.setDateHeader("Expires", 0); // Proxies
 
       out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");

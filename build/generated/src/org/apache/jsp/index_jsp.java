@@ -45,7 +45,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\r');
       out.write('\n');
 
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -83,8 +83,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
-      out.write("      \r\n");
       out.write("\r\n");
+      out.write("        <input type=\"hidden\" id=\"logstatus\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userSuccess}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" id=\"userNameCurrent\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
       out.write("        <!-- Search Start -->\r\n");
       out.write("        <div class=\"search-section section-padding-100\">\r\n");
       out.write("            <div class=\"search-close\">\r\n");
@@ -123,21 +128,21 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("\r\n");
       out.write("            <!-- Topbar Start -->\r\n");
-      out.write("                <div class=\"container-fluid\">\r\n");
-      out.write("                    <div class=\"row upbar\">\r\n");
-      out.write("                        <div class=\"col-lg-6 d-none d-lg-block\">\r\n");
-      out.write("                            <div class=\"d-inline-flex align-items-center\">\r\n");
-      out.write("                                <a class=\"text-light\"><i class=\"fa-solid fa-phone\"></i> Call Us: 0960-542-2186</a>\r\n");
-      out.write("                                <span class=\"text-light px-2\">|</span>\r\n");
-      out.write("                                <a class=\"text-light\"><i class=\"fa-solid fa-envelope\"></i> Our Email: furrealpetsupplies@gmail.com</a>\r\n");
-      out.write("                                <span class=\"text-light px-2\">|</span>\r\n");
-      out.write("                                <a style=\"color: #FBFF4B;\" href=\"");
+      out.write("            <div class=\"container-fluid\">\r\n");
+      out.write("                <div class=\"row upbar\">\r\n");
+      out.write("                    <div class=\"col-lg-6 d-none d-lg-block\">\r\n");
+      out.write("                        <div class=\"d-inline-flex align-items-center\">\r\n");
+      out.write("                            <a class=\"text-light\"><i class=\"fa-solid fa-phone\"></i> Call Us: 0960-542-2186</a>\r\n");
+      out.write("                            <span class=\"text-light px-2\">|</span>\r\n");
+      out.write("                            <a class=\"text-light\"><i class=\"fa-solid fa-envelope\"></i> Our Email: furrealpetsupplies@gmail.com</a>\r\n");
+      out.write("                            <span class=\"text-light px-2\">|</span>\r\n");
+      out.write("                            <a style=\"color: #FBFF4B;\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/physicalshop\">Visit our physical shop. <i class=\"fa-solid fa-location-dot\"></i></a>\r\n");
-      out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
       out.write("            <!-- Topbar End -->\r\n");
       out.write("\r\n");
       out.write("            <!-- Header Area Start -->\r\n");
@@ -407,9 +412,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("        </footer>\r\n");
-      out.write("\r\n");
-      out.write("        <!-- ##### Login Area Start ##### -->\r\n");
-      out.write("        <!-- ##### Login Area End ##### -->\r\n");
       out.write("        <!-- ##### Footer Area End ##### -->\r\n");
       out.write("\r\n");
       out.write("        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->\r\n");
@@ -431,7 +433,25 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>\r\n");
       out.write("        <script>\r\n");
       out.write("                                    $(document).ready(function () {\r\n");
-      out.write("                                       \r\n");
+      out.write("                                        var statusreg = $('#logstatus').val();\r\n");
+      out.write("                                        var username = $('#userNameCurrent').val();\r\n");
+      out.write("                                        if (statusreg === \"success\") {\r\n");
+      out.write("                                            Swal.fire({\r\n");
+      out.write("                                                icon: 'success',\r\n");
+      out.write("                                                title: 'Login Successful',\r\n");
+      out.write("                                                text: 'Welcome ' + username,\r\n");
+      out.write("                                                timer: 5000,\r\n");
+      out.write("                                                background: '#20c997',\r\n");
+      out.write("                                                color: '#fff',\r\n");
+      out.write("                                                iconColor: '#fff',\r\n");
+      out.write("                                                showConfirmButton: false,\r\n");
+      out.write("                                                timerProgressBar: true\r\n");
+      out.write("                                            }).then(function () {\r\n");
+      out.write("            ");
+ session.removeAttribute("userSuccess");
+      out.write(" // Clear the session attribute\r\n");
+      out.write("                                            });\r\n");
+      out.write("                                        }\r\n");
       out.write("                                    });\r\n");
       out.write("\r\n");
       out.write("        </script>\r\n");

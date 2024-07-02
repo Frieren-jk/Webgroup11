@@ -20,6 +20,7 @@
 
         <input type="hidden" id="status" value="${status}">
         <input type="hidden" id="statusreg" value="${regUser}">
+        <input type="hidden" id="lockoutTime" value="${sessionScope.lockoutTime}">
         <div class="container-fluid">
             <div class="row ">
                 <!-- IMAGE CONTAINER BEGIN -->
@@ -92,6 +93,7 @@
             $(document).ready(function () {
                 var status = $('#status').val();
                 var statusreg = $('#statusreg').val();
+                var lockoutTime = $('#lockoutTime').val();
 
                 if (status === "failed") {
                     Swal.fire({
@@ -123,6 +125,34 @@
                     }).then(function () {
             <% session.removeAttribute("regUser");%> // Clear the session attribute
                     });
+                }
+                
+                if (lockoutTime) {
+                    var currentTime = new Date().getTime();
+                    var remainingTime = lockoutTime - currentTime;
+
+                    if (remainingTime > 0) {
+                        var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Account Locked',
+                            text: 'Your account is locked. Please try again in ' + minutes + ' minutes and ' + seconds + ' seconds. Or\n\
+        you can use another account',
+                            toast: true,
+                            position: 'top-end',
+                            timer: remainingTime,
+                            timerProgressBar: true,
+                            showConfirmButton: false,
+                            background: '#dc3545',
+                            color: '#fff',
+                            iconColor: '#fff',
+                            willClose: () => {
+                                location.reload();
+                            }
+                        });
+                    }
                 }
 
                 $('#loginForm').submit(function (event) {

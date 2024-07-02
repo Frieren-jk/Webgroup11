@@ -411,55 +411,6 @@
                 </div>
             </div>
         </footer>
-
-        <!-- ##### Login Area Start ##### -->
-        <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">x</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-title text-center">
-                            <h4>LOGIN</h4>
-                        </div>
-                        <div class="d-flex flex-column text-center">
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter a username.
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter your password.
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <button type='submit' form="Loginform" class="btn btn-info btn-block btn-round d-block  buttonfx angleindouble">Log In</button>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ##### Login Area End ##### -->
         <!-- ##### Footer Area End ##### -->
 
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->

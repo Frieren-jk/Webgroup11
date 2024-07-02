@@ -7,10 +7,15 @@
         <link href="css/Another.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Tab Icon  -->
+        <link rel="icon" href="img/core-img/iconlight.png">
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     </head>
+
     <body>
 
         <input type="hidden" id="status" value="${status}">
@@ -58,32 +63,32 @@
                                 <button type="submit" class="btn btn-block">Log In</button>
                             </div>
                             <div class="text-right ">
-                                <a href="reset.html" class="forget-link">Forgot password?</a>
+                                <a href="#" class="forget-link">Forgot password?</a>
                             </div>
                             <div class="text-center mb-2">
                                 <div class="text-center mb-2 text-white">or login with</div>
 
                                 <!-- Facebook Button -->
-                                <a href="" class="btn btn-social btn-facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
+                                <a href="https://www.facebook.com/" class="btn btn-social btn-facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
 
                                 <!-- Google Button -->
-                                <a href="" class="btn btn-social btn-google"><i class="fa-brands fa-google"></i> Google</a>
+                                <a href="https://google.com/" class="btn btn-social btn-google"><i class="fa-brands fa-google"></i> Google</a>
 
                                 <!-- Twitter Button -->
-                                <a href="" class="btn btn-social btn-twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter</a>
+                                <a href="https://x.com/" class="btn btn-social btn-twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter</a>
                             </div>
                             <div class="text-center mb-5 text-white">Don't have an account? 
-                                <a class="register-link" href="${pageContext.request.contextPath}/registration">Register here</a>
+                                <a class="register-link" href="${pageContext.request.contextPath}/registration">Register here</a>.
                             </div>
                         </form>
                     </div>					
                 </div>
                 <!-- FORM CONTAINER END -->
             </div>
-        </div>	
+        </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-
             $(document).ready(function () {
                 var status = $('#status').val();
                 var statusreg = $('#statusreg').val();
@@ -145,7 +150,7 @@
                     }
                 });
             });
-
         </script>
     </body>
+
 </html>

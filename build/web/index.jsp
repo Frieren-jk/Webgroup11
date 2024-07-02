@@ -310,9 +310,6 @@
                 </div>
             </div>
         </footer>
-
-        <!-- ##### Login Area Start ##### -->
-        <!-- ##### Login Area End ##### -->
         <!-- ##### Footer Area End ##### -->
 
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
@@ -339,8 +336,8 @@
                                         if (statusreg === "success") {
                                             Swal.fire({
                                                 icon: 'success',
-                                                title: 'Log-in Success',
-                                                text: 'Welcome User ' + username,
+                                                title: 'Login Successful',
+                                                text: 'Welcome ' + username,
                                                 timer: 5000,
                                                 background: '#20c997',
                                                 color: '#fff',

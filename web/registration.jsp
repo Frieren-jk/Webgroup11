@@ -151,6 +151,7 @@
                                             </div>
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="signup-section">Already have an account? <a href="${pageContext.request.contextPath}/login" class="text-info">Login here</a>.</div>
+                                                <div class="signup-section">Already logged in? <a href="${pageContext.request.contextPath}/home" class="text-success">Go to Homepage</a>.</div>
                                             </div>
                                         </div> 
                                     </form>

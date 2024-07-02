@@ -1,3 +1,17 @@
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    session = request.getSession(false);
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+%>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -36,27 +50,8 @@
 
     <body>
 
-        <%-- Debugging statement to check the value of 'success' --%>
 
-        <c:if test="${addUser == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToastEdit" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-success">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${addUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastSuccess">
-                        USER "<c:out value="${userName}" />" WAS SUCCESSFULLY ADDED
-                        DEFAULT PASSWORD: Secret@123
-                    </div>
-                </div>
-            </div>
-        </c:if>
-
-        <input type="hidden" id="addUser" value="${addUser}"
+        <input type="hidden" id="addUser" value="${addUser}">
         <input type="hidden" id="editStatus" value="${editUser}">
 
 
@@ -163,7 +158,7 @@
 
                     <div class="registration-form-wrapper pt-auto" id="table1">
                         <div class="table-responsive">
-                            <table id="myTable" class="table row-border order-column table-hover">
+                            <table id="myTable" class="table row-border order-column table-hover" >
                                 <thead>
                                     <tr>
                                         <th>User</th>
@@ -410,17 +405,31 @@
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'Edit Success',
-                                                text: 'Username was successfully edited'
+                                                text: 'Username was successfully edited',
+                                                timer: 4000,
+                                                background: '#20c997',
+                                                toast: true,
+                                                color: '#fff',
+                                                position: 'top-end',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
                                             }).then(function () {
             <% session.removeAttribute("editUser");%>
                                             });
                                         }
-                                        
+
                                         if (add === "success") {
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'User Added',
-                                                text: 'User was successfully added to the inventory'
+                                                text: 'User was successfully added to the inventory',
+                                                timer: 4000,
+                                                background: '#20c997',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
                                             }).then(function () {
             <% session.removeAttribute("addUser");%>
                                             });
@@ -450,7 +459,13 @@
                                                         Swal.fire({
                                                             title: "Deleted!",
                                                             text: "User has been deleted.",
-                                                            icon: "success"
+                                                            icon: "success",
+                                                            timer: 4000,
+                                                            background: '#20c997',
+                                                            color: '#fff',
+                                                            iconColor: '#fff',
+                                                            showConfirmButton: false,
+                                                            timerProgressBar: true
                                                         }).then(() => {
                                                             // Redirect to the href if confirmed
                                                             window.location.href = href;

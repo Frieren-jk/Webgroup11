@@ -12,7 +12,7 @@ $(document).ready(function () {
         firstname: /^(?=[a-zA-Z\s]*[a-zA-Z])[a-zA-Z\s]{1,}$/i,
         middlename: /^[a-zA-Z\s]*$/i,
         lastname: /^[a-zA-Z\s]{2,}$/i,
-        address: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d ]+$/i,
+        address: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d. ]+$/i,
         birthday: /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(19[2-9][0-9]|200[0-5])$/i,
         number: /^09[0-9]{9}$/i,
         password: /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/,

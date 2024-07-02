@@ -1,3 +1,18 @@
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    session = request.getSession(false); 
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 

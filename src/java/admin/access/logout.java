@@ -1,5 +1,6 @@
 package admin.access;
 
+import admin.dao.UserDao;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,17 +15,21 @@ public class logout extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false); // don't create session if it doesn't exist
-
+        
         if (session != null) {
+            String userName = (String) session.getAttribute("userNamelog");
+            if (userName != null) {
+                UserDao userDao = new UserDao();
+                userDao.updateLoginStatus(userName);
+            }
             session.invalidate(); // invalidate the session
         }
 
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
         response.setHeader("Pragma", "no-cache"); // HTTP 1.0
         response.setDateHeader("Expires", 0); // Proxies
-        
-        
-        response.sendRedirect(request.getContextPath() + "/login"); 
+
+        response.sendRedirect(request.getContextPath() + "/login");
 
     }
 

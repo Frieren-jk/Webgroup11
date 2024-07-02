@@ -79,7 +79,7 @@ public class registration extends HttpServlet {
 
                 session.setAttribute("regUser", "success");
                 session.setAttribute("userName", userName);
-                response.sendRedirect(request.getContextPath() + "/home");
+                response.sendRedirect(request.getContextPath() + "/login");
                 
             } else {
 

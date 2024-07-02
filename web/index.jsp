@@ -1,6 +1,6 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -37,8 +37,9 @@
     </head>
 
     <body>
-       <input type="hidden" id="status" value="${regUser}">
 
+        <input type="hidden" id="logstatus" value="${userSuccess}">
+        <input type="hidden" id="userNameCurrent" value="${userNamelog}">
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -75,19 +76,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -333,14 +334,22 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
                                     $(document).ready(function () {
-                                        var status = $('#status').val();
-                                        console.log("Status value: " + status);
-                                        if (status === "success") {
+                                        var statusreg = $('#logstatus').val();
+                                        var username = $('#userNameCurrent').val();
+                                        if (statusreg === "success") {
                                             Swal.fire({
                                                 icon: 'success',
-                                                title: 'Success',
-                                                text: 'User successfully created!'
-                                            })
+                                                title: 'Log-in Success',
+                                                text: 'Welcome User ' + username,
+                                                timer: 5000,
+                                                background: '#20c997',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
+                                            }).then(function () {
+            <% session.removeAttribute("userSuccess");%> // Clear the session attribute
+                                            });
                                         }
                                     });
 

@@ -2,6 +2,7 @@ package admin.access;
 
 import admin.dao.UserDao;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,6 +29,16 @@ public class login extends HttpServlet {
             case "/login":
                 viewLogin(request, response);
                 break;
+            case "/changePassword":
+            {
+                try {
+                    changePassword(request, response);
+                } catch (SQLException ex) {
+                    Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+                break;
+
             case "/user":
                 try {
                     logUser(request, response);
@@ -49,6 +60,27 @@ public class login extends HttpServlet {
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/log-in.jsp");
         rd.forward(request, response);
     }
+
+    private void changePassword(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        
+        
+        String username = request.getParameter("username");
+        String newPassword = request.getParameter("newPassword");
+        
+        System.out.println(username + newPassword);
+        UserDao userDao = new UserDao();
+        boolean passwordChanged = userDao.changePass(username, newPassword);
+         if (passwordChanged) {
+           System.out.println("Success Change Password");
+            response.sendRedirect(request.getContextPath() + "/home");
+        } else {
+            System.out.println("Success Change Password");
+            response.sendRedirect(request.getContextPath() + "/home");
+        }
+    }
+    
+    
 
     private void logUser(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {

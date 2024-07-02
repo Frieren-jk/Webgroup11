@@ -87,4 +87,25 @@ public class UserDao {
             }
         }
     }
+
+    public boolean changePass(String username, String newPassword) throws SQLException {
+        boolean rowsDeleted = false;
+        Connection conn;
+        PreparedStatement ps;
+        String query = "UPDATE employee SET password = ? WHERE userName = ?";
+        try {
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, newPassword);
+            ps.setString(2, username);
+
+            rowsDeleted = ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            System.out.println("SELECT USER BY ID error: " + e);
+        }
+        return rowsDeleted;
+    }
+    
+    
 }

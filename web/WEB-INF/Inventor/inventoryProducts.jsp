@@ -1,3 +1,17 @@
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    session = request.getSession(false);
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+%>
 <!DOCTYPE html>
 
 
@@ -38,9 +52,9 @@
     </head>
 
     <body>
-       
 
-      
+
+
         <input type="hidden" id="editStatus" value="${editProduct}">
         <input type="hidden" id="addProduct" value="${addProduct}">
 
@@ -386,7 +400,15 @@
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'Edit Success',
-                                                text: 'Product was successfully edited'
+                                                text: 'Product was successfully edited',
+                                                timer: 4000,
+                                                background: '#20c997',
+                                                toast: true,
+                                                color: '#fff',
+                                                position: 'top-end',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
                                             }).then(function () {
             <% session.removeAttribute("editProduct");%>
                                             });
@@ -396,7 +418,13 @@
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'Product Added',
-                                                text: 'Product was successfully added to the inventory'
+                                                text: 'Product was successfully added to the inventory',
+                                                timer: 4000,
+                                                background: '#20c997',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
                                             }).then(function () {
             <% session.removeAttribute("addProduct");%>
                                             });
@@ -424,8 +452,14 @@
                                                     if (result.isConfirmed) {
                                                         Swal.fire({
                                                             title: "Deleted!",
-                                                            text: "User has been deleted.",
-                                                            icon: "success"
+                                                            text: "Product has been deleted.",
+                                                            icon: "success",
+                                                            timer: 4000,
+                                                            background: '#20c997',
+                                                            color: '#fff',
+                                                            iconColor: '#fff',
+                                                            showConfirmButton: false,
+                                                            timerProgressBar: true
                                                         }).then(() => {
                                                             // Redirect to the href if confirmed
                                                             window.location.href = href;

@@ -3,6 +3,7 @@ package org.apache.jsp.WEB_002dINF.Inventor;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import javax.servlet.http.HttpSession;
 
 public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -57,6 +58,22 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\r');
+      out.write('\n');
+
+    session = request.getSession(false); 
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html lang=\"en\">\r\n");
@@ -111,7 +128,9 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
         return;
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
+      out.write("        <input type=\"hidden\" id=\"addUser\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addUser}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"\r\n");
       out.write("        <input type=\"hidden\" id=\"editStatus\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${editUser}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
@@ -270,7 +289,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\r\n");
       out.write("                    <div class=\"registration-form-wrapper pt-auto\" id=\"table1\">\r\n");
       out.write("                        <div class=\"table-responsive\">\r\n");
-      out.write("                            <table id=\"myTable\" class=\"table row-border order-column table-hover\">\r\n");
+      out.write("                            <table id=\"myTable\" class=\"table row-border order-column table-hover\" >\r\n");
       out.write("                                <thead>\r\n");
       out.write("                                    <tr>\r\n");
       out.write("                                        <th>User</th>\r\n");
@@ -465,15 +484,29 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\r\n");
       out.write("                                    $(document).ready(function () {\r\n");
       out.write("                                        $('#myTable').DataTable();\r\n");
-      out.write("                                        var status = $('#edotStatus').val();\r\n");
-      out.write("                                        if (status === true) {\r\n");
+      out.write("\r\n");
+      out.write("                                        var status = $('#editStatus').val();\r\n");
+      out.write("                                        var add = $('#addUser').val();\r\n");
+      out.write("                                        if (status === \"success\") {\r\n");
       out.write("                                            Swal.fire({\r\n");
-      out.write("                                                icon: 'Success',\r\n");
+      out.write("                                                icon: 'success',\r\n");
       out.write("                                                title: 'Edit Success',\r\n");
       out.write("                                                text: 'Username was successfully edited'\r\n");
       out.write("                                            }).then(function () {\r\n");
       out.write("            ");
- session.removeAttribute("status");
+ session.removeAttribute("editUser");
+      out.write("\r\n");
+      out.write("                                            });\r\n");
+      out.write("                                        }\r\n");
+      out.write("                                        \r\n");
+      out.write("                                        if (add === \"success\") {\r\n");
+      out.write("                                            Swal.fire({\r\n");
+      out.write("                                                icon: 'success',\r\n");
+      out.write("                                                title: 'User Added',\r\n");
+      out.write("                                                text: 'User was successfully added to the inventory'\r\n");
+      out.write("                                            }).then(function () {\r\n");
+      out.write("            ");
+ session.removeAttribute("addUser");
       out.write("\r\n");
       out.write("                                            });\r\n");
       out.write("                                        }\r\n");

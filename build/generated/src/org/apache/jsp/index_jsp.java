@@ -83,9 +83,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
-      out.write("       <input type=\"hidden\" id=\"status\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${regUser}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\">\r\n");
+      out.write("      \r\n");
       out.write("\r\n");
       out.write("        <!-- Search Start -->\r\n");
       out.write("        <div class=\"search-section section-padding-100\">\r\n");
@@ -433,15 +431,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>\r\n");
       out.write("        <script>\r\n");
       out.write("                                    $(document).ready(function () {\r\n");
-      out.write("                                        var status = $('#status').val();\r\n");
-      out.write("                                        console.log(\"Status value: \" + status);\r\n");
-      out.write("                                        if (status === \"success\") {\r\n");
-      out.write("                                            Swal.fire({\r\n");
-      out.write("                                                icon: 'success',\r\n");
-      out.write("                                                title: 'Success',\r\n");
-      out.write("                                                text: 'User successfully created!'\r\n");
-      out.write("                                            })\r\n");
-      out.write("                                        }\r\n");
+      out.write("                                       \r\n");
       out.write("                                    });\r\n");
       out.write("\r\n");
       out.write("        </script>\r\n");

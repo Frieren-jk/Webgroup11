@@ -41,6 +41,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");

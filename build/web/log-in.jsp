@@ -14,7 +14,7 @@
     <body>
 
         <input type="hidden" id="status" value="${status}">
-
+        <input type="hidden" id="statusreg" value="${regUser}">
         <div class="container-fluid">
             <div class="row ">
                 <!-- IMAGE CONTAINER BEGIN -->
@@ -32,15 +32,17 @@
                             <h4>Login to your account</h4>
                         </div>
                         <!-- Form -->
-                        <form class="px-3" method="post" action="${pageContext.request.contextPath}/user">
+                        <form class="px-3 needs-validation" id="loginForm" method="post" action="${pageContext.request.contextPath}/user" novalidate>
                             <!-- Input Box -->
                             <div class="form-input">
                                 <span><i class="fa fa-user"></i></span>
-                                <input type="text" name="userNamelog" placeholder="Type your Username" required>
+                                <input type="text" name="userNamelog" id="userNamelog" placeholder="Type your Username" class="form-control" required>
+                                <div class="invalid-feedback">Please enter your username.</div>
                             </div>
                             <div class="form-input">
                                 <span><i class="fa fa-lock"></i></span>
-                                <input type="password" name="passwordlog" placeholder="Type your Password" required>
+                                <input type="password" name="passwordlog" id="passwordlog" placeholder="Type your Password" class="form-control" required>
+                                <div class="invalid-feedback">Please enter your password.</div>
                             </div>
                             <div class="row mb-3">
                                 <!-- Remember Checkbox -->
@@ -84,17 +86,66 @@
 
             $(document).ready(function () {
                 var status = $('#status').val();
-                console.log("Status value: " + status);
+                var statusreg = $('#statusreg').val();
+
                 if (status === "failed") {
                     Swal.fire({
                         icon: 'error',
                         title: 'Error Login',
-                        text: 'Your username and password does not match!'
+                        text: 'Your username and password does not match!',
+                        timer: 3000,
+                        background: '#dc3545 ',
+                        color: '#fff',
+                        iconColor: '#fff',
+                        showConfirmButton: false,
+                        timerProgressBar: true
                     }).then(function () {
             <% session.removeAttribute("status");%> // Clear the session attribute
                     });
                 }
+
+                if (statusreg === "success") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'User successfully created!',
+                        timer: 5000,
+                        background: '#20c997',
+                        color: '#fff',
+                        iconColor: '#fff',
+                        showConfirmButton: false,
+                        timerProgressBar: true
+                    }).then(function () {
+            <% session.removeAttribute("regUser");%> // Clear the session attribute
+                    });
+                }
+
+                $('#loginForm').submit(function (event) {
+                    if (this.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        // Trigger Bootstrap's default invalid-feedback display
+
+
+                        // Optionally, show a SweetAlert for empty required fields
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Empty Fields',
+                            text: 'Please fill out all required fields.',
+                            toast: true,
+                            background: '#dc3545 ',
+                            color: '#fff',
+                            iconColor: '#fff',
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true
+                        });
+                    }
+                });
             });
+
         </script>
     </body>
 </html>

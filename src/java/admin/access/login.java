@@ -55,6 +55,7 @@ public class login extends HttpServlet {
 
         if (loginUser) {
             session.setAttribute("userNamelog", userName);
+            session.setAttribute("userSuccess", "success");
             response.sendRedirect(request.getContextPath() + "/home");
         } else {
             session.setAttribute("status", "failed");

@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import org.apache.catalina.User;
+
 
 /**
  *
@@ -28,7 +28,6 @@ public class EmployeeDao {
             + "address, "
             + "birthday, "
             + "mobileNumber from employee where userName = ? ";
-    private static final String SELECT_ALL_USER = "select * from employee";
     private static final String DELETE_USER = "delete from employee where userName = ?;";
     private static final String UPDATE_USER = "UPDATE employee SET "
             + "password=?, "

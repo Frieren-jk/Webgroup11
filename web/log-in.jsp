@@ -90,7 +90,9 @@
                         icon: 'error',
                         title: 'Error Login',
                         text: 'Your username and password does not match!'
-                    })
+                    }).then(function () {
+            <% session.removeAttribute("status");%> // Clear the session attribute
+                    });
                 }
             });
         </script>

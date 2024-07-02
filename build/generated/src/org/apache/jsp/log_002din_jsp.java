@@ -139,7 +139,11 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        icon: 'error',\r\n");
       out.write("                        title: 'Error Login',\r\n");
       out.write("                        text: 'Your username and password does not match!'\r\n");
-      out.write("                    })\r\n");
+      out.write("                    }).then(function () {\r\n");
+      out.write("            ");
+ session.removeAttribute("status");
+      out.write(" // Clear the session attribute\r\n");
+      out.write("                    });\r\n");
       out.write("                }\r\n");
       out.write("            });\r\n");
       out.write("        </script>\r\n");

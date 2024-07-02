@@ -12,16 +12,20 @@ public class logout extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession(false); // don't create session if it doesn't exist
-        
+
         if (session != null) {
             session.invalidate(); // invalidate the session
         }
+
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+        response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+        response.setDateHeader("Expires", 0); // Proxies
         
-        // Redirect to the login page after logout
-        response.sendRedirect(request.getContextPath() + "/login"); // or wherever your login page is
         
+        response.sendRedirect(request.getContextPath() + "/login"); 
+
     }
 
     @Override

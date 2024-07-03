@@ -28,14 +28,14 @@
     <body>
         <input type="hidden" id="status" value="${regUser}">
 
-            <div class="cart-table-area section-padding-100 ">
+            <div class="regis-table-area section-padding-100 ">
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-12">
                             <div class="checkout_details_area clearfix">
 
                                 <div class="cart-title">
-                                    <center><h1><b>REGISTRATION FORM</b></h1></center>
+                                    <center><h1><b style="color: steelblue;">REGISTRATION FORM</b></h1></center>
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form method="POST" action="${pageContext.request.contextPath}/registration/add" class="py-3 needs-validation" id="regform" novalidate>

@@ -40,6 +40,7 @@
 
         <input type="hidden" id="logstatus" value="${userSuccess}">
         <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+         <input type="hidden" id="passwordCurrent" value="${currentPassword}">
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -356,19 +357,33 @@
                                             event.preventDefault(); // Prevent default form submission behavior
 
                                             Swal.fire({
-                                                title: 'Change Password for ' +username,
+                                                title: 'Change Password for ' + username,
                                                 html: `
-            <form id="changePasswordForm">
-                <input type="hidden" name="username" value="${userNamelog}">
-                <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
-                <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
-            </form>
-        `,
+                <form id="changePasswordForm">
+                    <input type="hidden" name="username" value="${userNamelog}">
+                    <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                    <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                </form>
+            `,
                                                 confirmButtonText: 'Change',
                                                 focusConfirm: false,
+                                                didOpen: () => {
+                                                    const popup = Swal.getPopup();
+                                                    const newPasswordInput = popup.querySelector('#newPassword');
+                                                    const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');
+
+                                                    newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                    confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                },
                                                 preConfirm: () => {
                                                     const newPassword = document.getElementById('newPassword').value;
                                                     const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                                                    var currentPassword = $('#passwordCurrent').val(); // assume you have a way to get the current user's password
+
+                                                    if (newPassword === currentPassword) {
+                                                        Swal.showValidationMessage('New password cannot be the same as the current password');
+                                                        return false;
+                                                    }
 
                                                     if (!newPassword || !confirmNewPassword) {
                                                         Swal.showValidationMessage('Please fill out all fields');
@@ -376,7 +391,7 @@
                                                     }
 
                                                     if (newPassword !== confirmNewPassword) {
-                                                        Swal.showValidationMessage('Passwords do not match!');
+                                                        Swal.showValidationMessage('Passwords do not match');
                                                         return false;
                                                     }
 

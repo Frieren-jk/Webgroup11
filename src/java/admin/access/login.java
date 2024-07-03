@@ -103,6 +103,7 @@ public class login extends HttpServlet {
             attempts.remove(userName);
             lockout.remove(userName);
             session.setAttribute("userNamelog", userName);
+             session.setAttribute("currentPassword", password);
             session.setAttribute("userSuccess", "success");
             response.sendRedirect(request.getContextPath() + "/home");
         } else {

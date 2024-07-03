@@ -80,7 +80,7 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                            <div class=\"checkout_details_area clearfix\">\r\n");
       out.write("\r\n");
       out.write("                                <div class=\"cart-title\">\r\n");
-      out.write("                                    <center><h1>REGISTRATION FORM</h1></center>\r\n");
+      out.write("                                    <center><h1><b>REGISTRATION FORM</b></h1></center>\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"registration-form-wrapper\">\r\n");
       out.write("                                    <form method=\"POST\" action=\"");
@@ -179,8 +179,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            <div class=\"col-12 col-md-4 me-auto mt-5 \">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
       out.write("                                                    <label for=\"birthday\">Birthday</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control bday\" id=\"birthday\" name=\"birthday\" placeholder=\"Enter your Birthday MM-DD-YYYY (2005)\"   required>\r\n");
-      out.write("                                                    <small id=\"birthdayHelp\" class=\"form-text\">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>\r\n");
+      out.write("                                                    <input type=\"text\" class=\"form-control bday\" id=\"birthday\" name=\"birthday\" placeholder=\"Enter your Birthday MM-DD-YYYY (< 2005)\"   required>\r\n");
+      out.write("                                                    <small id=\"birthdayHelp\" class=\"form-text\">Birthday format must be MM-DD-YYYY. Make sure you are at legal age (2005 below).</small>\r\n");
       out.write("                                                    <div class=\"invalid-feedback\">\r\n");
       out.write("                                                        Please pick your Birthday.\r\n");
       out.write("                                                    </div>\r\n");

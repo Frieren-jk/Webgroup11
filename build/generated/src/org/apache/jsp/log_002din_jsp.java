@@ -82,7 +82,7 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"col-lg-9 col-md-12 col-sm-9 col-xs-12 infinity-form\">\r\n");
       out.write("                        <!-- Company Logo -->\r\n");
       out.write("                        <div class=\"text-center mb-3 mt-5\">\r\n");
-      out.write("                            <img src=\"img/core-img/logotransparent.png\" width=\"150px\">\r\n");
+      out.write("                            <img src=\"img/core-img/logodark.png\" width=\"150px\">\r\n");
       out.write("                        </div>\r\n");
       out.write("                        <div class=\"text-center mb-4\">\r\n");
       out.write("                            <h4>Login to your account</h4>\r\n");
@@ -197,7 +197,7 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            icon: 'warning',\r\n");
       out.write("                            title: 'Account Locked',\r\n");
       out.write("                            text: 'Your account is locked. Please try again in ' + minutes + ' minutes and ' + seconds + ' seconds. Or\\n\\\r\n");
-      out.write("        you can use another account',\r\n");
+      out.write("        you can use another account.',\r\n");
       out.write("                            toast: true,\r\n");
       out.write("                            position: 'top-end',\r\n");
       out.write("                            timer: remainingTime,\r\n");

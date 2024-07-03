@@ -337,7 +337,7 @@
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'Login Successful',
-                                                text: 'Welcome ' + username,
+                                                text: 'Welcome, ' + username,
                                                 timer: 5000,
                                                 background: '#20c997',
                                                 color: '#fff',
@@ -376,7 +376,7 @@
                                                     }
 
                                                     if (newPassword !== confirmNewPassword) {
-                                                        Swal.showValidationMessage('Passwords do not match');
+                                                        Swal.showValidationMessage('Passwords do not match!');
                                                         return false;
                                                     }
 

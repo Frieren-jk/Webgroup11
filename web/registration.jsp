@@ -35,7 +35,7 @@
                             <div class="checkout_details_area clearfix">
 
                                 <div class="cart-title">
-                                    <center><h1>REGISTRATION FORM</h1></center>
+                                    <center><h1><b>REGISTRATION FORM</b></h1></center>
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form method="POST" action="${pageContext.request.contextPath}/registration/add" class="py-3 needs-validation" id="regform" novalidate>
@@ -132,8 +132,8 @@
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
                                                     <label for="birthday">Birthday</label>
-                                                    <input type="text" class="form-control bday" id="birthday" name="birthday" placeholder="Enter your Birthday MM-DD-YYYY (2005)"   required>
-                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>
+                                                    <input type="text" class="form-control bday" id="birthday" name="birthday" placeholder="Enter your Birthday MM-DD-YYYY (< 2005)"   required>
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age (2005 below).</small>
                                                     <div class="invalid-feedback">
                                                         Please pick your Birthday.
                                                     </div>

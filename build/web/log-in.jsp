@@ -33,7 +33,7 @@
                     <div class="col-lg-9 col-md-12 col-sm-9 col-xs-12 infinity-form">
                         <!-- Company Logo -->
                         <div class="text-center mb-3 mt-5">
-                            <img src="img/core-img/logotransparent.png" width="150px">
+                            <img src="img/core-img/logodark.png" width="150px">
                         </div>
                         <div class="text-center mb-4">
                             <h4>Login to your account</h4>
@@ -140,7 +140,7 @@
                             icon: 'warning',
                             title: 'Account Locked',
                             text: 'Your account is locked. Please try again in ' + minutes + ' minutes and ' + seconds + ' seconds. Or\n\
-        you can use another account',
+        you can use another account.',
                             toast: true,
                             position: 'top-end',
                             timer: remainingTime,

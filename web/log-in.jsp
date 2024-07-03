@@ -81,6 +81,9 @@
                             </div>
                             <div class="text-center mb-5 text-white">Don't have an account? 
                                 <a class="register-link" href="${pageContext.request.contextPath}/registration">Register here</a>.
+                                <div class="text-center mb-5 text-white">Already logged in? 
+                                    <a class="register-link" href="${pageContext.request.contextPath}/home">Go to Homepage</a>.
+                                </div>
                             </div>
                         </form>
                     </div>					

@@ -40,6 +40,7 @@
 
         <input type="hidden" id="logstatus" value="${userSuccess}">
         <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+         <input type="hidden" id="passwordCurrent" value="${currentPassword}">
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -108,7 +109,7 @@
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog}</a>
-                        <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
+                        <a href="#" id="changePasswordBtn" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
@@ -310,9 +311,6 @@
                 </div>
             </div>
         </footer>
-
-        <!-- ##### Login Area Start ##### -->
-        <!-- ##### Login Area End ##### -->
         <!-- ##### Footer Area End ##### -->
 
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
@@ -339,8 +337,8 @@
                                         if (statusreg === "success") {
                                             Swal.fire({
                                                 icon: 'success',
-                                                title: 'Log-in Success',
-                                                text: 'Welcome User ' + username,
+                                                title: 'Login Successful',
+                                                text: 'Welcome, ' + username,
                                                 timer: 5000,
                                                 background: '#20c997',
                                                 color: '#fff',
@@ -351,7 +349,90 @@
             <% session.removeAttribute("userSuccess");%> // Clear the session attribute
                                             });
                                         }
+
+
+
+
+                                        $('#changePasswordBtn').click(function (event) {
+                                            event.preventDefault(); // Prevent default form submission behavior
+
+                                            Swal.fire({
+                                                title: 'Change Password for ' + username,
+                                                html: `
+                <form id="changePasswordForm">
+                    <input type="hidden" name="username" value="${userNamelog}">
+                    <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                    <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                </form>
+            `,
+                                                confirmButtonText: 'Change',
+                                                focusConfirm: false,
+                                                didOpen: () => {
+                                                    const popup = Swal.getPopup();
+                                                    const newPasswordInput = popup.querySelector('#newPassword');
+                                                    const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');
+
+                                                    newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                    confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                },
+                                                preConfirm: () => {
+                                                    const newPassword = document.getElementById('newPassword').value;
+                                                    const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                                                    var currentPassword = $('#passwordCurrent').val(); // assume you have a way to get the current user's password
+
+                                                    if (newPassword === currentPassword) {
+                                                        Swal.showValidationMessage('New password cannot be the same as the current password');
+                                                        return false;
+                                                    }
+
+                                                    if (!newPassword || !confirmNewPassword) {
+                                                        Swal.showValidationMessage('Please fill out all fields');
+                                                        return false;
+                                                    }
+
+                                                    if (newPassword !== confirmNewPassword) {
+                                                        Swal.showValidationMessage('Passwords do not match');
+                                                        return false;
+                                                    }
+
+                                                    const passwordRegex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/;
+                                                    if (!passwordRegex.test(newPassword)) {
+                                                        Swal.showValidationMessage('8-16 characters long, with at least one lowercase letter, one uppercase letter, and one number');
+                                                        return false;
+                                                    }
+
+                                                    // Submit the form using AJAX to prevent default submission behavior
+                                                    $.ajax({
+                                                        type: 'POST',
+                                                        url: '${pageContext.request.contextPath}/changePassword',
+                                                        data: $('#changePasswordForm').serialize(),
+                                                        success: function () {
+                                                            // Show success alert
+                                                            Swal.fire({
+                                                                icon: 'success',
+                                                                title: 'Password Changed',
+                                                                text: 'Your password has been successfully changed!',
+                                                                showConfirmButton: true,
+                                                                timer: 0
+                                                            }).then((result) => {
+                                                                if (result.isConfirmed) {
+                                                                    // Redirect to home page after success
+                                                                    window.location.href = '${pageContext.request.contextPath}/home';
+                                                                }
+                                                            });
+                                                        },
+                                                        error: function (xhr, status, error) {
+                                                            Swal.showValidationMessage(`Error: ${error}`);
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        });
                                     });
+
+
+
+
 
         </script>
 

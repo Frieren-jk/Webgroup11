@@ -14,11 +14,8 @@
 %>
 <!DOCTYPE html>
 
-
 <html lang="en">
-
     <head>
-
         <meta charset="UTF-8">
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,18 +43,12 @@
         <script defer src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/core-style.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">     
-
-
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Custom11Css.css">
     </head>
 
     <body>
-
-
-
         <input type="hidden" id="editStatus" value="${editProduct}">
         <input type="hidden" id="addProduct" value="${addProduct}">
-
 
         <div class="main-content-wrapper d-flex clearfix">
 
@@ -263,14 +254,9 @@
                             </table>
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
-
-
 
         <!-- ##### Footer Area End ##### -->
         <footer class="footer_area clearfix w-100">
@@ -325,55 +311,7 @@
                 </div>
             </div>
         </footer>
-        <!-- ##### Login Area Start ##### -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">x</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-title text-center">
-                            <h4>LOGIN</h4>
-                        </div>
-                        <div class="d-flex flex-column text-center">
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter a username.
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter your password.
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ##### Login Area End ##### -->
-
+        
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
         <script src="js/jquery/jQuery v3.7.1.min.js"></script>
 
@@ -399,8 +337,8 @@
                                         if (status === "success") {
                                             Swal.fire({
                                                 icon: 'success',
-                                                title: 'Edit Success',
-                                                text: 'Product was successfully edited',
+                                                title: 'Edit successfully',
+                                                text: 'Product was successfully edited.',
                                                 timer: 4000,
                                                 background: '#20c997',
                                                 toast: true,
@@ -418,7 +356,7 @@
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'Product Added',
-                                                text: 'Product was successfully added to the inventory',
+                                                text: 'Product was successfully added to the inventory.',
                                                 timer: 4000,
                                                 background: '#20c997',
                                                 color: '#fff',
@@ -469,8 +407,6 @@
                                             });
                                         });
                                     });
-
-
         </script>
     </body>
 

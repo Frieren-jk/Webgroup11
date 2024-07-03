@@ -28,14 +28,14 @@
     <body>
         <input type="hidden" id="status" value="${regUser}">
 
-            <div class="cart-table-area section-padding-100 ">
+            <div class="regis-table-area section-padding-100 ">
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-12">
                             <div class="checkout_details_area clearfix">
 
                                 <div class="cart-title">
-                                    <center><h1>REGISTRATION FORM</h1></center>
+                                    <center><h1><b style="color: steelblue;">REGISTRATION FORM</b></h1></center>
                                 </div>
                                 <div class="registration-form-wrapper">
                                     <form method="POST" action="${pageContext.request.contextPath}/registration/add" class="py-3 needs-validation" id="regform" novalidate>
@@ -132,8 +132,8 @@
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="form-group">
                                                     <label for="birthday">Birthday</label>
-                                                    <input type="text" class="form-control bday" id="birthday" name="birthday" placeholder="Enter your Birthday MM-DD-YYYY (2005)"   required>
-                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age. 2005 below.</small>
+                                                    <input type="text" class="form-control bday" id="birthday" name="birthday" placeholder="Enter your Birthday MM-DD-YYYY (< 2005)"   required>
+                                                    <small id="birthdayHelp" class="form-text">Birthday format must be MM-DD-YYYY. Make sure you are at legal age (2005 below).</small>
                                                     <div class="invalid-feedback">
                                                         Please pick your Birthday.
                                                     </div>
@@ -151,6 +151,7 @@
                                             </div>
                                             <div class="col-12 col-md-4 me-auto mt-5 ">
                                                 <div class="signup-section">Already have an account? <a href="${pageContext.request.contextPath}/login" class="text-info">Login here</a>.</div>
+                                                <div class="signup-section">Already logged in? <a href="${pageContext.request.contextPath}/home" class="text-success">Go to Homepage</a>.</div>
                                             </div>
                                         </div> 
                                     </form>

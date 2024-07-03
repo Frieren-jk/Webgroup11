@@ -244,11 +244,22 @@
     z-index: -1;
 }
 
+.regis-table-area {
+    background-image: url('img/regispic.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
 .header-area {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
 }
 .text-info {
+    font-size: 15px;
+}
+
+.text-success {
     font-size: 15px;
 }
 

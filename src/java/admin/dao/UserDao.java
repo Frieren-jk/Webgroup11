@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class UserDao {
 
@@ -14,45 +15,40 @@ public class UserDao {
         ResultSet rs = null;
 
         try {
-            String query = "SELECT * FROM employee WHERE userName = ? and password = ?";
+            String query = "SELECT password FROM employee WHERE userName = ?";
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, userName);
-            ps.setString(2, password);
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                exists = true;
-                String updateQuery = "UPDATE employee SET loginStatus = 'Online' WHERE userName = ?";
-                PreparedStatement updatePs;
-                updatePs = conn.prepareStatement(updateQuery);
-                updatePs.setString(1, userName);
-                updatePs.executeUpdate();
-                updatePs.close();
+                String storedHashedPassword = rs.getString("password");
+                if (BCrypt.checkpw(password, storedHashedPassword)) {
+                    exists = true;
+
+                    // Update login status to 'Online'
+                    String updateQuery = "UPDATE employee SET loginStatus = 'Online' WHERE userName = ?";
+                    try (PreparedStatement updatePs = conn.prepareStatement(updateQuery)) {
+                        updatePs.setString(1, userName);
+                        updatePs.executeUpdate();
+                    }
+                }
             }
         } catch (SQLException e) {
-            System.out.println("SQLException" + e);
+            System.out.println("SQLException: " + e);
         } finally {
-            if (rs != null) {
-                try {
+            try {
+                if (rs != null) {
                     rs.close();
-                } catch (SQLException e) {
-                    System.out.println("SQLException" + e.getMessage());
                 }
-            }
-            if (ps != null) {
-                try {
+                if (ps != null) {
                     ps.close();
-                } catch (SQLException e) {
-                    System.out.println("SQLException" + e.getMessage());
                 }
-            }
-            if (conn != null) {
-                try {
+                if (conn != null) {
                     conn.close();
-                } catch (SQLException e) {
-                    System.out.println("SQLException" + e.getMessage());
                 }
+            } catch (SQLException e) {
+                System.out.println("SQLException: " + e.getMessage());
             }
         }
         return exists;
@@ -87,4 +83,36 @@ public class UserDao {
             }
         }
     }
+
+    public boolean changePass(String username, String newPassword) throws SQLException {
+        boolean rowsUpdated = false;
+        try (Connection conn = ConnectPool.getConnection(); PreparedStatement ps = conn.prepareStatement("SELECT password FROM employee WHERE userName = ?")) {
+            ps.setString(1, username);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    String currentPasswordHash = rs.getString("password");
+                    System.out.println("Current Password Hash: " + currentPasswordHash);
+
+                    // Check if the new password matches the current password hash
+                    if (BCrypt.checkpw(newPassword, currentPasswordHash)) {
+                        System.out.println("New password is the same as the current password.");
+                        return false;
+                    }
+                }
+            }
+
+            try (PreparedStatement updatePs = conn.prepareStatement("UPDATE employee SET password = ? WHERE userName = ?")) {
+                updatePs.setString(1, hashPassword(newPassword)); // hash the new password
+                updatePs.setString(2, username);
+                rowsUpdated = updatePs.executeUpdate() > 0;
+            }
+        }
+        return rowsUpdated;
+    }
+
+    private String hashPassword(String password) {
+        String salt = BCrypt.gensalt(12); // Use a strong salt (12 rounds is recommended)
+        return BCrypt.hashpw(password, salt);
+    }
+
 }

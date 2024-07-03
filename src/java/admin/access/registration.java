@@ -10,6 +10,7 @@ import admin.dao.EmployeeDao;
 import admin.model.EmployeeBlueprint;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpSession;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  * Servlet implementation class RegistrationServlet
@@ -61,9 +62,10 @@ public class registration extends HttpServlet {
             String address = request.getParameter("address");
             String birthday = request.getParameter("birthday");
             String mobileNumber = request.getParameter("mobileNumber");
+            String hashedPassword = hashPassword(password);
             EmployeeBlueprint newEmployee = new EmployeeBlueprint(
                     userName,
-                    password,
+                    hashedPassword,
                     firstName,
                     middleName,
                     lastName,
@@ -90,6 +92,11 @@ public class registration extends HttpServlet {
         } else {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid registration request");
         }
+    }
+    
+    private String hashPassword(String password) {
+        String salt = BCrypt.gensalt(12); // Use a strong salt (12 rounds is recommended)
+        return BCrypt.hashpw(password, salt);
     }
 
 }

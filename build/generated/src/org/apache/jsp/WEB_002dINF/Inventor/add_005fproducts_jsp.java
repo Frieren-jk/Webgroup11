@@ -3,6 +3,7 @@ package org.apache.jsp.WEB_002dINF.Inventor;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import javax.servlet.http.HttpSession;
 
 public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -41,6 +42,23 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\r');
+      out.write('\n');
+
+    session = request.getSession(false); 
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");
@@ -153,14 +171,24 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top\" >\r\n");
-      out.write("\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100\">\r\n");
+      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/img/core-img/usericon.png\" alt=\"error\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</a>\r\n");
+      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");
+      out.write("                        <a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/logout\" class=\"fav-nav\"><img src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/img/core-img/logouticon.png\" alt=\"error\">Log Out</a>\r\n");
+      out.write("                        <br><br><br>\r\n");
       out.write("                        <a href=\"#\" class=\"search-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/searchicon.png\" alt=\"error\"> Search</a>\r\n");
-      out.write("<!--                   hide for now     <a data-toggle=\"modal\" data-target=\"#myModal\" class=\"fav-nav\"><img src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/img/core-img/loginicon.png\" alt=\"error\"> Log In</a>-->\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\" class=\"fav-nav\"><img src=\"");

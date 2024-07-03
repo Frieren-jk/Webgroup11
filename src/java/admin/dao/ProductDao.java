@@ -20,7 +20,6 @@ public class ProductDao {
             + "size,"
             + "price,"
             + "quantity from product where productID = ? ";
-    private static final String SELECT_ALL_PRODUCT = "select * from product";
     private static final String DELETE_PRODUCT = "delete from product where productID = ?;";
     private static final String UPDATE_PRODUCT = "UPDATE product SET "
             + "productName=?, "

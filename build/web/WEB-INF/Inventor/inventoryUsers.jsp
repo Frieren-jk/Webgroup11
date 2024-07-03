@@ -1,9 +1,21 @@
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    session = request.getSession(false);
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+%>
 <!DOCTYPE html>
 
 <html lang="en">
-
     <head>
-
         <meta charset="UTF-8">
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,62 +47,8 @@
     </head>
 
     <body>
-
-        <%-- Debugging statement to check the value of 'success' --%>
-        <c:if test="${editUser == true}">
-            <div class=" bounce-in-right toast-container position-fixed top-0 end-0 p-3" id="toastContainer">
-                <div id="liveToast" class="toast show"
-                     role="status" aria-live="assertive"  aria-atomic="true">
-                    <div class="toast-header bg-success">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${editUser = false}" class="btn-close " data-bs-dismiss="toast" aria-label="Close"></a>
-                    </div>
-                    <div class="toast-body">
-                        USER "<c:out value="${userName}" />" WAS SUCCESSFULLY EDITED
-                    </div>
-                </div>
-            </div>
-        </c:if>
-        
-         <c:if test="${addUser == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToastEdit" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-success">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${addUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastSuccess">
-                        USER "<c:out value="${userName}" />" WAS SUCCESSFULLY ADDED
-                       DEFAULT PASSWORD: Secret@123
-                    </div>
-                </div>
-            </div>
-        </c:if>
-        
-        
-        <c:if test="${deleteUser == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToast" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-danger">
-                        <i class="fas fa-trash-alt me-2"></i> <!-- Changed to trash icon -->
-                        <strong class="me-auto">STATUS</strong>
-                        <a href="${deleteUser = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastDanger">
-                        USER "<c:out value="${userName}" />" WAS SUCCESSFULLY DELETED
-                    </div>
-                </div>
-            </div>
-        </c:if>
-
-
-
+        <input type="hidden" id="addUser" value="${addUser}">
+        <input type="hidden" id="editStatus" value="${editUser}">
 
         <div class="main-content-wrapper d-flex clearfix">
 
@@ -158,7 +116,7 @@
                 <!-- Main Nav -->
                 <div class="sticky-top" >
                     <div class="cart-fav-search mb-100">
-                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userName}</a>
+                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
                         <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
@@ -194,7 +152,7 @@
 
                     <div class="registration-form-wrapper pt-auto" id="table1">
                         <div class="table-responsive">
-                            <table id="myTable" class="table row-border order-column table-hover">
+                            <table id="myTable" class="table row-border order-column table-hover" >
                                 <thead>
                                     <tr>
                                         <th>User</th>
@@ -229,7 +187,7 @@
                                                 </a>
                                             </td> 
                                             <td> 
-                                                <a href="${pageContext.request.contextPath}/inventory/delete/user?userName=<c:out value='${show.userName}' />" class="bin-button">
+                                                <a data-href="${pageContext.request.contextPath}/inventory/delete/user?userName=<c:out value='${show.userName}' />" class="bin-button delete-link">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         fill="none"
@@ -301,16 +259,9 @@
                             </table>
                         </div>
                     </div>
-
-
-
                 </div>
-
-
             </div>
         </div>
-
-
 
         <!-- ##### Footer Area End ##### -->
         <footer class="footer_area clearfix w-100">
@@ -365,54 +316,6 @@
                 </div>
             </div>
         </footer>
-        <!-- ##### Login Area Start ##### -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">x</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-title text-center">
-                            <h4>LOGIN</h4>
-                        </div>
-                        <div class="d-flex flex-column text-center">
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-                                        <small id="usernameHelp"  class="form-text">Alphanumeric, must be between 4 - 12 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter a username.
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-group ">
-
-                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters.</small>
-                                        <div class="invalid-feedback">
-                                            Please enter your password.
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <button type='submit' form="regform" class="btn btn-info btn-block btn-round">Log In</button>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="${pageContext.request.contextPath}/registration" class="text-info">Sign Up</a>.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ##### Login Area End ##### -->
 
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
         <script src="js/jquery/jQuery v3.7.1.min.js"></script>
@@ -429,15 +332,88 @@
         <!-- Active js -->
         <script src="${pageContext.request.contextPath}/js/active.js"></script>
         <script src="${pageContext.request.contextPath}/js/CustomJs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
 
                                     $(document).ready(function () {
                                         $('#myTable').DataTable();
-                                        
-                                        
+
+                                        var status = $('#editStatus').val();
+                                        var add = $('#addUser').val();
+                                        if (status === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'Edit Successfully',
+                                                text: 'The user was successfully edited.',
+                                                timer: 4000,
+                                                background: '#20c997',
+                                                toast: true,
+                                                color: '#fff',
+                                                position: 'top-end',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
+                                            }).then(function () {
+            <% session.removeAttribute("editUser");%>
+                                            });
+                                        }
+
+                                        if (add === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'User Added',
+                                                text: 'User was successfully added to the inventory.',
+                                                timer: 4000,
+                                                background: '#20c997',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
+                                            }).then(function () {
+            <% session.removeAttribute("addUser");%>
+                                            });
+                                        }
+
+
                                     });
 
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        const deleteLinks = document.querySelectorAll('.delete-link');
+                                        deleteLinks.forEach(function (link) {
+                                            link.addEventListener('click', function (event) {
+                                                event.preventDefault(); // Prevent the default anchor behavior
 
+                                                const href = this.getAttribute('data-href'); // Get the data-href attribute
+
+                                                Swal.fire({
+                                                    title: "Are you sure?",
+                                                    text: "You won't be able to revert this!",
+                                                    icon: "warning",
+                                                    showCancelButton: true,
+                                                    confirmButtonColor: "#3085d6",
+                                                    cancelButtonColor: "#d33",
+                                                    confirmButtonText: "Yes, delete it!"
+                                                }).then((result) => {
+                                                    if (result.isConfirmed) {
+                                                        Swal.fire({
+                                                            title: "Deleted!",
+                                                            text: "User has been deleted.",
+                                                            icon: "success",
+                                                            timer: 4000,
+                                                            background: '#20c997',
+                                                            color: '#fff',
+                                                            iconColor: '#fff',
+                                                            showConfirmButton: false,
+                                                            timerProgressBar: true
+                                                        }).then(() => {
+                                                            // Redirect to the href if confirmed
+                                                            window.location.href = href;
+                                                        });
+                                                    }
+                                                });
+                                            });
+                                        });
+                                    });
         </script>
     </body>
 

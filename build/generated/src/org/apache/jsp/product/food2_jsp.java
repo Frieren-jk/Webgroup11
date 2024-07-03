@@ -3,6 +3,7 @@ package org.apache.jsp.product;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import javax.servlet.http.HttpSession;
 
 public final class food2_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -41,6 +42,22 @@ public final class food2_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\r');
+      out.write('\n');
+
+    session = request.getSession(false); 
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
+        response.sendRedirect(request.getContextPath() + "/login");
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
+
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");
@@ -137,10 +154,16 @@ public final class food2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top pt-1\">\r\n");
-      out.write("                    <div> </div>\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100 mt-5 \">\r\n");
+      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</a>\r\n");
+      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");
+      out.write("                        <a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/logout\" class=\"fav-nav\"><img src=\"img/core-img/logouticon.png\" alt=\"error\">Log Out</a>\r\n");
+      out.write("                        <br><br><br>\r\n");
       out.write("                        <a href=\"#\" class=\"search-nav\"><img src=\"img/core-img/searchicon.png\" alt=\"error\">Search</a>\r\n");
-      out.write("                        <a class=\"fav-nav\" data-toggle=\"modal\" data-target=\"#myModal\"><img src=\"img/core-img/loginicon.png\" alt=\"error\">Login</a>\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\" class=\"fav-nav\"><img src=\"img/core-img/createicon.png\" alt=\"error\">Register Now</a>\r\n");
@@ -287,9 +310,6 @@ public final class food2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/physicalshop\">Physical Shop</a>\r\n");
       out.write("                                            </li>\r\n");
       out.write("                                            <li class=\"nav-item\">\r\n");
-      out.write("                                                <a class=\"nav-link fav-nav\" data-toggle=\"modal\" data-target=\"#myModal\">Login</a>\r\n");
-      out.write("                                            </li>\r\n");
-      out.write("                                            <li class=\"nav-item\">\r\n");
       out.write("                                                <a class=\"nav-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\">Register Now</a>\r\n");
@@ -303,55 +323,6 @@ public final class food2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("        </footer>\r\n");
-      out.write("\r\n");
-      out.write("        <!-- ##### Login Area Start ##### -->\r\n");
-      out.write("        <div class=\"modal fade\" id=\"myLogin\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n");
-      out.write("            <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\r\n");
-      out.write("                <div class=\"modal-content\">\r\n");
-      out.write("                    <div class=\"modal-header border-bottom-0\">\r\n");
-      out.write("                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n");
-      out.write("                            <span aria-hidden=\"true\">x</span>\r\n");
-      out.write("                        </button>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"modal-body\">\r\n");
-      out.write("                        <div class=\"form-title text-center\">\r\n");
-      out.write("                            <h4>LOGIN</h4>\r\n");
-      out.write("                        </div>\r\n");
-      out.write("                        <div class=\"d-flex flex-column text-center\">\r\n");
-      out.write("                            <form>\r\n");
-      out.write("                                <div class=\"form-group\">\r\n");
-      out.write("                                    <div class=\"form-group \">\r\n");
-      out.write("                                        <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"Enter your username\" required>\r\n");
-      out.write("                                        <small id=\"usernameHelp\"  class=\"form-text\">Alphanumeric, must be between 4 - 12 characters.</small>\r\n");
-      out.write("                                        <div class=\"invalid-feedback\">\r\n");
-      out.write("                                            Please enter a username.\r\n");
-      out.write("                                        </div>\r\n");
-      out.write("                                    </div> \r\n");
-      out.write("                                </div>\r\n");
-      out.write("                                <div class=\"form-group\">\r\n");
-      out.write("                                    <div class=\"form-group \">\r\n");
-      out.write("                                        <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Enter your password\" required>\r\n");
-      out.write("                                        <small id=\"passwordHelp\" class=\"form-text\">Password must be alphanumeric, 8 - 16 characters.</small>\r\n");
-      out.write("                                        <div class=\"invalid-feedback\">\r\n");
-      out.write("                                            Please enter your password.\r\n");
-      out.write("                                        </div>\r\n");
-      out.write("                                    </div> \r\n");
-      out.write("                                </div>\r\n");
-      out.write("\r\n");
-      out.write("                                <button type='submit' form=\"Loginform\" class=\"btn btn-info btn-block btn-round d-block  buttonfx angleindouble\">Log In</button>\r\n");
-      out.write("\r\n");
-      out.write("                            </form>\r\n");
-      out.write("                        </div>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div class=\"modal-footer d-flex justify-content-center\">\r\n");
-      out.write("                        <div class=\"signup-section\">Not a member yet? <a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/registration\" class=\"text-info\">Sign Up</a>.</div>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                </div>\r\n");
-      out.write("            </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <!-- ##### Login Area End ##### -->\r\n");
       out.write("        <!-- ##### Footer Area End ##### -->\r\n");
       out.write("\r\n");
       out.write("        <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->\r\n");

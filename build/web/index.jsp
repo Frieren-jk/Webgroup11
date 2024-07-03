@@ -1,7 +1,16 @@
-<% if(session.getAttribute("userName")==null){
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%
+    session = request.getSession(false);
+
+    if (session == null || session.getAttribute("userNamelog") == null) {
+        // User is not logged in, redirect to the login page
         response.sendRedirect(request.getContextPath() + "/login");
-    } 
-    
+    }
+
+    // Set headers to prevent caching
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setDateHeader("Expires", 0); // Proxies
 %>
 
 <!DOCTYPE html>
@@ -28,8 +37,10 @@
     </head>
 
     <body>
-       <input type="hidden" id="status" value="${regUser}">
 
+        <input type="hidden" id="logstatus" value="${userSuccess}">
+        <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+         <input type="hidden" id="passwordCurrent" value="${currentPassword}">
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -66,19 +77,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -97,8 +108,8 @@
                 <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userName}</a>
-                        <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
+                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a href="#" id="changePasswordBtn" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
@@ -300,9 +311,6 @@
                 </div>
             </div>
         </footer>
-
-        <!-- ##### Login Area Start ##### -->
-        <!-- ##### Login Area End ##### -->
         <!-- ##### Footer Area End ##### -->
 
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
@@ -324,16 +332,107 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
                                     $(document).ready(function () {
-                                        var status = $('#status').val();
-                                        console.log("Status value: " + status);
-                                        if (status === "success") {
+                                        var statusreg = $('#logstatus').val();
+                                        var username = $('#userNameCurrent').val();
+                                        if (statusreg === "success") {
                                             Swal.fire({
                                                 icon: 'success',
-                                                title: 'Success',
-                                                text: 'User successfully created!'
-                                            })
+                                                title: 'Login Successful',
+                                                text: 'Welcome, ' + username,
+                                                timer: 5000,
+                                                background: '#20c997',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
+                                            }).then(function () {
+            <% session.removeAttribute("userSuccess");%> // Clear the session attribute
+                                            });
                                         }
+
+
+
+
+                                        $('#changePasswordBtn').click(function (event) {
+                                            event.preventDefault(); // Prevent default form submission behavior
+
+                                            Swal.fire({
+                                                title: 'Change Password for ' + username,
+                                                html: `
+                <form id="changePasswordForm">
+                    <input type="hidden" name="username" value="${userNamelog}">
+                    <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                    <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                </form>
+            `,
+                                                confirmButtonText: 'Change',
+                                                focusConfirm: false,
+                                                didOpen: () => {
+                                                    const popup = Swal.getPopup();
+                                                    const newPasswordInput = popup.querySelector('#newPassword');
+                                                    const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');
+
+                                                    newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                    confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                },
+                                                preConfirm: () => {
+                                                    const newPassword = document.getElementById('newPassword').value;
+                                                    const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                                                    var currentPassword = $('#passwordCurrent').val(); // assume you have a way to get the current user's password
+
+                                                    if (newPassword === currentPassword) {
+                                                        Swal.showValidationMessage('New password cannot be the same as the current password');
+                                                        return false;
+                                                    }
+
+                                                    if (!newPassword || !confirmNewPassword) {
+                                                        Swal.showValidationMessage('Please fill out all fields');
+                                                        return false;
+                                                    }
+
+                                                    if (newPassword !== confirmNewPassword) {
+                                                        Swal.showValidationMessage('Passwords do not match');
+                                                        return false;
+                                                    }
+
+                                                    const passwordRegex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/;
+                                                    if (!passwordRegex.test(newPassword)) {
+                                                        Swal.showValidationMessage('8-16 characters long, with at least one lowercase letter, one uppercase letter, and one number');
+                                                        return false;
+                                                    }
+
+                                                    // Submit the form using AJAX to prevent default submission behavior
+                                                    $.ajax({
+                                                        type: 'POST',
+                                                        url: '${pageContext.request.contextPath}/changePassword',
+                                                        data: $('#changePasswordForm').serialize(),
+                                                        success: function () {
+                                                            // Show success alert
+                                                            Swal.fire({
+                                                                icon: 'success',
+                                                                title: 'Password Changed',
+                                                                text: 'Your password has been successfully changed!',
+                                                                showConfirmButton: true,
+                                                                timer: 0
+                                                            }).then((result) => {
+                                                                if (result.isConfirmed) {
+                                                                    // Redirect to home page after success
+                                                                    window.location.href = '${pageContext.request.contextPath}/home';
+                                                                }
+                                                            });
+                                                        },
+                                                        error: function (xhr, status, error) {
+                                                            Swal.showValidationMessage(`Error: ${error}`);
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        });
                                     });
+
+
+
+
 
         </script>
 

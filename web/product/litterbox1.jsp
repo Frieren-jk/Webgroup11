@@ -182,7 +182,7 @@
                                     <p>The sifting cat litter box is a practical solution designed to simplify the task of cleaning cat litter. It typically consists of two or three nested trays with varying sizes of holes. After the cat uses the litter box, the owner sifts or shakes the trays, allowing clean litter to fall through while clumps of waste remain on top for easy disposal. This design helps maintain cleanliness and freshness in the litter box, reducing the frequency of complete litter changes and making the chore of cleaning up after pets more efficient.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1019"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

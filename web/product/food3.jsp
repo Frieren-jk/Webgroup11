@@ -182,7 +182,7 @@
                                     <p>Pedigree Schmackos for Dogs are tasty and nutritious treats designed to delight your canine companion. These treats are crafted with high-quality ingredients, providing a delicious flavor that dogs love. Whether used as a reward during training or simply as a heartfelt snack, Pedigree Schmackos are a wholesome choice to keep tails wagging and dogs happy.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1024"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

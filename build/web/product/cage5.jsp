@@ -182,7 +182,7 @@
                                     <p>The octagonal dog metal fence is a durable and versatile enclosure designed to provide a safe and secure outdoor space for pets. Its octagonal shape offers ample room for dogs to play and exercise, while the sturdy metal construction ensures long-lasting performance and resistance to weather elements. The fence typically features easy-to-assemble panels with secure latches, making it both a practical and efficient solution for pet owners looking to create a controlled environment for their furry friends.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1005"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

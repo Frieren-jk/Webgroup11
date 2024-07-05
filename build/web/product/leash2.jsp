@@ -182,7 +182,7 @@
                                     <p>A no pull harness leash is a specialized type of dog harness designed to discourage pulling behavior during walks. Unlike traditional collars and leashes, the no-pull harness typically features a front clip attachment on the dog's chest, which helps redirect their forward momentum and encourages them to walk beside the owner. This design provides better control and reduces strain on the dog's neck and throat, making it a safer and more comfortable option for both the dog and the owner. No Pull Harness Leashes are especially beneficial for training and are suitable for dogs of all sizes and breeds.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1012"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

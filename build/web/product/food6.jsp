@@ -182,7 +182,7 @@
                                     <p>Purina Friskies Indoor Delights, weighing 1.1kg, offers a specially formulated dry cat food designed to cater to the nutritional needs of indoor cats. Packed with a blend of flavors and essential nutrients, it supports indoor cats' health and vitality while promoting a balanced diet. Ideal for maintaining a healthy weight and supporting digestive health, it provides a tasty and complete meal option for your indoor feline companion.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1027"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

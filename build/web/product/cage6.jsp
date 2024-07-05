@@ -182,7 +182,7 @@
                                     <p>The round steel roller cage is a sturdy, cylindrical-ish enclosure designed for dogs. Made from high-quality steel, it features a rolling mechanism for easy movement and handling. This durable cage ensures pet safety and is ideal for secure containment in various environments.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1006"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

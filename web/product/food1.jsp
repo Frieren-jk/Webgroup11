@@ -182,7 +182,7 @@
                                     <p>Pedigree Chicken 400g is a premium-quality dog food product, known for its nutritious formulation specifically designed for adult dogs. Packed with essential vitamins, minerals, and protein from real chicken, it offers a balanced diet to support your dog's overall health and vitality. Ideal for daily feeding, Pedigree Chicken 400g aims to keep your dog happy, healthy, and energetic.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1022"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

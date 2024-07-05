@@ -182,7 +182,7 @@
                                     <p>The 2 piece dog bone toy is a durable and engaging set designed for dogs of all sizes. Made from high-quality, non-toxic materials, these bone-shaped toys provide hours of chewing pleasure, helping to keep your dog's teeth clean and gums healthy. The textured surface aids in dental hygiene while satisfying your pet's natural chewing instincts. Perfect for playtime, fetch, and interactive games, the 2 Piece Dog Bone Toy is an essential addition to your dog's toy collection, promoting physical activity and mental stimulation.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1016"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

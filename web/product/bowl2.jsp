@@ -182,7 +182,7 @@
                                     <p>The slow feeder stainless steel bowl for dogs is designed to promote healthier eating habits by slowing down the pace at which your pet consumes their food. Made from durable, high-quality stainless steel, this bowl features a unique interior pattern that creates obstacles for your dog, preventing them from gulping down their meals too quickly. This can help reduce the risk of bloating, indigestion, and obesity. The bowl is easy to clean, dishwasher-safe, and resistant to rust and scratches, ensuring longevity and a hygienic feeding experience for your furry friend.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1008"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

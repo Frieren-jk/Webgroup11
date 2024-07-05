@@ -182,7 +182,7 @@
                                     <p>A retractable dog leash is a type of dog leash that extends and retracts from a compact casing, allowing for adjustable lengths. It typically features a locking mechanism to control the leash's length, providing flexibility and freedom for the dog to explore while giving the owner the ability to quickly reel in the dog when needed. These leashes often come with a comfortable handle and are made from durable materials to ensure safety and longevity. Ideal for walks in open areas, retractable dog leashes offer convenience and control, making them a popular choice among dog owners.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1013"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

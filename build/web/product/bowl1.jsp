@@ -182,7 +182,7 @@
                                     <p>A small stainless steel bowl for dogs is a durable and hygienic feeding accessory designed for pets. Made from high-quality stainless steel, it resists rust, stains, and bacteria buildup. Its non-slip base ensures stability during feeding, preventing spills and skids. This bowl is easy to clean, either by hand or in a dishwasher, making it a convenient and practical choice for pet owners. Its size is ideal for small dogs, providing an appropriate portion size for their meals and water needs.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1007"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

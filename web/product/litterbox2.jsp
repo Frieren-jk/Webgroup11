@@ -181,7 +181,7 @@
                                         <p>The open top cat litter box with Shovel provides a convenient and accessible solution for cat owners. Featuring an open design for easy access, it includes a handy shovel for effortless cleaning. This litter box is designed to minimize odors and mess, making it a practical choice for maintaining cleanliness and comfort for your feline companion.</p>
                                     </div>
                                     <div>
-                                        <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                        <a href="${pageContext.request.contextPath}/addtocart?productID=1020"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                     </div>
                                 </div>
                             </div>

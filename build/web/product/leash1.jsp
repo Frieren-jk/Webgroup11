@@ -182,7 +182,7 @@
                                     <p>A bungee leash for dogs is a specially designed leash that incorporates a flexible, stretchable bungee section. This innovative feature helps to absorb the shock and sudden pulls from energetic dogs, providing a smoother walking experience for both the dog and the owner. The bungee leash reduces the risk of injury by minimizing the impact on the dogâs neck and the handlerâs arm. It is ideal for active dogs and those in training, ensuring comfort and control during walks, runs, or hikes.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1011"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

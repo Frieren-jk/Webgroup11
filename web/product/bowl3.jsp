@@ -182,7 +182,7 @@
                                     <p>A plastic slow feeder dog bowl is designed to promote healthy eating habits in dogs by slowing down their eating pace. Made from durable, non-toxic plastic, these bowls feature ridges, patterns, or mazes that create obstacles for dogs to navigate while eating, preventing them from gulping down their food too quickly. This helps reduce the risk of choking, bloating, and digestive issues. Ideal for dogs of all sizes and breeds, the bowl's non-slip base ensures it stays in place during mealtime.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1009"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

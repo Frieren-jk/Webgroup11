@@ -182,7 +182,7 @@
                                     <p>Pedigree Choice Cuts Wet Beef, in a 22oz package, offers a savory and nutritious meal for dogs. This canned food features tender chunks of beef cooked to perfection, providing a delicious and protein-rich option that dogs love. It's formulated with essential nutrients to support overall health and well-being, making it a popular choice among pet owners looking to give their dogs a balanced diet with great taste.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1023"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

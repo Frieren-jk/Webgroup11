@@ -182,7 +182,7 @@
                                     <p>A harness and bungee leash for cats is a specialized set of accessories designed to provide safe and comfortable outdoor experiences for feline companions. The harness is typically made from soft, adjustable materials to ensure a secure and snug fit around the cat's body, preventing escape without causing discomfort. It evenly distributes pressure across the chest and shoulders, reducing strain on the neck.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1015"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

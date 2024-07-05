@@ -182,7 +182,7 @@
                                     <p>Yarn ball for cats is a playful and interactive toy designed to entertain our feline friends. It consists of a compact ball of yarn, often colorful and textured, that cats enjoy chasing, pouncing on, and batting around. This simple yet engaging toy helps stimulate their natural hunting instincts and provides them with exercise and mental stimulation. It's a classic favorite among cat owners for its ability to keep cats entertained and active.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1017"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

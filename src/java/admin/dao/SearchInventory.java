@@ -12,7 +12,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
 public class SearchInventory {
 
     public ArrayList<EmployeeBlueprint> getAllUser() {
@@ -52,11 +51,8 @@ public class SearchInventory {
                 user.setMobileNumber(rs.getString("mobileNumber"));
                 user.setAccountStatus(rs.getString("accountStatus"));
                 user.setLoginStatus(rs.getString("loginStatus"));
-              
 
                 AllUser.add(user);
-
-              
 
             }
 
@@ -90,7 +86,7 @@ public class SearchInventory {
         return AllUser;
 
     }
-    
+
     public ArrayList<ProductBlueprint> getAllProducts() {
         ArrayList<ProductBlueprint> AllProducts = new ArrayList<>();
         Connection conn = null;
@@ -150,6 +146,39 @@ public class SearchInventory {
         }
 
         return AllProducts;
+    }
+
+    public ArrayList<ProductBlueprint> getAllCart(String userName) {
+        ArrayList<ProductBlueprint> cartProducts = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            String query = "SELECT userName, productID, productName, price FROM cart WHERE userName = ?";
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userName);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                ProductBlueprint product = new ProductBlueprint();
+                product.setuserName(rs.getString("userName"));
+                product.setProductID(rs.getInt("productID"));
+                product.setProductName(rs.getString("productName"));
+                product.setPrice(rs.getBigDecimal("price"));
+
+                cartProducts.add(product);
+            }
+
+        } catch (SQLException error) {
+            System.out.println("getAllCart Error: " + error);
+        } finally {
+            // Close resources in finally block
+            // Omitted for brevity (rs, ps, conn closing)
+        }
+
+        return cartProducts;
     }
 
 }

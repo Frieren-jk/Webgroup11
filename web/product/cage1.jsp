@@ -182,7 +182,7 @@
                                     <p>A large foldable steel cage for dogs offers a spacious and secure environment for pets, crafted from durable steel for longevity. Its generous interior space allows for comfort and movement, while the sturdy construction ensures safety and containment. Ideal for crate training, travel, or providing a cozy retreat at home, this cage prioritizes the well-being of canine companions, combining versatility with peace of mind for owners.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1001"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

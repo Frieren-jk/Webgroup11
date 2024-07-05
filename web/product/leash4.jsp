@@ -182,7 +182,7 @@
                                     <p>A metal leash for dogs is a durable and sturdy tether designed to provide secure control and guidance for pets during walks. Made from robust materials such as stainless steel or aluminum, these leashes are resistant to chewing and offer longevity. Metal leashes often feature a comfortable handle for the owner and a secure clip to attach to the dog's collar or harness. They are ideal for strong or large breeds that require extra control and are perfect for pet owners looking for a long-lasting and reliable walking accessory.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1014"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

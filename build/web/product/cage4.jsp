@@ -182,7 +182,7 @@
                                     <p>A small plastic cage for cats is a lightweight, durable, and portable enclosure designed to provide a safe and secure space for cats during travel or temporary confinement. These cages typically feature well-ventilated sides, a secure door latch, and often include a comfortable handle for easy transport. They are ideal for trips to the vet, short car rides, or as a temporary shelter at home. The plastic material is easy to clean and maintain, ensuring a hygienic environment for your feline friend.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1004"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

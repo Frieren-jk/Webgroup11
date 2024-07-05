@@ -182,7 +182,7 @@
                                     <p>An automatic cat feeder is a convenient and efficient device designed to dispense food to cats at pre-set times and portions. It helps ensure that pets receive consistent and timely meals, even when their owners are not at home. These feeders often feature programmable timers, portion control settings, and storage compartments to keep food fresh. Advanced models may include features like smartphone connectivity for remote feeding, voice recording to call pets during mealtime, and compatibility with both dry and wet food.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1010"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

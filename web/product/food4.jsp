@@ -182,7 +182,7 @@
                                     <p>Whiskas Tuna Dry 7kg for Cats is a nutritious and flavorful cat food designed to meet the dietary needs of adult cats. Packed with real tuna, it offers essential proteins for strong muscles and overall health. This dry food also provides balanced nutrition with added vitamins, minerals, and antioxidants to support a healthy immune system and shiny coat. Ideal for adult cats, Whiskas Tuna Dry 7kg promotes overall well-being and is formulated to satisfy their natural cravings.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1025"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

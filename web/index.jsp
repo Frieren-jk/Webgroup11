@@ -372,11 +372,11 @@
                 <form id="changePasswordForm">
                     <input type="hidden" name="username" value="${userNamelog}">
                             <div class="password-field">
-                            <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                            <input type="password" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
                         <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('newPassword')"></i>
                     </div>
                         <div class="password-field">
-                            <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                            <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
                         <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('confirmNewPassword')"></i>
                     </div>
                 </form>

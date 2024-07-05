@@ -182,7 +182,7 @@
                                     <p>A cat carrier bag is a portable, enclosed bag designed for safely transporting cats. It typically features durable materials, mesh panels for ventilation, secure zippers or clasps, and comfortable handles or shoulder straps. Some models may include additional pockets for storing pet essentials and a removable, washable base for easy cleaning. Ideal for vet visits, travel, or outings, a cat carrier bag ensures your feline friend's comfort and security while on the go.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1002"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

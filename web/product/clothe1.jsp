@@ -182,7 +182,7 @@
                                     <p>Monkey cat sweater for cats is a charming and cozy knit sweater designed specifically for our feline friends. Featuring a playful monkey design, this sweater combines warmth and style, ensuring your cat stays comfortable during cooler weather while looking adorable. Perfect for indoor lounging or outdoor adventures, it's a delightful addition to any cat's wardrobe, offering both practicality and cuteness in one purrfect package.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1018"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

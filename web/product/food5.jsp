@@ -182,7 +182,7 @@
                                     <p>Whiskas Adult Wet Cat Food Pouches offer a convenient and balanced meal option for adult cats. Designed to meet the nutritional needs of cats aged 1 year and older, these pouches come in a variety of flavors and contain essential vitamins and minerals to support overall health. Each pouch is filled with tender pieces of meat or fish in a savory gravy, ensuring a delicious dining experience that cats love. Perfect for providing hydration and essential nutrients, Whiskas Adult Wet Cat Food Pouches are a trusted choice for cat owners seeking quality and convenience in every meal.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1026"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

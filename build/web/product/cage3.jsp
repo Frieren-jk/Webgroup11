@@ -182,7 +182,7 @@
                                     <p>The carbon quality and wood cage is a premium dog crate designed to provide a secure and comfortable space for your pet. Made from high-quality, sustainably sourced wood, it combines durability with a stylish aesthetic that complements any home decor. The cage features a sturdy framework, ensuring the safety and well-being of your dog, while the eco-friendly materials and carbon-neutral production process reflect a commitment to environmental responsibility. Ideal for both home use and travel, this cage offers a practical and green solution for pet owners.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1003"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

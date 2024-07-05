@@ -182,7 +182,7 @@
                                     <p>The hooded cat litter box is a specialized enclosure designed for cats to use as a private and contained area for their litter needs. It features a covered design with an entry point for the cat, providing privacy and reducing litter tracking around the home. These litter boxes often come with filters to minimize odors and are available in various sizes and styles to suit different cat breeds and household preferences.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1021"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

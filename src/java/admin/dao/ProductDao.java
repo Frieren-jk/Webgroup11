@@ -64,7 +64,6 @@ public class ProductDao {
         return success;
     }
 
-   
     public ProductBlueprint getProductList(ProductBlueprint product) {
         // Get the fields from the product object
         int productID = product.getProductID();
@@ -83,9 +82,9 @@ public class ProductDao {
                 quantity);
         return productList;
     }
-    
+
     //update product
-     public boolean updateProduct(String productName, String description, String size, BigDecimal price, int quantity, int productID) {
+    public boolean updateProduct(String productName, String description, String size, BigDecimal price, int quantity, int productID) {
         boolean success = false;
         Connection conn = null;
         PreparedStatement ps = null;
@@ -110,13 +109,11 @@ public class ProductDao {
         } catch (SQLException error) {
             System.out.println("updateProduct Error: " + error);
         }
-        
-        
 
         return success;
     }
-     
-     //SELECT USER BY ID
+
+    //SELECT USER BY ID
     public ArrayList<ProductBlueprint> selectProduct(int productID) {
         ArrayList<ProductBlueprint> AllProducts = new ArrayList<>();
         Connection conn = null;
@@ -138,8 +135,6 @@ public class ProductDao {
                 product.setQuantity(rs.getInt("quantity"));
 
                 AllProducts.add(product);
-                
-                System.out.println(AllProducts);
             }
 
         } catch (SQLException e) {
@@ -149,10 +144,7 @@ public class ProductDao {
         return AllProducts;
     }
 
-    
     // SELECT ALL USER
-    
-    
     //DLEETE USER
     public boolean deleteProduct(int productID) throws SQLException {
         boolean rowsDeleted = false;
@@ -162,9 +154,8 @@ public class ProductDao {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(DELETE_PRODUCT);
             ps.setInt(1, productID);
-            
+
             rowsDeleted = ps.executeUpdate() > 0;
-            
 
         } catch (SQLException e) {
             System.out.println("DELETE PRODUCT error: " + e);
@@ -172,4 +163,70 @@ public class ProductDao {
         return rowsDeleted;
     }
 
+    public boolean createCart(String userName, ProductBlueprint product) throws SQLException {
+        boolean success = false;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        String query = "INSERT INTO cart (userName, productID, productName, price) VALUES (?, ?, ?, ?);";
+        try {
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userName);
+            ps.setInt(2, product.getProductID());
+            ps.setString(3, product.getProductName());
+            ps.setBigDecimal(4, product.getPrice());
+            int rowAffected = ps.executeUpdate();
+            if (rowAffected != 0) {
+                success = true;
+            }
+        } catch (SQLException error) {
+            System.out.println("createCart Error: " + error);
+        } finally {
+            // Close resources in a finally block
+            // Handle exceptions here if needed
+            if (ps != null) {
+                ps.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        return success;
+    }
+    
+    public boolean deleteCart(int productID) throws SQLException {
+        boolean rowsDeleted = false;
+        Connection conn;
+        PreparedStatement ps;
+        try {
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement("delete from cart where productID = ?;");
+            ps.setInt(1, productID);
+
+            rowsDeleted = ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            System.out.println("DELETE PRODUCT error: " + e);
+        }
+        return rowsDeleted;
+    }
+    
+    public boolean deleteAllCart(String userName) throws SQLException {
+        boolean rowsDeleted = false;
+        Connection conn;
+        PreparedStatement ps;
+        try {
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement("delete from cart where userName = ?;");
+            ps.setString(1, userName);
+
+            rowsDeleted = ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            System.out.println("DELETE PRODUCT error: " + e);
+        }
+        return rowsDeleted;
+    }
+    
+    
 }

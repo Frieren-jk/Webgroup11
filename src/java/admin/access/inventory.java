@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpSession;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -57,15 +58,14 @@ public class inventory extends HttpServlet {
             case "/inventory/add/form/product":
                 viewAddFormProduct(request, response); //view form
                 break;
-            case "/inventory/add/product":
-            {
+            case "/inventory/add/product": {
                 try {
                     AddProduct(request, response); //add product method
                 } catch (SQLException ex) {
                     Logger.getLogger(inventory.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-                break;
+            break;
 
             case "/inventory/update/product": {
                 try {
@@ -304,9 +304,10 @@ public class inventory extends HttpServlet {
             String address = request.getParameter("address");
             String birthday = request.getParameter("birthday");
             String mobileNumber = request.getParameter("mobileNumber");
+            String hashedPass = hashPassword(password);
             EmployeeBlueprint newEmployee = new EmployeeBlueprint(
                     userName,
-                    password,
+                    hashedPass,
                     firstName,
                     middleName,
                     lastName,
@@ -334,6 +335,11 @@ public class inventory extends HttpServlet {
         } else {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid Add Inventory request");
         }
+    }
+
+    private String hashPassword(String password) {
+        String salt = BCrypt.gensalt(12); // Use a strong salt (12 rounds is recommended)
+        return BCrypt.hashpw(password, salt);
     }
 
     private void ShowEditUser(HttpServletRequest request, HttpServletResponse response)

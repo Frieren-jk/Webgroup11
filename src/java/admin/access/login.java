@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class login extends HttpServlet {
 
@@ -29,15 +30,14 @@ public class login extends HttpServlet {
             case "/login":
                 viewLogin(request, response);
                 break;
-            case "/changePassword":
-            {
+            case "/changePassword": {
                 try {
                     changePassword(request, response);
                 } catch (SQLException ex) {
                     Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-                break;
+            break;
 
             case "/user":
                 try {
@@ -63,24 +63,25 @@ public class login extends HttpServlet {
 
     private void changePassword(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-        
-        
+
+        HttpSession session = request.getSession();
         String username = request.getParameter("username");
         String newPassword = request.getParameter("newPassword");
-        
+
         System.out.println(username + newPassword);
         UserDao userDao = new UserDao();
         boolean passwordChanged = userDao.changePass(username, newPassword);
-         if (passwordChanged) {
-           System.out.println("Success Change Password");
+        if (passwordChanged) {
+            session.removeAttribute("currentPassword");
+            session.setAttribute("latestpass", newPassword);
+            System.out.println("Success Change Password");
+
             response.sendRedirect(request.getContextPath() + "/home");
         } else {
-            System.out.println("Success Change Password");
+            System.out.println("Failed Change Password");
             response.sendRedirect(request.getContextPath() + "/home");
         }
     }
-    
-    
 
     private void logUser(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
@@ -103,8 +104,12 @@ public class login extends HttpServlet {
             attempts.remove(userName);
             lockout.remove(userName);
             session.setAttribute("userNamelog", userName);
-             session.setAttribute("currentPassword", password);
+            session.setAttribute("currentPassword", password);
             session.setAttribute("userSuccess", "success");
+            UserDao userDao = new UserDao();
+            String userType = userDao.getRole(userName);
+            session.setAttribute("userRole", userType);
+            System.out.println("user is " + userType);
             response.sendRedirect(request.getContextPath() + "/home");
         } else {
             // Increment the attempt count
@@ -123,5 +128,10 @@ public class login extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/login");
             }
         }
+    }
+
+    private String hashPassword(String password) {
+        String salt = BCrypt.gensalt(12); // Use a strong salt (12 rounds is recommended)
+        return BCrypt.hashpw(password, salt);
     }
 }

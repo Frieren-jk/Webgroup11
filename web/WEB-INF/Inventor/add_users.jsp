@@ -21,6 +21,8 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
@@ -53,6 +55,12 @@
                 </div>
             </div>
         </div>
+
+        <input type="hidden" id="logstatus" value="${userSuccess}">
+        <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+        <input type="hidden" id="passwordCurrent" value="${latestpass}">
+        <input type="hidden" id="passwordlogged" value="${currentPassword}">
+        <input type="hidden" id="userRole" value="${userRole}">
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">
@@ -101,13 +109,17 @@
                 <!-- Main Nav -->
                 <div class="sticky-top" >
                     <div class="cart-fav-search mb-100">
-                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a style="color: steelblue;" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
                         <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory" alt="error"> Inventory</a>
+                        <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
+                                <img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error">Inventory
+                            </a>
+                        </c:if>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/homeicon.png" alt="error">Home</a>
                         <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/shopicon.png" alt="error">Shop</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="${pageContext.request.contextPath}/img/core-img/carticon.png" alt="error"> Cart <span>(3)</span>

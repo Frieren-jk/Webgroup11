@@ -12,10 +12,20 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_if_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -31,7 +41,7 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -45,7 +55,7 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\r');
       out.write('\n');
 
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -67,7 +77,8 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n");
       out.write("        <!-- The above 4 meta tags must come first in the head -->\r\n");
-      out.write("\r\n");
+      out.write("        \r\n");
+      out.write("        \r\n");
       out.write("        <!-- Title  -->\r\n");
       out.write("        <title>Fur Real Pet Supplies - Litter Box 2</title>\r\n");
       out.write("\r\n");
@@ -82,6 +93,22 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
+      out.write("        <input type=\"hidden\" id=\"logstatus\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userSuccess}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" id=\"userNameCurrent\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" id=\"passwordCurrent\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${latestpass}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" id=\"passwordlogged\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentPassword}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" id=\"userRole\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("\r\n");
       out.write("        <!-- Search Start -->\r\n");
       out.write("        <div class=\"search-section section-padding-100\">\r\n");
       out.write("            <div class=\"search-close\">\r\n");
@@ -120,21 +147,21 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("\r\n");
       out.write("            <!-- Topbar Start -->\r\n");
-      out.write("                <div class=\"container-fluid\">\r\n");
-      out.write("                    <div class=\"row upbar\">\r\n");
-      out.write("                        <div class=\"col-lg-6 d-none d-lg-block\">\r\n");
-      out.write("                            <div class=\"d-inline-flex align-items-center\">\r\n");
-      out.write("                                <a class=\"text-light\"><i class=\"fa-solid fa-phone\"></i> Call Us: 0960-542-2186</a>\r\n");
-      out.write("                                <span class=\"text-light px-2\">|</span>\r\n");
-      out.write("                                <a class=\"text-light\"><i class=\"fa-solid fa-envelope\"></i> Our Email: furrealpetsupplies@gmail.com</a>\r\n");
-      out.write("                                <span class=\"text-light px-2\">|</span>\r\n");
-      out.write("                                <a style=\"color: #FBFF4B;\" href=\"");
+      out.write("            <div class=\"container-fluid\">\r\n");
+      out.write("                <div class=\"row upbar\">\r\n");
+      out.write("                    <div class=\"col-lg-6 d-none d-lg-block\">\r\n");
+      out.write("                        <div class=\"d-inline-flex align-items-center\">\r\n");
+      out.write("                            <a class=\"text-light\"><i class=\"fa-solid fa-phone\"></i> Call Us: 0960-542-2186</a>\r\n");
+      out.write("                            <span class=\"text-light px-2\">|</span>\r\n");
+      out.write("                            <a class=\"text-light\"><i class=\"fa-solid fa-envelope\"></i> Our Email: furrealpetsupplies@gmail.com</a>\r\n");
+      out.write("                            <span class=\"text-light px-2\">|</span>\r\n");
+      out.write("                            <a style=\"color: #FBFF4B;\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/physicalshop\">Visit our physical shop. <i class=\"fa-solid fa-location-dot\"></i></a>\r\n");
-      out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
       out.write("            <!-- Topbar End -->\r\n");
       out.write("\r\n");
       out.write("            <!-- Header Area Start -->\r\n");
@@ -155,9 +182,11 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top pt-1\">\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100 mt-5 \">\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
+      out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</a>\r\n");
+      out.write(" <span style=\"padding-left: 29px;\">(");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write(")</span></a>\r\n");
       out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -167,11 +196,10 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\" class=\"fav-nav\"><img src=\"img/core-img/createicon.png\" alt=\"error\">Register Now</a>\r\n");
-      out.write("                        <a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/inventory/users\" class=\"fav-nav\"><img src=\"img/core-img/inventoryicon.png\" href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/inventory/users\" alt=\"error\">Inventory</a>\r\n");
+      out.write("                        ");
+      if (_jspx_meth_c_if_0(_jspx_page_context))
+        return;
+      out.write("\r\n");
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/home\" class=\"fav-nav\"><img src=\"img/core-img/homeicon.png\" alt=\"error\">Home</a>\r\n");
@@ -215,42 +243,42 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"cart-wrapper\">                \r\n");
-      out.write("                    <div class=\"row\">\r\n");
-      out.write("                        <div class=\"col-12 col-lg-7\">\r\n");
-      out.write("                            <div class=\"single_product_thumb\">\r\n");
-      out.write("                                <div class=\"carousel-inner\">\r\n");
-      out.write("                                    <div class=\"carousel-item active\">\r\n");
-      out.write("                                        <a class=\"gallery_img\" href=\"img/product-img/prodetails/litbox 2 shop.png\">\r\n");
-      out.write("                                            <img class=\"d-block w-100\" src=\"img/product-img/prodetails/litbox 2 shop.png\" alt=\"First slide\">\r\n");
+      out.write("                        <div class=\"row\">\r\n");
+      out.write("                            <div class=\"col-12 col-lg-7\">\r\n");
+      out.write("                                <div class=\"single_product_thumb\">\r\n");
+      out.write("                                    <div class=\"carousel-inner\">\r\n");
+      out.write("                                        <div class=\"carousel-item active\">\r\n");
+      out.write("                                            <a class=\"gallery_img\" href=\"img/product-img/prodetails/litbox 2 shop.png\">\r\n");
+      out.write("                                                <img class=\"d-block w-100\" src=\"img/product-img/prodetails/litbox 2 shop.png\" alt=\"First slide\">\r\n");
+      out.write("                                            </a>\r\n");
+      out.write("                                        </div>\r\n");
+      out.write("                                    </div>\r\n");
+      out.write("                                </div>\r\n");
+      out.write("                            </div>\r\n");
+      out.write("\r\n");
+      out.write("                            <div class=\"col-12 col-lg-5\">\r\n");
+      out.write("                                <div class=\"single_product_desc\">\r\n");
+      out.write("                                    <!-- Product Meta Data -->\r\n");
+      out.write("                                    <div class=\"product-meta-data\">\r\n");
+      out.write("                                        <div class=\"line\"></div>\r\n");
+      out.write("                                        <p class=\"product-price\">PHP 910.00</p>\r\n");
+      out.write("                                        <a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/litterbox2\">\r\n");
+      out.write("                                            <h6>Open Top Cat Litter Box with Shovel</h6>\r\n");
       out.write("                                        </a>\r\n");
+      out.write("                                    </div>\r\n");
+      out.write("                                    <div class=\"short_overview my-5\">\r\n");
+      out.write("                                        <p>The open top cat litter box with Shovel provides a convenient and accessible solution for cat owners. Featuring an open design for easy access, it includes a handy shovel for effortless cleaning. This litter box is designed to minimize odors and mess, making it a practical choice for maintaining cleanliness and comfort for your feline companion.</p>\r\n");
+      out.write("                                    </div>\r\n");
+      out.write("                                    <div>\r\n");
+      out.write("                                        <a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/addtocart?productID=1020\"><button type=\"submit\" name=\"addtocart\" value=\"5\" class=\"btn amado-bt\">Add to Cart</button></a>\r\n");
       out.write("                                    </div>\r\n");
       out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
-      out.write("\r\n");
-      out.write("                        <div class=\"col-12 col-lg-5\">\r\n");
-      out.write("                            <div class=\"single_product_desc\">\r\n");
-      out.write("                                <!-- Product Meta Data -->\r\n");
-      out.write("                                <div class=\"product-meta-data\">\r\n");
-      out.write("                                    <div class=\"line\"></div>\r\n");
-      out.write("                                    <p class=\"product-price\">PHP 910.00</p>\r\n");
-      out.write("                                    <a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/litterbox2\">\r\n");
-      out.write("                                        <h6>Open Top Cat Litter Box with Shovel</h6>\r\n");
-      out.write("                                    </a>\r\n");
-      out.write("                                </div>\r\n");
-      out.write("                                <div class=\"short_overview my-5\">\r\n");
-      out.write("                                    <p>The open top cat litter box with Shovel provides a convenient and accessible solution for cat owners. Featuring an open design for easy access, it includes a handy shovel for effortless cleaning. This litter box is designed to minimize odors and mess, making it a practical choice for maintaining cleanliness and comfort for your feline companion.</p>\r\n");
-      out.write("                                </div>\r\n");
-      out.write("                                <div>\r\n");
-      out.write("                                <a href=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/cart\"><button type=\"submit\" name=\"addtocart\" value=\"5\" class=\"btn amado-bt\">Add to Cart</button></a>\r\n");
-      out.write("                                </div>\r\n");
-      out.write("                            </div>\r\n");
-      out.write("                        </div>\r\n");
-      out.write("                    </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
@@ -354,5 +382,37 @@ public final class litterbox2_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_0.setParent(null);
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole == 'Admin' || userRole == 'admin'}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
+    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                            <a href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/inventory/users\" class=\"fav-nav\">\r\n");
+        out.write("                                <img src=\"img/core-img/inventoryicon.png\" alt=\"error\">Inventory\r\n");
+        out.write("                            </a>\r\n");
+        out.write("                        ");
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+    return false;
   }
 }

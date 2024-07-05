@@ -21,6 +21,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- The above 4 meta tags must come first in the head -->
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
         <!-- Title  -->
         <title>Fur Real Pet Supplies - Cage 1</title>
@@ -36,6 +38,12 @@
     </head>
 
     <body>
+        <input type="hidden" id="logstatus" value="${userSuccess}">
+        <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+        <input type="hidden" id="passwordCurrent" value="${latestpass}">
+        <input type="hidden" id="passwordlogged" value="${currentPassword}">
+        <input type="hidden" id="userRole" value="${userRole}">
+        
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -103,13 +111,17 @@
                 <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
                         <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
+                        <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
+                                <img src="img/core-img/inventoryicon.png" alt="error">Inventory
+                            </a>
+                        </c:if>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
                         <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="img/core-img/shopicon.png" alt="error">Shop</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
@@ -170,7 +182,7 @@
                                     <p>A large foldable steel cage for dogs offers a spacious and secure environment for pets, crafted from durable steel for longevity. Its generous interior space allows for comfort and movement, while the sturdy construction ensures safety and containment. Ideal for crate training, travel, or providing a cozy retreat at home, this cage prioritizes the well-being of canine companions, combining versatility with peace of mind for owners.</p>
                                 </div>
                                 <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
+                                <a href="${pageContext.request.contextPath}/addtocart?productID=1001"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                 </div>
                             </div>
                         </div>

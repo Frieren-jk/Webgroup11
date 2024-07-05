@@ -14,6 +14,7 @@ public class ProductBlueprint {
 
     private int productID;
     private String productName;
+    private String userName;
     private String description;
     private String size;
     private BigDecimal price;
@@ -42,6 +43,18 @@ public class ProductBlueprint {
         this.quantity = quantity;
     }
 
+    public ProductBlueprint(
+            int productID,
+            String userName,
+            BigDecimal price
+    ) {
+        this.productID = productID;
+        this.productID = productID;
+        this.userName = userName;
+        this.price = price;
+
+    }
+
     @Override
     public String toString() {
         return "ProductBlueprint{"
@@ -52,6 +65,14 @@ public class ProductBlueprint {
                 + ", price=" + price
                 + ", quantity='" + quantity + '\''
                 + '}';
+    }
+
+    public String getuserName() {
+        return userName;
+    }
+
+    public void setuserName(String userName) {
+        this.userName = userName;
     }
 
     public int getProductID() {

@@ -41,6 +41,13 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0); 
+
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
@@ -134,6 +141,11 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <a class=\"register-link\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\">Register here</a>.\r\n");
+      out.write("                                <div class=\"text-center mb-5 text-white\">Already logged in? \r\n");
+      out.write("                                    <a class=\"register-link\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/home\">Go to Homepage</a>.\r\n");
+      out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </form>\r\n");
       out.write("                    </div>\t\t\t\t\t\r\n");

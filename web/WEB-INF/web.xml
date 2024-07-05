@@ -64,6 +64,10 @@
         <servlet-name>logout</servlet-name>
         <servlet-class>admin.access.logout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addtocart</servlet-name>
+        <servlet-class>admin.access.addtocart</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inventory</servlet-name>
         <url-pattern>/inventory</url-pattern>
@@ -299,6 +303,18 @@
     <servlet-mapping>
         <servlet-name>logout</servlet-name>
         <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addtocart</servlet-name>
+        <url-pattern>/addtocart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addtocart</servlet-name>
+        <url-pattern>/deletecart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addtocart</servlet-name>
+        <url-pattern>/checkoutcart</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

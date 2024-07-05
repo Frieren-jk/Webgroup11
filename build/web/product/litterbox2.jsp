@@ -1,6 +1,6 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -21,7 +21,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- The above 4 meta tags must come first in the head -->
-
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- Title  -->
         <title>Fur Real Pet Supplies - Litter Box 2</title>
 
@@ -36,6 +37,12 @@
     </head>
 
     <body>
+        <input type="hidden" id="logstatus" value="${userSuccess}">
+        <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+        <input type="hidden" id="passwordCurrent" value="${latestpass}">
+        <input type="hidden" id="passwordlogged" value="${currentPassword}">
+        <input type="hidden" id="userRole" value="${userRole}">
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -72,19 +79,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -103,13 +110,17 @@
                 <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
                         <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
+                        <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
+                                <img src="img/core-img/inventoryicon.png" alt="error">Inventory
+                            </a>
+                        </c:if>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
                         <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="img/core-img/shopicon.png" alt="error">Shop</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
@@ -143,38 +154,38 @@
                         </div>
                     </div>
                     <div class="cart-wrapper">                
-                    <div class="row">
-                        <div class="col-12 col-lg-7">
-                            <div class="single_product_thumb">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <a class="gallery_img" href="img/product-img/prodetails/litbox 2 shop.png">
-                                            <img class="d-block w-100" src="img/product-img/prodetails/litbox 2 shop.png" alt="First slide">
+                        <div class="row">
+                            <div class="col-12 col-lg-7">
+                                <div class="single_product_thumb">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <a class="gallery_img" href="img/product-img/prodetails/litbox 2 shop.png">
+                                                <img class="d-block w-100" src="img/product-img/prodetails/litbox 2 shop.png" alt="First slide">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-5">
+                                <div class="single_product_desc">
+                                    <!-- Product Meta Data -->
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">PHP 910.00</p>
+                                        <a href="${pageContext.request.contextPath}/litterbox2">
+                                            <h6>Open Top Cat Litter Box with Shovel</h6>
                                         </a>
+                                    </div>
+                                    <div class="short_overview my-5">
+                                        <p>The open top cat litter box with Shovel provides a convenient and accessible solution for cat owners. Featuring an open design for easy access, it includes a handy shovel for effortless cleaning. This litter box is designed to minimize odors and mess, making it a practical choice for maintaining cleanliness and comfort for your feline companion.</p>
+                                    </div>
+                                    <div>
+                                        <a href="${pageContext.request.contextPath}/addtocart?productID=1020"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-12 col-lg-5">
-                            <div class="single_product_desc">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">PHP 910.00</p>
-                                    <a href="${pageContext.request.contextPath}/litterbox2">
-                                        <h6>Open Top Cat Litter Box with Shovel</h6>
-                                    </a>
-                                </div>
-                                <div class="short_overview my-5">
-                                    <p>The open top cat litter box with Shovel provides a convenient and accessible solution for cat owners. Featuring an open design for easy access, it includes a handy shovel for effortless cleaning. This litter box is designed to minimize odors and mess, making it a practical choice for maintaining cleanliness and comfort for your feline companion.</p>
-                                </div>
-                                <div>
-                                <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>

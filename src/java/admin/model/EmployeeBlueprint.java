@@ -20,11 +20,39 @@ public class EmployeeBlueprint {
     private String mobileNumber;
     private String accountStatus;
     private String loginStatus;
+     private String userType;
+   
 
     public EmployeeBlueprint() {
-        //empty
+    
     }
+    
+    
 
+    public EmployeeBlueprint(
+            String userName,
+            String password,
+            String firstName,
+            String middleName,
+            String lastName,
+            String address,
+            String birthday,
+            String mobileNumber,
+            String userType) {
+
+        this.userName = userName;
+        this.password = password;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.address = address;
+        this.birthday = birthday;
+        this.mobileNumber = mobileNumber;
+         this.userType = userType;
+        
+
+    }
+    
     public EmployeeBlueprint(
             String userName,
             String password,
@@ -66,6 +94,8 @@ public class EmployeeBlueprint {
         this.mobileNumber = mobileNumber;
 
     }
+    
+    
 
     @Override
     public String toString() {
@@ -161,6 +191,14 @@ public class EmployeeBlueprint {
 
     public void setLoginStatus(String loginStatus) {
         this.loginStatus = loginStatus;
+    }
+    
+     public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 
 }

@@ -1,6 +1,6 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -21,6 +21,8 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
@@ -37,6 +39,14 @@
     </head>
 
     <body>
+        <input type="hidden" id="logstatus" value="${userSuccess}">
+        <input type="hidden" id="userNameCurrent" value="${userNamelog}">
+        <input type="hidden" id="passwordCurrent" value="${latestpass}">
+        <input type="hidden" id="passwordlogged" value="${currentPassword}">
+        <input type="hidden" id="userRole" value="${userRole}">
+        <input type="hidden" id="checkout" value="${checkout}">
+
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -73,19 +83,19 @@
             </div>
 
             <!-- Topbar Start -->
-                <div class="container-fluid">
-                    <div class="row upbar">
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
-                                <span class="text-light px-2">|</span>
-                                <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
-                                <span class="text-light px-2">|</span>
-                                <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row upbar">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="d-inline-flex align-items-center">
+                            <a class="text-light"><i class="fa-solid fa-phone"></i> Call Us: 0960-542-2186</a>
+                            <span class="text-light px-2">|</span>
+                            <a class="text-light"><i class="fa-solid fa-envelope"></i> Our Email: furrealpetsupplies@gmail.com</a>
+                            <span class="text-light px-2">|</span>
+                            <a style="color: #FBFF4B;" href="${pageContext.request.contextPath}/physicalshop">Visit our physical shop. <i class="fa-solid fa-location-dot"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
             <!-- Topbar End -->
 
             <!-- Header Area Start -->
@@ -104,13 +114,17 @@
                 <!-- Main Nav -->
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
-                        <a href="#" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
                         <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav"><img src="img/core-img/inventoryicon.png" href="${pageContext.request.contextPath}/inventory/users" alt="error">Inventory</a>
+                            <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
+                                <img src="img/core-img/inventoryicon.png" alt="error">Inventory
+                            </a>
+                        </c:if>
                         <a href="${pageContext.request.contextPath}/home" class="fav-nav"><img src="img/core-img/homeicon.png" alt="error">Home</a>
                         <a href="${pageContext.request.contextPath}/cages" class="fav-nav"><img src="img/core-img/shopicon.png" alt="error">Shop</a>
                         <a href="${pageContext.request.contextPath}/cart" class="cart-nav"><img class="pb-1" src="img/core-img/carticon.png" alt="error">Cart<span>(3)</span></a>
@@ -136,114 +150,52 @@
                                 <h2>SHOPPING CART</h2>
                             </div>
                             <div class="cart-wrapper">
-                            <div class="cart-table clearfix">
-                                <table class="table table-responsive">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Name</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart/cage 1 cart.png" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Foldable Steel Cage</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 1720.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if (!isNaN(qty) && qty > 1)
-                                                                    effect.value--;
-                                                                return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty))
-                                                                    effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart/cage 2 cart.png" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Cat Carrier Bag</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 1100.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty2');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty) && qty > 1)
-                                                                    effect.value--;
-                                                                return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty2" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty2');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty))
-                                                                    effect.value++;
-                                                                return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cart_product_img">
-                                                <a href="#"><img src="img/bg-img/cart/cage 3 cart.png" alt="Product"></a>
-                                            </td>
-                                            <td class="cart_product_desc">
-                                                <h5>Small Plastic Cage</h5>
-                                            </td>
-                                            <td class="price">
-                                                <span>PHP 960.00</span>
-                                            </td>
-                                            <td class="qty">
-                                                <div class="qty-btn d-flex">
-                                                    <p>Qty</p>
-                                                    <div class="quantity">
-                                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value;
-                                                                if (!isNaN(qty) && qty > 1)
-                                                                    effect.value--;
-                                                                return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                                        <input type="number" class="qty-text" id="qty3" step="1" min="1" max="300" name="quantity" value="1">
-                                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty3');
-                                                                var qty = effect.value;
-                                                                if (!isNaN(qty))
-                                                                    effect.value++; return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                <div class="cart-table clearfix">
+                                    <table class="table table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>productID</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Remove from cart</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:set var="cartTotal" value="0" />
+                                            <c:forEach var="product" items="${cartProducts}">
+                                                <c:set var="subtotal" value="${product.price * 1}" />
+                                                <c:set  var="cartTotal" value="${cartTotal + subtotal}" />
+                                                <tr>
+                                                    <td class="cart_product_img">
+                                                        <h5><c:out value="${product.productID}" /></h5>
+                                                    </td>
+                                                    <td class="cart_product_desc">
+                                                        <h5><c:out value="${product.productName}" /></h5>
+                                                    </td>
+                                                    <td class="price">
+                                                        <span><c:out value="${product.price}" /></span>
+                                                    </td>
+                                                    <td class="qty">
+                                                        <a href="${pageContext.request.contextPath}/deletecart?productID=<c:out value='${product.productID}'/>" class="btn btn-danger btn-sm" >Remove</a>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-4">
                             <div class="cart-summary">
                                 <h5>CART TOTAL</h5>
                                 <ul class="summary-table">
-                                    <li><span>Subtotal:</span> <span>3780.00</span></li>
+                                    <li><span>Subtotal:</span> <span id ="checkouttotal" value="${cartTotal}">${cartTotal}</span></li>
                                     <li><span>Delivery:</span> <span>32.00</span></li>
-                                    <li><span>Total:</span> <span>3812.00</span></li>
+                                    <li><span>Total:</span> <span>${cartTotal + 32}</span></li>
                                 </ul>
                                 <div class="cart-btn mt-100">
-                                    <a href="${pageContext.request.contextPath}/cart" class="btn amado-bt w-100">Checkout</a>
+                                    <a href="${pageContext.request.contextPath}/checkoutcart" class="btn amado-bt w-100">Checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -306,6 +258,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- ##### Footer Area End ##### -->
 
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
@@ -323,6 +276,28 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+                                    $(document).ready(function () {
+                                        var checkoutsuccess = $('#checkout').val();
+                                        var checkouttotal = $('#checkouttotal').val();
+                                        if (checkoutsuccess === "success") {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'CHECKOUT SUCCESSFUL',
+                                                text: 'Thank you for choosing us!',
+                                                timer: 5000,
+                                                background: '#20c997',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
+                                            }).then(function () {
+            <% session.removeAttribute("checkout");%> // Clear the session attribute
+                                            });
+                                        }
+                                    });
+        </script>
     </body>
 
 </html>

@@ -371,9 +371,16 @@
                                                 html: `
                 <form id="changePasswordForm">
                     <input type="hidden" name="username" value="${userNamelog}">
-                    <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
-                    <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                            <div class="password-field">
+                            <input type="text" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                        <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('newPassword')"></i>
+                    </div>
+                        <div class="password-field">
+                            <input type="text" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                        <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('confirmNewPassword')"></i>
+                    </div>
                 </form>
+
             `,
                                                 confirmButtonText: 'Change',
                                                 focusConfirm: false,
@@ -442,7 +449,19 @@
                                     });
 
 
-
+                                    function togglePasswordVisibility(inputId) {
+                                        const input = document.getElementById(inputId);
+                                        const icon = input.nextElementSibling;
+                                        if (input.type === "password") {
+                                            input.type = "text";
+                                            icon.classList.remove("fa-eye-slash");
+                                            icon.classList.add("fa-eye");
+                                        } else {
+                                            input.type = "password";
+                                            icon.classList.remove("fa-eye");
+                                            icon.classList.add("fa-eye-slash");
+                                        }
+                                    }
 
 
         </script>

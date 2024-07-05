@@ -95,7 +95,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
-      out.write("\r\n");
       out.write("        <input type=\"hidden\" id=\"logstatus\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userSuccess}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
@@ -111,6 +110,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <input type=\"hidden\" id=\"userRole\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
+      out.write("\r\n");
       out.write("        <!-- Search Start -->\r\n");
       out.write("        <div class=\"search-section section-padding-100\">\r\n");
       out.write("            <div class=\"search-close\">\r\n");
@@ -187,7 +187,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</a>\r\n");
+      out.write(" <span style=\"padding-left: 29px;\">(");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write(")</span></a>\r\n");
       out.write("\r\n");
       out.write("                        <a href=\"#\" id=\"changePasswordBtn\" class=\"fav-nav\"><img src=\"img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");
       out.write("                        <a href=\"");

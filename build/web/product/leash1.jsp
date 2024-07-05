@@ -21,6 +21,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- The above 4 meta tags must come first in the head -->
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
         <!-- Title  -->
         <title>Fur Real Pet Supplies - Leash 1</title>
@@ -177,7 +179,7 @@
                                     </a>
                                 </div>
                                 <div class="short_overview my-5">
-                                    <p>A bungee leash for dogs is a specially designed leash that incorporates a flexible, stretchable bungee section. This innovative feature helps to absorb the shock and sudden pulls from energetic dogs, providing a smoother walking experience for both the dog and the owner. The bungee leash reduces the risk of injury by minimizing the impact on the dog’s neck and the handler’s arm. It is ideal for active dogs and those in training, ensuring comfort and control during walks, runs, or hikes.</p>
+                                    <p>A bungee leash for dogs is a specially designed leash that incorporates a flexible, stretchable bungee section. This innovative feature helps to absorb the shock and sudden pulls from energetic dogs, providing a smoother walking experience for both the dog and the owner. The bungee leash reduces the risk of injury by minimizing the impact on the dogâs neck and the handlerâs arm. It is ideal for active dogs and those in training, ensuring comfort and control during walks, runs, or hikes.</p>
                                 </div>
                                 <div>
                                 <a href="${pageContext.request.contextPath}/cart"><button type="submit" name="addtocart" value="5" class="btn amado-bt">Add to Cart</button></a>

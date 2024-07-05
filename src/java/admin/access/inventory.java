@@ -391,7 +391,6 @@ public class inventory extends HttpServlet {
 
         try {
             String userName = request.getParameter("userName");
-            String password = request.getParameter("password");
             String firstName = request.getParameter("firstName");
             String middleName = request.getParameter("middleName");
             String lastName = request.getParameter("lastName");
@@ -402,7 +401,6 @@ public class inventory extends HttpServlet {
 
             EmployeeDao employeedao = new EmployeeDao();
             boolean editUser = employeedao.updateUser(
-                    password,
                     firstName,
                     middleName,
                     lastName,

@@ -188,7 +188,7 @@
                                                 <div class="col-12 col-md-6 mt-3">
                                                     <div class="form-group">
                                                         <label for="price">Price</label>
-                                                        <input type="number" class="form-control" id="price" name="price" placeholder="Enter the Price" value="${product.price}">
+                                                        <input type="number" class="form-control" id="price"  step="0.01" name="price" placeholder="Enter the Price" value="${product.price}">
                                                         <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
                                                     </div>
                                                 </div>

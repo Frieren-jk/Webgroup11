@@ -120,7 +120,7 @@
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="img/core-img/createicon.png" alt="error">Register Now</a>
-                        <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
                             <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
                                 <img src="img/core-img/inventoryicon.png" alt="error">Inventory
                             </a>

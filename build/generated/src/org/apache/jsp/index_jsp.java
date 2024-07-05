@@ -200,7 +200,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/registration\" class=\"fav-nav\"><img src=\"img/core-img/createicon.png\" alt=\"error\">Register Now</a>\r\n");
-      out.write("                        ");
+      out.write("                            ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
       out.write("\r\n");

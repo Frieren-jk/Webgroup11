@@ -39,12 +39,12 @@
     </head>
 
     <body>
-
         <input type="hidden" id="logstatus" value="${userSuccess}">
         <input type="hidden" id="userNameCurrent" value="${userNamelog}">
         <input type="hidden" id="passwordCurrent" value="${latestpass}">
         <input type="hidden" id="passwordlogged" value="${currentPassword}">
         <input type="hidden" id="userRole" value="${userRole}">
+        
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">

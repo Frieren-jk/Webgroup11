@@ -62,6 +62,8 @@ public class registration extends HttpServlet {
             String address = request.getParameter("address");
             String birthday = request.getParameter("birthday");
             String mobileNumber = request.getParameter("mobileNumber");
+            String userType = request.getParameter("role");
+            
             String hashedPassword = hashPassword(password);
             EmployeeBlueprint newEmployee = new EmployeeBlueprint(
                     userName,
@@ -71,7 +73,8 @@ public class registration extends HttpServlet {
                     lastName,
                     address,
                     birthday,
-                    mobileNumber);
+                    mobileNumber, 
+                    userType);
             EmployeeDao employeeDao = new EmployeeDao();
             boolean createUser = employeeDao.createEmployee(newEmployee);
             HttpSession session = request.getSession();

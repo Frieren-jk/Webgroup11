@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package admin.dao;
 
 import admin.model.EmployeeBlueprint;
@@ -11,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 
 /**
  *
@@ -52,7 +47,8 @@ public class EmployeeDao {
                 + "lastName, "
                 + "address, "
                 + "birthday, "
-                + "mobileNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+                + "mobileNumber, "
+                + "userType) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
         try {
             conn = ConnectPool.getConnection();
             ps = conn.prepareStatement(query);
@@ -64,6 +60,7 @@ public class EmployeeDao {
             ps.setString(6, employee.getaddress());
             ps.setString(7, employee.getbirthday());
             ps.setString(8, employee.getmobileNumber());
+            ps.setString(9, employee.getUserType());
             int rowAffected = ps.executeUpdate();
             // Check if the insertion was successful
             if (rowAffected != 0) {
@@ -183,6 +180,4 @@ public class EmployeeDao {
         return rowsDeleted;
     }
 
-    
-  
 }

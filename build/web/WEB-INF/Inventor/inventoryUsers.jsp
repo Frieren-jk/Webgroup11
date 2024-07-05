@@ -5,7 +5,7 @@
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
         response.sendRedirect(request.getContextPath() + "/login");
-    }
+    } 
 
     // Set headers to prevent caching
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1

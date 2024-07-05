@@ -71,17 +71,13 @@ public class login extends HttpServlet {
         System.out.println(username + newPassword);
         UserDao userDao = new UserDao();
         boolean passwordChanged = userDao.changePass(username, newPassword);
-        String newpass = userDao.getLatestPass(username);
-        String hashpass = hashPassword(newpass);
-        System.out.println("both pass: " + newpass + "and " + hashpass);
         if (passwordChanged) {
             session.removeAttribute("currentPassword");
             session.setAttribute("latestpass", newPassword);
             System.out.println("Success Change Password");
-            
+
             response.sendRedirect(request.getContextPath() + "/home");
         } else {
-            session.setAttribute("latestpass", "samepass");
             System.out.println("Failed Change Password");
             response.sendRedirect(request.getContextPath() + "/home");
         }
@@ -110,6 +106,10 @@ public class login extends HttpServlet {
             session.setAttribute("userNamelog", userName);
             session.setAttribute("currentPassword", password);
             session.setAttribute("userSuccess", "success");
+            UserDao userDao = new UserDao();
+            String userType = userDao.getRole(userName);
+            session.setAttribute("userRole", userType);
+            System.out.println("user is " + userType);
             response.sendRedirect(request.getContextPath() + "/home");
         } else {
             // Increment the attempt count

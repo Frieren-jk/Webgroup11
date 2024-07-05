@@ -40,7 +40,8 @@
 
         <input type="hidden" id="logstatus" value="${userSuccess}">
         <input type="hidden" id="userNameCurrent" value="${userNamelog}">
-         <input type="hidden" id="passwordCurrent" value="${currentPassword}">
+        <input type="hidden" id="passwordCurrent" value="${latestpass}">
+        <input type="hidden" id="passwordlogged" value="${currentPassword}">
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">
@@ -378,10 +379,12 @@
                                                 preConfirm: () => {
                                                     const newPassword = document.getElementById('newPassword').value;
                                                     const confirmNewPassword = document.getElementById('confirmNewPassword').value;
-                                                    var currentPassword = $('#passwordCurrent').val(); // assume you have a way to get the current user's password
+                                                    var currentPassword = $('#passwordCurrent').val();
+                                                    var logPassword = $('#passwordlogged').val();
 
-                                                    if (newPassword === currentPassword) {
+                                                    if (currentPassword === "samepass" || logPassword == newPassword || currentPassword == newPassword) {
                                                         Swal.showValidationMessage('New password cannot be the same as the current password');
+
                                                         return false;
                                                     }
 

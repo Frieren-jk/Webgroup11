@@ -115,4 +115,51 @@ public class UserDao {
         return BCrypt.hashpw(password, salt);
     }
 
+    public String getLatestPass(String userName) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String password = null;
+
+        try {
+            String query = "Select password from employee WHERE userName = ?";
+            conn = ConnectPool.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userName);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+
+                password = rs.getString("password");
+                System.out.println("latest" + password);
+            }
+        } catch (SQLException e) {
+            System.out.println("SQLException: " + e.getMessage());
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException: " + e.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException: " + e.getMessage());
+                }
+            }
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("SQLException: " + e.getMessage());
+                }
+            }
+        }
+        return password;
+    }
+
 }

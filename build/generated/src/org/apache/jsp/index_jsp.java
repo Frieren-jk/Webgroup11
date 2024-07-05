@@ -90,7 +90,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <input type=\"hidden\" id=\"userNameCurrent\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
-      out.write("         <input type=\"hidden\" id=\"passwordCurrent\" value=\"");
+      out.write("        <input type=\"\" id=\"passwordCurrent\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${latestpass}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"\" id=\"passwordlogged\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentPassword}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
       out.write("        <!-- Search Start -->\r\n");
@@ -486,10 +489,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                                preConfirm: () => {\r\n");
       out.write("                                                    const newPassword = document.getElementById('newPassword').value;\r\n");
       out.write("                                                    const confirmNewPassword = document.getElementById('confirmNewPassword').value;\r\n");
-      out.write("                                                    var currentPassword = $('#passwordCurrent').val(); // assume you have a way to get the current user's password\r\n");
+      out.write("                                                    var currentPassword = $('#passwordCurrent').val();\r\n");
+      out.write("                                                    var logPassword = $('#passwordlogged').val();\r\n");
       out.write("\r\n");
-      out.write("                                                    if (newPassword === currentPassword) {\r\n");
+      out.write("                                                    if (currentPassword === \"samepass\" || logPassword == newPassword || currentPassword == newPassword) {\r\n");
       out.write("                                                        Swal.showValidationMessage('New password cannot be the same as the current password');\r\n");
+      out.write("                                                        if (currentPassword === \"samepass\")\r\n");
+      out.write("\r\n");
       out.write("                                                        return false;\r\n");
       out.write("                                                    }\r\n");
       out.write("\r\n");

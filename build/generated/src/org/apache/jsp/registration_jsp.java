@@ -73,14 +73,14 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${regUser}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
       out.write("\r\n");
-      out.write("            <div class=\"cart-table-area section-padding-100 \">\r\n");
+      out.write("            <div class=\"regis-table-area section-padding-100 \">\r\n");
       out.write("                <div class=\"container-fluid \">\r\n");
       out.write("                    <div class=\"row\">\r\n");
       out.write("                        <div class=\"col-12\">\r\n");
       out.write("                            <div class=\"checkout_details_area clearfix\">\r\n");
       out.write("\r\n");
       out.write("                                <div class=\"cart-title\">\r\n");
-      out.write("                                    <center><h1><b>REGISTRATION FORM</b></h1></center>\r\n");
+      out.write("                                    <center><h1><b style=\"color: steelblue;\">REGISTRATION FORM</b></h1></center>\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"registration-form-wrapper\">\r\n");
       out.write("                                    <form method=\"POST\" action=\"");

@@ -102,7 +102,7 @@
                 <!-- Main Nav -->
                 <div class="sticky-top" >
                     <div class="cart-fav-search mb-100">
-                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a style="color: steelblue;" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
                         <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
@@ -143,7 +143,7 @@
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
                                                     <label for="productID">Product ID</label>
-                                                    <input type="text" class="form-control" id="productID" name="productID" placeholder="Enter the Product ID">
+                                                    <input type="number" class="form-control" id="productID" name="productID" placeholder="Enter the Product ID">
                                                     <small id="productIDHelp" class="form-text">Product ID must be alphanumeric.</small>
                                                 </div>
                                             </div>
@@ -175,7 +175,7 @@
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
                                                     <label for="price">Price</label>
-                                                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price">
+                                                    <input type="number" class="form-control" id="price" name="price" placeholder="Enter the Price">
                                                     <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
                                                 </div>
                                             </div>

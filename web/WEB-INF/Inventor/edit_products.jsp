@@ -103,7 +103,7 @@
                 <!-- Main Nav -->
                 <div class="sticky-top" >
                     <div class="cart-fav-search mb-100">
-                        <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
+                        <a style="color: steelblue;" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/usericon.png" alt="error">${userNamelog}</a>
                         <a href="#" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
@@ -147,7 +147,7 @@
                                                 <div class="col-12 col-md-6 mt-3">
                                                     <div class="form-group">
                                                         <label for="productID">Editing Product ID </label>
-                                                        <input type="text" class="form-control" id="productID" name="productID" value="${product.productID}" readonly >
+                                                        <input type="number" class="form-control" id="productID" name="productID" value="${product.productID}" readonly >
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-6 mt-3">
@@ -178,7 +178,7 @@
                                                 <div class="col-12 col-md-6 mt-3">
                                                     <div class="form-group">
                                                         <label for="price">Price</label>
-                                                        <input type="text" class="form-control" id="price" name="price" placeholder="Enter the Price" value="${product.price}">
+                                                        <input type="number" class="form-control" id="price" name="price" placeholder="Enter the Price" value="${product.price}">
                                                         <small id="priceHelp" class="form-text">Price must be in decimal format.</small>
                                                     </div>
                                                 </div>

@@ -160,19 +160,6 @@
                                                             Please enter a username.</div>
                                                     </div> 
                                                 </div>
-                                           
-                                                <div class="col-12 col-md-6 mt-3">
-                                                    <div class="form-group form-pass">
-                                                        <label for="password">Password</label>
-                                                        <i class="fa fa-eye-slash showPass " ></i>
-                                                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter your password" value="${user.password}" required >
-                                                        <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8 - 16 characters,
-                                                            must contain at least 1: capital letter , small letter, number, and special character(!@#$&* are allowed).</small>
-                                                        <div class="invalid-feedback">
-                                                            Please enter your password.
-                                                        </div>
-                                                    </div>
-                                                </div>   
 
 
                                             </div> 

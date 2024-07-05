@@ -44,7 +44,7 @@
         <input type="hidden" id="passwordCurrent" value="${latestpass}">
         <input type="hidden" id="passwordlogged" value="${currentPassword}">
         <input type="hidden" id="userRole" value="${userRole}">
-        
+
         <!-- Search Start -->
         <div class="search-section section-padding-100">
             <div class="search-close">

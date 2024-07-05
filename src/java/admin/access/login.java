@@ -17,7 +17,7 @@ import org.mindrot.jbcrypt.BCrypt;
 public class login extends HttpServlet {
 
     private static final int MAX_ATTEMPTS = 3; // Maximum login attempts
-    private static final long LOCKOUT_TIME = 60000; //  (1 minute) or 300000 for 5 minutes
+    private static final long LOCKOUT_TIME = 30000; //  (1 minute) or 300000 for 5 minutes
     private static final HashMap<String, Integer> attempts = new HashMap<>();
     private static final HashMap<String, Long> lockout = new HashMap<>();
 

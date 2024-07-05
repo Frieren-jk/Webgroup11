@@ -41,6 +41,8 @@ public class ProductBlueprint {
         this.price = price;
         this.quantity = quantity;
     }
+    
+    
 
     @Override
     public String toString() {

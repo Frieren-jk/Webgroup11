@@ -102,8 +102,8 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                                            <div class=\"form-group\">\r\n");
       out.write("                                                <select class=\"form-control\" id=\"role\" name=\"role\" required>\r\n");
       out.write("                                                    <option value=\"\" disabled selected>Select your role</option>\r\n");
-      out.write("                                                    <option value=\"admin\">Admin</option>\r\n");
-      out.write("                                                    <option value=\"user\">User</option>\r\n");
+      out.write("                                                    <option value=\"Admin\">Admin</option>\r\n");
+      out.write("                                                    <option value=\"User\">User</option>\r\n");
       out.write("                                                </select>\r\n");
       out.write("                                                <div class=\"invalid-feedback\">\r\n");
       out.write("                                                    Please select a role.\r\n");

@@ -63,7 +63,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
         response.sendRedirect(request.getContextPath() + "/login");
-    }
+    } 
 
     // Set headers to prevent caching
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
@@ -199,7 +199,7 @@ public final class inventoryUsers_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top\" >\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100\">\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));

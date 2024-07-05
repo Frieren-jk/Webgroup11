@@ -177,7 +177,7 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top\" >\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100\">\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -404,7 +404,7 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
           out.write("                                                <div class=\"col-12 col-md-6 mt-3\">\r\n");
           out.write("                                                    <div class=\"form-group\">\r\n");
           out.write("                                                        <label for=\"productID\">Editing Product ID </label>\r\n");
-          out.write("                                                        <input type=\"text\" class=\"form-control\" id=\"productID\" name=\"productID\" value=\"");
+          out.write("                                                        <input type=\"number\" class=\"form-control\" id=\"productID\" name=\"productID\" value=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.productID}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\" readonly >\r\n");
           out.write("                                                    </div>\r\n");
@@ -443,7 +443,7 @@ public final class edit_005fproducts_jsp extends org.apache.jasper.runtime.HttpJ
           out.write("                                                <div class=\"col-12 col-md-6 mt-3\">\r\n");
           out.write("                                                    <div class=\"form-group\">\r\n");
           out.write("                                                        <label for=\"price\">Price</label>\r\n");
-          out.write("                                                        <input type=\"text\" class=\"form-control\" id=\"price\" name=\"price\" placeholder=\"Enter the Price\" value=\"");
+          out.write("                                                        <input type=\"number\" class=\"form-control\" id=\"price\" name=\"price\" placeholder=\"Enter the Price\" value=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.price}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\r\n");
           out.write("                                                        <small id=\"priceHelp\" class=\"form-text\">Price must be in decimal format.</small>\r\n");

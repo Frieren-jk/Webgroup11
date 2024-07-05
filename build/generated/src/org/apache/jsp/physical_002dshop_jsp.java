@@ -156,7 +156,7 @@ public final class physical_002dshop_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top pt-1\">\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100 mt-5 \">\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
+      out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</a>\r\n");
       out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");

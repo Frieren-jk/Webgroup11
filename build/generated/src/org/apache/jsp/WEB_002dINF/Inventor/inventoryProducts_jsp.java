@@ -199,7 +199,7 @@ public final class inventoryProducts_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top\" >\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100\">\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));

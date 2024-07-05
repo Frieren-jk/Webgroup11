@@ -172,7 +172,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                <!-- Main Nav -->\r\n");
       out.write("                <div class=\"sticky-top\" >\r\n");
       out.write("                    <div class=\"cart-fav-search mb-100\">\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write("                        <a style=\"color: steelblue;\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/usericon.png\" alt=\"error\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -249,7 +249,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
       out.write("                                                    <label for=\"productID\">Product ID</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"productID\" name=\"productID\" placeholder=\"Enter the Product ID\">\r\n");
+      out.write("                                                    <input type=\"number\" class=\"form-control\" id=\"productID\" name=\"productID\" placeholder=\"Enter the Product ID\">\r\n");
       out.write("                                                    <small id=\"productIDHelp\" class=\"form-text\">Product ID must be alphanumeric.</small>\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </div>\r\n");
@@ -281,7 +281,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
       out.write("                                                    <label for=\"price\">Price</label>\r\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" id=\"price\" name=\"price\" placeholder=\"Enter the Price\">\r\n");
+      out.write("                                                    <input type=\"number\" class=\"form-control\" id=\"price\" name=\"price\" placeholder=\"Enter the Price\">\r\n");
       out.write("                                                    <small id=\"priceHelp\" class=\"form-text\">Price must be in decimal format.</small>\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </div>\r\n");

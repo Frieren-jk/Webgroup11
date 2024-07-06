@@ -369,7 +369,7 @@
                                                             }).then((result) => {
                                                                 if (result.isConfirmed) {
                                                                     // Redirect to home page after success
-                                                                    window.location.href = '${pageContext.request.contextPath}/physicalshop';
+                                                                    window.location.href = '${pageContext.request.contextPath}/update/form/product';
                                                                 }
                                                             });
                                                         },

@@ -21,6 +21,8 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <!-- The above 4 meta tags must come first in the head -->
 
         <!-- Title  -->
@@ -111,7 +113,7 @@
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
                         <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
-                        <a href="#" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
+                        <a href="#" id="changePasswordBtn" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="img/core-img/searchicon.png" alt="error">Search</a>
@@ -161,7 +163,7 @@
                                                 <br>
                                                 Weekdays: 8AM - 5PM | Weekends: 10AM - 3PM
                                                 <br><br><b><i class="fa-solid fa-map-location-dot"></i> Address: </b><br>
-                                                <em>123 Example St, District, City, Zip Code Region<br>Philippines</em></p>
+                                                <em>379 Pureza, Sta. Mesa, Manila, 1008 NCR<br>Philippines</em></p>
                                             </div>
                                         </div>
                                     </section>
@@ -176,7 +178,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div>
-                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5632538.36497416!2d-129.942709!3d46.423669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3b5f9be02ded%3A0x9e79371a486731ec!2sexample!5e0!3m2!1sen!2sph!4v1716192207333!5m2!1sen!2sph" width="100%" height="500" frameborder="0" style="border:0"allowfullscreen></iframe>
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.992379968779!2d121.00172867494915!3d14.599509885886688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9e42d5f7275%3A0x569eb3406c633fbe!2sPolytechnic%20University%20of%20the%20Philippines%20-%20Institute%20of%20Technology!5e0!3m2!1sen!2sph!4v1720228548693!5m2!1sen!2sph" width="100%" height="500" frameborder="0" style="border:0"allowfullscreen></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -261,6 +263,118 @@
         <!-- Active js -->
         <script src="js/active.js"></script>
         <script src="js/CustomJs.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+                                    $(document).ready(function () {
+                                        var statusreg = $('#logstatus').val();
+                                        var username = $('#userNameCurrent').val();
+
+
+
+
+                                        $('#changePasswordBtn').click(function (event) {
+                                            event.preventDefault(); // Prevent default form submission behavior
+
+                                            Swal.fire({
+                                                title: 'Change Password for ' + username,
+                                                html: `
+                <form id="changePasswordForm">
+                    <input type="hidden" name="username" value="${userNamelog}">
+                            <div class="password-field">
+                            <input type="password" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                        <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('newPassword')"></i>
+                    </div>
+                        <div class="password-field">
+                            <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                        <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('confirmNewPassword')"></i>
+                    </div>
+                </form>
+
+            `,
+                                                confirmButtonText: 'Change',
+                                                focusConfirm: false,
+                                                didOpen: () => {
+                                                    const popup = Swal.getPopup();
+                                                    const newPasswordInput = popup.querySelector('#newPassword');
+                                                    const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');
+
+                                                    newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                    confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                },
+                                                preConfirm: () => {
+                                                    const newPassword = document.getElementById('newPassword').value;
+                                                    const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                                                    var currentPassword = $('#passwordCurrent').val();
+                                                    var logPassword = $('#passwordlogged').val();
+
+                                                    if (currentPassword === "samepass" || logPassword == newPassword || currentPassword == newPassword) {
+                                                        Swal.showValidationMessage('New password cannot be the same as the current password');
+                                                        return false;
+                                                    }
+
+                                                    if (!newPassword || !confirmNewPassword) {
+                                                        Swal.showValidationMessage('Please fill out all fields');
+                                                        return false;
+                                                    }
+
+                                                    if (newPassword !== confirmNewPassword) {
+                                                        Swal.showValidationMessage('Passwords do not match');
+                                                        return false;
+                                                    }
+
+                                                    const passwordRegex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/;
+                                                    if (!passwordRegex.test(newPassword)) {
+                                                        Swal.showValidationMessage('8-16 characters long, with at least one lowercase letter, one uppercase letter, and one number');
+                                                        return false;
+                                                    }
+
+                                                    // Submit the form using AJAX to prevent default submission behavior
+                                                    $.ajax({
+                                                        type: 'POST',
+                                                        url: '${pageContext.request.contextPath}/changePassword',
+                                                        data: $('#changePasswordForm').serialize(),
+                                                        success: function () {
+                                                            // Show success alert
+                                                            Swal.fire({
+                                                                icon: 'success',
+                                                                title: 'Password Changed',
+                                                                text: 'Your password has been successfully changed!',
+                                                                showConfirmButton: true,
+                                                                timer: 0
+                                                            }).then((result) => {
+                                                                if (result.isConfirmed) {
+                                                                    // Redirect to home page after success
+                                                                    window.location.href = '${pageContext.request.contextPath}/physicalshop';
+                                                                }
+                                                            });
+                                                        },
+                                                        error: function (xhr, status, error) {
+                                                            Swal.showValidationMessage(`Error: ${error}`);
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        });
+                                    });
+
+
+                                    function togglePasswordVisibility(inputId) {
+                                        const input = document.getElementById(inputId);
+                                        const icon = input.nextElementSibling;
+                                        if (input.type === "password") {
+                                            input.type = "text";
+                                            icon.classList.remove("fa-eye-slash");
+                                            icon.classList.add("fa-eye");
+                                        } else {
+                                            input.type = "password";
+                                            icon.classList.remove("fa-eye");
+                                            icon.classList.add("fa-eye-slash");
+                                        }
+                                    }
+
+
+        </script>
     </body>
 
 </html>

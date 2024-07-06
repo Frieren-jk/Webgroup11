@@ -10,14 +10,14 @@
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/dao/ConnectPool.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/food2.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/model/ProductBlueprint.java</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/model/Cart.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/cage1.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/1product%20info%20(readme%20pls).txt</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/WEB-INF/Inventor/add_products.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/WEB-INF/Inventor/add_users.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/shop/toys.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/index.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/log-in.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/index.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/leash1.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/bowl2.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/cage4.jsp</file>
@@ -32,30 +32,33 @@
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/shop/clothes.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/model/EmployeeBlueprint.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/litterbox1.jsp</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/inventory.java</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/logout.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/leash2.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/inventory.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/cage3.jsp</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/physical-shop.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/food6.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/physical-shop.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/registration.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/dao/UserDao.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/litterbox2.jsp</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/cage6.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/toy2.jsp</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/registration.java</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/cage6.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/leash5.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/registration.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/cart.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/leash3.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/css/Another.css</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/food5.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/shop/leashes.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/shop/cages.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/cage5.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/litterbox3.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/bowl1.jsp</file>
-            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/shop/foods.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/leash4.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/shop/foods.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/dao/EmployeeDao.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/cart.jsp</file>
+            <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/src/java/admin/access/addtocart.java</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/product/food3.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/index.jsp</file>
             <file>file:/C:/Users/John/Documents/GitHub/Webgroup11/web/WEB-INF/Inventor/edit_products.jsp</file>

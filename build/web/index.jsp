@@ -113,8 +113,20 @@
                 <div class="sticky-top pt-1">
                     <div class="cart-fav-search mb-100 mt-5 ">
 
-                        <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
-
+                        
+                        <c:choose>
+                            
+                            <c:when test="${userRole == 'Admin' || userRole =='admin' }">
+                                <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/adminusericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
+                            </c:when>
+                                
+                                <c:otherwise>
+                                    <a style="color: steelblue;" class="fav-nav"><img src="img/core-img/usericon.png" alt="error">${userNamelog} <span style="padding-left: 29px;">(${userRole})</span></a>
+                                    
+                                </c:otherwise>
+                            </c:choose>
+                        
+                        
                         <a href="#" id="changePasswordBtn" class="fav-nav"><img src="img/core-img/changepassicon.png" alt="error">Change Pass</a>
                         <a href="${pageContext.request.contextPath}/logout" class="fav-nav"><img src="img/core-img/logouticon.png" alt="error">Log Out</a>
                         <br><br><br>

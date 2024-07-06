@@ -25,7 +25,6 @@ public class EmployeeDao {
             + "mobileNumber from employee where userName = ? ";
     private static final String DELETE_USER = "delete from employee where userName = ?;";
     private static final String UPDATE_USER = "UPDATE employee SET "
-            + "password=?, "
             + "firstName=?, "
             + "middleName=?, "
             + "lastName=?, "
@@ -96,7 +95,7 @@ public class EmployeeDao {
     }
 
     //update User
-    public boolean updateUser(String password, String firstName, String middleName, String lastName, String address, String birthday, String mobileNumber, String userName) {
+    public boolean updateUser(String firstName, String middleName, String lastName, String address, String birthday, String mobileNumber, String userName) {
         boolean success = false;
         Connection conn;
         PreparedStatement ps;
@@ -106,14 +105,13 @@ public class EmployeeDao {
             // Prepare the SQL statement
             ps = conn.prepareStatement(UPDATE_USER);
             // Set the parameters for the prepared statement
-            ps.setString(1, password);
-            ps.setString(2, firstName);
-            ps.setString(3, middleName);
-            ps.setString(4, lastName);
-            ps.setString(5, address);
-            ps.setString(6, birthday);
-            ps.setString(7, mobileNumber);
-            ps.setString(8, userName);
+            ps.setString(1, firstName);
+            ps.setString(2, middleName);
+            ps.setString(3, lastName);
+            ps.setString(4, address);
+            ps.setString(5, birthday);
+            ps.setString(6, mobileNumber);
+            ps.setString(7, userName);
 
             // Execute the update
             int rowAffected = ps.executeUpdate();

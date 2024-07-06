@@ -1,8 +1,4 @@
-<%
-    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
-    response.setHeader("Pragma", "no-cache");
-    response.setDateHeader("Expires", 0); 
-%>
+
 
 <!DOCTYPE html>
 <html>
@@ -57,21 +53,9 @@
                                 <input type="password" name="passwordlog" id="passwordlog" placeholder="Type your Password" class="form-control" required>
                                 <div class="invalid-feedback">Please enter your password.</div>
                             </div>
-                            <div class="row mb-3">
-                                <!-- Remember Checkbox -->
-                                <div class="col-auto d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="cb1">
-                                        <label class="custom-control-label text-white" for="cb1">Remember me</label>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- Login Button -->
                             <div class="mb-3"> 
                                 <button type="submit" class="btn btn-block">Log In</button>
-                            </div>
-                            <div class="text-right ">
-                                <a href="#" class="forget-link">Forgot password?</a>
                             </div>
                             <div class="text-center mb-2">
                                 <div class="text-center mb-2 text-white">or login with</div>

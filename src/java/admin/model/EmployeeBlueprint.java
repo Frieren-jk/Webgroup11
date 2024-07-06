@@ -20,7 +20,7 @@ public class EmployeeBlueprint {
     private String mobileNumber;
     private String accountStatus;
     private String loginStatus;
-     private String userType;
+    private String userType;
    
 
     public EmployeeBlueprint() {

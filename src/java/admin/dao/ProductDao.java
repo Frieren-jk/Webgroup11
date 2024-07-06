@@ -200,7 +200,7 @@ public class ProductDao {
         PreparedStatement ps;
         try {
             conn = ConnectPool.getConnection();
-            ps = conn.prepareStatement("delete from cart where productID = ?;");
+            ps = conn.prepareStatement("delete from cart where productID = ?; ");
             ps.setInt(1, productID);
 
             rowsDeleted = ps.executeUpdate() > 0;

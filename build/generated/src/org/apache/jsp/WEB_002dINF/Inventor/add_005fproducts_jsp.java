@@ -293,7 +293,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
       out.write("                                                    <label for=\"price\">Price</label>\r\n");
-      out.write("                                                    <input type=\"number\" class=\"form-control\" id=\"price\" name=\"price\" placeholder=\"Enter the Price\">\r\n");
+      out.write("                                                    <input type=\"number\" class=\"form-control\" step=\"0.01\" id=\"price\" name=\"price\" placeholder=\"Enter the Price\">\r\n");
       out.write("                                                    <small id=\"priceHelp\" class=\"form-text\">Price must be in decimal format.</small>\r\n");
       out.write("                                                </div>\r\n");
       out.write("                                            </div>\r\n");

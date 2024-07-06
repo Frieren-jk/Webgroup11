@@ -1,6 +1,6 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -40,28 +40,14 @@
     </head>
 
     <body>
-<!--        <c:if test="${addProductError == true}">
-            <div class="bounce-in-right toast-container position-fixed top-0 end-0 p-3">
-                <div id="liveToastDelete" class="toast show"
-                     role="status" aria-live="assertive" aria-atomic="true"
-                     data-bs-config='{"animation": true, "autohide": true, "delay": 5000}'>
-                    <div class="toast-header bg-danger">
-                        <i class="fas fa-trash-alt me-2"></i>
-                        <strong class="me-auto">STATUS</strong>
-                       <a href="${addProductError = false}" class="btn-close" data-bs-dismiss="toast" aria-label="Close""></a>
-                    </div>
-                    <div class="toast-body toastDanger">
-                        <c:out value="${ErrorMessage}" />
-                    </div>
-                </div>
-            </div>
-        </c:if>-->
+
 
         <input type="hidden" id="logstatus" value="${userSuccess}">
         <input type="hidden" id="userNameCurrent" value="${userNamelog}">
         <input type="hidden" id="passwordCurrent" value="${latestpass}">
         <input type="hidden" id="passwordlogged" value="${currentPassword}">
         <input type="hidden" id="userRole" value="${userRole}">
+        <input type="hidden" id="addProduct" value="${addProduct}">
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">
@@ -116,7 +102,7 @@
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
-                        <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
                             <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
                                 <img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error">Inventory
                             </a>
@@ -145,12 +131,12 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8">
                             <div class="checkout_details_area mt-50 clearfix position-relative">
-                                
+
                                 <div class="cart-title">
                                     <h2>ADD PRODUCT</h2>
                                 </div>
                                 <div class="registration-form-wrapper">
-                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/product" class="py-3" id="regform">
+                                    <form method="POST" action="${pageContext.request.contextPath}/inventory/add/product" class="py-3 " id="regform">
                                         <div class="row">
                                             <div class="col-12 col-md-6 mt-3">
                                                 <div class="form-group">
@@ -280,6 +266,7 @@
             <script src="<%=request.getContextPath()%>/js/active.js"></script>
             <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
 
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
                                     $(document).ready(function () {
@@ -372,6 +359,23 @@
                                                 }
                                             });
                                         });
+                                        
+                                         var add = $('#addProduct').val();
+                                        if (add === "failed") {
+                                            Swal.fire({
+                                                icon: 'error',
+                                                title: 'Error unsuccessful',
+                                                text: 'Error Add Product Check Console!',
+                                                timer: 3000,
+                                                background: '#dc3545 ',
+                                                color: '#fff',
+                                                iconColor: '#fff',
+                                                showConfirmButton: false,
+                                                timerProgressBar: true
+                                            }).then(function () {
+                <% session.removeAttribute("addProduct");%>
+                                            });
+                                        }
                                     });
 
 
@@ -391,6 +395,7 @@
 
 
         </script>
+           
     </body>
 
 </html>

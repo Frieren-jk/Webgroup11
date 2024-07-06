@@ -1,6 +1,6 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -61,6 +61,7 @@
         <input type="hidden" id="passwordCurrent" value="${latestpass}">
         <input type="hidden" id="passwordlogged" value="${currentPassword}">
         <input type="hidden" id="userRole" value="${userRole}">
+        <input type="" id="addUser" value="${addUser}">
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">
@@ -115,7 +116,7 @@
                         <br><br><br>
                         <a href="#" class="search-nav"><img src="${pageContext.request.contextPath}/img/core-img/searchicon.png" alt="error"> Search</a>
                         <a href="${pageContext.request.contextPath}/registration" class="fav-nav"><img src="${pageContext.request.contextPath}/img/core-img/createicon.png" alt="error"> Register Now</a>
-                        <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
+                            <c:if test="${userRole == 'Admin' || userRole == 'admin'}">
                             <a href="${pageContext.request.contextPath}/inventory/users" class="fav-nav">
                                 <img src="${pageContext.request.contextPath}/img/core-img/inventoryicon.png" alt="error">Inventory
                             </a>
@@ -162,7 +163,7 @@
                                             </div>
                                         </div>
 
-                                        
+
                                         <div class="row ">
                                             <div class="col-12 col-md-4  mt-5">
                                                 <div class="form-group">
@@ -311,119 +312,136 @@
 
             <!-- Active js -->
             <script src="<%=request.getContextPath()%>/js/active.js"></script>
-            <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
-            
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script>
-                                    $(document).ready(function () {
-                                        var statusreg = $('#logstatus').val();
-                                        var username = $('#userNameCurrent').val();
+            <<<<<<< Updated upstream
+                        <!--<script src="<%=request.getContextPath()%>/js/CustomJs.js"></script>-->
+
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+                                            $(document).ready(function () {
+                                                var statusreg = $('#logstatus').val();
+                                                var username = $('#userNameCurrent').val();
 
 
 
 
-                                        $('#changePasswordBtn').click(function (event) {
-                                            event.preventDefault(); // Prevent default form submission behavior
+                                                $('#changePasswordBtn').click(function (event) {
+                                                    event.preventDefault(); // Prevent default form submission behavior
 
-                                            Swal.fire({
-                                                title: 'Change Password for ' + username,
-                                                html: `
-                <form id="changePasswordForm">
-                    <input type="hidden" name="username" value="${userNamelog}">
+                                                    Swal.fire({
+                                                        title: 'Change Password for ' + username,
+                                                        html: `
+                    <form id="changePasswordForm">
+                        <input type="hidden" name="username" value="${userNamelog}">
+                                <div class="password-field">
+                                <input type="password" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
+                            <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('newPassword')"></i>
+                        </div>
                             <div class="password-field">
-                            <input type="password" id="newPassword" name="newPassword" class="swal2-input" placeholder="New Password">
-                        <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('newPassword')"></i>
-                    </div>
-                        <div class="password-field">
-                            <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
-                        <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('confirmNewPassword')"></i>
-                    </div>
-                </form>
+                                <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="swal2-input" placeholder="Confirm New Password">
+                            <i class="fa fa-eye-slash showPass" onclick="togglePasswordVisibility('confirmNewPassword')"></i>
+                        </div>
+                    </form>
 
-            `,
-                                                confirmButtonText: 'Change',
-                                                focusConfirm: false,
-                                                didOpen: () => {
-                                                    const popup = Swal.getPopup();
-                                                    const newPasswordInput = popup.querySelector('#newPassword');
-                                                    const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');
+                `,
+                                                        confirmButtonText: 'Change',
+                                                        focusConfirm: false,
+                                                        didOpen: () => {
+                                                            const popup = Swal.getPopup();
+                                                            const newPasswordInput = popup.querySelector('#newPassword');
+                                                            const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');
 
-                                                    newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
-                                                    confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
-                                                },
-                                                preConfirm: () => {
-                                                    const newPassword = document.getElementById('newPassword').value;
-                                                    const confirmNewPassword = document.getElementById('confirmNewPassword').value;
-                                                    var currentPassword = $('#passwordCurrent').val();
-                                                    var logPassword = $('#passwordlogged').val();
+                                                            newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                            confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();
+                                                        },
+                                                        preConfirm: () => {
+                                                            const newPassword = document.getElementById('newPassword').value;
+                                                            const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                                                            var currentPassword = $('#passwordCurrent').val();
+                                                            var logPassword = $('#passwordlogged').val();
 
-                                                    if (currentPassword === "samepass" || logPassword == newPassword || currentPassword == newPassword) {
-                                                        Swal.showValidationMessage('New password cannot be the same as the current password');
-                                                        return false;
-                                                    }
+                                                            if (currentPassword === "samepass" || logPassword == newPassword || currentPassword == newPassword) {
+                                                                Swal.showValidationMessage('New password cannot be the same as the current password');
+                                                                return false;
+                                                            }
 
-                                                    if (!newPassword || !confirmNewPassword) {
-                                                        Swal.showValidationMessage('Please fill out all fields');
-                                                        return false;
-                                                    }
+                                                            if (!newPassword || !confirmNewPassword) {
+                                                                Swal.showValidationMessage('Please fill out all fields');
+                                                                return false;
+                                                            }
 
-                                                    if (newPassword !== confirmNewPassword) {
-                                                        Swal.showValidationMessage('Passwords do not match');
-                                                        return false;
-                                                    }
+                                                            if (newPassword !== confirmNewPassword) {
+                                                                Swal.showValidationMessage('Passwords do not match');
+                                                                return false;
+                                                            }
 
-                                                    const passwordRegex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/;
-                                                    if (!passwordRegex.test(newPassword)) {
-                                                        Swal.showValidationMessage('8-16 characters long, with at least one lowercase letter, one uppercase letter, and one number');
-                                                        return false;
-                                                    }
+                                                            const passwordRegex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d)(?=.*[!@#$&*])[A-Za-z\d!@#$&*]{8,16}$/;
+                                                            if (!passwordRegex.test(newPassword)) {
+                                                                Swal.showValidationMessage('8-16 characters long, with at least one lowercase letter, one uppercase letter, and one number');
+                                                                return false;
+                                                            }
 
-                                                    // Submit the form using AJAX to prevent default submission behavior
-                                                    $.ajax({
-                                                        type: 'POST',
-                                                        url: '${pageContext.request.contextPath}/changePassword',
-                                                        data: $('#changePasswordForm').serialize(),
-                                                        success: function () {
-                                                            // Show success alert
-                                                            Swal.fire({
-                                                                icon: 'success',
-                                                                title: 'Password Changed',
-                                                                text: 'Your password has been successfully changed!',
-                                                                showConfirmButton: true,
-                                                                timer: 0
-                                                            }).then((result) => {
-                                                                if (result.isConfirmed) {
-                                                                    // Redirect to home page after success
-                                                                    window.location.href = '${pageContext.request.contextPath}/add/form/user';
+                                                            // Submit the form using AJAX to prevent default submission behavior
+                                                            $.ajax({
+                                                                type: 'POST',
+                                                                url: '${pageContext.request.contextPath}/changePassword',
+                                                                data: $('#changePasswordForm').serialize(),
+                                                                success: function () {
+                                                                    // Show success alert
+                                                                    Swal.fire({
+                                                                        icon: 'success',
+                                                                        title: 'Password Changed',
+                                                                        text: 'Your password has been successfully changed!',
+                                                                        showConfirmButton: true,
+                                                                        timer: 0
+                                                                    }).then((result) => {
+                                                                        if (result.isConfirmed) {
+                                                                            // Redirect to home page after success
+                                                                            window.location.href = '${pageContext.request.contextPath}/add/form/user';
+                                                                        }
+                                                                    });
+                                                                },
+                                                                error: function (xhr, status, error) {
+                                                                    Swal.showValidationMessage(`Error: ${error}`);
                                                                 }
                                                             });
-                                                        },
-                                                        error: function (xhr, status, error) {
-                                                            Swal.showValidationMessage(`Error: ${error}`);
                                                         }
+                                                    });
+                                                });
+                                                var add = $('#addUser').val();
+                                                if (add === "failed") {
+                                                    Swal.fire({
+                                                        icon: 'error',
+                                                        title: 'Error unsuccessful',
+                                                        text: 'Error did not add product! Check Console!',
+                                                        timer: 3000,
+                                                        background: '#dc3545 ',
+                                                        color: '#fff',
+                                                        iconColor: '#fff',
+                                                        showConfirmButton: false,
+                                                        timerProgressBar: true
+                                                    }).then(function () {
+                <% session.removeAttribute("addUser");%>
                                                     });
                                                 }
                                             });
-                                        });
-                                    });
 
 
-                                    function togglePasswordVisibility(inputId) {
-                                        const input = document.getElementById(inputId);
-                                        const icon = input.nextElementSibling;
-                                        if (input.type === "password") {
-                                            input.type = "text";
-                                            icon.classList.remove("fa-eye-slash");
-                                            icon.classList.add("fa-eye");
-                                        } else {
-                                            input.type = "password";
-                                            icon.classList.remove("fa-eye");
-                                            icon.classList.add("fa-eye-slash");
-                                        }
-                                    }
+                                            function togglePasswordVisibility(inputId) {
+                                                const input = document.getElementById(inputId);
+                                                const icon = input.nextElementSibling;
+                                                if (input.type === "password") {
+                                                    input.type = "text";
+                                                    icon.classList.remove("fa-eye-slash");
+                                                    icon.classList.add("fa-eye");
+                                                } else {
+                                                    input.type = "password";
+                                                    icon.classList.remove("fa-eye");
+                                                    icon.classList.add("fa-eye-slash");
+                                                }
+                                            }
 
 
-        </script>
+            </script>
     </body>
 
 </html>

@@ -63,6 +63,7 @@ public class inventory extends HttpServlet {
                     AddProduct(request, response); //add product method
                 } catch (SQLException ex) {
                     Logger.getLogger(inventory.class.getName()).log(Level.SEVERE, null, ex);
+                    
                 }
             }
             break;
@@ -155,7 +156,8 @@ public class inventory extends HttpServlet {
 
     private void AddProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-
+        HttpSession session = request.getSession();
+try {
         if (request.getParameter("addItem") != null) {
             int productID = Integer.parseInt(request.getParameter("productID"));
             String productName = request.getParameter("productName");
@@ -168,7 +170,6 @@ public class inventory extends HttpServlet {
             ProductBlueprint newProduct = new ProductBlueprint(productID, productName, description, size, price, quantity);
             // Instantiate the ProductDao
             ProductDao productDao = new ProductDao();
-            HttpSession session = request.getSession();
 
             // Insert the new product into the database
             boolean productAdded = productDao.createProduct(newProduct);
@@ -184,9 +185,13 @@ public class inventory extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/inventory/products");
             } else {
                 System.out.println("Did not add product");
-
+                session.setAttribute("addProduct", "failed");
                 response.sendRedirect(request.getContextPath() + "/inventory/add/form/product");
             }
+        }  } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
+            session.setAttribute("addProduct", "failed");
+            System.out.println("Invalid Product ID");
+            response.sendRedirect(request.getContextPath() + "/inventory/add/form/product");
         }
     }
 
@@ -320,15 +325,13 @@ public class inventory extends HttpServlet {
 
             if (userAdded) {
                 System.out.println("Add Inventory for " + userName + " is successful");
-                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-                response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-                response.setHeader("Expires", "0");
+                
                 session.setAttribute("addUser", "success");
                 session.setAttribute("userName", userName);
                 response.sendRedirect(request.getContextPath() + "/inventory/users");
             } else {
                 System.out.println("Did not add product");
-
+                session.setAttribute("addUser", "failed");
                 response.sendRedirect(request.getContextPath() + "/inventory/add/form/user");
             }
 

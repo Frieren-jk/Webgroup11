@@ -12,7 +12,6 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
 
   private static java.util.List<String> _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -22,12 +21,10 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
   }
 
   public void _jspInit() {
-    _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_c_out_value_nobody.release();
     _jspx_tagPool_c_if_test.release();
   }
 
@@ -58,7 +55,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write('\r');
       out.write('\n');
 
-    session = request.getSession(false); 
+    session = request.getSession(false);
 
     if (session == null || session.getAttribute("userNamelog") == null) {
         // User is not logged in, redirect to the login page
@@ -107,10 +104,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
-      out.write("<!--        ");
-      if (_jspx_meth_c_if_0(_jspx_page_context))
-        return;
-      out.write("-->\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("        <input type=\"hidden\" id=\"logstatus\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userSuccess}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -126,6 +120,9 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\">\r\n");
       out.write("        <input type=\"hidden\" id=\"userRole\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" id=\"addProduct\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addProduct}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\">\r\n");
       out.write("\r\n");
       out.write("        <!-- ##### Main Content Wrapper Start ##### -->\r\n");
@@ -192,7 +189,7 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write(" <span style=\"padding-left: 29px;\">(");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write(")</span></a>\r\n");
-      out.write("                        <a href=\"#\" class=\"fav-nav\"><img src=\"");
+      out.write("                        <a href=\"#\" id=\"changePasswordBtn\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/changepassicon.png\" alt=\"error\">Change Pass</a>\r\n");
       out.write("                        <a href=\"");
@@ -209,8 +206,8 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("/registration\" class=\"fav-nav\"><img src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/img/core-img/createicon.png\" alt=\"error\"> Register Now</a>\r\n");
-      out.write("                        ");
-      if (_jspx_meth_c_if_1(_jspx_page_context))
+      out.write("                            ");
+      if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("                        <a href=\"");
@@ -249,14 +246,14 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                    <div class=\"row justify-content-center\">\r\n");
       out.write("                        <div class=\"col-12 col-md-8\">\r\n");
       out.write("                            <div class=\"checkout_details_area mt-50 clearfix position-relative\">\r\n");
-      out.write("                                \r\n");
+      out.write("\r\n");
       out.write("                                <div class=\"cart-title\">\r\n");
       out.write("                                    <h2>ADD PRODUCT</h2>\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"registration-form-wrapper\">\r\n");
       out.write("                                    <form method=\"POST\" action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/inventory/add/product\" class=\"py-3\" id=\"regform\">\r\n");
+      out.write("/inventory/add/product\" class=\"py-3 \" id=\"regform\">\r\n");
       out.write("                                        <div class=\"row\">\r\n");
       out.write("                                            <div class=\"col-12 col-md-6 mt-3\">\r\n");
       out.write("                                                <div class=\"form-group\">\r\n");
@@ -411,6 +408,147 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("            <!--<script src=\"");
       out.print(request.getContextPath());
       out.write("/js/CustomJs.js\"></script>-->\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("        <script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>\r\n");
+      out.write("        <script>\r\n");
+      out.write("                                    $(document).ready(function () {\r\n");
+      out.write("                                        var statusreg = $('#logstatus').val();\r\n");
+      out.write("                                        var username = $('#userNameCurrent').val();\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("                                        $('#changePasswordBtn').click(function (event) {\r\n");
+      out.write("                                            event.preventDefault(); // Prevent default form submission behavior\r\n");
+      out.write("\r\n");
+      out.write("                                            Swal.fire({\r\n");
+      out.write("                                                title: 'Change Password for ' + username,\r\n");
+      out.write("                                                html: `\r\n");
+      out.write("                <form id=\"changePasswordForm\">\r\n");
+      out.write("                    <input type=\"hidden\" name=\"username\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userNamelog}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\">\r\n");
+      out.write("                            <div class=\"password-field\">\r\n");
+      out.write("                            <input type=\"password\" id=\"newPassword\" name=\"newPassword\" class=\"swal2-input\" placeholder=\"New Password\">\r\n");
+      out.write("                        <i class=\"fa fa-eye-slash showPass\" onclick=\"togglePasswordVisibility('newPassword')\"></i>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                        <div class=\"password-field\">\r\n");
+      out.write("                            <input type=\"password\" id=\"confirmNewPassword\" name=\"confirmNewPassword\" class=\"swal2-input\" placeholder=\"Confirm New Password\">\r\n");
+      out.write("                        <i class=\"fa fa-eye-slash showPass\" onclick=\"togglePasswordVisibility('confirmNewPassword')\"></i>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                </form>\r\n");
+      out.write("\r\n");
+      out.write("            `,\r\n");
+      out.write("                                                confirmButtonText: 'Change',\r\n");
+      out.write("                                                focusConfirm: false,\r\n");
+      out.write("                                                didOpen: () => {\r\n");
+      out.write("                                                    const popup = Swal.getPopup();\r\n");
+      out.write("                                                    const newPasswordInput = popup.querySelector('#newPassword');\r\n");
+      out.write("                                                    const confirmNewPasswordInput = popup.querySelector('#confirmNewPassword');\r\n");
+      out.write("\r\n");
+      out.write("                                                    newPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();\r\n");
+      out.write("                                                    confirmNewPasswordInput.onkeyup = (event) => event.key === 'Enter' && Swal.clickConfirm();\r\n");
+      out.write("                                                },\r\n");
+      out.write("                                                preConfirm: () => {\r\n");
+      out.write("                                                    const newPassword = document.getElementById('newPassword').value;\r\n");
+      out.write("                                                    const confirmNewPassword = document.getElementById('confirmNewPassword').value;\r\n");
+      out.write("                                                    var currentPassword = $('#passwordCurrent').val();\r\n");
+      out.write("                                                    var logPassword = $('#passwordlogged').val();\r\n");
+      out.write("\r\n");
+      out.write("                                                    if (currentPassword === \"samepass\" || logPassword == newPassword || currentPassword == newPassword) {\r\n");
+      out.write("                                                        Swal.showValidationMessage('New password cannot be the same as the current password');\r\n");
+      out.write("                                                        return false;\r\n");
+      out.write("                                                    }\r\n");
+      out.write("\r\n");
+      out.write("                                                    if (!newPassword || !confirmNewPassword) {\r\n");
+      out.write("                                                        Swal.showValidationMessage('Please fill out all fields');\r\n");
+      out.write("                                                        return false;\r\n");
+      out.write("                                                    }\r\n");
+      out.write("\r\n");
+      out.write("                                                    if (newPassword !== confirmNewPassword) {\r\n");
+      out.write("                                                        Swal.showValidationMessage('Passwords do not match');\r\n");
+      out.write("                                                        return false;\r\n");
+      out.write("                                                    }\r\n");
+      out.write("\r\n");
+      out.write("                                                    const passwordRegex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\\d)(?=.*[!@#$&*])[A-Za-z\\d!@#$&*]{8,16}$/;\r\n");
+      out.write("                                                    if (!passwordRegex.test(newPassword)) {\r\n");
+      out.write("                                                        Swal.showValidationMessage('8-16 characters long, with at least one lowercase letter, one uppercase letter, and one number');\r\n");
+      out.write("                                                        return false;\r\n");
+      out.write("                                                    }\r\n");
+      out.write("\r\n");
+      out.write("                                                    // Submit the form using AJAX to prevent default submission behavior\r\n");
+      out.write("                                                    $.ajax({\r\n");
+      out.write("                                                        type: 'POST',\r\n");
+      out.write("                                                        url: '");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/changePassword',\r\n");
+      out.write("                                                        data: $('#changePasswordForm').serialize(),\r\n");
+      out.write("                                                        success: function () {\r\n");
+      out.write("                                                            // Show success alert\r\n");
+      out.write("                                                            Swal.fire({\r\n");
+      out.write("                                                                icon: 'success',\r\n");
+      out.write("                                                                title: 'Password Changed',\r\n");
+      out.write("                                                                text: 'Your password has been successfully changed!',\r\n");
+      out.write("                                                                showConfirmButton: true,\r\n");
+      out.write("                                                                timer: 0\r\n");
+      out.write("                                                            }).then((result) => {\r\n");
+      out.write("                                                                if (result.isConfirmed) {\r\n");
+      out.write("                                                                    // Redirect to home page after success\r\n");
+      out.write("                                                                    window.location.href = '");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/add/form/product';\r\n");
+      out.write("                                                                }\r\n");
+      out.write("                                                            });\r\n");
+      out.write("                                                        },\r\n");
+      out.write("                                                        error: function (xhr, status, error) {\r\n");
+      out.write("                                                            Swal.showValidationMessage(`Error: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${error}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("`);\r\n");
+      out.write("                                                        }\r\n");
+      out.write("                                                    });\r\n");
+      out.write("                                                }\r\n");
+      out.write("                                            });\r\n");
+      out.write("                                        });\r\n");
+      out.write("                                        \r\n");
+      out.write("                                         var add = $('#addProduct').val();\r\n");
+      out.write("                                        if (add === \"failed\") {\r\n");
+      out.write("                                            Swal.fire({\r\n");
+      out.write("                                                icon: 'error',\r\n");
+      out.write("                                                title: 'Error unsuccessful',\r\n");
+      out.write("                                                text: 'Error Add Product Check Console!',\r\n");
+      out.write("                                                timer: 3000,\r\n");
+      out.write("                                                background: '#dc3545 ',\r\n");
+      out.write("                                                color: '#fff',\r\n");
+      out.write("                                                iconColor: '#fff',\r\n");
+      out.write("                                                showConfirmButton: false,\r\n");
+      out.write("                                                timerProgressBar: true\r\n");
+      out.write("                                            }).then(function () {\r\n");
+      out.write("                ");
+ session.removeAttribute("addProduct");
+      out.write("\r\n");
+      out.write("                                            });\r\n");
+      out.write("                                        }\r\n");
+      out.write("                                    });\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("                                    function togglePasswordVisibility(inputId) {\r\n");
+      out.write("                                        const input = document.getElementById(inputId);\r\n");
+      out.write("                                        const icon = input.nextElementSibling;\r\n");
+      out.write("                                        if (input.type === \"password\") {\r\n");
+      out.write("                                            input.type = \"text\";\r\n");
+      out.write("                                            icon.classList.remove(\"fa-eye-slash\");\r\n");
+      out.write("                                            icon.classList.add(\"fa-eye\");\r\n");
+      out.write("                                        } else {\r\n");
+      out.write("                                            input.type = \"password\";\r\n");
+      out.write("                                            icon.classList.remove(\"fa-eye\");\r\n");
+      out.write("                                            icon.classList.add(\"fa-eye-slash\");\r\n");
+      out.write("                                        }\r\n");
+      out.write("                                    }\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("        </script>\r\n");
+      out.write("           \r\n");
       out.write("    </body>\r\n");
       out.write("\r\n");
       out.write("</html>");
@@ -435,73 +573,9 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_0.setPageContext(_jspx_page_context);
     _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addProductError == true}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole == 'Admin' || userRole == 'admin'}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("            <div class=\"bounce-in-right toast-container position-fixed top-0 end-0 p-3\">\r\n");
-        out.write("                <div id=\"liveToastDelete\" class=\"toast show\"\r\n");
-        out.write("                     role=\"status\" aria-live=\"assertive\" aria-atomic=\"true\"\r\n");
-        out.write("                     data-bs-config='{\"animation\": true, \"autohide\": true, \"delay\": 5000}'>\r\n");
-        out.write("                    <div class=\"toast-header bg-danger\">\r\n");
-        out.write("                        <i class=\"fas fa-trash-alt me-2\"></i>\r\n");
-        out.write("                        <strong class=\"me-auto\">STATUS</strong>\r\n");
-        out.write("                       <a href=\"");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${addProductError = false}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"\"></a>\r\n");
-        out.write("                    </div>\r\n");
-        out.write("                    <div class=\"toast-body toastDanger\">\r\n");
-        out.write("                        ");
-        if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
-          return true;
-        out.write("\r\n");
-        out.write("                    </div>\r\n");
-        out.write("                </div>\r\n");
-        out.write("            </div>\r\n");
-        out.write("        ");
-        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-      return true;
-    }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_out_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:out
-    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
-    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_out_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_0);
-    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ErrorMessage}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
-    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
-      return true;
-    }
-    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_if_1(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_if_1.setPageContext(_jspx_page_context);
-    _jspx_th_c_if_1.setParent(null);
-    _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${userRole == 'Admin' || userRole == 'admin'}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
-    if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
         out.write("                            <a href=\"");
@@ -512,16 +586,16 @@ public final class add_005fproducts_jsp extends org.apache.jasper.runtime.HttpJs
         out.write("/img/core-img/inventoryicon.png\" alt=\"error\">Inventory\r\n");
         out.write("                            </a>\r\n");
         out.write("                        ");
-        int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
       } while (true);
     }
-    if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
       return true;
     }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
     return false;
   }
 }

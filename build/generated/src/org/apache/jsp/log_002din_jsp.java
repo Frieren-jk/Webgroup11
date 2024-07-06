@@ -41,11 +41,6 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-
-    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
-    response.setHeader("Pragma", "no-cache");
-    response.setDateHeader("Expires", 0); 
-
       out.write("\r\n");
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
@@ -109,21 +104,9 @@ public final class log_002din_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <input type=\"password\" name=\"passwordlog\" id=\"passwordlog\" placeholder=\"Type your Password\" class=\"form-control\" required>\r\n");
       out.write("                                <div class=\"invalid-feedback\">Please enter your password.</div>\r\n");
       out.write("                            </div>\r\n");
-      out.write("                            <div class=\"row mb-3\">\r\n");
-      out.write("                                <!-- Remember Checkbox -->\r\n");
-      out.write("                                <div class=\"col-auto d-flex align-items-center\">\r\n");
-      out.write("                                    <div class=\"custom-control custom-checkbox\">\r\n");
-      out.write("                                        <input type=\"checkbox\" class=\"custom-control-input\" id=\"cb1\">\r\n");
-      out.write("                                        <label class=\"custom-control-label text-white\" for=\"cb1\">Remember me</label>\r\n");
-      out.write("                                    </div>\r\n");
-      out.write("                                </div>\r\n");
-      out.write("                            </div>\r\n");
       out.write("                            <!-- Login Button -->\r\n");
       out.write("                            <div class=\"mb-3\"> \r\n");
       out.write("                                <button type=\"submit\" class=\"btn btn-block\">Log In</button>\r\n");
-      out.write("                            </div>\r\n");
-      out.write("                            <div class=\"text-right \">\r\n");
-      out.write("                                <a href=\"#\" class=\"forget-link\">Forgot password?</a>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"text-center mb-2\">\r\n");
       out.write("                                <div class=\"text-center mb-2 text-white\">or login with</div>\r\n");

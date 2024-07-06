@@ -193,7 +193,7 @@ public class ProductDao {
         }
         return success;
     }
-    
+
     public boolean deleteCart(int productID) throws SQLException {
         boolean rowsDeleted = false;
         Connection conn;
@@ -210,23 +210,67 @@ public class ProductDao {
         }
         return rowsDeleted;
     }
-    
+
     public boolean deleteAllCart(String userName) throws SQLException {
         boolean rowsDeleted = false;
-        Connection conn;
-        PreparedStatement ps;
+        Connection conn = null;
+        PreparedStatement psCart = null;
+        PreparedStatement psProductUpdate = null;
+        PreparedStatement psGetCartItems = null;
         try {
             conn = ConnectPool.getConnection();
-            ps = conn.prepareStatement("delete from cart where userName = ?;");
-            ps.setString(1, userName);
+            conn.setAutoCommit(false);  // Begin transaction
 
-            rowsDeleted = ps.executeUpdate() > 0;
+            // Get cart items for the user
+            psGetCartItems = conn.prepareStatement("SELECT productID FROM cart WHERE userName = ?;");
+            psGetCartItems.setString(1, userName);
+            ResultSet rs = psGetCartItems.executeQuery();
 
+            // Update product quantities
+            while (rs.next()) {
+                int productID = rs.getInt("productID");
+                psProductUpdate = conn.prepareStatement("UPDATE product SET quantity = quantity - 1 WHERE productID = ? AND quantity > 0;");
+                psProductUpdate.setInt(1, productID);
+                psProductUpdate.executeUpdate();
+            }
+
+            // Delete from cart
+            psCart = conn.prepareStatement("DELETE FROM cart WHERE userName = ?;");
+            psCart.setString(1, userName);
+            int cartRowsDeleted = psCart.executeUpdate();
+
+            // If the cart deletion is successful, commit the transaction
+            if (cartRowsDeleted > 0) {
+                conn.commit();
+                rowsDeleted = true;
+            } else {
+                conn.rollback();  // Rollback if any operation failed
+            }
         } catch (SQLException e) {
-            System.out.println("DELETE PRODUCT error: " + e);
+            if (conn != null) {
+                try {
+                    conn.rollback();  // Rollback in case of an error
+                } catch (SQLException rollbackException) {
+                    System.out.println("Rollback error: " + rollbackException);
+                }
+            }
+            System.out.println("DELETE/UPDATE error: " + e);
+        } finally {
+            if (psGetCartItems != null) {
+                psGetCartItems.close();
+            }
+            if (psCart != null) {
+                psCart.close();
+            }
+            if (psProductUpdate != null) {
+                psProductUpdate.close();
+            }
+            if (conn != null) {
+                conn.setAutoCommit(true);  // Reset auto-commit to true
+                conn.close();
+            }
         }
         return rowsDeleted;
     }
-    
-    
+
 }

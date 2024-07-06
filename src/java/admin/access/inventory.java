@@ -63,7 +63,7 @@ public class inventory extends HttpServlet {
                     AddProduct(request, response); //add product method
                 } catch (SQLException ex) {
                     Logger.getLogger(inventory.class.getName()).log(Level.SEVERE, null, ex);
-                    
+
                 }
             }
             break;
@@ -100,9 +100,15 @@ public class inventory extends HttpServlet {
             case "/inventory/add/form/user":
                 viewAddFormUser(request, response); //view form
                 break;
-            case "/inventory/add/user":
-                AddUser(request, response); //add product method
-                break;
+            case "/inventory/add/user": {
+                try {
+                    AddUser(request, response); //add product method
+                } catch (SQLException ex) {
+                    Logger.getLogger(inventory.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+
             case "/inventory/update/form/user": {
                 try {
                     ShowEditUser(request, response);
@@ -157,38 +163,39 @@ public class inventory extends HttpServlet {
     private void AddProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         HttpSession session = request.getSession();
-try {
-        if (request.getParameter("addItem") != null) {
-            int productID = Integer.parseInt(request.getParameter("productID"));
-            String productName = request.getParameter("productName");
-            String description = request.getParameter("description");
-            String size = request.getParameter("size");
-            BigDecimal price = new BigDecimal(request.getParameter("price"));
-            int quantity = Integer.parseInt(request.getParameter("quantity"));
+        try {
+            if (request.getParameter("addItem") != null) {
+                int productID = Integer.parseInt(request.getParameter("productID"));
+                String productName = request.getParameter("productName");
+                String description = request.getParameter("description");
+                String size = request.getParameter("size");
+                BigDecimal price = new BigDecimal(request.getParameter("price"));
+                int quantity = Integer.parseInt(request.getParameter("quantity"));
 
-            // Create a new product instance
-            ProductBlueprint newProduct = new ProductBlueprint(productID, productName, description, size, price, quantity);
-            // Instantiate the ProductDao
-            ProductDao productDao = new ProductDao();
+                // Create a new product instance
+                ProductBlueprint newProduct = new ProductBlueprint(productID, productName, description, size, price, quantity);
+                // Instantiate the ProductDao
+                ProductDao productDao = new ProductDao();
 
-            // Insert the new product into the database
-            boolean productAdded = productDao.createProduct(newProduct);
+                // Insert the new product into the database
+                boolean productAdded = productDao.createProduct(newProduct);
 
-            // Prepare a message to display on the UI
-            if (productAdded) {
-                System.out.println("Succesfully added product");
-                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
-                response.setHeader("Pragma", "no-cache"); // HTTP 1.0
-                response.setHeader("Expires", "0");
-                session.setAttribute("addProduct", "success");
-                session.setAttribute("productName", productName);
-                response.sendRedirect(request.getContextPath() + "/inventory/products");
-            } else {
-                System.out.println("Did not add product");
-                session.setAttribute("addProduct", "failed");
-                response.sendRedirect(request.getContextPath() + "/inventory/add/form/product");
+                // Prepare a message to display on the UI
+                if (productAdded) {
+                    System.out.println("Succesfully added product");
+                    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+                    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+                    response.setHeader("Expires", "0");
+                    session.setAttribute("addProduct", "success");
+                    session.setAttribute("productName", productName);
+                    response.sendRedirect(request.getContextPath() + "/inventory/products");
+                } else {
+                    System.out.println("Did not add product");
+                    session.setAttribute("addProduct", "failed");
+                    response.sendRedirect(request.getContextPath() + "/inventory/add/form/product");
+                }
             }
-        }  } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
+        } catch (NumberFormatException e) { // Handle the case where productIDParam is not a valid integer
             session.setAttribute("addProduct", "failed");
             System.out.println("Invalid Product ID");
             response.sendRedirect(request.getContextPath() + "/inventory/add/form/product");
@@ -298,45 +305,59 @@ try {
     }
 
     private void AddUser(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
+        HttpSession session = request.getSession();
+        try {
+            if (request.getParameter("AddUser") != null) {
+                String userName = request.getParameter("userName");
+                String firstName = request.getParameter("firstName");
+                String password = "Secret@123"; //Default Password
+                String middleName = request.getParameter("middleName");
+                String lastName = request.getParameter("lastName");
+                String address = request.getParameter("address");
+                String birthday = request.getParameter("birthday");
+                String mobileNumber = request.getParameter("mobileNumber");
+                if (userName == null || firstName == null || lastName == null
+                        || address == null || birthday == null || mobileNumber == null
+                        || userName.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || birthday.isEmpty()
+                        || mobileNumber.isEmpty()) {
+                    session.setAttribute("addUser", "failed");
+                    response.sendRedirect(request.getContextPath() + "/inventory/add/form/user");
+                    return;
+                }
 
-        if (request.getParameter("AddUser") != null) {
-            String userName = request.getParameter("userName");
-            String firstName = request.getParameter("firstName");
-            String password = "Secret@123"; //Default Password
-            String middleName = request.getParameter("middleName");
-            String lastName = request.getParameter("lastName");
-            String address = request.getParameter("address");
-            String birthday = request.getParameter("birthday");
-            String mobileNumber = request.getParameter("mobileNumber");
-            String hashedPass = hashPassword(password);
-            EmployeeBlueprint newEmployee = new EmployeeBlueprint(
-                    userName,
-                    hashedPass,
-                    firstName,
-                    middleName,
-                    lastName,
-                    address,
-                    birthday,
-                    mobileNumber);
-            HttpSession session = request.getSession();
-            EmployeeDao employeeDao = new EmployeeDao();
-            boolean userAdded = employeeDao.createEmployee(newEmployee);
+                String hashedPass = hashPassword(password);
+                EmployeeBlueprint newEmployee = new EmployeeBlueprint(
+                        userName,
+                        hashedPass,
+                        firstName,
+                        middleName,
+                        lastName,
+                        address,
+                        birthday,
+                        mobileNumber);
+                EmployeeDao employeeDao = new EmployeeDao();
+                boolean userAdded = employeeDao.createEmployee(newEmployee);
 
-            if (userAdded) {
-                System.out.println("Add Inventory for " + userName + " is successful");
-                
-                session.setAttribute("addUser", "success");
-                session.setAttribute("userName", userName);
-                response.sendRedirect(request.getContextPath() + "/inventory/users");
+                if (userAdded) {
+                    System.out.println("Add Inventory for " + userName + " is successful");
+
+                    session.setAttribute("addUser", "success");
+                    session.setAttribute("userName", userName);
+                    response.sendRedirect(request.getContextPath() + "/inventory/users");
+                } else {
+                    System.out.println("Did not add product");
+                    session.setAttribute("addUser", "failed");
+                    response.sendRedirect(request.getContextPath() + "/inventory/add/form/user");
+                }
+
             } else {
-                System.out.println("Did not add product");
-                session.setAttribute("addUser", "failed");
-                response.sendRedirect(request.getContextPath() + "/inventory/add/form/user");
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid Add Inventory request");
             }
-
-        } else {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid Add Inventory request");
+        } catch (IOException e) { // Handle the case where productIDParam is not a valid integer
+            session.setAttribute("addProduct", "failed");
+            System.out.println("Invalid USER ID");
+            response.sendRedirect(request.getContextPath() + "/inventory/add/form/user");
         }
     }
 

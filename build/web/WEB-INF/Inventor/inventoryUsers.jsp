@@ -372,7 +372,7 @@
                                             Swal.fire({
                                                 icon: 'success',
                                                 title: 'User Added',
-                                                text: 'User was successfully added to the inventory.',
+                                                text: 'User was successfully added to the inventory. Default Password: Secret@123',
                                                 timer: 4000,
                                                 background: '#20c997',
                                                 color: '#fff',

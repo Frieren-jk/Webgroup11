@@ -61,7 +61,7 @@
         <input type="hidden" id="passwordCurrent" value="${latestpass}">
         <input type="hidden" id="passwordlogged" value="${currentPassword}">
         <input type="hidden" id="userRole" value="${userRole}">
-        <input type="" id="addUser" value="${addUser}">
+        <input type="hidden" id="addUser" value="${addUser}">
 
         <!-- ##### Main Content Wrapper Start ##### -->
         <div class="main-content-wrapper d-flex clearfix">
@@ -412,7 +412,7 @@
                                                     Swal.fire({
                                                         icon: 'error',
                                                         title: 'Error unsuccessful',
-                                                        text: 'Error did not add product! Check Console!',
+                                                        text: 'Error did not add USER! Check Console!',
                                                         timer: 3000,
                                                         background: '#dc3545 ',
                                                         color: '#fff',

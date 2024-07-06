@@ -369,25 +369,7 @@
                                                         }
                                                     });
                                                 });
-                                                var add = $('#addProduct').val();
-                                                if (status != "success") {
-                                                    Swal.fire({
-                                                        icon: 'error',
-                                                        title: 'Edit successfully',
-                                                        text: 'Product was successfully edited.',
-                                                        timer: 4000,
-                                                        background: '#20c997',
-                                                        toast: true,
-                                                        color: '#fff',
-                                                        position: 'top-end',
-                                                        iconColor: '#fff',
-                                                        showConfirmButton: false,
-                                                        timerProgressBar: true
-                                                    }).then(function () {
-                <% session.removeAttribute("addProduct");%>
-                                                    });
-                                                }
-                                            });
+                                               
 
 
                                             function togglePasswordVisibility(inputId) {

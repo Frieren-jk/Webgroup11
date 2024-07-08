@@ -5,7 +5,7 @@
 ### GRADE: 1.00
 
 #### Description
-This project was completed as part of Computer Engineer at Polytechnic University of the Philippines. The project has been graded by my professor and will no longer be actively maintained.
+This project was completed as part of WebTech at Polytechnic University of the Philippines. The project has been graded by my professor and will no longer be actively maintained.
 
 ### Technologies Used
 - Java Servlet

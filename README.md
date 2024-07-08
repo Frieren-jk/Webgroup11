@@ -18,7 +18,10 @@ This project was completed as part of WebTech at Polytechnic University of the P
 - HashMap (Java Collections Framework)
 
 ### Important Note
-All images used in this project are purely for school purposes only and will not be used for profit.
+- All images used in this project are purely for school purposes only and will not be used for profit
+- Minor bugs can be found but we are too lazy to fix that, since we are graded already.
+
+![Sad-cat-thumbs-up-meme-6](https://github.com/Frieren-jk/Webgroup11/assets/83899433/6b7d71a7-2290-4941-b8f3-4f953a1d1568)
 
 ### Installation
 To install and run this project locally, follow these steps:

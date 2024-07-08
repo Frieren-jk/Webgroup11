@@ -19,7 +19,7 @@ This project was completed as part of WebTech at Polytechnic University of the P
 
 ### Important Note
 - All images used in this project are purely for school purposes only and will not be used for profit
-- Minor bugs can be found but we are too lazy to fix that, since we are graded already.
+- Minor bugs can be found but we are too lazy to fix that. If it works it works.
 
 ![Sad-cat-thumbs-up-meme-6](https://github.com/Frieren-jk/Webgroup11/assets/83899433/6b7d71a7-2290-4941-b8f3-4f953a1d1568)
 
